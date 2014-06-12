@@ -14,7 +14,7 @@ For detailed information about the proposed project, look at the [proposal][].
 
 ## Progress
 
-For detailed information about the progress of this project look at the [wiki][opencast wiki].
+For detailed information about the progress of this project look at the [wiki][opencastwiki].
 
 At this point we are trying to build feature vectors for the [full protein list][proteinlist].
 We have a [long list of data sources][sourcelist] which we are working through trying to quickly extract features.
