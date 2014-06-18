@@ -30,6 +30,11 @@ class FeatureVectorAssembler():
             #update the script directory
             if "script" in d["options"].keys():
                 d["options"]["script"] = os.path.join(self.sourcetabdir,d["options"]["script"])
+            #parse protindexes and validexes:
+            if "protindexes" in d["options"].keys():
+                d["options"]["protindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["protindexes"]))
+            if "valindexes" in d["options"].keys():
+                d["options"]["valindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["valindexes"]))
             #copy the dictionary into the list
             self.parserinitlist.append(d.copy())
         #then initialise each of these parsers and keep them in a list
@@ -39,14 +44,14 @@ class FeatureVectorAssembler():
                                                      parser["output path"],
                                                      **parser["options"]))
         return None
-    
-    def regenerate(self):
+
+    def regenerate(self, force=False):
         '''Calls all known protein parsers and gets them to regenerate their output, if they have to.'''
         for parser in self.parserlist:
-            parser.regenerate()
+            parser.regenerate(force)
         return None
     
-    def assemble(self, pairfile, outputfile):
+    def assemble(self, pairfile, outputfile, pairlabels=False):
         '''Assembles a file of feature vectors for each protein pair in a protein pair file supplied.
         
         Assumes the pairfile is tab delimited.'''
@@ -62,10 +67,13 @@ class FeatureVectorAssembler():
         # then iterate through the pairs, querying all parser databases
         for pair in pairs:
             row = []
-            lpair = list(pair)
-            row = row + lpair
+            if pairlabels==True:
+                lpair = list(pair)
+                if len(lpair)==1:
+                    lpair = lpair*2
+                row = row+lpair
             for parser in self.parserinitlist:
-                row.append(dbdict[parser["output path"]][pair])
+                row = row + dbdict[parser["output path"]][pair]
             c.writerow(row)
             
         #close all the databases
@@ -109,17 +117,18 @@ class ProteinPairDB(shelve.DbfilenameShelf):
 
 class ProteinPairParser():
     '''Does simple parsing on data files to produce protein pair files with feature values'''
-    def __init__(self,datadir,outdir,protindexes=(1,2),valindex=3,script=None,csvdelim="\t"):
+    def __init__(self,datadir,outdir,protindexes=(0,1),valindexes=(2),script=None,csvdelim="\t",ignoreheader=0):
         #first, store the initialisation
         self.datadir = datadir
         self.outdir = outdir
         self.protindexes=protindexes
-        self.valindex=valindex
+        self.valindexes=valindexes
         self.script=script
         self.csvdelim=csvdelim
+        self.ignoreheader=ignoreheader
         return None
     
-    def regenerate(self):
+    def regenerate(self, force=False):
         '''Regenerate the pair file from the data source
         if the data source is newer than the pair file'''
         # so first check the ages of both files
@@ -130,7 +139,7 @@ class ProteinPairParser():
             #bit of a hack
             pairmtime = 0
         #if the data modification time is greater than output modification time
-        if datamtime > pairmtime:
+        if datamtime > pairmtime or force==True:
             # now regenerate the data file according to the options defined above:
             print "data file is newer than pair file"
             #if there's a script to run
@@ -145,12 +154,20 @@ class ProteinPairParser():
             db = openpairshelf(self.outdir)
             #open the data file
             c = csv.reader(open(self.datadir), delimiter=self.csvdelim)
+            #if the header should be ignored then ignore it
+            if self.ignoreheader==1:
+                c.next()
             for line in c:
                 #each line use the protein pair as a key
                 #by formatting it as a frozenset
                 pair = frozenset([line[self.protindexes[0]],line[self.protindexes[1]]])
-                #and the value is indexed by valindex
-                db[pair] = line[self.valindex]
+                #and the value is indexed by valindexes
+                db[pair] = []
+                for i in self.valindexes:
+                    db[pair].append(line[i])
             db.close()
         return None
 
+def openpairshelf(filename, flag='c', protocol=None, writeback=False):
+    """Returns a ProteinPairDB object, with similar functionality to shelve.open()"""
+    return ProteinPairDB(filename, flag, protocol, writeback)
