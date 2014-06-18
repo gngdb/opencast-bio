@@ -1,6 +1,6 @@
 # Feature extraction code
 
-import os, time, subprocess, csv, shelve, re
+import os, time, subprocess, csv, shelve, re, pdb
 
 class FeatureVectorAssembler():
     '''Assembles feature vectors from protein pair files, data source lists and gold standard protein pair lists.'''
@@ -19,22 +19,24 @@ class FeatureVectorAssembler():
             d["data path"] = os.path.join(self.sourcetabdir,line[0])
             d["output path"] = os.path.join(self.sourcetabdir,line[1])
             #store options in a dictionary in the dictionary
+            # if there are options
             d["options"] = {}
-            options = line[2].split(";")
-            for x in options:
-                #split each option to find out which option it is:
-                x = x.split("=")
-                #store it in the dictionary
-                # if there are invalid options this code WILL NOT DETECT THEM
-                d["options"][x[0]]= x[1]
-            #update the script directory
-            if "script" in d["options"].keys():
-                d["options"]["script"] = os.path.join(self.sourcetabdir,d["options"]["script"])
-            #parse protindexes and validexes:
-            if "protindexes" in d["options"].keys():
-                d["options"]["protindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["protindexes"]))
-            if "valindexes" in d["options"].keys():
-                d["options"]["valindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["valindexes"]))
+            if line[2] != "":
+                options = line[2].split(";")
+                for x in options:
+                    #split each option to find out which option it is:
+                    x = x.split("=")
+                    #store it in the dictionary
+                    # if there are invalid options this code WILL NOT DETECT THEM
+                    d["options"][x[0]]= x[1]
+                #update the script directory
+                if "script" in d["options"].keys():
+                    d["options"]["script"] = os.path.join(self.sourcetabdir,d["options"]["script"])
+                #parse protindexes and validexes:
+                if "protindexes" in d["options"].keys():
+                    d["options"]["protindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["protindexes"]))
+                if "valindexes" in d["options"].keys():
+                    d["options"]["valindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["valindexes"]))
             #copy the dictionary into the list
             self.parserinitlist.append(d.copy())
         #then initialise each of these parsers and keep them in a list
@@ -51,20 +53,21 @@ class FeatureVectorAssembler():
             parser.regenerate(force)
         return None
     
-    def assemble(self, pairfile, outputfile, pairlabels=False):
+    def assemble(self, pairfile, outputfile, pairlabels=False, delim="\t", missinglabel="missing"):
         '''Assembles a file of feature vectors for each protein pair in a protein pair file supplied.
         
         Assumes the pairfile is tab delimited.'''
         # first parse the pairfile into a list of frozensets
         pairs = map(lambda l: frozenset(l),csv.reader(open(pairfile), delimiter="\t"))
         # open the file to put the feature vector in
-        c = csv.writer(open(outputfile, "w"), delimiter="\t")
+        c = csv.writer(open(outputfile, "w"), delimiter=delim)
         #open all the databases and put them in a dictionary
         dbdict = {}
         for parser in self.parserinitlist:
             dbdict[parser["output path"]] = openpairshelf(parser["output path"])
         
-        # then iterate through the pairs, querying all parser databases
+        # then iterate through the pairs, querying all parser databases and building a list of rows
+        rows = []
         for pair in pairs:
             row = []
             if pairlabels==True:
@@ -73,8 +76,19 @@ class FeatureVectorAssembler():
                     lpair = lpair*2
                 row = row+lpair
             for parser in self.parserinitlist:
-                row = row + dbdict[parser["output path"]][pair]
-            c.writerow(row)
+                #if there are features there then append them to the row
+                try:
+                    row.append(dbdict[parser["output path"]][pair])
+                except KeyError:
+                    row.append([missinglabel])
+            #copy the row into the list of rows
+            rows.append(row[:])
+        #check if lengths of missing labels is correct
+        columns = zip(*rows)
+        for col,colindex in zip(columns,range(len(columns))):
+
+        #write all the rows to file
+        c.writerows(rows)
             
         #close all the databases
         for parser in self.parserinitlist:
@@ -117,12 +131,14 @@ class ProteinPairDB(shelve.DbfilenameShelf):
 
 class ProteinPairParser():
     '''Does simple parsing on data files to produce protein pair files with feature values'''
-    def __init__(self,datadir,outdir,protindexes=(0,1),valindexes=(2),script=None,csvdelim="\t",ignoreheader=0):
+    def __init__(self,datadir,outdir,protindexes=(0,1),valindexes=[2],script=None,csvdelim="\t",ignoreheader=0):
         #first, store the initialisation
         self.datadir = datadir
         self.outdir = outdir
         self.protindexes=protindexes
-        self.valindexes=valindexes
+        # had to hack this together from the list above
+        # passing tuple in as default did not work
+        self.valindexes=tuple(valindexes)
         self.script=script
         self.csvdelim=csvdelim
         self.ignoreheader=ignoreheader
@@ -155,7 +171,8 @@ class ProteinPairParser():
             #open the data file
             c = csv.reader(open(self.datadir), delimiter=self.csvdelim)
             #if the header should be ignored then ignore it
-            if self.ignoreheader==1:
+            if self.ignoreheader=="1":
+                print "ignoring header"
                 c.next()
             for line in c:
                 #each line use the protein pair as a key
@@ -163,8 +180,11 @@ class ProteinPairParser():
                 pair = frozenset([line[self.protindexes[0]],line[self.protindexes[1]]])
                 #and the value is indexed by valindexes
                 db[pair] = []
-                for i in self.valindexes:
-                    db[pair].append(line[i])
+                try:
+                    for i in self.valindexes:
+                        db[pair].append(line[i])
+                except TypeError:
+                    pdb.set_trace()
             db.close()
         return None
 
