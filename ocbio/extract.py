@@ -1,4 +1,5 @@
 # Feature extraction code
+# Header pending
 
 import os
 import time
@@ -7,6 +8,8 @@ import csv
 import shelve
 import re
 import sys
+import pickle
+import geneontology
 
 def verbosecheck(verbose):
     '''returns a function depending on the state of the verbose flag'''
@@ -214,7 +217,8 @@ class ProteinPairParser():
                  valindexes=[2],
                  script=None,
                  csvdelim="\t",
-                 ignoreheader=0):
+                 ignoreheader=0,
+                 generator=False):
         # first, store the initialisation
         self.datadir = datadir
         self.outdir = outdir
@@ -225,76 +229,95 @@ class ProteinPairParser():
         self.script = script
         self.csvdelim = csvdelim
         self.ignoreheader = ignoreheader
+        if generator:
+            #then open up this pickle file
+            f = open(generator)
+            self.generator = pickle.load(f)
+            f.close()
+        else:
+            self.generator == None
+            self.db = openpairshelf(self.outdir)
         return None
 
     def regenerate(self, force=False, verbose=False):
         '''Regenerate the pair file from the data source
         if the data source is newer than the pair file'''
         v_print = verbosecheck(verbose)
-        # so first check the ages of both files
-        datamtime = os.stat(self.datadir)[-2]
-        if os.path.isfile(self.outdir):
-            pairmtime = os.stat(self.outdir)[-2]
-        else:
-            # bit of a hack
-            pairmtime = 0
-        # if the data modification time is greater than output modification time
-        if datamtime > pairmtime or force is True:
-            # now regenerate the data file according to the options defined above:
-            if verbose and datamtime > pairmtime:
-                if pairmtime == 0:
-                    print "Database file not found, regenerating at {0} from {1}.".format(self.outdir, self.datadir)
-                else:
-                    print "Data file {0} is newer than processed database {1}, regenerating.".format(self.datadir, self.outdir)
-            if verbose and force:
-                print "Forcing regeneration of database {0} from data file {1}.".format(self.outdir, self.datadir)
-            # if there's a script to run
-            if self.script is not None:
-                v_print("Executing script: {0}.".format(self.script))
-                # then execute the script
-                retcode = subprocess.call("python2 {0}".format(self.script), shell=True)
-
-                v_print("Script returned: {0}".format(retcode))
-            # first delete out of date file, if it's there
+        if self.generator != None:
+            # so first check the ages of both files
+            datamtime = os.stat(self.datadir)[-2]
             if os.path.isfile(self.outdir):
-                os.remove(self.outdir)
-            # perform simple parsing to make a file of just protein pairs and the value we care about
-            # and save these using shelve
-            db = openpairshelf(self.outdir)
-            # open the data file
-            c = csv.reader(open(self.datadir), delimiter=self.csvdelim)
-            # if the header should be ignored then ignore it
+                pairmtime = os.stat(self.outdir)[-2]
+            else:
+                # bit of a hack
+                pairmtime = 0
+            # if the data modification time is greater than output modification time
+            if datamtime > pairmtime or force is True:
+                # now regenerate the data file according to the options defined above:
+                if verbose and datamtime > pairmtime:
+                    if pairmtime == 0:
+                        print "Database file not found, regenerating at {0} from {1}.".format(self.outdir, self.datadir)
+                    else:
+                        print "Data file {0} is newer than processed database {1}, regenerating.".format(self.datadir, self.outdir)
+                if verbose and force:
+                    print "Forcing regeneration of database {0} from data file {1}.".format(self.outdir, self.datadir)
+                # if there's a script to run
+                if self.script is not None:
+                    v_print("Executing script: {0}.".format(self.script))
+                    # then execute the script
+                    retcode = subprocess.call("python2 {0}".format(self.script), shell=True)
 
-            if self.ignoreheader == "1":
-                v_print("Ignoring header.")
-                c.next()
+                    v_print("Script returned: {0}".format(retcode))
+                # first delete out of date file, if it's there
+                if os.path.isfile(self.outdir):
+                    os.remove(self.outdir)
+                # open the data file
+                c = csv.reader(open(self.datadir), delimiter=self.csvdelim)
+                # if the header should be ignored then ignore it
 
-            if verbose:
-                sys.stdout.write("Filling database")
-                lcount = 0
-
-            for line in c:
-                # each line use the protein pair as a key
-                # by formatting it as a frozenset
-                pair = frozenset([line[self.protindexes[0]], line[self.protindexes[1]]])
-                # and the value is indexed by valindexes
-                values = []
-
-                for i in self.valindexes:
-                    values.append(line[i])
-
-                db[pair] = values[:]
+                if self.ignoreheader == "1":
+                    v_print("Ignoring header.")
+                    c.next()
 
                 if verbose:
-                    lcount = lcount + 1
-                    if lcount % 1000 == 0:
-                        sys.stdout.write(".")
+                    sys.stdout.write("Filling database")
+                    lcount = 0
 
-            if verbose:
-                sys.stdout.write("\n")
-                print "Parsed {0} lines.".format(lcount)
-            db.close()
+                for line in c:
+                    # each line use the protein pair as a key
+                    # by formatting it as a frozenset
+                    pair = frozenset([line[self.protindexes[0]], line[self.protindexes[1]]])
+                    # and the value is indexed by valindexes
+                    values = []
 
+                    for i in self.valindexes:
+                        values.append(line[i])
+
+                    self.db[pair] = values[:]
+
+                    if verbose:
+                        lcount = lcount + 1
+                        if lcount % 1000 == 0:
+                            sys.stdout.write(".")
+
+                if verbose:
+                    sys.stdout.write("\n")
+                    print "Parsed {0} lines.".format(lcount)
+            else:
+                v_print("Custom generator function, no database to regenerate.")
+
+        return None
+
+    def __getitem__(self,key):
+        if self.generator != None:
+            #try and read a key from the custom generator
+            return self.generator[key]
+        else:
+            #read key from database
+            return self.db[key]
+
+    def close(self):
+        self.db.close()
         return None
 
 
