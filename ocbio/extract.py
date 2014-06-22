@@ -10,6 +10,7 @@ import re
 import sys
 import pickle
 import geneontology
+import pdb
 
 def verbosecheck(verbose):
     '''returns a function depending on the state of the verbose flag'''
@@ -66,7 +67,7 @@ class FeatureVectorAssembler():
                 if "script" in d["options"].keys():
                     d["options"]["script"] = os.path.join(self.sourcetabdir,
                                                           d["options"]["script"])
-                # parse protindexes and validexes:
+                # parse protindexes and valindexes:
                 if "protindexes" in d["options"].keys():
                     d["options"]["protindexes"] = tuple(int(v) for v in re.findall("[0-9]+", d["options"]["protindexes"]))
                 if "valindexes" in d["options"].keys():
@@ -108,30 +109,39 @@ class FeatureVectorAssembler():
         pairs = map(lambda l: frozenset(l), csv.reader(open(pairfile), delimiter="\t"))
         # open the file to put the feature vector in
         c = csv.writer(open(outputfile, "w"), delimiter=delim)
-        # open all the databases and put them in a dictionary
-        dbdict = {}
-
-        v_print("Opening databases:")
-        for parser in self.parserinitlist:
-            dbdict[parser["output path"]] = openpairshelf(parser["output path"])
-            v_print("\t {0} open".format(parser["output path"]))
 
         v_print("Checking feature sizes:")
         # check size of feature in each file
         # will be important later
         featuresizes = {}
-        for parser in self.parserinitlist:
-            k = dbdict[parser["output path"]].keys()[0]
-            featuresizes[parser["output path"]] = len(dbdict[parser["output path"]][k])
-            v_print("\t Database {0} contains features of size {1}.".format(parser["output path"],
-                                                                            featuresizes[parser["output path"]]))
+        for parser, i in zip(self.parserlist, range(len(self.parserlist))):
+            #try to get an example feature
+            examplefeature = None
+            for pair in pairs:
+                try:
+                    examplefeature = parser[pair]
+                except KeyError:
+                    #keep trying
+                    pass
+                #if examplefeature != None:
+                #    break
+            #check we actually got an example feature
+            if examplefeature == None:
+                # should probably not include a feature that's going to be all missing values
+                del self.parserlist[i]
+                v_print("\t Feature from {0} does not map to these protein pairs.".format(parser.datadir))
+            else:
+                #then we've got a feature so we should see what size it is
+                featuresizes[parser.datadir] = len(examplefeature)
+                v_print("\t Data source {0} produces features of size {1}.".format(parser.datadir,
+                                                                            featuresizes[parser.datadir]))
         if verbose:
             sys.stdout.write("Writing feature vectors")
             lcount = 0
             # counters for each database reporting numbers of missing values
             mcount = {}
-            for parser in self.parserinitlist:
-                mcount[parser["output path"]] = 0
+            for parser in self.parserlist:
+                mcount[parser.datadir] = 0
         # then iterate through the pairs, querying all parser databases and building a list of rows
         rows = []
         for pair in pairs:
@@ -141,31 +151,35 @@ class FeatureVectorAssembler():
                 if len(lpair) == 1:
                     lpair = lpair * 2
                 row = row + lpair
-            for parser in self.parserinitlist:
+            for parser in self.parserlist:
                 # if there are features there then append them to the row
                 try:
-                    row = row + dbdict[parser["output path"]][pair]
+                    row = row + parser[pair]
                 except KeyError:
-                    row = row + [missinglabel] * featuresizes[parser["output path"]]
+                    row = row + [missinglabel] * featuresizes[parser.datadir]
                     if verbose:
-                        mcount[parser["output path"]] += 1
+                        mcount[parser.datadir] += 1
             c.writerow(row)
             if verbose:
                 lcount = lcount+1
-                if lcount % 1000 == 0:
+                if lcount % 10000 == 0:
                     sys.stdout.write(".")
         if verbose:
             sys.stdout.write("\n")
             print "Wrote {0} vectors.".format(lcount)
-            for parser in self.parserinitlist:
-                percentage_match = 100.0 - 100.0 * mcount[parser["output path"]] / lcount
-                print "Matched {0:.2f} % of protein pairs in {1} to {2}".format(percentage_match,
+            for parser in self.parserlist:
+                percentage_match = 100.0 - 100.0 * mcount[parser.datadir] / lcount
+                print "Matched {0:.2f} % of protein pairs in {1} to features from {2}".format(percentage_match,
                                                                                 pairfile,
-                                                                                parser["output path"])
-        # close all the databases
-        for parser in self.parserinitlist:
-            dbdict[parser["output path"]].close()
+                                                                                parser.datadir)
+        return None
 
+    def close(self, verbose=False):
+        v_print = verbosecheck(verbose)
+        for parser in self.parserlist:
+            if parser.db != None:
+                parser.close()
+                v_print("{0} closed".format(parser.outdir))
         return None
 
 
@@ -234,8 +248,10 @@ class ProteinPairParser():
             f = open(generator)
             self.generator = pickle.load(f)
             f.close()
+            self.db = None
         else:
-            self.generator == None
+            #otherwise open the database that is assumed to exist 
+            self.generator = None
             self.db = openpairshelf(self.outdir)
         return None
 
@@ -243,7 +259,7 @@ class ProteinPairParser():
         '''Regenerate the pair file from the data source
         if the data source is newer than the pair file'''
         v_print = verbosecheck(verbose)
-        if self.generator != None:
+        if self.generator == None:
             # so first check the ages of both files
             datamtime = os.stat(self.datadir)[-2]
             if os.path.isfile(self.outdir):
@@ -268,9 +284,6 @@ class ProteinPairParser():
                     retcode = subprocess.call("python2 {0}".format(self.script), shell=True)
 
                     v_print("Script returned: {0}".format(retcode))
-                # first delete out of date file, if it's there
-                if os.path.isfile(self.outdir):
-                    os.remove(self.outdir)
                 # open the data file
                 c = csv.reader(open(self.datadir), delimiter=self.csvdelim)
                 # if the header should be ignored then ignore it
@@ -303,8 +316,8 @@ class ProteinPairParser():
                 if verbose:
                     sys.stdout.write("\n")
                     print "Parsed {0} lines.".format(lcount)
-            else:
-                v_print("Custom generator function, no database to regenerate.")
+        else:
+            v_print("Custom generator function, no database to regenerate.")
 
         return None
 
