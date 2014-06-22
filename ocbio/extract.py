@@ -8,6 +8,19 @@ import shelve
 import re
 import sys
 
+def verbosecheck(verbose):
+    '''returns a function depending on the state of the verbose flag'''
+    if verbose:
+        def v_print(*args):
+            '''declare v_print function that prints to stdout
+            if verbose flag is on'''
+            for argument in args:
+                print argument,
+                print
+    else:
+        def v_print(*args):
+            None
+    return v_print
 
 class FeatureVectorAssembler():
     '''Assembles feature vectors from protein pair files, data source lists
@@ -18,16 +31,7 @@ class FeatureVectorAssembler():
         # store the directory of the table and it's name
         self.sourcetabdir, self.tabfile = os.path.split(sourcetab)
 
-        if verbose:
-            def v_print(*args):
-                '''declare v_print function that prints to stdout
-                if verbose flag is on'''
-                for argument in args:
-                    print argument,
-                    print
-        else:
-            def v_print(*args):
-                None
+        v_print = verbosecheck(verbose)
 
         v_print("Using {0} from top data directory {1}.".format(self.sourcetabdir,
                                                                 self.tabfile))
@@ -83,6 +87,7 @@ class FeatureVectorAssembler():
     def regenerate(self, force=False, verbose=False):
         '''Calls all known protein parsers and gets them to regenerate their
         output, if they have to.'''
+        v_print = verbosecheck(verbose)
         v_print("Regenerating parsers:")
         for parser in self.parserlist:
             v_print("\t parser {0}".format(self.parserlist.index(parser)))
@@ -94,6 +99,7 @@ class FeatureVectorAssembler():
         '''Assembles a file of feature vectors for each protein pair in a
         protein pair file supplied.
         Assumes the pairfile is tab delimited.'''
+        v_print = verbosecheck(verbose)
         v_print("Reading pairfile: {0}".format(pairfile))
         # first parse the pairfile into a list of frozensets
         pairs = map(lambda l: frozenset(l), csv.reader(open(pairfile), delimiter="\t"))
@@ -224,6 +230,7 @@ class ProteinPairParser():
     def regenerate(self, force=False, verbose=False):
         '''Regenerate the pair file from the data source
         if the data source is newer than the pair file'''
+        v_print = verbosecheck(verbose)
         # so first check the ages of both files
         datamtime = os.stat(self.datadir)[-2]
         if os.path.isfile(self.outdir):
