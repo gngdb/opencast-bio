@@ -10,7 +10,8 @@ import re
 import sys
 import pickle
 import geneontology
-import pdb
+#import pdb
+import time
 
 def verbosecheck(verbose):
     '''returns a function depending on the state of the verbose flag'''
@@ -84,6 +85,7 @@ class FeatureVectorAssembler():
         for parser in self.parserinitlist:
             self.parserlist.append(ProteinPairParser(parser["data path"],
                                                      parser["output path"],
+                                                     verbose=verbose,
                                                      **parser["options"]))
         v_print("Finished Initialisation.")
         return None
@@ -232,7 +234,9 @@ class ProteinPairParser():
                  script=None,
                  csvdelim="\t",
                  ignoreheader=0,
-                 generator=False):
+                 generator=False,
+                 verbose=False):
+        v_print = verbosecheck(verbose)
         # first, store the initialisation
         self.datadir = datadir
         self.outdir = outdir
@@ -253,6 +257,11 @@ class ProteinPairParser():
             #otherwise open the database that is assumed to exist 
             self.generator = None
             self.db = openpairshelf(self.outdir)
+            #check if this is a new database
+            try:
+                v_print("Database {0} last updated {1}".format(self.outdir,time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.db["last written"]))))
+            except KeyError:
+                v_print("Database {0} may be empty, must be updated, please run regenerate.".format(self.outdir))
         return None
 
     def regenerate(self, force=False, verbose=False):
@@ -260,19 +269,20 @@ class ProteinPairParser():
         if the data source is newer than the pair file'''
         v_print = verbosecheck(verbose)
         if self.generator == None:
-            # so first check the ages of both files
+            # so first check the age of the data file
             datamtime = os.stat(self.datadir)[-2]
-            if os.path.isfile(self.outdir):
-                pairmtime = os.stat(self.outdir)[-2]
-            else:
-                # bit of a hack
-                pairmtime = 0
-            # if the data modification time is greater than output modification time
-            if datamtime > pairmtime or force is True:
+            # check if the database file has ever been written to before
+            try:
+                v_print("Database {0} last updated {1}".format(self.outdir,time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.db["last written"]))))
+            except KeyError:
+                #if not make sure it goes through the next if statement
+                self.db["last written"] = 0
+            # if the data modification time is greater than last time we wrote to the database
+            if datamtime > self.db["last written"] or force is True:
                 # now regenerate the data file according to the options defined above:
-                if verbose and datamtime > pairmtime:
-                    if pairmtime == 0:
-                        print "Database file not found, regenerating at {0} from {1}.".format(self.outdir, self.datadir)
+                if verbose and datamtime > self.db["last written"]:
+                    if self.db["last written"] == 0:
+                        print "Database file may be empty, regenerating at {0} from {1}.".format(self.outdir, self.datadir)
                     else:
                         print "Data file {0} is newer than processed database {1}, regenerating.".format(self.datadir, self.outdir)
                 if verbose and force:
@@ -316,9 +326,10 @@ class ProteinPairParser():
                 if verbose:
                     sys.stdout.write("\n")
                     print "Parsed {0} lines.".format(lcount)
+                    # add the current time to the database "last written" entry:
+                    self.db["last written"] = time.time()
         else:
             v_print("Custom generator function, no database to regenerate.")
-
         return None
 
     def __getitem__(self,key):
