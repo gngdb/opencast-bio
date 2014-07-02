@@ -12,6 +12,7 @@ import pickle
 import geneontology
 #import pdb
 import time
+import ents
 
 def verbosecheck(verbose):
     '''returns a function depending on the state of the verbose flag'''
@@ -203,7 +204,7 @@ class ProteinPairDB(shelve.DbfilenameShelf):
         key = list(key)
         if len(key) == 1:
             key1 = key[0] * 2
-            key1 = key[0] * 2
+            key2 = key[0] * 2
         else:
             key1 = key[0] + "\t" + key[1]
             key2 = key[1] + "\t" + key[0]
