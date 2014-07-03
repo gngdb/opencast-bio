@@ -131,9 +131,19 @@ class ENTSfeatures():
         if len(pair) == 1:
             pair = pair*2
         #convert both to ensembl
-        protein1 = self.entreztoensembl[pair[0]]
-        protein2 = self.entreztoensembl[pair[1]]
-        #retreive the feature vector
+        for p in self.entreztoensembl[pair[0]]:
+            if p in self.proteins:
+                protein1 = p
+                break
+            else:
+                raise KeyError("Unknown protein")
+        for p in self.entreztoensembl[pair[1]]:
+            if p in self.proteins:
+                protein2 = p
+                break
+            else:
+                raise KeyError("Unknown protein")
+        #retrieve the feature vector
         fvector = self.getfeaturevector(protein1,protein2)
         if fvector == None:
             raise KeyError("No feature vector found for pair {0}".format(pair))
