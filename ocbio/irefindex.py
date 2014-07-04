@@ -1,7 +1,7 @@
 # class for storing dictionary of feature vectors from iRefIndex
 # will also ensure that zeroed vectors are returned where there is no evidence
 
-class features()
+class features():
     def __init__(self,featuredict):
         self.featuredict = featuredict
         return None
