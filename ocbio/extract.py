@@ -13,6 +13,8 @@ import geneontology
 #import pdb
 import time
 import ents
+import string
+import irefindex
 
 def verbosecheck(verbose):
     '''returns a function depending on the state of the verbose flag'''
