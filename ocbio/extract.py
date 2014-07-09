@@ -13,7 +13,7 @@ import geneontology
 #import pdb
 import time
 import ents
-import string
+import ppipred
 import irefindex
 
 def verbosecheck(verbose):
