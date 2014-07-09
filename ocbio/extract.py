@@ -238,7 +238,8 @@ class ProteinPairParser():
                  csvdelim="\t",
                  ignoreheader=0,
                  generator=False,
-                 verbose=False):
+                 verbose=False,
+                 zeromissing=0):
         v_print = verbosecheck(verbose)
         # first, store the initialisation
         self.datadir = datadir
@@ -250,6 +251,7 @@ class ProteinPairParser():
         self.script = script
         self.csvdelim = csvdelim
         self.ignoreheader = ignoreheader
+        self.zeromissing = zeromissing
         if generator:
             #then open up this pickle file
             f = open(generator)
@@ -341,6 +343,15 @@ class ProteinPairParser():
             return self.generator[key]
         else:
             #read key from database
+            try:
+                return self.db[key]
+            except KeyError:
+                #catch the key error and check if this should be zeroed.
+                if self.zeromissing == '1':
+                    featurelen = len(self.valindexes)
+                    return [0]*featurelen
+                else:
+                    raise KeyError
             return self.db[key]
 
     def close(self):
