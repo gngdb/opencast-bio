@@ -4,13 +4,16 @@
 # pending link
 
 class features():
-    def __init__(self,featuredict):
+    def __init__(self,featuredict,featurelen):
+        """ A class to store a dictionary mapping to the predictions
+        of another PPI prediction engine"""
         self.featuredict = featuredict
+        self.featurelen = featurelen
         return None
 
     def __getitem__(self,key):
         try:
             return self.featuredict[key]
         except KeyError:
-            return ["0"]*8
+            return ["0"]*self.featurelen
         # if you can't find an entry in the dictionary return a zeroed vector
