@@ -125,11 +125,11 @@ class FeatureVectorAssembler():
             for pair in pairs:
                 try:
                     examplefeature = parser[pair]
+                    #if we got a feature then break
+                    break
                 except KeyError:
                     #keep trying
                     pass
-                #if examplefeature != None:
-                #    break
             #check we actually got an example feature
             if examplefeature == None:
                 # should probably not include a feature that's going to be all missing values
