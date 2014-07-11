@@ -1,1 +1,1 @@
-pdflatex main.tex --output-directory out/
+pdflatex -output-directory out/ main.tex 

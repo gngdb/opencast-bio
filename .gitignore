@@ -52,3 +52,9 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Don't version control output thesis files
+report/out/
+
+# ignore files that aren't mine
+report/infthesis.cls
+report/eushield.sty
