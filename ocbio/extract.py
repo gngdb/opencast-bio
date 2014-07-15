@@ -239,7 +239,8 @@ class ProteinPairParser():
                  ignoreheader=0,
                  generator=False,
                  verbose=False,
-                 zeromissing=0):
+                 zeromissing=0,
+                 zermomissinginternal=0):
         v_print = verbosecheck(verbose)
         # first, store the initialisation
         self.datadir = datadir
@@ -252,6 +253,7 @@ class ProteinPairParser():
         self.csvdelim = csvdelim
         self.ignoreheader = ignoreheader
         self.zeromissing = zeromissing
+        self.zeromissinginternal = zeromissinginternal
         if generator:
             #then open up this pickle file
             f = open(generator)
@@ -267,6 +269,8 @@ class ProteinPairParser():
                 v_print("Database {0} last updated {1}".format(self.outdir,time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(self.db["last written"]))))
             except KeyError:
                 v_print("Database {0} may be empty, must be updated, please run regenerate.".format(self.outdir))
+            #get a list of the proteins in the keys of the database
+            self.proteins = set([x for y in self.db.keys() for x in y])
         return None
 
     def regenerate(self, force=False, verbose=False):
@@ -350,6 +354,11 @@ class ProteinPairParser():
                 if self.zeromissing == '1':
                     featurelen = len(self.valindexes)
                     return [0]*featurelen
+                elif self.zeromissinginternal == '1':
+                    pair = list(key)
+                    if pair[0] in self.proteins and pair[1] in self.proteins:
+                        featurelen = len(self.valindexes)
+                        return [0]*featurelen
                 else:
                     raise KeyError
             return self.db[key]
