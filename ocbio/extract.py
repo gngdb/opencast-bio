@@ -90,6 +90,8 @@ class FeatureVectorAssembler():
                                                      parser["output path"],
                                                      verbose=verbose,
                                                      **parser["options"]))
+        # have to initialise mcount here
+        self.mcount = None
         v_print("Finished Initialisation.")
         return None
 
@@ -103,18 +105,10 @@ class FeatureVectorAssembler():
             parser.regenerate(force, verbose)
         return None
 
-    def assemble(self, pairfile, outputfile, pairlabels=False, delim="\t",
-                 missinglabel="missing", verbose=False):
-        '''Assembles a file of feature vectors for each protein pair in a
-        protein pair file supplied.
-        Assumes the pairfile is tab delimited.'''
-        v_print = verbosecheck(verbose)
-        v_print("Reading pairfile: {0}".format(pairfile))
-        # first parse the pairfile into a list of frozensets
-        pairs = map(lambda l: frozenset(l), csv.reader(open(pairfile), delimiter="\t"))
-        # open the file to put the feature vector in
-        c = csv.writer(open(outputfile, "w"), delimiter=delim)
-
+    def checkfeaturesizes(self,verbose=False):
+        """Check the length of each feature so that missing values can be 
+        padded to the correct length."""
+        v_print = verbosecheck(verbose) 
         v_print("Checking feature sizes:")
         # check size of feature in each file
         # will be important later
@@ -140,30 +134,36 @@ class FeatureVectorAssembler():
                 featuresizes[parser.datadir] = len(examplefeature)
                 v_print("\t Data source {0} produces features of size {1}.".format(parser.datadir,
                                                                             featuresizes[parser.datadir]))
+        return featuresizes
+
+
+    def assemble(self, pairfile, outputfile, pairlabels=False, delim="\t",
+                 missinglabel="missing", verbose=False):
+        '''Assembles a file of feature vectors for each protein pair in a
+        protein pair file supplied.
+        Assumes the pairfile is tab delimited.'''
+        v_print = verbosecheck(verbose)
+        v_print("Reading pairfile: {0}".format(pairfile))
+        # first parse the pairfile into a list of frozensets
+        pairs = map(lambda l: frozenset(l), csv.reader(open(pairfile), delimiter="\t"))
+        # open the file to put the feature vector in
+        c = csv.writer(open(outputfile, "w"), delimiter=delim)
+
+        # checking feature sizes
+        featuresizes = self.checkfeaturesizes(verbose=verbose)
+
         if verbose:
             sys.stdout.write("Writing feature vectors")
             lcount = 0
             # counters for each database reporting numbers of missing values
-            mcount = {}
+            self.mcount = {}
             for parser in self.parserlist:
-                mcount[parser.datadir] = 0
+                self.mcount[parser.datadir] = 0
+        
         # then iterate through the pairs, querying all parser databases and building a list of rows
         rows = []
         for pair in pairs:
-            row = []
-            if pairlabels is True:
-                lpair = list(pair)
-                if len(lpair) == 1:
-                    lpair = lpair * 2
-                row = row + lpair
-            for parser in self.parserlist:
-                # if there are features there then append them to the row
-                try:
-                    row = row + parser[pair]
-                except KeyError:
-                    row = row + [missinglabel] * featuresizes[parser.datadir]
-                    if verbose:
-                        mcount[parser.datadir] += 1
+            row = self.getfeaturevector(pair,pairlabels=pairlabels,missinglabel=missinglabel)           
             c.writerow(row)
             if verbose:
                 lcount = lcount+1
@@ -173,11 +173,29 @@ class FeatureVectorAssembler():
             sys.stdout.write("\n")
             print "Wrote {0} vectors.".format(lcount)
             for parser in self.parserlist:
-                percentage_match = 100.0 - 100.0 * mcount[parser.datadir] / lcount
+                percentage_match = 100.0 - 100.0 * self.mcount[parser.datadir] / lcount
                 print "Matched {0:.2f} % of protein pairs in {1} to features from {2}".format(percentage_match,
                                                                                 pairfile,
                                                                                 parser.datadir)
         return None
+
+    def getfeaturevector(self,pair,pairlabels=False,missinglabel="missing",mcount=None):
+        """Produces a single feature vector to be written to a file in the assemble method."""
+        row = []
+        if pairlabels is True:
+            lpair = list(pair)
+            if len(lpair) == 1:
+                lpair = lpair * 2
+            row = row + lpair
+        for parser in self.parserlist:
+            # if there are features there then append them to the row
+            try:
+                row = row + parser[pair]
+            except KeyError:
+                row = row + [missinglabel] * featuresizes[parser.datadir]
+                if self.mcount:
+                    self.mcount[parser.datadir] += 1
+        return row
 
     def close(self, verbose=False):
         v_print = verbosecheck(verbose)
@@ -240,7 +258,9 @@ class ProteinPairParser():
                  generator=False,
                  verbose=False,
                  zeromissing=0,
-                 zermomissinginternal=0):
+                 zeromissinginternal=0,
+                 interpolator=False,
+                 interpolatordata=False):
         v_print = verbosecheck(verbose)
         # first, store the initialisation
         self.datadir = datadir
@@ -271,6 +291,13 @@ class ProteinPairParser():
                 v_print("Database {0} may be empty, must be updated, please run regenerate.".format(self.outdir))
             #get a list of the proteins in the keys of the database
             self.proteins = set([x for y in self.db.keys() for x in y])
+        if interpolator:
+            #load it
+            f = open(interpolator)
+            self.interpolator = pickle.load(f)
+            f.close()
+            #and then try to load its data
+            self.interpolatordata = FeatureVectorAssembler(interpolatordata)
         return None
 
     def regenerate(self, force=False, verbose=False):
@@ -359,6 +386,13 @@ class ProteinPairParser():
                     if pair[0] in self.proteins and pair[1] in self.proteins:
                         featurelen = len(self.valindexes)
                         return [0]*featurelen
+                elif self.interpolator != False:
+                    #try to interpolate the point
+                    #using a feature vector generated for this point
+                    #using this interpolator's own assembler
+                    fvector = self.interpolatordata.getfeaturevector(key)
+                    #use the regressor on this new vector
+                    
                 else:
                     raise KeyError
             return self.db[key]
