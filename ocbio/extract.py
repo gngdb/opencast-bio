@@ -105,7 +105,7 @@ class FeatureVectorAssembler():
             parser.regenerate(force, verbose)
         return None
 
-    def checkfeaturesizes(self,verbose=False):
+    def checkfeaturesizes(self,pairs,verbose=False):
         """Check the length of each feature so that missing values can be 
         padded to the correct length."""
         v_print = verbosecheck(verbose) 
@@ -150,7 +150,7 @@ class FeatureVectorAssembler():
         c = csv.writer(open(outputfile, "w"), delimiter=delim)
 
         # checking feature sizes
-        featuresizes = self.checkfeaturesizes(verbose=verbose)
+        featuresizes = self.checkfeaturesizes(pairs,verbose=verbose)
 
         if verbose:
             sys.stdout.write("Writing feature vectors")
@@ -391,8 +391,9 @@ class ProteinPairParser():
                     #using a feature vector generated for this point
                     #using this interpolator's own assembler
                     fvector = self.interpolatordata.getfeaturevector(key)
+                    fvector = map(float,fvector)
                     #use the regressor on this new vector
-                    
+                    self.interpolator.predict(fvector)
                 else:
                     raise KeyError
             return self.db[key]
