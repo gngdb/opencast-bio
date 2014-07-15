@@ -124,6 +124,19 @@ class ENTSfeatures():
             #########################################
         return [domain_dict[k] for k in self.domain_cols]
 
+    def highestdomineconf1ofk(self,fvector):
+        """Replaces string encoding of highest_domine_conf
+        with 1-of-k encoding"""
+        if fvector[7] == '0':
+            fvector = fvector[:7] + [1,0,0,0] + fvector[8:]
+        elif fvector[7] == 'LC':
+            fvector = fvector[:7] + [0,1,0,0] + fvector[8:]
+        elif fvector[7] == 'MC':
+            fvector = fvector[:7] + [0,0,1,0] + fvector[8:]
+        elif fvector[7] == 'HC':
+            fvector = fvector[:7] + [0,0,0,1] + fvector[8:]
+        return fvector
+
     def __getitem__(self,key):
         """Where key is a protein pair, returns a feature vector"""
         #the pair should be a frozenset of Entrez IDs
@@ -147,4 +160,8 @@ class ENTSfeatures():
         fvector = self.getfeaturevector(protein1,protein2)
         if fvector == None:
             raise KeyError("No feature vector found for pair {0}".format(pair))
+        #transform feature vector
+        # fix string encoding of highest_domine_conf
+        fvector = self.highestdomineconf1ofk(fvector)
+
         return fvector
