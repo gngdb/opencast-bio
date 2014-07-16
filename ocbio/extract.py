@@ -163,7 +163,7 @@ class FeatureVectorAssembler():
         # then iterate through the pairs, querying all parser databases and building a list of rows
         rows = []
         for pair in pairs:
-            row = self.getfeaturevector(pair,pairlabels=pairlabels,missinglabel=missinglabel)           
+            row = self.getfeaturevector(pair,featuresizes,pairlabels=pairlabels,missinglabel=missinglabel) 
             c.writerow(row)
             if verbose:
                 lcount = lcount+1
@@ -179,7 +179,7 @@ class FeatureVectorAssembler():
                                                                                 parser.datadir)
         return None
 
-    def getfeaturevector(self,pair,pairlabels=False,missinglabel="missing",mcount=None):
+    def getfeaturevector(self,pair,featuresizes,pairlabels=False,missinglabel="missing",mcount=None):
         """Produces a single feature vector to be written to a file in the assemble method."""
         row = []
         if pairlabels is True:
