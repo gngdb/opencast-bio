@@ -389,6 +389,8 @@ class ProteinPairParser():
                     return [0]*featurelen
                 elif self.zeromissinginternal == '1':
                     pair = list(key)
+                    if len(pair) == 1:
+                        pair = pair*2
                     if pair[0] in self.proteins and pair[1] in self.proteins:
                         featurelen = len(self.valindexes)
                         return [0]*featurelen
