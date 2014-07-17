@@ -260,7 +260,8 @@ class ProteinPairParser():
                  zeromissing=0,
                  zeromissinginternal=0,
                  interpolator=False,
-                 interpolatordata=False):
+                 interpolatordata=False,
+                 fillmissing=False):
         v_print = verbosecheck(verbose)
         # first, store the initialisation
         self.datadir = datadir
@@ -298,6 +299,11 @@ class ProteinPairParser():
             f.close()
             #and then try to load its data
             self.interpolatordata = FeatureVectorAssembler(interpolatordata)
+        if fillmissing:
+            #load it
+            f = open(fillmissing)
+            self.fillmissing = pickle.load(f)
+            f.close()
         return None
 
     def regenerate(self, force=False, verbose=False):
@@ -394,8 +400,13 @@ class ProteinPairParser():
                     fvector = map(float,fvector)
                     #use the regressor on this new vector
                     self.interpolator.predict(fvector)
+
+                if self.fillmissing != False:
+                    #a pickled list to fill any missing values with
+                    return self.fillmissing
                 else:
                     raise KeyError
+
             return self.db[key]
 
     def close(self):
