@@ -304,6 +304,8 @@ class ProteinPairParser():
             f = open(fillmissing)
             self.fillmissing = pickle.load(f)
             f.close()
+        else:
+            self.fillmissing = False
         return None
 
     def regenerate(self, force=False, verbose=False):
