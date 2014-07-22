@@ -13,14 +13,14 @@ def persist_cv_splits(X, y, name=None, n_cv_iter=5, suffix=u"_cv_%03d.pkl",
                       folder=u'.'):
     u"""Materialize randomized train test splits of a dataset."""
     from sklearn.externals import joblib
-    from sklearn.cross_validation import ShuffleSplit
+    from sklearn.cross_validation import StratifiedShuffleSplit
     import os
     import uuid
 
     if name is None:
         name = uuid.uuid4().get_hex()
 
-    cv = ShuffleSplit(X.shape[0], n_iter=n_cv_iter,
+    cv = StratifiedShuffleSplit(X.shape[0], n_iter=n_cv_iter,
         test_size=test_size, random_state=random_state)
     cv_split_filenames = []
 
