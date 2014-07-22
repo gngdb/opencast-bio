@@ -58,3 +58,6 @@ report/out/
 # ignore files that aren't mine
 report/infthesis.cls
 report/eushield.sty
+
+# ignore backup files
+*.bak
