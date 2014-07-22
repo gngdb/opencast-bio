@@ -1,21 +1,41 @@
-\documentclass{infthesis}
+\documentclass[mscres,ianc]{infthesis}
 
 \usepackage{lipsum}
+%alis autocite to cite once biblatex is loaded
 
 \title{Title Pending}
 
 \author{Gavin Gray}
 
+\abstract{
+%Abstract goes here.
+\lipsum[1-2]}
+
 \begin{document}
 
 \maketitle
 
+%structured based on guidelines to begin with
+%source: http://www.inf.ed.ac.uk/teaching/courses/diss/diss.marking.guidelines.html
+%
+%info on submission here: http://www.inf.ed.ac.uk/teaching/courses/diss/thesis_instructions.html
+
+\tableofcontents
+
 \include{introduction}
+
+\include{background}
 
 \include{methods}
 
 \include{results}
 
 \include{conclusion}
+
+%appendix go here
+\include{appendix}
+
+%MIT license for code (and report?)
+%should probably go here
 
 \end{document}
