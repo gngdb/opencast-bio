@@ -20,7 +20,7 @@ def persist_cv_splits(X, y, name=None, n_cv_iter=5, suffix=u"_cv_%03d.pkl",
     if name is None:
         name = uuid.uuid4().get_hex()
 
-    cv = StratifiedShuffleSplit(y, n_iter=n_cv_iter, train_size=train_size
+    cv = StratifiedShuffleSplit(y, n_iter=n_cv_iter, train_size=train_size,
         test_size=test_size, random_state=random_state)
     cv_split_filenames = []
 
