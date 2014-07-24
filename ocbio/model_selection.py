@@ -77,7 +77,7 @@ Evaluation = namedtuple(u'Evaluation', (
     u'parameters'))
 
 
-class RandomizedGridSeach(object):
+class RandomizedGridSearch(object):
     u""""Async Randomized Parameter search."""
 
     def __init__(self, load_balanced_view, random_state=0):
@@ -126,7 +126,7 @@ class RandomizedGridSeach(object):
         # Abort any other previously scheduled tasks
         self.abort()
 
-        # Schedule a new batch of evalutation tasks
+        # Schedule a new batch of evaluation tasks
         self.task_groups, self.all_parameters = [], []
 
         # Collect temporary files:
@@ -248,3 +248,104 @@ class RandomizedGridSeach(object):
             pl.xticks(np.arange(len(param_values)) + 1, param_values)
             pl.xlabel(param_name)
             pl.ylabel(u"Val. Score")
+
+class LearningCurve(RandomizedGridSearch):
+    u"""Async Learning Curve processing and plotting."""
+    def launch_for_splits(self, model, cv_split_dict, params=None,
+        pre_warm=True, collect_files_on_reset=False,scoring_method='accuracy'):
+        u"""Launch a Grid Search on precomputed CV splits."""
+
+        # Abort any existing processing and erase previous state
+        self.reset()
+
+        # Mark the files for garbage collection
+        if collect_files_on_reset:
+            self._temp_files.extend(cv_split_filenames)
+
+        # Warm the OS disk cache on each host with sequential reads instead
+        # of having concurrent evaluation tasks compete for the the same host
+        # disk resources later.
+        if pre_warm:
+            warm_mmap_on_cv_splits(self.lb_view.client, cv_split_filenames)
+
+        task_group = []
+        self.task_dict = {}
+        
+        for train_size in cv_split_dict.keys():
+            task_dict[train_size] = []
+            for cv_split_filenames in cv_split_dict[train_size]:
+                for cv_split_filename in cv_split_filenames:
+                    task = self.lb_view.apply(compute_evaluation,
+                        model, cv_split_filename, params=params, scoring_method=scoring_method)
+                    task_group.append(task)
+                    self.task_dict[train_size].append(task)
+
+                self.task_groups.append(task_group)
+
+        # Make it possible to chain method calls
+        return self
+
+    def launch_for_arrays(self, model, X, y, train_sizes, n_cv_iter=5, params=None,
+                          test_ratio=0.25, pre_warm=True, folder=u".", name=None,
+                          random_state=None):
+        cv_split_dict = {}
+        for train_size in trainsizes:
+                test_size = int(test_ratio*train_size)
+                name = "{0}_{1}".format(name,train_size)
+                cv_split_dict[train_size] = persist_cv_splits(
+                    X, y, n_cv_iter=n_cv_iter, train_size=train_size, test_size=test_size,
+                    name=name, folder=folder, random_state=random_state)
+                
+        return self.launch_for_splits(model, cv_split_dict,
+             pre_warm=pre_warm, params=params, collect_files_on_reset=True)
+
+    def report(self):
+        output = u"Progress: {0:02d}% ({1:03d}/{2:03d})\n".format(
+            int(100 * self.progress()), self.completed(), self.total())
+        return output
+
+    def plot_curve(self):
+        u"""Plot the resulting learning curve."""
+        import pylab as pl
+        mean_scores = {}
+        for train_size in self.task_dict.keys():
+            task_group = self.task_dict[train_size]
+            evaluations = [Evaluation(*t.get())
+                           for t in task_group
+                           if t.ready() and not is_aborted(t)]
+            if len(evaluations) == 0:
+                continue
+            train_scores = [e.train_score for e in evaluations]
+            test_scores = [e.test_score for e in evaluations]
+            mean_scores[train_size] = (np.mean(train_scores), sem(train_scores),
+                                    np.mean(test_scores), sem(test_scores))
+        # now the mean_scores dictionary contains everything required to build the plot
+        trainsizes = sorted(self.task_dict.keys())
+        mean_train = [mean_scores[train_size][0] for train_size in train_sizes]
+        mean_test = [mean_scores[train_size][2] for train_size in train_sizes]
+        train_confidence = [mean_scores[train_size][1]*2 for train_size in train_sizes]
+        test_confidence = [mean_scores[train_size][3]*2 for train_size in train_sizes]
+
+        #plot the training scores
+        pl.figure()
+        pl.fill_between(trainsizes, mean_train - train_confidence, mean_train + train_confidence,
+                    color = 'b', alpha = .2)
+        pl.plot(trainsizes, mean_train, 'o-k', c='b', label='Train score')
+
+        #plot the test scores
+        pl.figure()
+        pl.fill_between(trainsizes, mean_test - test_confidence, mean_test + test_confidence,
+                    color = 'b', alpha = .2)
+        pl.plot(trainsizes, mean_test, 'o-k', c='b', label='Train score')
+
+        #extra annotation
+        plt.xlabel('Training set size')
+        plt.ylabel('Score')
+        plt.xlim(0, max(trainsizes))
+        plt.ylim((None, 1.0))  # The best possible score is 1.0
+        plt.legend(loc='best')
+        plt.title('Main train and test scores +/- 2 standard errors') 
+
+        #should return the data required to recreate the plot
+        #so that it can be pickled
+        return mean_scores
