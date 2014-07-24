@@ -323,10 +323,10 @@ class LearningCurve(RandomizedGridSearch):
                                     np.mean(test_scores), sem(test_scores))
         # now the mean_scores dictionary contains everything required to build the plot
         trainsizes = sorted(self.task_dict.keys())
-        mean_train = [mean_scores[train_size][0] for train_size in train_sizes]
-        mean_test = [mean_scores[train_size][2] for train_size in train_sizes]
-        train_confidence = [mean_scores[train_size][1]*2 for train_size in train_sizes]
-        test_confidence = [mean_scores[train_size][3]*2 for train_size in train_sizes]
+        mean_train = np.array([mean_scores[train_size][0] for train_size in trainsizes])
+        mean_test = np.array([mean_scores[train_size][2] for train_size in trainsizes])
+        train_confidence = np.array([mean_scores[train_size][1]*2 for train_size in trainsizes])
+        test_confidence = np.array([mean_scores[train_size][3]*2 for train_size in trainsizes])
 
         #plot the training scores
         pl.figure()
@@ -335,18 +335,17 @@ class LearningCurve(RandomizedGridSearch):
         pl.plot(trainsizes, mean_train, 'o-k', c='b', label='Train score')
 
         #plot the test scores
-        pl.figure()
         pl.fill_between(trainsizes, mean_test - test_confidence, mean_test + test_confidence,
-                    color = 'b', alpha = .2)
-        pl.plot(trainsizes, mean_test, 'o-k', c='b', label='Train score')
+                    color = 'g', alpha = .2)
+        pl.plot(trainsizes, mean_test, 'o-k', c='g', label='Test score')
 
         #extra annotation
-        plt.xlabel('Training set size')
-        plt.ylabel('Score')
-        plt.xlim(0, max(trainsizes))
-        plt.ylim((None, 1.0))  # The best possible score is 1.0
-        plt.legend(loc='best')
-        plt.title('Main train and test scores +/- 2 standard errors') 
+        pl.xlabel('Training set size')
+        pl.ylabel('Score')
+        pl.xlim(0, max(trainsizes))
+        pl.ylim((None, 1.0))  # The best possible score is 1.0
+        pl.legend(loc='best')
+        pl.title('Main train and test scores +/- 2 standard errors') 
 
         #should return the data required to recreate the plot
         #so that it can be pickled
