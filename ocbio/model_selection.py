@@ -318,7 +318,7 @@ class LearningCurve(RandomizedGridSearch):
             if len(evaluations) == 0:
                 continue
             train_scores = [e.train_score for e in evaluations]
-            test_scores = [e.test_score for e in evaluations]
+            test_scores = [e.validation_score for e in evaluations]
             mean_scores[train_size] = (np.mean(train_scores), sem(train_scores),
                                     np.mean(test_scores), sem(test_scores))
         # now the mean_scores dictionary contains everything required to build the plot
