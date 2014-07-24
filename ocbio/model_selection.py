@@ -259,7 +259,7 @@ class LearningCurve(RandomizedGridSearch):
         self.reset()
 
         for train_size in cv_split_dict.keys():
-            for cv_split_filenames in cv_split_dict[train_size]:
+            cv_split_filenames = cv_split_dict[train_size]
                 # Mark the files for garbage collection
                 if collect_files_on_reset:
                     self._temp_files.extend(cv_split_filenames)
@@ -297,7 +297,6 @@ class LearningCurve(RandomizedGridSearch):
                 cv_split_dict[train_size] = persist_cv_splits(
                     X, y, n_cv_iter=n_cv_iter, train_size=int(train_size), test_size=test_size,
                     name=name, folder=folder, random_state=random_state)
-                
         return self.launch_for_splits(model, cv_split_dict,
              pre_warm=pre_warm, params=params, collect_files_on_reset=True)
 

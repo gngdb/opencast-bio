@@ -2,6 +2,8 @@ u"""Utilities for Parallel Model Selection with IPython
 
 Author: Olivier Grisel <olivier@ogrisel.com>
 Licensed: Simplified BSD
+Modified by Gavin Gray <s0805516@sms.ed.ac.uk>
+for opencast-bio MRes project
 """
 import os
 from IPython.parallel import interactive
@@ -62,6 +64,5 @@ def warm_mmap_on_cv_splits(client, cv_split_filenames):
             arrays = joblib.load(filename, mmap_mode=u'r')
             for array in arrays:
                 array.sum()  # trigger the disk read
-
     cv_split_filenames = [os.path.abspath(f) for f in cv_split_filenames]
     hosts_view.apply_sync(load_in_memory, cv_split_filenames)
