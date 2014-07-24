@@ -260,29 +260,29 @@ class LearningCurve(RandomizedGridSearch):
 
         for train_size in cv_split_dict.keys():
             cv_split_filenames = cv_split_dict[train_size]
-                # Mark the files for garbage collection
-                if collect_files_on_reset:
-                    self._temp_files.extend(cv_split_filenames)
+            # Mark the files for garbage collection
+            if collect_files_on_reset:
+                self._temp_files.extend(cv_split_filenames)
 
-                # Warm the OS disk cache on each host with sequential reads instead
-                # of having concurrent evaluation tasks compete for the the same host
-                # disk resources later.
-                if pre_warm:
-                    warm_mmap_on_cv_splits(self.lb_view.client, cv_split_filenames)
+            # Warm the OS disk cache on each host with sequential reads instead
+            # of having concurrent evaluation tasks compete for the the same host
+            # disk resources later.
+            if pre_warm:
+                warm_mmap_on_cv_splits(self.lb_view.client, cv_split_filenames)
 
         task_group = []
         self.task_dict = {}
         
         for train_size in cv_split_dict.keys():
             task_dict[train_size] = []
-            for cv_split_filenames in cv_split_dict[train_size]:
-                for cv_split_filename in cv_split_filenames:
-                    task = self.lb_view.apply(compute_evaluation,
-                        model, cv_split_filename, params=params, scoring_method=scoring_method)
-                    task_group.append(task)
-                    self.task_dict[train_size].append(task)
+            cv_split_filenames = cv_split_dict[train_size]:
+            for cv_split_filename in cv_split_filenames:
+                task = self.lb_view.apply(compute_evaluation,
+                    model, cv_split_filename, params=params, scoring_method=scoring_method)
+                task_group.append(task)
+                self.task_dict[train_size].append(task)
 
-                self.task_groups.append(task_group)
+            self.task_groups.append(task_group)
 
         # Make it possible to chain method calls
         return self
