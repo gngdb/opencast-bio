@@ -289,11 +289,11 @@ class LearningCurve(RandomizedGridSearch):
                           test_ratio=0.25, pre_warm=True, folder=u".", name=None,
                           random_state=None):
         cv_split_dict = {}
-        for train_size in trainsizes:
+        for train_size in train_sizes:
                 test_size = int(test_ratio*train_size)
                 name = "{0}_{1}".format(name,train_size)
                 cv_split_dict[train_size] = persist_cv_splits(
-                    X, y, n_cv_iter=n_cv_iter, train_size=train_size, test_size=test_size,
+                    X, y, n_cv_iter=n_cv_iter, train_size=int(train_size), test_size=test_size,
                     name=name, folder=folder, random_state=random_state)
                 
         return self.launch_for_splits(model, cv_split_dict,
