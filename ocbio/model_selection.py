@@ -258,15 +258,17 @@ class LearningCurve(RandomizedGridSearch):
         # Abort any existing processing and erase previous state
         self.reset()
 
-        # Mark the files for garbage collection
-        if collect_files_on_reset:
-            self._temp_files.extend(cv_split_filenames)
+        for train_size in cv_split_dict.keys():
+            for cv_split_filenames in cv_split_dict[train_size]:
+                # Mark the files for garbage collection
+                if collect_files_on_reset:
+                    self._temp_files.extend(cv_split_filenames)
 
-        # Warm the OS disk cache on each host with sequential reads instead
-        # of having concurrent evaluation tasks compete for the the same host
-        # disk resources later.
-        if pre_warm:
-            warm_mmap_on_cv_splits(self.lb_view.client, cv_split_filenames)
+                # Warm the OS disk cache on each host with sequential reads instead
+                # of having concurrent evaluation tasks compete for the the same host
+                # disk resources later.
+                if pre_warm:
+                    warm_mmap_on_cv_splits(self.lb_view.client, cv_split_filenames)
 
         task_group = []
         self.task_dict = {}
