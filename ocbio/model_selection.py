@@ -307,6 +307,7 @@ class LearningCurve(RandomizedGridSearch):
     def plot_curve(self):
         u"""Plot the resulting learning curve."""
         import pylab as pl
+        from scipy.stats import sem
         mean_scores = {}
         for train_size in self.task_dict.keys():
             task_group = self.task_dict[train_size]
