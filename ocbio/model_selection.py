@@ -34,7 +34,7 @@ def is_aborted(task):
 
 @interactive
 def compute_evaluation(model, cv_split_filename, params=None,
-    train_fraction=1.0, mmap_mode=u'r', scoring_method='accuracy'):
+    train_fraction=1.0, mmap_mode=u'r'):
     u"""Function executed on a worker to evaluate a model on a given CV split"""
     # All module imports should be executed in the worker namespace
     from time import time
@@ -58,10 +58,10 @@ def compute_evaluation(model, cv_split_filename, params=None,
     train_time = time() - t0
 
     # Compute score on training set
-    train_score = model.score(X_train, y_train, scoring=scoring_method)
+    train_score = model.score(X_train, y_train)
 
     # Compute score on test set
-    test_score = model.score(X_test, y_test, scoring=scoring_method)
+    test_score = model.score(X_test, y_test)
 
     # Wrap evaluation results in a simple tuple datastructure
     return (test_score, train_score, train_time,
@@ -135,7 +135,7 @@ class RandomizedGridSearch(object):
         del self._temp_files[:]
 
     def launch_for_splits(self, model, parameter_grid, cv_split_filenames,
-        pre_warm=True, collect_files_on_reset=False,scoring_method='accuracy'):
+        pre_warm=True, collect_files_on_reset=False):
         u"""Launch a Grid Search on precomputed CV splits."""
 
         # Abort any existing processing and erase previous state
@@ -162,7 +162,7 @@ class RandomizedGridSearch(object):
 
             for cv_split_filename in cv_split_filenames:
                 task = self.lb_view.apply(compute_evaluation,
-                    model, cv_split_filename, params=params, scoring_method=scoring_method)
+                    model, cv_split_filename, params=params)
                 task_group.append(task)
 
             self.task_groups.append(task_group)
@@ -252,7 +252,7 @@ class RandomizedGridSearch(object):
 class LearningCurve(RandomizedGridSearch):
     u"""Async Learning Curve processing and plotting."""
     def launch_for_splits(self, model, cv_split_dict, params=None,
-        pre_warm=True, collect_files_on_reset=False,scoring_method='accuracy'):
+        pre_warm=True, collect_files_on_reset=False):
         u"""Launch a Grid Search on precomputed CV splits."""
 
         # Abort any existing processing and erase previous state
@@ -274,11 +274,11 @@ class LearningCurve(RandomizedGridSearch):
         self.task_dict = {}
         
         for train_size in cv_split_dict.keys():
-            task_dict[train_size] = []
-            cv_split_filenames = cv_split_dict[train_size]:
+            self.task_dict[train_size] = []
+            cv_split_filenames = cv_split_dict[train_size]
             for cv_split_filename in cv_split_filenames:
                 task = self.lb_view.apply(compute_evaluation,
-                    model, cv_split_filename, params=params, scoring_method=scoring_method)
+                    model, cv_split_filename, params=params)
                 task_group.append(task)
                 self.task_dict[train_size].append(task)
 
