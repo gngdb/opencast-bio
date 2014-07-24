@@ -34,7 +34,7 @@ def is_aborted(task):
 
 @interactive
 def compute_evaluation(model, cv_split_filename, params=None,
-    train_fraction=1.0, mmap_mode=u'r'):
+    train_fraction=1.0, mmap_mode=u'r', scoring_method=scoring_method):
     u"""Function executed on a worker to evaluate a model on a given CV split"""
     # All module imports should be executed in the worker namespace
     from time import time
@@ -135,7 +135,7 @@ class RandomizedGridSeach(object):
         del self._temp_files[:]
 
     def launch_for_splits(self, model, parameter_grid, cv_split_filenames,
-        pre_warm=True, collect_files_on_reset=False):
+        pre_warm=True, collect_files_on_reset=False,scoring_method='accuracy'):
         u"""Launch a Grid Search on precomputed CV splits."""
 
         # Abort any existing processing and erase previous state
@@ -162,7 +162,7 @@ class RandomizedGridSeach(object):
 
             for cv_split_filename in cv_split_filenames:
                 task = self.lb_view.apply(compute_evaluation,
-                    model, cv_split_filename, params=params)
+                    model, cv_split_filename, params=params, scoring_method=scoring_method)
                 task_group.append(task)
 
             self.task_groups.append(task_group)
