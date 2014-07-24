@@ -34,7 +34,7 @@ def is_aborted(task):
 
 @interactive
 def compute_evaluation(model, cv_split_filename, params=None,
-    train_fraction=1.0, mmap_mode=u'r', scoring_method=scoring_method):
+    train_fraction=1.0, mmap_mode=u'r', scoring_method='accuracy'):
     u"""Function executed on a worker to evaluate a model on a given CV split"""
     # All module imports should be executed in the worker namespace
     from time import time
@@ -58,10 +58,10 @@ def compute_evaluation(model, cv_split_filename, params=None,
     train_time = time() - t0
 
     # Compute score on training set
-    train_score = model.score(X_train, y_train)
+    train_score = model.score(X_train, y_train, scoring=scoring_method)
 
     # Compute score on test set
-    test_score = model.score(X_test, y_test)
+    test_score = model.score(X_test, y_test, scoring=scoring_method)
 
     # Wrap evaluation results in a simple tuple datastructure
     return (test_score, train_score, train_time,
