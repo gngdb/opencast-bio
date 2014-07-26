@@ -8,12 +8,6 @@
 
 \lipsum[10-15]
 
-\subsection{IPython notebooks}
-
-The job of quickly running arbitrary processing on a variety of different data sources, each of which are being encountered for the first time was approached using IPython notebooks.
-Quick interactive programming was useful as unexpected problems could be quickly solved.
-Also, a detailed log, with inline comments, could be kept to track exactly what was done.
-
 %description of feature extraction code
 \subsection{Dedicated code: ocbio.extract}
 
