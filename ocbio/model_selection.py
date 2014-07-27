@@ -322,7 +322,7 @@ class LearningCurve(RandomizedGridSearch):
             mean_scores[train_size] = (np.mean(train_scores), sem(train_scores),
                                     np.mean(test_scores), sem(test_scores))
         # now the mean_scores dictionary contains everything required to build the plot
-        trainsizes = sorted(self.task_dict.keys())
+        trainsizes = sorted(mean_scores.keys())
         mean_train = np.array([mean_scores[train_size][0] for train_size in trainsizes])
         mean_test = np.array([mean_scores[train_size][2] for train_size in trainsizes])
         train_confidence = np.array([mean_scores[train_size][1]*2 for train_size in trainsizes])
