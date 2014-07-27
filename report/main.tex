@@ -1,10 +1,11 @@
-\documentclass[mscres,ianc]{infthesis}
+\documentclass[12pt,oneside,abbrevs,dtc,mscres,neuro,notimes,logo]{infthesis}
 
 \usepackage{lipsum}
 %alis autocite to cite once biblatex is loaded
 
 \title{Title Pending}
-
+\submityear{2014}
+\date{\today}
 \author{Gavin Gray}
 
 \abstract{
@@ -12,15 +13,26 @@
 \lipsum[1-2]}
 
 \begin{document}
+  \begin{preliminary}
+    % Title Page
+    \shieldtype{1}
+    \maketitle
 
-\maketitle
+    % Preamble
+    \include{acknowledgements}
+    \standarddeclaration
+    \include{dedication}
+    \tableofcontents
+    \listoffigures
+  \end{preliminary}
+
 
 %structured based on guidelines to begin with
 %source: http://www.inf.ed.ac.uk/teaching/courses/diss/diss.marking.guidelines.html
 %
 %info on submission here: http://www.inf.ed.ac.uk/teaching/courses/diss/thesis_instructions.html
-
-\tableofcontents
+%
+%should probably include the license of the repository somewhere (can I distribute my thesis with an MIT license?)
 
 \include{introduction}
 
