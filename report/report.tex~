@@ -19,16 +19,16 @@
 %\usepackage{subcaption}
 \usepackage{array}
 %\usepackage{pgffor,pgf}
-\usepackage{psfrag}
-\usepackage{lipsum}
-\usepgflibrary{plothandlers}
-\usetikzlibrary{plotmarks}
-\pgfplotsset{compat=newest}
+%\usepackage{psfrag}
+%\usepackage{lipsum}
+%\usepgflibrary{plothandlers}
+%\usetikzlibrary{plotmarks}
+%\pgfplotsset{compat=newest}
 
 
-\mathtoolsset{showonlyrefs=false}
+%\mathtoolsset{showonlyrefs=false}
 
-\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
+%\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
 
 % Project Details
 \title{Title Pending}
@@ -71,7 +71,7 @@
   % Appendix
   \appendix
 
-  %\input{sections/appendix/program}
+  \input{sections/appendix/notebooks}
 
   % Bibliography
   \bibliography{refs/bibliography}{}
