@@ -1,0 +1,79 @@
+\documentclass[12pt,oneside,abbrevs,dtc,mscres,neuro,notimes,logo]{styles/infthesis}
+
+% Packages
+\usepackage{graphicx}
+\usepackage{abbrevs}
+\usepackage{acronym}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{cite} 
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{scalefnt}
+\usepackage{subfig}
+\usepackage{tabularx}
+%\usepackage{subcaption}
+\usepackage{array}
+%\usepackage{pgffor,pgf}
+\usepackage{psfrag}
+\usepackage{lipsum}
+\usepgflibrary{plothandlers}
+\usetikzlibrary{plotmarks}
+\pgfplotsset{compat=newest}
+
+
+\mathtoolsset{showonlyrefs=false}
+
+\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
+
+% Project Details
+\title{Title Pending}
+\author{Gavin Gray}
+\submityear{2014}
+\date{\today}
+
+%Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law.
+%
+%— Douglas Hofstadter, Gödel, Escher, Bach: An Eternal Golden Braid
+%
+% obligatory spell/etc check reminder
+
+%\input{sections/misc/acronyms}
+\input{sections/misc/abstract}
+
+% Extra Package Commands
+
+\begin{document}
+  \begin{preliminary}
+    % Title Page
+    \shieldtype{1}
+    \maketitle
+
+    % Preamble
+    \input{sections/misc/acknowledgements}
+    \standarddeclaration
+    \input{sections/misc/dedication}
+    \tableofcontents
+    \listoffigures
+  \end{preliminary}
+
+  % Chapters
+  \input{sections/intro}
+  \input{sections/background}
+  \input{sections/methods}
+  \input{sections/results}
+  \input{sections/conclusion}
+
+  % Appendix
+  \appendix
+
+  \input{sections/appendix/notebooks}
+
+  % Bibliography
+  \bibliography{refs/bibliography}{}
+  \bibliographystyle{apalike}
+\end{document}
