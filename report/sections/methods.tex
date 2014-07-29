@@ -14,24 +14,112 @@ The job of quickly running arbitrary processing on a variety of different data s
 Quick interactive programming was useful as unexpected problems could be quickly solved.
 Also, a detailed log, with inline comments, could be kept to track exactly what was done.
 
+\subsection{Supervised binary classification}
+
+% going through posing the problem in terms of probability
+In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
+Defining this training set rigorously, it consists of input variables $\mathbf{x}$ which are typically vectors of values known as features.
+The output variables in a classification problems are a set of labels\cite[2]{murphy_machine_2012}.
+In the case of binary classification these are simply either 0 or 1.
+Therefore, given $N$ training vectors $\mathbf{x}_{i}$ and training labels $y_{i}$ we can define our training set $\mathcal{D}$ as:
+
+\begin{align}
+    \mathcal{D} = \left{ ( \mathbf{x}_{i}, y_{i} ) \right}_{i=1}^{N}
+\end{align}
+
+%an example?
+
+%pose our problem
+Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
+The training labels are either an interaction (a one) or a non-interaction (a zero).
+Interactions are taken to be any interactions in the HIPPIE\cite{schaefer_hippie:_2012} database with over 50\% confidence.
+Negative interactions are three million random binary combinations of Entrez protein IDs, which is a method applied in other works\cite{qi_evaluation_2006} to create negative training examples.
+There are many more negative that positive interactions and it is unlikely that any of the negative examples are real interactions.
+
+What we would like to estimate is the posterior probability of an interaction existing given a new feature vector after training our classifier.
+For a model $\mathcal{H}$ and a new feature vector $\mathbf{x}^{*}$ we can express this using Bayes theorem:
+
+\begin{align}
+    p(y^{*} = 1 | \mathbf{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\mathbf{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{ \sum{y^{*}} p( \mathbf{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})}
+\end{align}
+
+These expressions are defined:
+
+\begin{itemize}
+    \item The posterior probability:
+        \begin{align}
+            p(y^{*} = 1 | \mathbf{x}^{*}, \mathcal{D}, \mathcal{H})
+        \end{align}
+    \item The likelihood:
+        \begin{align}
+            p(\mathbf{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H})
+        \end{align}
+    \item The prior:
+        \begin{align}
+            p( y^{*} = 1 | \mathcal{D}, \mathcal{H})
+        \end{align}
+    \item The marginal likelihood:
+        \begin{align}
+            \sum{y^{*}} p( \mathbf{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})
+        \end{align}
+
+We do not apply explicitly apply a prior to the probability of interaction, meaning that we implicitly apply a uniform prior.
+
 \subsection{Protein identifier mapping}
 
 Mapping from one protein identifier to another became a significant problem in this project.
 Unfortunately, most Biological databases maintain their own indexing method to identify different genes and proteins.
 New data sources being integrated into this project would often be using a different identification scheme to that originally chosen to use in PPI network work at Edinburgh: the NCBI Entrez identifier.
 
-%what the Entrez identifier is
+%what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
+Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
+For the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter and can encode other information about the gene.
+The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\cite{maglott_entrez_2006}.
+
+%other protein identifier schemes and mapping between them
+Other popular schemes include the Ensembl identifier from the Ensembl database\cite{ensembl_website}, Uniprot identifiers from the Uniprot database\cite{uniprot_website} and even those used only for specific databases such as DIP identifiers\cite{dip_website}.
+Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
+The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
+
 
 %methods used during the project, with references to appendix notebooks
+Various tools exist to map from one protein identifier to another:
+
+\begin{itemize}
+    \item Ensembl's BioMart\cite{smedley_biomart_2009}:
+        \begin{itemize}
+            \item Able to map from various identifiers to others based on different databases.
+            \item Produces a csv which can be used in a variety of different tools.
+            \item Requires a list of protein identifiers.
+        \end{itemize}
+    \item NCBI's Gene\cite{maglott_entrez_2006} provides conversion tables on it's ftp servers:
+        \begin{itemize}
+            \item Simple tab-separated text file converting all known GeneIDs between different formats.
+        \end{itemize}
+    \item The Uniprot\cite{consortium_universal_2007} online service:
+        \begin{itemize}
+            \item Similar to BioMart, but with a simpler interface.
+            \item Converts only to or from Uniprot identifiers.
+            \item Requires a list of protein identifiers.
+        \end{itemize}
+\end{itemize}
 
 % talk about the problem of canonicalisation
+Unfortunately, using any of these services there will be a number of IDs which cannot be converted and many IDs mapping to the same Entrez ID as different protein isoforms are picked up.
+One way to avoid this problem is to only refer to a single canonical form of any given protein and find this protein in other databases through its amino acid sequence.
+This ensures that when referring to an interaction between two identifiers the interaction is always simply between two proteins.
 
 % how using Entrez identifiers risks becoming gene interaction prediction
 % or "What Entrez isn't"
+Otherwise, as in this project, the interaction is detected between two Entrez IDs; which corresponds to an interaction between genes - possibly only a single interaction between combinations of the isoforms of each gene.
+Unfortunately, this means that this project is only concerned with gene interaction prediction until the Entrez IDs have been carefully canonicalized.
+This is not really a problem, as we are only aiming to provide a weighting to a graph, rather than provide an accurate prediction of interaction between proteins.
 
 % how iRefIndex solves this problem and should have been used from the start
 % with reference to storing the sequences of each protein involved to maintain unambiguity
-
+A solution to this problem is provided by the iRefIndex\cite{razick_irefindex_2008} database, which combines many databases and stores canonicalized entries.
+Using this database, it would be possible to ensure that the proteins used in a future project would be reliable canonical proteins.
+Additionally, each protein of interest should ideally be stored with reference to its sequence in, for example, FASTA format.
 
 %description of feature extraction code
 \subsection{Dedicated code: ocbio.extract}
@@ -52,25 +140,40 @@ New data sources being integrated into this project would often be using a diffe
 
 %why HIPPIE is better suited
 
+%problem with positive vs. negative ratio with HIPPIE
+
 \subsection{PPI prediction features}
 
 %this section should be written with reference to which features were found in the end to be important
 
+%a graph showing the importance of different features is required
 
+%a table describing each feature used, and where it comes from
 
 \subsection{Parallel processing with IPython.parallel}
 %description of how this was set up and how it could scale
 
-\lipsum[26-28]
+To take maximum advantage of the available computing facilities and because the sample sizes in the project exceed one million the decision was made to prepare the code for parallel processing on a remote server.
+Particularly, grid search operations to optimize performance of the classifier were considered to be processor intensive and vital to the success of the prediction task.
+The easiest way to set up these interactive parallel processing operations was the parallel processing model in IPython\cite{parallel_python_webpage}.
+
+%How this worked in practice, and the potential
+The notebooks using parallel processing are the notebooks on classifier training, which are described in Appendix \ref{app:classtrain}.
+This usage depended on code from a parallel processing tutorial\cite{ogrisel_parallel} to distribute memory to the cores using Numpy's memmap methods.
+The code to do this has been integrated into the ocbio module in the project repository and can be used as shown in the notebooks.
+Potentially, and as described in the tutorial, this code could be used to run the classifier training on cloud services using Starcluster.
+
+%how it should probably have been done differently
+However, the gains from parallel processing were mitigated by trying to run the notebook server on the remote server.
+The clusters could have been initialised and the jobs submitted locally to the remote server operating as a cluster, thus taking advantage of all the available resources.
+This would also be a better system if the parallel processing were to be scaled up to use other processing clusters.
 
 %details of what classifiers were chosen and about scikit-learning
 \section{Weighting Protein Interactions}
 
 \lipsum[1-10]
 
-\subsection{Supervised binary classification problems}
 
-% going through posing the problem in terms of probability
 
 \subsection{Classification algorithms}
 
