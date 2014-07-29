@@ -6,7 +6,9 @@
 
 \section{Feature extraction}
 
-\lipsum[10-15]
+Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in section \ref{supbinclass}.
+The process of taking a retrieving these from biological databases is referred to as feature extraction.
+This commonly involved mapping between protein identifiers and indexing large tables automatically, but also involved many other small pieces of scripting.
 
 \subsection{IPython notebooks}
 
@@ -14,7 +16,11 @@ The job of quickly running arbitrary processing on a variety of different data s
 Quick interactive programming was useful as unexpected problems could be quickly solved.
 Also, a detailed log, with inline comments, could be kept to track exactly what was done.
 
+%list of all the feature extraction ipython notebooks, with references to the appendices
+
+
 \subsection{Supervised binary classification}
+\label{supbinclass}
 
 % going through posing the problem in terms of probability
 In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
