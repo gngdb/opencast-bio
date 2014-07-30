@@ -2,5 +2,3 @@
 \newacro{DIP}{Database of Interacting Proteins\cite{xenarios_dip_2002}}
 \newacro{HIPPIE}{Human Integrated Protein-Protein Interaction rEference\cite{schaefer_hippie:_2012}}
 \newacro{PPI}{Protein-Protein Interaction}
-\newacro{SVM}{Support Vector Machine}
-
