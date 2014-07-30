@@ -22,8 +22,8 @@ We have a [long list of data sources][sourcelist] which we are working through t
 To do list:
 
 1. ~~Full list of proteins of interest~~
-2. Feature vectors
-3. Supervised classification code
+2. ~~Feature vectors~~
+3. ~~Supervised classification code~~
 4. Community detection analysis
 
 [opencastwiki]: https://github.com/ggray1729/opencast-bio/wiki
