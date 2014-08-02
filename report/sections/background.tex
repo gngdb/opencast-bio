@@ -67,12 +67,20 @@ Optimization based methods involves a different measure known as betweenness, wh
 %what is protein-protein interaction prediction?
 \section{Protein-protein interaction prediction}
 
-Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data%cite original paper?
+Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data by combining both direct and indirect information\cite{qi_learning_2008}.
+Direct information are the result of experiments, such as yeast two-hybrid, intended to directly find protein-protein interactions.
+Indirect information includes biological data that was not gathered directly to find interactions, such as gene expression data.
+A full list of the data sources considered for use in this project can be found in Appendix \ref{datasources}.
 
 %what are features?
-\lipsum[3-10]
+To predict a protein interaction we need to have a value or sequence of values from which to make our guess as to the existence of an interaction.
+For each interaction this set of values are known as features.
+The bulk of the work in this project involved obtaining these values for every feature necessary to train the classifier and classify the interactions of the synaptic network.
 
 %why do we want to predict protein-protein interactions?
+%reference to ENTS and similar projects aiming to make full interactomes
+%how this is different to our goal
+
 
 %what's the point in weighting connections?
 
