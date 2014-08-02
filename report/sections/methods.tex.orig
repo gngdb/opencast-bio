@@ -47,7 +47,11 @@ What we would like to estimate is the posterior probability of an interaction ex
 For a model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can express this using Bayes theorem:
 
 \begin{align}
+<<<<<<< HEAD
+    p(y^{*} = 1 | \mathbf{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\mathbf{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{\sum{y^{*}} p( \mathbf{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}
+=======
     p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{ \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})}
+>>>>>>> 436c544b1849313281928869ab540f2711d0b265
 \end{align}
 
 These expressions are defined:
@@ -67,7 +71,11 @@ These expressions are defined:
         \end{align}
     \item The marginal likelihood:
         \begin{align}
+<<<<<<< HEAD
+            \sum{y^{*}} p( \mathbf{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})p( y^{*} = 1 | \mathcal{D}, \mathcal{H})
+=======
             \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})
+>>>>>>> 436c544b1849313281928869ab540f2711d0b265
         \end{align}
 
 We do not apply explicitly apply a prior to the probability of interaction, meaning that we implicitly apply a uniform prior.

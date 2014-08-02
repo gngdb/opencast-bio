@@ -22,26 +22,65 @@ Disorders which affect the brain are also very common and poorly understood, aff
 Curing these diseases therefore may be possible through a greater understanding of the interactions of proteins at the synaptic level\cites{synsys,chua_architecture_2010}.
 
 %what are synapses?
+Synapses are the contacts between nerve cells where the vast majority of communication between nerve cells occurs, the only exceptions being through signalling molecules that can cross the cell membrane.
+There are two types of synapses in the nervous system, electrical and chemical\cite{kandel_principles_2000}:
+
+\begin{itemize}
+    \item Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
+    \item Chemical synapses are involved in a much more complex system of neurotransmitter release and reception.
+\end{itemize}
+
+Synapses are therefore important to the functioning of the nervous system.
+A problem with synapse function will likely cause large problems to the nervous system, so diseases of the nervous system are likely to involve problems with synapse function.
+As the cell is composed of proteins, so is the synapse composed of proteins.
+Investigating the functioning of these proteins will help to explain the functioning of the synapse and hopefully provide insight into the diseases of the synapse.
 
 %but what is a protein-protein interaction network?
 Physical interaction between proteins can be inferred from a range of different experiments.
-Typical contemporary protein interaction networks rely on databases of confirmed interactions from a variety of experiments, %example paper
+Typical contemporary protein interaction networks rely on databases of confirmed interactions from a variety of experiments, for example in \textcite{kenley_detecting_2011} several well-known interaction databases were used.
+By forming a network from these individual interactions as edges and clustering this network the example paper was able to predict complexes and functional associations.
+If these functional associations are involved in disease it is possible to associate proteins with diseases, as will be shown in section \ref{methods}.
 
+%historical work in the field
+Originally, two papers, \textcite{ito_comprehensive_2001} and \textcite{uetz_comprehensive_2000}, were able to leverage large volumes of recent interaction data and build interaction networks.
+These papers were able to make interesting discoveries about the network of interactions in yeast simply by investigating subnetworks in the network that was produced.
 
 %what is community detection?
 \section{Protein complexes and community detection}
 
-\lipsum[4-8]
+As mentioned in the previous section it is possible to analyse PPI networks to detect protein complexes and functional groups.
+This has recently been achieved through use of Community Detection\cites{chen_identifying_2013,wang_recent_2010}, which uses various methods to find community structure in graphs.
 
-%why would you want to run community detection on protein-protein interaction networks?
+%what is community structure?
+Community structure is described as a characteristic of graphs which have many connections within sub-groups but few connections outside that group\cite{newman_communities_2012}.
+Unfortunately, this description is not specific on exact measures for a graph to have community structure.
+Community detection algorithms are simply tested on graphs that are agreed to exhibit community structure with the aim of finding the pre-defined communities.
+
+%describe how these algorithms usually work
+There are two main approaches to the problem of Community Detection: traditional hierarchical methods and more recent optimization based methods\cite{newman_communities_2012}.
+Hierarchical methods were developed in the field of sociology and involves grading nodes by how highly connected they are in the network and then using this value to group nodes into communities.
+Optimization based methods involves a different measure known as betweenness, which is analogous to the current flowing along edges if the graph were an electric circuit, and then allows a reductive technique where edges are removed iteratively to reveal sub-graphs without connections between them.
+
+%example paper using community detection on ppi graphs?
+
 
 %what is protein-protein interaction prediction?
 \section{Protein-protein interaction prediction}
 
+Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data by combining both direct and indirect information\cite{qi_learning_2008}.
+Direct information are the result of experiments, such as yeast two-hybrid, intended to directly find protein-protein interactions.
+Indirect information includes biological data that was not gathered directly to find interactions, such as gene expression data.
+A full list of the data sources considered for use in this project can be found in Appendix \ref{datasources}.
+
 %what are features?
-\lipsum[3-10]
+To predict a protein interaction we need to have a value or sequence of values from which to make our guess as to the existence of an interaction.
+For each interaction this set of values are known as features.
+The bulk of the work in this project involved obtaining these values for every feature necessary to train the classifier and classify the interactions of the synaptic network.
 
 %why do we want to predict protein-protein interactions?
+%reference to ENTS and similar projects aiming to make full interactomes
+%how this is different to our goal
+
 
 %what's the point in weighting connections?
 
