@@ -62,3 +62,6 @@ report/styles
 
 # ignore backup files
 *.bak
+
+# ignore vim's extraneous files
+*~
