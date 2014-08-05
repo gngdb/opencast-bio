@@ -317,7 +317,7 @@ Beta regression would have been very suitable for the task and is suggested as f
 
 %what is beta regression? quickly
 A generalised linear model is one in which the output variable is distributed according to a given target density\cite{murphy_machine_2012}.
-In the case of Beta regression this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
+In the case of Beta regression\cite{smithson_better_2006} this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
 A maximum-likelihood solution to this model can be found and the resulting model fit in the same way as a standard regression model.
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
@@ -331,11 +331,59 @@ Using this we can build a model and update our belief on the likelihood of inter
 \subsubsection{Classifier verification}
 
 %Tests we planned to use on each classifier:
+%  mention cross-validation
+%  learning curves
 %  simple accuracy value
 %  grid search
 %  ROC
 %  Precision recall
 %  test interactions
+%  
+
+% consider using paragraph headings in this section
+
+% was or will be?
+Cross-validation was applied to tests during parameters searches and when plotting learning curves to get a statistical estimate of the reliability of the metrics applied to the classifier\cite[152]{witten_data_2011}.
+As the training set is relatively large, these were applied as random sub-samples of the full data set, but stratified to maintain the same proportion of zeros to ones as in the full training set.
+This is important as it must reflect the expected ratio for real protein interactions to non-interactions.
+
+% learning curves, what are they? and why?
+Learning curves, as in the notebook referenced in Appendix \ref{app:classtrain}, were used in this project to ensure that the number of samples used in a grid search was sufficient.
+The learning curve plots the accuracy of a classifier after it has been trained using cross-validation on a varying number of samples.
+
+%example learning curve?
+
+% grid search
+A grid search is a cross-validated test measuring accuracy testing the classifier with a variety of different hyper-parameters.
+Classifiers, such as a Logistic Regression model, have some number of hyper-parameters.
+A Logistic Regression model, for example, has a single hyper-parameter so that the grid search for this model simply involves varying this parameter to obtain the optimum performance on the test set.
+
+% accuracy value
+The accuracy value plotted in the learning curve and used in grid searches of parameters values is simply the proportional of correctly classified instances in a training or validation set.
+Typically, the protein interaction prediction problem is sparse, in that there are very few interactions for the large number of non-interactions.
+This is reflected in the accuracy in that a classifier that simply always predicts zero can still achieve a very high accuracy.
+Using this accuracy value is therefore problematic and this requires the other measures employed, such as ROC and precision-recall AUC values.
+
+% explain what those are
+A Receiver Operating Characteristic, or ROC, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
+This makes it useful as an illustration of the tradeoff possible with this particular classifier.
+The Area Under Curve, or AUC, value is the area under this line.
+A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\cite{hanczar_small-sample_2010}.
+These concerns center on the problems of small sample sizes, which are not the case in this project.
+
+%precision recall
+A precision recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
+These terms are defined:
+
+\begin{itemize}
+    \item Precision - the number of true positive results over the number of total positive results
+    \item Recall - the number of true positive results against the number of available positive examples
+\end{itemize}
+
+Again, the area under the curve can gauge a classifier's effectiveness.
+
+%example ROC curve?
+%example precision recall curve?
 
 \section{Measures applied to weighted and unweighted PPI networks}
 
