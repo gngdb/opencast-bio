@@ -263,7 +263,41 @@ Two hyper-parameters which can be tuned during a grid search operation are the d
 
 \subsubsection{Random Forest}
 
+Random forests operate as a combination of many decision trees.
+Decision trees are intuitively simple in that it consists of a series of comparisons arranged in a tree as shown in figure \ref{fig:dectree}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{Simple_decision_tree.svg.png}
+    \caption{A simple example decision tree, illustrating the process of sequential, dependent decisions.}
+    \label{fig:dectree}
+\end{figure}
+
+In this way decision trees are both simple and tractable methods for using a feature vector to classify inputs and there are many automated ways to generate effective decision trees.
+The problem in the design of a decision tree is which comparison to choose at each node, described as how to partition the data\cite[544]{murphy_machine_2012}. %redundant citation here?
+There are several implementations of algorithms to achieve this and a full description can be found in \textcite[544]{murphy_machine_2012}.
+Other advantages of decision trees include the ability to handle a mixture of discrete and continuous inputs, automatic variable selection, scaling to large datasets readily and the ability to handle missing inputs, with modification.
+%other strengths of decision trees?
+
+%describe split function? probably not worth going into this.
+
+%then explain the problems with decision trees, variance etc
+Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\cite{murphy_machine_2012}.
+The random forest algorithm addresses this problem by providing redundancy; multiple trees are grown and their results averaged.
+For M trees trained on different subsets of the data\cite{murphy_machine_2012}:
+
+\begin{align}
+    f(x) = \sum_{m=1}^{M} \frac{1}{M} f_{m}(x)
+\end{align}
+
+Where $f_{m}(x)$ is $m$th tree. This is simply averaging the results of the trees and is known as bagging.
+
 %with reference to Qi and ENTS, showning good performance on this problem
+With the ability to work on large datasets and mixing continuous and discrete data these types of classifiers would appear to already be well suited to this problem.
+This is what has been observed in the literature, with these classifiers achieving the best performance despite different types of biological data being used\cites{qi_evaluation_2006,rodgers-melnick_predicting_2013}.
+Due to these reports in the literature it appeared that this classifier would be the best choice for our protein interaction prediction task.
+
+%expand on how much better they were etc? in different places?
 
 \subsubsection*{Other options}
 
@@ -281,11 +315,31 @@ Beta regression would have been very suitable for the task and is suggested as f
 
 \subsubsection{Beta regression}
 
+%what is beta regression? quickly
+A generalised linear model is one in which the output variable is distributed according to a given target density\cite{murphy_machine_2012}.
+In the case of Beta regression this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
+A maximum-likelihood solution to this model can be found and the resulting model fit in the same way as a standard regression model.
+
 %why this would also have been a good idea, if we didn't have to implement it ourselves
+True protein interactions are not something which can be assumed in a protein interaction prediction task.
+Many proteins are known to be very likely, but others are less confidently classified, as reflected in the HIPPIE database's confidence scoring system\cite{schaefer_hippie:_2012}.
+To train a classifier a training set of true and false interactions is required and this cannot be supplied without thresholding the database at an arbitrary confidence value.
+
+Beta regression avoids this problem as it allows the confidence values to remain a part of the regression process.
+Using this we can build a model and update our belief on the likelihood of interaction in a Bayesian framework much more easily.
 
 \subsubsection{Classifier verification}
 
-%Tests we planned to use on each classifier
+%Tests we planned to use on each classifier:
+%  mention cross-validation
+%  simple accuracy value
+%  grid search
+%  ROC
+%  Precision recall
+%  test interactions
+%  
+
+
 
 \section{Measures applied to weighted and unweighted PPI networks}
 

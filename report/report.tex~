@@ -26,6 +26,9 @@
 \usetikzlibrary{plotmarks}
 \pgfplotsset{compat=newest}
 
+%adding path to images
+\graphicspath{{images/}}
+
 %alias cite to autocite, cites to autocites
 
 \mathtoolsset{showonlyrefs=false}
