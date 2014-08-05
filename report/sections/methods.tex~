@@ -143,14 +143,18 @@ Additionally, each protein of interest should ideally be stored with reference t
 
 %original work on DIP (justified choice from previous work)
 The database of interacting proteins (DIP) is a database of interactions proven by small-scale experiments\cite{xenarios_dip_2002}.
-Each interaction added is hand curated, so it should be fairly reliable as a training set.
+Each interaction added is hand curated so it was expected as a reliable training set.
+Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
 %problems with DIP
+
 
 %why HIPPIE is better suited
 
 %problem with positive vs. negative ratio with HIPPIE
 % and how it's not a problem
+
+%iRefIndex as a final solution?
 
 \subsection{PPI prediction features}
 
@@ -399,7 +403,7 @@ The following sections describe this process and the measures applied to both gr
 %  Geodesic edge Betweenness
 %  Random edge Betweenness
 %  Spectral Betweenness
-Three algorithms were identified for use in this project for community detection, all three are described in \textcite{newman_finding_2004}.
+Three algorithms were identified for use in this project for community detection, the first two are described in \textcite{newman_finding_2004}.
 All three are based on betweenness measures to partition the graph, making them optimisation approaches, but each calculates their betweenness measure in a different way:
 
 \begin{itemize}
@@ -414,10 +418,24 @@ All three are based on betweenness measures to partition the graph, making them 
 \subsection{Normalised Mutual Information}
 
 %NMI theory, what is a measure of
+Mutual information intuitively is the reduction in uncertainty about one random variable by observing another.
+Defined in terms of entropy it is\cite{mackay_information_2003}:
+
+%could move that citation next to the equation?
+\begin{align}
+    I(X;Y) = H(X) - H(X|Y)
+\end{align}
+
+Where $H(X)$ is the entropy of the random variable $X$ and $H(X|Y)$ is the conditional entropy of $X$ given $Y$.
+
+%need citation
+In the case of the function we are using to perform this from Scikit-learn the mutual information is normalised by $\sqrt{H(X)\timesH(Y)}$\cite{pedregosa_scikit-learn:_2011}.
+This produces a value between zero and one which reflects the redundancy of the distributions - 1.0 being exactly the same and 0.0 being independent.
 
 \subsection{Disease Enrichment}
 
 %Primer on what this test actually does
+
 
 \section*{Conclusion}
 
