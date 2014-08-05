@@ -387,17 +387,34 @@ Again, the area under the curve can gauge a classifier's effectiveness.
 
 \section{Measures applied to weighted and unweighted PPI networks}
 
-%why do we want to try weighted networks?
+%why do we want to try weighted networks? and intro
+It is hoped that a weighted graph will provide new insight into the interactions of proteins in the active zone.
+For this reason, comparing the unweighted and weighted cases of the graph produced is a major goal of this project.
+The following sections describe this process and the measures applied to both graphs.
 
 \subsection{Community detection}
 
 %description of each of the algorithms available
+%three:
+%  Geodesic edge Betweenness
+%  Random edge Betweenness
+%  Spectral Betweenness
+Three algorithms were identified for use in this project for community detection, all three are described in \textcite{newman_finding_2004}.
+All three are based on betweenness measures to partition the graph, making them optimisation approaches, but each calculates their betweenness measure in a different way:
+
+\begin{itemize}
+    \item Geodesic edge betweenness - find the shortest path between all pairs of nodes and count the number of these paths which run along each edge.
+    \item Random edge betweenness - expected net number of times that a random walk between two nodes will pass through an edge summed over all node pairs.
+    \item Spectral betweenness - pending
+\end{itemize}
 
 %community detection code, what it does, which algorithm was used
+%pending use - will see if I have time to use more than one
 
 \subsection{Normalised Mutual Information}
 
 %NMI theory, what is a measure of
+
 
 \subsection{Disease Enrichment}
 
