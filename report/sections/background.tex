@@ -12,19 +12,19 @@ In the following section these different components, and how they fit together, 
 %intro paragraph, why proteins are important
 Cells consist largely of proteins.
 Each of these proteins are carefully tuned molecules which fit into machinery of a cell within the human body.
-Functions of these cells include almost all cellular functions; there are proteins capable of pumping ions, reshaping DNA and fluorescing\cite{alberts_molecular_2008}.
+Functions of these cells include almost all cellular functions; there are proteins capable of pumping ions, reshaping DNA and fluorescing\autocite{alberts_molecular_2008}.
 A crude model of the cell is to map the interactions between these molecular machines to try to guess about the functioning of the cell.
 These models are protein-protein interaction (PPI) networks and can be useful for disease research.
 
 %going deeper, why do we care about proteins at the synapse, mention SYNSYS
 The proteins at the synapse drive synaptic communication, which in turn defines the functioning of the brain.
 As these proteins define the functioning of the brain any disorders which affect the brain are very likely to involve these proteins.
-Disorders which affect the brain are also very common and poorly understood, affecting one in three people in the developed world\cite{citation_needed}.
-Curing these diseases therefore may be possible through a greater understanding of the interactions of proteins at the synaptic level\cites{synsys,chua_architecture_2010}.
+Disorders which affect the brain are also very common and poorly understood, affecting one in three people in the developed world\autocite{citation_needed}.
+Curing these diseases therefore may be possible through a greater understanding of the interactions of proteins at the synaptic level\autocites{synsys,chua_architecture_2010}.
 
 %what are synapses?
 Synapses are the contacts between nerve cells where the vast majority of communication between nerve cells occurs, the only exceptions being through signalling molecules that can cross the cell membrane.
-There are two types of synapses in the nervous system, electrical and chemical\cite{kandel_principles_2000}:
+There are two types of synapses in the nervous system, electrical and chemical\autocite{kandel_principles_2000}:
 
 \begin{itemize}
     \item Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
@@ -50,15 +50,15 @@ These papers were able to make interesting discoveries about the network of inte
 \section{Protein complexes and community detection}
 
 As mentioned in the previous section it is possible to analyse PPI networks to detect protein complexes and functional groups.
-This has recently been achieved through use of Community Detection\cites{chen_identifying_2013,wang_recent_2010}, which uses various methods to find community structure in graphs.
+This has recently been achieved through use of Community Detection\autocites{chen_identifying_2013,wang_recent_2010}, which uses various methods to find community structure in graphs.
 
 %what is community structure?
-Community structure is described as a characteristic of graphs which have many connections within sub-groups but few connections outside that group\cite{newman_communities_2012}.
+Community structure is described as a characteristic of graphs which have many connections within sub-groups but few connections outside that group\autocite{newman_communities_2012}.
 Unfortunately, this description is not specific on exact measures for a graph to have community structure.
 Community detection algorithms are simply tested on graphs that are agreed to exhibit community structure with the aim of finding the pre-defined communities.
 
 %describe how these algorithms usually work
-There are two main approaches to the problem of Community Detection: traditional hierarchical methods and more recent optimization based methods\cite{newman_communities_2012}.
+There are two main approaches to the problem of Community Detection: traditional hierarchical methods and more recent optimization based methods\autocite{newman_communities_2012}.
 Hierarchical methods were developed in the field of sociology and involves grading nodes by how highly connected they are in the network and then using this value to group nodes into communities.
 Optimization based methods involves a different measure known as betweenness, which is analogous to the current flowing along edges if the graph were an electric circuit, and then allows a reductive technique where edges are removed iteratively to reveal sub-graphs without connections between them.
 
@@ -68,7 +68,7 @@ Optimization based methods involves a different measure known as betweenness, wh
 %what is protein-protein interaction prediction?
 \section{Protein-protein interaction prediction}
 
-Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data by combining both direct and indirect information\cite{qi_learning_2008}.
+Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data by combining both direct and indirect information\autocite{qi_learning_2008}.
 Direct information are the result of experiments, such as yeast two-hybrid, intended to directly find protein-protein interactions.
 Indirect information includes biological data that was not gathered directly to find interactions, such as gene expression data.
 More information on the data sources can be found in the following section \ref{back:sources}.
@@ -103,13 +103,13 @@ The full list can be found in Appendix \ref{datasources}.
 These different data sources fall into categories:
 
 \begin{itemize}
-    \item Primary interaction databases, such as DIP\cite{xenarios_dip_2002}, HIPPIE\cite{schaefer_hippie:_2012} or BioGRID\cite{stark_biogrid:_2006}.
-    \item Associated features, such as features derived from Gene Ontology\cite{ashburner_gene_2000} or those used in \textcite{rodgers-melnick_predicting_2013}.
-    \item Other PPI prediction resources, such as STRING\cite{vonMering_string_2005} or InterologWalk\cite{gallone_bio::homology::interologwalk_2011}.
+    \item Primary interaction databases, such as DIP\autocite{xenarios_dip_2002}, HIPPIE\autocite{schaefer_hippie:_2012} or BioGRID\autocite{stark_biogrid:_2006}.
+    \item Associated features, such as features derived from Gene Ontology\autocite{ashburner_gene_2000} or those used in \textcite{rodgers-melnick_predicting_2013}.
+    \item Other PPI prediction resources, such as STRING\autocite{vonMering_string_2005} or InterologWalk\autocite{gallone_bio::homology::interologwalk_2011}.
 \end{itemize}
 
 %why they were chosen
-The indirect sources of data were chosen based on usage in the literature, such as in the case of Gene Ontology\cite{qi_evaluation_2006}.
+The indirect sources of data were chosen based on usage in the literature, such as in the case of Gene Ontology\autocite{qi_evaluation_2006}.
 Direct data sources were listed by investigating all of the available databases which could be of use and choosing from these.
 
 \section*{Conclusion}

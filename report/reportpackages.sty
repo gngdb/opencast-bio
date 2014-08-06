@@ -1,0 +1,79 @@
+% Packages
+\usepackage{graphicx}
+\usepackage{abbrevs}
+\usepackage{acronym}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{scalefnt}
+\usepackage{subfig}
+\usepackage{tabularx}
+%\usepackage{subcaption}
+\usepackage{array}
+%\usepackage{pgffor,pgf}
+\usepackage[
+firstinits=true, % render first and middle names as initials
+useprefix=true,
+maxcitenames=3,
+maxbibnames=99,
+style=authoryear,
+dashed=false, % re-print recurring author names in bibliography
+natbib=true,
+url=true,
+backend=biber,
+bibencoding=utf8
+]{biblatex}
+
+\renewcommand*{\bibinitdelim}{}
+
+\usepackage{xpatch}
+\xapptobibmacro{date+extrayear}{\nopunct}{}{}
+
+% Use single quotes around titles:
+\usepackage[british]{babel}
+\usepackage{csquotes}
+
+\DeclareNameAlias{author}{last-first}
+\renewcommand*{\mkbibnamefirst}[1]{{\let~\,#1}} % insert thin spaces between author initials
+\renewcommand*{\nameyeardelim}{\addcomma\addspace} % insert a comma between author and year in-text citations
+\renewcommand*{\newunitpunct}{\addcomma\addspace} % comma as separator in bibliography, not full stop
+\setlength\bibitemsep{1.5\itemsep} % increase spacing between entries in bibliography
+\renewbibmacro{in:}{} % remove 'in:' preceding article title
+
+% Place volume number within parentheses:
+\renewbibmacro*{volume+number+eid}{
+    \printfield{volume}
+    \setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+    \printfield{number}
+    \setunit{\addcomma\space}
+    \printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+% get rid of abstracts in bibliography
+\AtEveryBibitem{\clearfield{note}}
+
+%direct this to a library in the repository
+\addbibresource{zlibrary.bib}
+
+
+\usepackage{psfrag}
+\usepackage{lipsum}
+\usepackage{fontspec}
+\usepgflibrary{plothandlers}
+\usetikzlibrary{plotmarks}
+\pgfplotsset{compat=newest}
+
+%adding path to images
+\graphicspath{{./images/}}
+
+%alias cite to autocite, cites to autocites
+
+\mathtoolsset{showonlyrefs=false}
+
+\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
+

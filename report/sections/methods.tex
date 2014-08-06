@@ -4,7 +4,7 @@
 % * description of disease enrichment method
 
 %intro to the methods
-\lipsum[5]
+
 
 \section{Feature extraction}
 
@@ -26,12 +26,12 @@ Also, a detailed log, with inline comments, could be kept to track exactly what 
 % going through posing the problem in terms of probability
 In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
 Defining this training set rigorously, it consists of input variables $\pmb{x}$ which are typically vectors of values known as features.
-The output variables in a classification problems are a set of labels\cite[2]{murphy_machine_2012}.
+The output variables in a classification problems are a set of labels\autocite[2]{murphy_machine_2012}.
 In the case of binary classification these are simply either 0 or 1.
 Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ we can define our training set $\mathcal{D}$ as:
 
 \begin{align}
-    \mathcal{D} = \left{ ( \pmb{x}_{i}, y_{i} ) \right}_{i=1}^{N}
+    \mathcal{D} = \left( ( \pmb{x}_{i}, y_{i} ) \right)_{i=1}^{N}
 \end{align}
 
 %an example?
@@ -39,8 +39,8 @@ Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ 
 %pose our problem
 Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
 The training labels are either an interaction (a one) or a non-interaction (a zero).
-Interactions are taken to be any interactions in the HIPPIE\cite{schaefer_hippie:_2012} database with over 50\% confidence.
-Negative interactions are three million random binary combinations of Entrez protein IDs, which is a method applied in other works\cite{qi_evaluation_2006} to create negative training examples.
+Interactions are taken to be any interactions in the HIPPIE\autocite{schaefer_hippie:_2012} database with over 50\% confidence.
+Negative interactions are three million random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
 There are many more negative that positive interactions and it is unlikely that any of the negative examples are real interactions.
 
 What we would like to estimate is the posterior probability of an interaction existing given a new feature vector after training our classifier.
@@ -69,6 +69,7 @@ These expressions are defined:
         \begin{align}
             \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})
         \end{align}
+\end{itemize}
 
 We do not apply explicitly apply a prior to the probability of interaction, meaning that we implicitly apply a uniform prior.
 
@@ -81,10 +82,10 @@ New data sources being integrated into this project would often be using a diffe
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
 Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
 For the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter and can encode other information about the gene.
-The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\cite{maglott_entrez_2006}.
+The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2006}.
 
 %other protein identifier schemes and mapping between them
-Other popular schemes include the Ensembl identifier from the Ensembl database\cite{ensembl_website}, Uniprot identifiers from the Uniprot database\cite{uniprot_website} and even those used only for specific databases such as DIP identifiers\cite{dip_website}.
+Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{ensembl_website}, Uniprot identifiers from the Uniprot database\autocite{uniprot_website} and even those used only for specific databases such as DIP identifiers\autocite{dip_website}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
 
@@ -93,17 +94,17 @@ The reason this happens is due to isoforms of different proteins; different amin
 Various tools exist to map from one protein identifier to another:
 
 \begin{itemize}
-    \item Ensembl's BioMart\cite{smedley_biomart_2009}:
+    \item Ensembl's BioMart\autocite{smedley_biomart_2009}:
         \begin{itemize}
             \item Able to map from various identifiers to others based on different databases.
             \item Produces a csv which can be used in a variety of different tools.
             \item Requires a list of protein identifiers.
         \end{itemize}
-    \item NCBI's Gene\cite{maglott_entrez_2006} provides conversion tables on it's ftp servers:
+    \item NCBI's Gene\autocite{maglott_entrez_2006} provides conversion tables on it's ftp servers:
         \begin{itemize}
             \item Simple tab-separated text file converting all known GeneIDs between different formats.
         \end{itemize}
-    \item The Uniprot\cite{consortium_universal_2007} online service:
+    \item The Uniprot\autocite{consortium_universal_2007} online service:
         \begin{itemize}
             \item Similar to BioMart, but with a simpler interface.
             \item Converts only to or from Uniprot identifiers.
@@ -124,14 +125,14 @@ This is not really a problem, as we are only aiming to provide a weighting to a 
 
 % how iRefIndex solves this problem and should have been used from the start
 % with reference to storing the sequences of each protein involved to maintain unambiguity
-A solution to this problem is provided by the iRefIndex\cite{razick_irefindex_2008} database, which combines many databases and stores canonicalized entries.
+A solution to this problem is provided by the iRefIndex\autocite{razick_irefindex_2008} database, which combines many databases and stores canonicalized entries.
 Using this database, it would be possible to ensure that the proteins used in a future project would be reliable canonical proteins.
 Additionally, each protein of interest should ideally be stored with reference to its sequence in, for example, FASTA format.
 
 %description of feature extraction code
 \subsection{Dedicated code: ocbio.extract}
 
-\lipsum[15-20]
+
 
 % link to the notebook on using this code
 % but update it to explain what custom generator options are
@@ -139,10 +140,10 @@ Additionally, each protein of interest should ideally be stored with reference t
 \subsection{Gold standard datasets}
 %material on the problems with choosing between gold-standard datasets
 % with reference here to the section in Qi's thesis
-\lipsum[21-25]
+
 
 %original work on DIP (justified choice from previous work)
-The database of interacting proteins (DIP) is a database of interactions proven by small-scale experiments\cite{xenarios_dip_2002}.
+The database of interacting proteins (DIP) is a database of interactions proven by small-scale experiments\autocite{xenarios_dip_2002}.
 Each interaction added is hand curated so it was expected as a reliable training set.
 Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
@@ -174,11 +175,11 @@ Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
 To take maximum advantage of the available computing facilities and because the sample sizes in the project exceed one million the decision was made to prepare the code for parallel processing on a remote server.
 Particularly, grid search operations to optimize performance of the classifier were considered to be processor intensive and vital to the success of the prediction task.
-The easiest way to set up these interactive parallel processing operations was the parallel processing model in IPython\cite{parallel_python_webpage}.
+The easiest way to set up these interactive parallel processing operations was the parallel processing model in IPython\autocite{parallel_python_webpage}.
 
 %How this worked in practice, and the potential
 The notebooks using parallel processing are the notebooks on classifier training, which are described in Appendix \ref{app:classtrain}.
-This usage depended on code from a parallel processing tutorial\cite{ogrisel_parallel} to distribute memory to the cores using Numpy's memmap methods.
+This usage depended on code from a parallel processing tutorial\autocite{ogrisel_parallel} to distribute memory to the cores using Numpy's memmap methods.
 The code to do this has been integrated into the ocbio module in the project repository and can be used as shown in the notebooks.
 Potentially, and as described in the tutorial, this code could be used to run the classifier training on cloud services using Starcluster.
 
@@ -196,7 +197,7 @@ Classification is normally concerned about picking a decision threshold to class
 However, in this case the output of our process is the posterior probability of the model given a new example.
 
 %introduce scikit-learn
-To produce this output the chosen tool was the Python package Scikit-learn\cite{pedregosa_scikit-learn:_2011}.
+To produce this output the chosen tool was the Python package Scikit-learn\autocite{pedregosa_scikit-learn:_2011}.
 Each classifier implemented in this package has a similar interface allowing modular code to be written.
 In addition, this package is actively developed with all the required classifiers having efficient implementations.
 
@@ -218,14 +219,14 @@ The reasons for choosing these and brief description of each algorithm are given
 
 %with reference to Murphy
 Logistic regression is a linear model being used for classification.
-It is equivalent to a linear regression model transformed through a sigmoid function\cite[376]{murphy_machine_2012}:
+It is equivalent to a linear regression model transformed through a sigmoid function\autocite[376]{murphy_machine_2012}:
 
 \begin{align}
     p(c=1|\pmb{x}) = \sigma(b + \pmb{x}^{T}*\pmb{w})
 \end{align}
 
 Where $\pmb{x}$ is the vector of features.
-The weights and biases are the parameters of this model, expressed in the above equation as $b$ and $\pmb$.
+The weights and biases are the parameters of this model, expressed in the above equation as $b$ and $\pmb{w}$.
 
 This divides the points in the dataset by a hyperplane, classifying the points on each side into different classes.
 For data that is linearly separable, this produces a classifier that will make no mistakes on the test data.
@@ -241,7 +242,7 @@ The log likelihood for this model is:
 
 %describe what the C parameter is
 Regularisation of the weights represents a prior belief that the weights should not increase without bound.
-In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\cite[381]{murphy_machine_2012}.
+In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{murphy_machine_2012}.
 To stop this from happening we apply a penalty term to the size of the weights:
 
 \begin{align}
@@ -254,12 +255,12 @@ Tuning this hyper-parameter is the goal of a grid search when training a Logisti
 
 %with reference to Murphy
 Logistic regression can be generalised to apply kernel functions to the input features to obtain better classifications.
-Support Vector Machines exploit this while also applying a different objective function intended to avoid overfitting\cite[383]{murphy_machine_2012}.
+Support Vector Machines exploit this while also applying a different objective function intended to avoid overfitting\autocite[383]{murphy_machine_2012}.
 The objective in placing the hyperplane for a Support Vector Machine is a "maximum margin" in that is attempts to maintain the same distance from the closest opposing class points.
 
 %success of these models?
 These are often successful classifiers in practice.
-Applications include text categorisation, hand-written character recognition, image classification and biosequences analysis\cite{cristianini_an_2000}.
+Applications include text categorisation, hand-written character recognition, image classification and biosequences analysis\autocite{cristianini_an_2000}.
 
 %describe the hyper-parameters?
 The hyper-parameters for a Support Vector Machine control the kernels, along with the regularisation parameter as described for logistic regression in section \ref{logreg}.
@@ -279,7 +280,7 @@ Decision trees are intuitively simple in that it consists of a series of compari
 \end{figure}
 
 In this way decision trees are both simple and tractable methods for using a feature vector to classify inputs and there are many automated ways to generate effective decision trees.
-The problem in the design of a decision tree is which comparison to choose at each node, described as how to partition the data\cite[544]{murphy_machine_2012}. %redundant citation here?
+The problem in the design of a decision tree is which comparison to choose at each node, described as how to partition the data\autocite[544]{murphy_machine_2012}. %redundant citation here?
 There are several implementations of algorithms to achieve this and a full description can be found in \textcite[544]{murphy_machine_2012}.
 Other advantages of decision trees include the ability to handle a mixture of discrete and continuous inputs, automatic variable selection, scaling to large datasets readily and the ability to handle missing inputs, with modification.
 %other strengths of decision trees?
@@ -287,9 +288,9 @@ Other advantages of decision trees include the ability to handle a mixture of di
 %describe split function? probably not worth going into this.
 
 %then explain the problems with decision trees, variance etc
-Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\cite{murphy_machine_2012}.
+Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\autocite{murphy_machine_2012}.
 The random forest algorithm addresses this problem by providing redundancy; multiple trees are grown and their results averaged.
-For M trees trained on different subsets of the data\cite{murphy_machine_2012}:
+For M trees trained on different subsets of the data\autocite{murphy_machine_2012}:
 
 \begin{align}
     f(x) = \sum_{m=1}^{M} \frac{1}{M} f_{m}(x)
@@ -299,7 +300,7 @@ Where $f_{m}(x)$ is $m$th tree. This is simply averaging the results of the tree
 
 %with reference to Qi and ENTS, showning good performance on this problem
 With the ability to work on large datasets and mixing continuous and discrete data these types of classifiers would appear to already be well suited to this problem.
-This is what has been observed in the literature, with these classifiers achieving the best performance despite different types of biological data being used\cites{qi_evaluation_2006,rodgers-melnick_predicting_2013}.
+This is what has been observed in the literature, with these classifiers achieving the best performance despite different types of biological data being used\autocites{qi_evaluation_2006,rodgers-melnick_predicting_2013}.
 Due to these reports in the literature it appeared that this classifier would be the best choice for our protein interaction prediction task.
 
 %expand on how much better they were etc? in different places?
@@ -315,19 +316,19 @@ Other options considered for our classification problem, but not included in the
     \item Beta regression
 \end{itemize}
 
-Naive Bayes in particular would have required modifying the code from Scikit-learn to deal with data from multiple different distributions or implementing Weka's solution of kernel density estimated distributions for each different feature\cite{john_estimating_1995}.
+Naive Bayes in particular would have required modifying the code from Scikit-learn to deal with data from multiple different distributions or implementing Weka's solution of kernel density estimated distributions for each different feature\autocite{john_estimating_1995}.
 Beta regression would have been very suitable for the task and is suggested as future work, described in the following section.
 
 \subsubsection{Beta regression}
 
 %what is beta regression? quickly
-A generalised linear model is one in which the output variable is distributed according to a given target density\cite{murphy_machine_2012}.
-In the case of Beta regression\cite{smithson_better_2006} this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
+A generalised linear model is one in which the output variable is distributed according to a given target density\autocite{murphy_machine_2012}.
+In the case of Beta regression\autocite{smithson_better_2006} this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
 A maximum-likelihood solution to this model can be found and the resulting model fit in the same way as a standard regression model.
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
 True protein interactions are not something which can be assumed in a protein interaction prediction task.
-Many proteins are known to be very likely, but others are less confidently classified, as reflected in the HIPPIE database's confidence scoring system\cite{schaefer_hippie:_2012}.
+Many proteins are known to be very likely, but others are less confidently classified, as reflected in the HIPPIE database's confidence scoring system\autocite{schaefer_hippie:_2012}.
 To train a classifier a training set of true and false interactions is required and this cannot be supplied without thresholding the database at an arbitrary confidence value.
 
 Beta regression avoids this problem as it allows the confidence values to remain a part of the regression process.
@@ -348,7 +349,7 @@ Using this we can build a model and update our belief on the likelihood of inter
 % consider using paragraph headings in this section
 
 % was or will be?
-Cross-validation was applied to tests during parameters searches and when plotting learning curves to get a statistical estimate of the reliability of the metrics applied to the classifier\cite[152]{witten_data_2011}.
+Cross-validation was applied to tests during parameters searches and when plotting learning curves to get a statistical estimate of the reliability of the metrics applied to the classifier\autocite[152]{witten_data_2011}.
 As the training set is relatively large, these were applied as random sub-samples of the full data set, but stratified to maintain the same proportion of zeros to ones as in the full training set.
 This is important as it must reflect the expected ratio for real protein interactions to non-interactions.
 
@@ -373,7 +374,7 @@ Using this accuracy value is therefore problematic and this requires the other m
 A Receiver Operating Characteristic, or ROC, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
 This makes it useful as an illustration of the tradeoff possible with this particular classifier.
 The Area Under Curve, or AUC, value is the area under this line.
-A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\cite{hanczar_small-sample_2010}.
+A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
 
 %precision recall
@@ -420,7 +421,7 @@ All three are based on betweenness measures to partition the graph, making them 
 
 %NMI theory, what is a measure of
 Mutual information intuitively is the reduction in uncertainty about one random variable by observing another.
-Defined in terms of entropy it is\cite{mackay_information_2003}:
+Defined in terms of entropy it is\autocite{mackay_information_2003}:
 
 %could move that citation next to the equation?
 \begin{align}
@@ -430,7 +431,7 @@ Defined in terms of entropy it is\cite{mackay_information_2003}:
 Where $H(X)$ is the entropy of the random variable $X$ and $H(X|Y)$ is the conditional entropy of $X$ given $Y$.
 
 %need citation
-In the case of the function we are using to perform this from Scikit-learn the mutual information is normalised by $\sqrt{H(X)\timesH(Y)}$\cite{pedregosa_scikit-learn:_2011}.
+In the case of the function we are using to perform this from Scikit-learn the mutual information is normalised by $\sqrt{H(X)\times H(Y)}$\autocite{pedregosa_scikit-learn:_2011}.
 This produces a value between zero and one which reflects the redundancy of the distributions - 1.0 being exactly the same and 0.0 being independent.
 
 \subsection{Disease Enrichment}
@@ -440,4 +441,4 @@ This produces a value between zero and one which reflects the redundancy of the 
 
 \section*{Conclusion}
 
-\lipsum[1]
+

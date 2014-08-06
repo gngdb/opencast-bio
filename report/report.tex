@@ -1,39 +1,6 @@
 \documentclass[12pt,oneside,abbrevs,dtc,mscres,neuro,notimes,logo]{styles/infthesis}
 
-% Packages
-\usepackage{graphicx}
-\usepackage{abbrevs}
-\usepackage{acronym}
-\usepackage{minted}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{cite} 
-\usepackage{gensymb}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{scalefnt}
-\usepackage{subfig}
-\usepackage{tabularx}
-%\usepackage{subcaption}
-\usepackage{array}
-%\usepackage{pgffor,pgf}
-\usepackage{biblatex}
-\usepackage{psfrag}
-\usepackage{lipsum}
-\usepgflibrary{plothandlers}
-\usetikzlibrary{plotmarks}
-\pgfplotsset{compat=newest}
-
-%adding path to images
-\graphicspath{{./images/}}
-
-%alias cite to autocite, cites to autocites
-
-\mathtoolsset{showonlyrefs=false}
-
-\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
+\usepackage{reportpackages}
 
 % Project Details
 \title{Title Pending}
@@ -50,17 +17,21 @@
 %
 % Pending:
 %
+% * Intro
+%   * intro to intro
 % * Background
 %   * Intro
 %   * Protein complexes and community detection
-%
+% * Methods
+%   * Features section
+%   * gold standard data
 
-%\input{sections/misc/acronyms}
+\begin{document}
+
+\input{sections/misc/acronyms}
 \input{sections/misc/abstract}
 
 % Extra Package Commands
-
-\begin{document}
   \begin{preliminary}
     % Title Page
     \shieldtype{1}
@@ -87,6 +58,6 @@
   \input{sections/appendix/notebooks}
 
   % Bibliography
-  \bibliography{refs/bibliography}{}
-  \bibliographystyle{apalike}
+  \printbibliography
+
 \end{document}
