@@ -9,29 +9,79 @@
 %Feature extraction results
 \section{PPI feature vectors}
 
-%what were the features extracted?
+%The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C).
 
-%iterations of the results
+%Larger features
+%Gene ontology was built as a feature in the same manner as that of qi_evaluation_2006 but, without knowing their approach, we had to develop our own method of creating usable features.
 
-%Which were most useful?
+%ENTS features were retreived through analysis and modification of the code published on the ENTS website, but did not have full coverage on any dataset.
+
+%Before their removal the features that best predicted the chosen gold standard dataset were reliably those directly derived from interaction databases.
+
+%example feature importance graph
+
+%After removing interaction databases 
 
 %graph of feature importance from RF classifier?
 
-
 %tables with explanation
+
+\subsection{Data visualisation}
+
+\subsubsection{Reducing dimensionality}
+%PCA is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
+
+
+\subsection{High dimensional plots}
+
+%Very few graphs are able to integrate large numbers of dimensions in a meaningful way; parallel line graphs and Andrew's curves are the two we have applied.
+
+%Explain how Andrew's curves work, what they mean.
 
 
 \subsection{Missing data}
 %how was missing data dealt with?
 
+%Justification for mean value filling.
+
 \section{Classification of weighted PPI networks}
 
+%Accuracy as a simple measure of the performance of a classifier is difficult to interpret in the case of a heavily unbalanced classifier such as this.
+\subsection{Classifier accuracy and best parameters}
 
+%Using grid searches over the following parameter ranges we were able to search for the optimal parameters for each of the classifiers tested.
+
+%table of the best parameters obtained for each classifier.
+
+\subsection{ROC curves}
+
+%An ROC curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
+
+%ROC curves for the different classifiers
+
+%differences between the classifiers and reasons for this.
+
+\subsection{Precision-recall curves}
+
+%precision recall curves for the different classifiers
+
+\subsection{Feature importances}
+
+%Comparing logistic regression to random forests
 
 %tests characterising and comparing different classifiers, results
 
+%Treating interactions as an unobserved random variable, we were able to build a simple probabilistic model to make up for the failings of the classifier and continue with the Community Detection.
+
 \section{Comparison of weighted and unweighted PPI networks}
 
+%Here are the communities we detected in each case
+
+%images of both sets of communities, nicely rendered
+
+%Investigate some of the communities by eye, look at distribution of baits etc
+
+\subsection{Graph comparison}
 
 %comparison of using weighted and unweighted
 %NMI and disease enrichment
