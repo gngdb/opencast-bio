@@ -1,0 +1,35 @@
+[0] Config.pm:318> INFO - This is Biber 1.8
+[0] Config.pm:321> INFO - Logfile is 'report.blg'
+[93] biber:275> INFO - === Wed Aug  6, 2014, 17:44:51
+[93] Biber.pm:333> INFO - Reading 'report.bcf'
+[177] Biber.pm:630> INFO - Found 46 citekeys in bib section 0
+[197] Biber.pm:3053> INFO - Processing section 0
+[216] Biber.pm:3190> INFO - Looking for bibtex format file 'zlibrary.bib' for section 0
+[416] bibtex.pm:937> INFO - Decoding LaTeX character macros into UTF-8
+[596] bibtex.pm:812> INFO - Found BibTeX data source 'zlibrary.bib'
+[717] Utils.pm:169> WARN - I didn't find a database entry for 'proposal' (section 0)
+[717] Utils.pm:169> WARN - I didn't find a database entry for 'synsys' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'github' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'gitannex' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'opencast-bio' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'opencastbiowiki' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'ug4template' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'alberts_molecular_2008' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'citation_needed' (section 0)
+[718] Utils.pm:169> WARN - I didn't find a database entry for 'kandel_principles_2000' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'vonMering_string_2005' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'maglott_entrez_2006' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'ensembl_website' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'uniprot_website' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'dip_website' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'consortium_universal_2007' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'razick_irefindex_2008' (section 0)
+[719] Utils.pm:169> WARN - I didn't find a database entry for 'parallel_python_webpage' (section 0)
+[720] Utils.pm:169> WARN - I didn't find a database entry for 'ogrisel_parallel' (section 0)
+[720] Utils.pm:169> WARN - I didn't find a database entry for 'cristianini_an_2000' (section 0)
+[966] Biber.pm:2939> INFO - Overriding locale 'en_GB.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[966] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
+[967] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_GB.UTF-8'
+[1112] bbl.pm:482> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[1124] bbl.pm:555> INFO - Output to report.bbl
+[1124] Biber.pm:105> INFO - WARNINGS: 20
