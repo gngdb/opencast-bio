@@ -14,11 +14,47 @@ Using all of the data available it was possible to run a simple Bayesian alterna
 \section{PPI feature vectors}
 
 %The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C.
+Many features were identified for extraction and these are described in Appendix \ref{datasources}.
+Of these, only a small subset were succesfully processed into a usable form.
+These were:
+
+\begin{itemize}
+    \item
+\end{itemize}
+
+Of these, a smaller proportion were used in the final classifier, which neglected features directly derived from interaction databases.
+The features used to train the final classifier are shown in table \ref{tab:features}.
+A brief description of these features is given below.
+
+%feature table, with information about each
+\begin{table}
+    \centering
+    %tabular goes here
+    \caption{A table summarising the components of the feature vectors used in the final classifier.}
+    \label{tab:features}
+\end{table}
+
+\subsection{Gene Ontology}
 
 %Larger features
 %Gene ontology was built as a feature in the same manner as that of qi_evaluation_2006 but, without knowing their approach, we had to develop our own method of creating usable features.
+The Gene Ontology\autocite{ashburner_gene_2000} is a resource of annotations for genes to indicate various characteristics in a hierarchical manner, such as cellular localisation or function.
+This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as STRING\autocite{von-mering_string:_2005} to predict protein interactions.
+Intuitively, it can be used to detect when, for example, two proteins are localised in the same area of the cell - as this would increase the probability that these two proteins interact.
+Details on exactly how this feature was generated can be found in the notebook reference in Appendix \ref{app:go}.
 
+\subsection{Features derived from ENTS}
 %ENTS features were retreived through analysis and modification of the code published on the ENTS website, but did not have full coverage on any dataset.
+
+These features were obtained through analysis and modification of the bundled code and data downloaded from the website of \textcite{rodgers-melnick_predicting_2013}.
+In turn, most of these features were generated through the Multiloc2 program of \textcite{blum_multiloc2:_2009}.
+The remaining features are pairwise combinations of conserved protein domains, which are conserved "modules" of proteins described in \textcite{janin_domains_1985}.
+
+\subsection{Yeast Two-Hybrid}
+
+%description of Y2H feature
+
+\subsection{Removed features}
 
 %Before their removal the features that best predicted the chosen gold standard dataset were reliably those directly derived from interaction databases.
 
@@ -28,7 +64,7 @@ Using all of the data available it was possible to run a simple Bayesian alterna
 
 %graph of feature importance from RF classifier?
 
-%tables with explanation
+%tables with explanation - table above now, not required.
 
 \subsection{Data visualisation}
 
@@ -48,12 +84,14 @@ Using all of the data available it was possible to run a simple Bayesian alterna
 %Explain how Andrew's curves work, what they mean.
 
 
+
+
+\section{Classification of weighted PPI networks}
+
 \subsection{Missing data}
 %how was missing data dealt with?
 
 %Justification for mean value filling.
-
-\section{Classification of weighted PPI networks}
 
 %Accuracy as a simple measure of the performance of a classifier is difficult to interpret in the case of a heavily unbalanced classifier such as this.
 \subsection{Classifier accuracy and best parameters}
