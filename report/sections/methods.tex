@@ -430,9 +430,12 @@ Defined in terms of entropy it is\autocite{mackay_information_2003}:
 
 Where $H(X)$ is the entropy of the random variable $X$ and $H(X|Y)$ is the conditional entropy of $X$ given $Y$.
 
-%need citation
 In the case of the function we are using to perform this from Scikit-learn the mutual information is normalised by $\sqrt{H(X)\times H(Y)}$\autocite{pedregosa_scikit-learn:_2011}.
 This produces a value between zero and one which reflects the redundancy of the distributions - 1.0 being exactly the same and 0.0 being independent.
+
+Code produced at Edinburgh to calculate NMI was also used.
+The problem with the Scikit-learn code is that it assumes the class labels are correct, but they have just been arbitrarily numbered as the communities are found. 
+This code takes that into account, ensuring that the class labels are accurate to the IDs in the community.
 
 \subsection{Disease Enrichment}
 
