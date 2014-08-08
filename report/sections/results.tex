@@ -269,15 +269,29 @@ The results of this search are shown in table \ref{tab:gridresults}.
 %table of the best parameters obtained for each classifier.
 \begin{table}
     \centering
-    \begin{tabular}{tablespec}
+    \begin{tabular}{l c c c c}
+        Classifier                                  & Hyper-parameter values    & Test set accuracy         &                               & Training set accuracy         &  \\
+        \hline
+        Logistic Regression                         & C : $0.0215$              & $0.9984$                  & $\pm 3\e{-5}$                 & $0.99847$                     & $\pm 2\e{-5}$ \\
+        \multirow{3}{*}{Support Vector Machine}     & kernel: RBF               & \multirow{3}{*}{$0.9985$} & \multirow{3}{*}{N/A}          & \multirow{3}{*}{$0.99933$}    & \multirow{3}{*}{$\pm 1.2\e{-4}$} \\
+                                                    & Gamma: $10.0$             &                           &                               &                               &       \\
+                                                    & C: $10.0$                 &                           &                               &                               &       \\
+        \multirow{2}{*}{Random Forest}              & N estimators: $44$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+                                                    & Max features: $25$        &                           &                               &                               &       \\
+        \multirow{2}{*}{Extremely Randomized Trees} & N estimators: $94$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+                                                    & Max features: $25$        &                           &                               &                               &       \\
     \end{tabular}
     \caption{Summary of the hyper-parameter combinations found by grid search and associated statistical accuracy measures.}
     \label{tab:gridresults}
 \end{table}
 
+Although the results of the Support Vector Machine appear to be good, it was trained on a relatively small dataset and its performance in later tests deemed it unsuitable to our classification task.
+The random forest can be seen to be performing worse than the logistic regression model in this test, with a slightly lower accuracy, but within the standard error boundaries.
+
 \subsection{ROC curves}
 
 %An ROC curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
+
 
 %ROC curves for the different classifiers
 
