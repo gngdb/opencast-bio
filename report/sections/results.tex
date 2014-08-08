@@ -16,25 +16,43 @@ Using all of the data available it was possible to run a simple Bayesian alterna
 %The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C.
 Many features were identified for extraction and these are described in Appendix \ref{datasources}.
 Of these, only a small subset were succesfully processed into a usable form.
-These were:
+These are listed below and more information about each can be found in Appendix \ref{datasources}:
 
+%more citations below?
 \begin{itemize}
-    \item
+    \item HIPPIE database
+    \item Pulldown derived features: affinity and abundance
+    \item Gene Ontology, also described in section \ref{go}
+    \item Yeast Two-Hybrid, also described in section \ref{y2h}
+    \item ENTS derived features, also described in section \ref{ents}
+    \item iRefIndex database
+    \item STRING database
+    \item HMR database 
+    \item InterologWalk results
 \end{itemize}
 
 Of these, a smaller proportion were used in the final classifier, which neglected features directly derived from interaction databases.
 The features used to train the final classifier are shown in table \ref{tab:features}.
 A brief description of these features is given below.
 
-%feature table, with information about each
+%feature table, with information about each (size of features, categorical/ordinal/numerical, coverage)
 \begin{table}
     \centering
     %tabular goes here
+    \begin{tabular}{l c c c c}
+        Feature         &   Size &  Type                &  Coverage on training set &  Coverage on active zone network \\
+        \hline
+        Gene Ontology    &  90   &  Binary categorical  &  100.0\%                  & 100.0\%                          \\
+        Yeast two-hybrid &  1    &  Numerical           &  100.0\%                  & 100.0\%                          \\
+        ENTS derived     &  107  &  Numerical           &  38.39\%                  & 42.74\%                          \\
+    \end{tabular}
     \caption{A table summarising the components of the feature vectors used in the final classifier.}
     \label{tab:features}
 \end{table}
 
+%these subsections may be too small
 \subsection{Gene Ontology}
+\label{go}
 
 %Larger features
 %Gene ontology was built as a feature in the same manner as that of qi_evaluation_2006 but, without knowing their approach, we had to develop our own method of creating usable features.
@@ -44,36 +62,61 @@ Intuitively, it can be used to detect when, for example, two proteins are locali
 Details on exactly how this feature was generated can be found in the notebook reference in Appendix \ref{app:go}.
 
 \subsection{Features derived from ENTS}
+\label{ents}
 %ENTS features were retreived through analysis and modification of the code published on the ENTS website, but did not have full coverage on any dataset.
 
 These features were obtained through analysis and modification of the bundled code and data downloaded from the website of \textcite{rodgers-melnick_predicting_2013}.
 In turn, most of these features were generated through the Multiloc2 program of \textcite{blum_multiloc2:_2009}.
 The remaining features are pairwise combinations of conserved protein domains, which are conserved "modules" of proteins described in \textcite{janin_domains_1985}.
 
-\subsection{Yeast Two-Hybrid}
+\subsection{Yeast Two-Hybrid results}
+\label{y2h}
 
 %description of Y2H feature
+%pending
 
 \subsection{Removed features}
 
 %Before their removal the features that best predicted the chosen gold standard dataset were reliably those directly derived from interaction databases.
+As listed above there were originally many features used in the supervised classification that were derived from interaction databases.
+These were very effective in predicting interactions on the training set, as expected, but their importance in the task outweighed any other features, as shown in figure \ref{fig:unbalanced}.
+It was decided that indirect features should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
 
 %example feature importance graph
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{unbalanced.weighting.png}
+    \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features.}
+    \label{fig:unbalanced}
+\end{figure}
 
 %After removing interaction databases 
+Once these databases were removed the performance of the classifier was drastically lower.
+However, all of the available features had more closely distributed importances in the final classifier, as shown in section \ref{importances}.
+The classifier was then integrated 
 
-%graph of feature importance from RF classifier?
+%graph of feature importance from RF classifier? probably not required, will be found below.
 
 %tables with explanation - table above now, not required.
 
 \subsection{Data visualisation}
 
 %describe the problem of using in proportion and out of proportion methods
+For all graphs, two cases were investigated: in proportion and out of proportion.
+In proportion refers to the case where the proportion of interactions to non-interactions is correct; specifically, 1 interaction to 600 non-interactions.
+Out of proportion maintains the same number of interactions to non-interactions.
+This is important as it is often easier to separated the data when the classes are equally split.
 
 \subsubsection{Reducing dimensionality}
 %PCA is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
+Two methods were tested to reduce the dimensionality of the data to two dimensions so that it could be easily plotted.
+The first of these is PCA, which is relatively simple with a fast implementation, and the second is t-SNE, which is more complicated but has achieved better performance in recent works.
+Both of these methods are described below in more detail.
+
+%PCA description, referencing Barber
 
 %tSNE is more complicated, but was recommended due to reportedly good performance
+
 
 %Both methods show that this data is likely to be difficult to accurately categorize as the points are not separated in a 2d space
 
@@ -116,12 +159,18 @@ The remaining features are pairwise combinations of conserved protein domains, w
 
 
 \subsection{Feature importances}
+\label{importances}
 
 %Comparing logistic regression to random forests
 
 %tests characterising and comparing different classifiers, results
 
 %Treating interactions as an unobserved random variable, we were able to build a simple probabilistic model to make up for the failings of the classifier and continue with the Community Detection.
+
+\subsection{Bayesian weighting of interactions}
+\label{bayesresults}
+
+%description of the Bayesian method of interaction weighting, with reference to the notebook on this
 
 \section{Comparison of weighted and unweighted PPI networks}
 
