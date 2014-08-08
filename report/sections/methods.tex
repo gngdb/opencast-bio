@@ -334,7 +334,7 @@ To train a classifier a training set of true and false interactions is required 
 Beta regression avoids this problem as it allows the confidence values to remain a part of the regression process.
 Using this we can build a model and update our belief on the likelihood of interaction in a Bayesian framework much more easily.
 
-\subsubsection{Classifier verification}
+\subsection{Classifier verification}
 
 %Tests we planned to use on each classifier:
 %  mention cross-validation
@@ -391,10 +391,22 @@ Again, the area under the curve can gauge a classifier's effectiveness.
 %example ROC curve?
 %example precision recall curve?
 
+\subsection{Missing data}
+%how was missing data dealt with?
+Before classification could be performed the missing data in the feature vectors had to be imputed.
+This was performed by filling the missing values with the mean value of that feature.
+This is a common technique that is applied if it is likely the data is missing at random.
+In this case the data that is missing is due to mismatches in protein identifier mapping dictionaries, which is likely random and independent of the interaction prediction task.
+
 \subsection{Bayesian weighting}
 \label{bayes}
 
 %description of the method used to weight interactions after the classifier was found to be insufficient
+
+
+
+
+
 
 \section{Measures applied to weighted and unweighted PPI networks}
 

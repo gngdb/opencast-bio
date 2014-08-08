@@ -108,40 +108,172 @@ Out of proportion maintains the same number of interactions to non-interactions.
 This is important as it is often easier to separated the data when the classes are equally split.
 
 \subsubsection{Reducing dimensionality}
+%why do we want to reduce the dimensionality
+If the data were two dimensional we would like to plot it as a scatter plot and see if there was a clear grouping of the points.
+This would indicate that a classification algorithm would be able classify the data.
+As the data has in excess of one hundred dimensions it is necessary to reduce the dimensionality before plotting.
+
 %PCA is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
 Two methods were tested to reduce the dimensionality of the data to two dimensions so that it could be easily plotted.
 The first of these is PCA, which is relatively simple with a fast implementation, and the second is t-SNE, which is more complicated but has achieved better performance in recent works.
 Both of these methods are described below in more detail.
 
 %PCA description, referencing Barber
+In PCA the method to express a high-dimensional point $\pmb{x}$ as a low dimensional point relies on finding an approximation for this point according to\autocite[330]{barber_bayesian_2013}:
+
+\begin{align}
+    \pmb{x}^{n} \approx \pmb{c} + \sum_{j=1}^{M} y_{j}^{n} \pmb{b}^{j} \equiv \tilde{\pmb{x}}^{n}
+\end{align}
+
+Where the low dimensional points are $\pmb{y}^{n}$, $\pmb{c}$ is a constant and $\pmb{b}_{j}$ are the principal components.
+The algorithm to find these principal components is described in \textcite[333]{barber_bayesian_2013}.
+
+The resulting plot produced using this technique is shown in figures \ref{fig:inpca} and \ref{fig:outpca} for the in proportion and out cases, respectively.
+In the case of the data being out of proportion it appears that the groups can be separated.
+However, this is not the case for the in proportion case.
+
+%plots
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{in.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{In proportion plot of the data reduced to two dimensions using PCA.}
+    \label{fig:inpca}
+\end{figure}
+
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{out.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{Out of proportion plot of the data reduced to two dimensions using PCA.}
+    \label{fig:outpca}
+\end{figure}
+
 
 %tSNE is more complicated, but was recommended due to reportedly good performance
+A more complex method to reduce the dimensionality of the data is t-SNE\autocite{van_der_maaten_visualizing_2008}.
+This technique won the Merck Visualization Challenge.
+It differs from PCA in the objective function in that it aims to maintain a similarity measure between points between the high and low-dimensional cases.
 
+%should probably say what we did vis. TruncatedSVD
+In addition to using this technique it was also recommended to use Truncated Singular Value Decomposition(SVD) to reduce the dimensionality of the vector to 50 beforehand.
+This was for implementation based reasons in Scikit-learn.
+
+%results
+Unfortunately, this was no more successful than PCA on this dataset, as shown in figures \ref{fig:intsne} and \ref{fig:outtsne}.
+It should also be noted that the number of points plotted in these graphs is much lower than in the case of PCA as it is much more computationally intensive.
+
+%plots
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{in.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{In proportion plot of the data reduced to two dimensions using t-SNE.}
+    \label{fig:intsne}
+\end{figure}
+
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{out.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{Out of proportion plot of the data reduced to two dimensions using t-SNE.}
+    \label{fig:outtsne}
+\end{figure}
 
 %Both methods show that this data is likely to be difficult to accurately categorize as the points are not separated in a 2d space
+Both of the methods above suggest that this classification problem is difficult, as the points are not significantly separated in any of the plots.
 
 \subsection{High dimensional plots}
 
 %Very few graphs are able to integrate large numbers of dimensions in a meaningful way; parallel line graphs and Andrew's curves are the two we have applied.
+Neglecting reducing the dimensionality of the data there are some plots which are able to illustrate a very large number of dimensions.
+Two which have been applied in this project are parallel lines plots and Andrew's curves\autocite{andrews_plots_1972}.
+Parallel lines plots are relatively simple in that each feature is simply scaled and plotted along the x axis at its index in the vector, producing a number of overlapping lines.
+Andrew's curves are more complex, and the method is described below along with the results obtained.
+
+%parallel line plot results
+The parallel lines plots are shown in proportion in figure \ref{fig:inparline} and out of proportion in figure \ref{fig:outparline}.
+In either case, it is not clear whether the data easily separates into two classes.
+The in proportion case in particular shown in figure \ref{fig:inparlines} is very difficult to separate into interactions and non-interactions.
+
+%this should be a tikz plot
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{in.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{In proportion parallel line plot of the data used to train the final classifier.}
+    \label{fig:inparline}
+\end{figure}
+
+%this should be a tikz plot
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{out.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{Out of proportion parallel line plot of the data used to train the final classifier.}
+    \label{fig:outparline}
+\end{figure}
 
 %Explain how Andrew's curves work, what they mean.
+Andrew's curves are similar to parallel line plots in that they consist of overlapping lines.
+The lines in Andrew's curves are generated by mixing waves at different frequencies weighted based on the values of the features in the vector\autocite{andrews_plots_1972}.
+The result is a periodic wave that is modulated based on the values of the feature vectors.
+If the feature vectors of each class have reliably different values this should be reflected in the grouping of these curves.
+The two cases of in proportion and out are shown in figures \ref{fig:inandcurve} and \ref{fig:outandcurve}, respectively.
 
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{in.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{In proportion Andrew's curves plot of the data used to train the final classifier.}
+    \label{fig:inandcurve}
+\end{figure}
 
+\begin{figure}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{out.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
+    \centering
+    \caption{Out of proportion Andrew's curves plot of the data used to train the final classifier.}
+    \label{fig:outandcurve}
+\end{figure}
 
+%what is shown in the plots?
+In neither graph is it easy to see a grouping of the curves being plotted.
+This means that it is likely to be very difficult to accurately classify the vectors.
 
-\section{Classification of weighted PPI networks}
+\section{Classification in weighted PPI networks}
 
-\subsection{Missing data}
-%how was missing data dealt with?
+%why is this different to regular classification
+In a classification task there are two common components: a training set that is labeled and a set of data which the classifier is to be applied to, without labels.
+This task is similar in that we have created a training set with labels and the active zone network forms a set of feature vectors that have no labels.
+However, this does not accurately encode our prior knowledge of the active zone network interactions, which were picked for their likelihood to be true interactions.
+For this reason, in this application classification alone is not sufficient to solve the problem of creating accurate weights, driving the development of the technique described in section \ref{bayes}.
 
-%Justification for mean value filling.
+This section describes both the results of training the classifier as planned on the labeled training set and the results of the Bayesian method to weight the interactions of the active zone network.
 
 %Accuracy as a simple measure of the performance of a classifier is difficult to interpret in the case of a heavily unbalanced classifier such as this.
 \subsection{Classifier accuracy and best parameters}
 
 %Using grid searches over the following parameter ranges we were able to search for the optimal parameters for each of the classifiers tested.
+Grid searches of hyper-parameter values were used to find the optimal combination.
+The results of this search are shown in table \ref{tab:gridresults}.
 
 %table of the best parameters obtained for each classifier.
+\begin{table}
+    \centering
+    \begin{tabular}{tablespec}
+    \end{tabular}
+    \caption{Summary of the hyper-parameter combinations found by grid search and associated statistical accuracy measures.}
+    \label{tab:gridresults}
+\end{table}
 
 \subsection{ROC curves}
 
