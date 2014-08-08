@@ -85,7 +85,9 @@ It was decided that indirect features should be used in the trained supervised c
 %example feature importance graph
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{unbalanced.weighting.png}
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features.}
     \label{fig:unbalanced}
 \end{figure}
@@ -290,33 +292,124 @@ The random forest can be seen to be performing worse than the logistic regressio
 
 \subsection{ROC curves}
 
-%An ROC curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
-
+%A ROC curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
+As described in section \ref{classifierverification} ROC curves were applied to all classifiers to characterise the performance of each.
+The ROC curve produced by the logistic regression model is shown in figure \ref{fig:logroc}.
+The positive AUC value is desirable and the curve of the ROC curve suggests this model can achieve a relatively good true positive rate at low false positive rate, which is likely what it would be used at - to avoid false positive protein interactions being classified.
 
 %ROC curves for the different classifiers
+%with AUC values in the captions
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{logreg.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The ROC curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.781$.}
+    \label{fig:logroc}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{rf.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The ROC curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.806$.}
+    \label{fig:rfroc}
+\end{figure}
+
+%commented out as graph is not worth including
+%\begin{figure}
+%    \centering
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{svc.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \caption{The ROC curve produced by a support vector machine model on the test data set using the best parameters shown in table \ref{tab:gridresults}.}
+%    \label{fig:svcroc}
+%\end{figure}
+
+However, the ROC curve shown in figure \ref{fig:rfroc} is very similar to that created by the logistic regression model except it has slightly better performance at low false positive rates.
+In addition, it has a higher AUC value.
+
+Unfortunately, it was not possible to train the support vector machine on a large enough training set to plot a realistic ROC curve due to time constraints, so it is not shown here.
+The notebook referenced in appendix \ref{app:classtrain} provides the results obtained.
+This is also true of the precision-recall graph in the following section.
 
 %differences between the classifiers and reasons for this.
 
 \subsection{Precision-recall curves}
 
-%what a precision recall plot is?
+%what a precision recall plot is? already in methods
+As described in section \ref{classifierverification} the classifiers were also characterised through plotting a precision-recall curve.
+This is shown for the random forest and logistic regression models in figures \ref{fig:rfpr} and \ref{fig:logpr}, respectively.
+Although the random forest model achieves a better AUC value, the curve demonstrates is unable to recall as many samples with perfect precision as the logistic regression model.
 
 %precision recall curves for the different classifiers
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{logreg.pr.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The precision-recall curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.11$.}
+    \label{fig:logpr}
+\end{figure}
 
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{rf.pr.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The precision-recall curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.12$.}
+    \label{fig:rfpr}
+\end{figure}
 
 \subsection{Feature importances}
 \label{importances}
 
 %Comparing logistic regression to random forests
+Both logistic regression models and random forests can quickly return feature importances.
+In the case of logistic regression, this is as simple as looking at the weights applied to each input feature.
+Random forests store the importances of each feature internally in Scikit-learn and this can be easily queried.
+These importances measures are plotted in figures \ref{fig:logregweights} and \ref{fig:rfimportances}.
 
-%tests characterising and comparing different classifiers, results
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{logreg.weights.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The internal weighting of features in a logistic regression model trained using the parameters described in table \ref{tab:gridresults}.}
+    \label{fig:logregweights}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{rf.importances.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{The importances of each input feature as reported by the random forest model trained using the parameters described in table \ref{tab:gridresults}.}
+    \label{fig:rfimportances}
+\end{figure}
 
 %Treating interactions as an unobserved random variable, we were able to build a simple probabilistic model to make up for the failings of the classifier and continue with the Community Detection.
-
 \subsection{Bayesian weighting of interactions}
 \label{bayesresults}
 
 %description of the Bayesian method of interaction weighting, with reference to the notebook on this
+% nope, that'll be in the methods section
+%results of the bayesian weighting, what are the results? the distributions?
+Once the Bayesian updating of the weights was completed it was necessary to check the distribution of the weights produced.
+This distribution is shown in figure \ref{fig:weightdist}
+Unfortunately, the distribution produced forms two dense groups due to the majority of binary features involved.
+
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{bayes.weights.dist.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{A histogram of the weights produced using the method of Bayesian weight generation described in section \ref{bayes}.}
+    \label{fig:weightdist}
+\end{figure}
+
+%not yet, but beta/kde distributions could go here
 
 \section{Comparison of weighted and unweighted PPI networks}
 
