@@ -274,7 +274,7 @@ Decision trees are intuitively simple in that it consists of a series of compari
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Simple_decision_tree.svg.png}
+    \includegraphics[width=0.8\textwidth]{Simple_decision_tree.png}
     \caption{A simple example decision tree, illustrating the process of sequential, dependent decisions.}
     \label{fig:dectree}
 \end{figure}
@@ -356,23 +356,32 @@ Cross-validation was applied to tests during parameters searches and when plotti
 As the training set is relatively large, these were applied as random sub-samples of the full data set, but stratified to maintain the same proportion of zeros to ones as in the full training set.
 This is important as it must reflect the expected ratio for real protein interactions to non-interactions.
 
+\subsubsection{Pipeline}
+
+%what is a pipeline? why did I use one?
+
+\subsubsection{Learning Curves}
 % learning curves, what are they? and why?
 Learning curves, as in the notebook referenced in Appendix \ref{app:classtrain}, were used in this project to ensure that the number of samples used in a grid search was sufficient.
 The learning curve plots the accuracy of a classifier after it has been trained using cross-validation on a varying number of samples.
 
 %example learning curve?
 
+
+\subsubsection{Grid search}
 % grid search
 A grid search is a cross-validated test measuring accuracy testing the classifier with a variety of different hyper-parameters.
 Classifiers, such as a Logistic Regression model, have some number of hyper-parameters.
 A Logistic Regression model, for example, has a single hyper-parameter so that the grid search for this model simply involves varying this parameter to obtain the optimum performance on the test set.
 
+\subsubsection{Accuracy}
 % accuracy value
 The accuracy value plotted in the learning curve and used in grid searches of parameters values is simply the proportional of correctly classified instances in a training or validation set.
 Typically, the protein interaction prediction problem is sparse, in that there are very few interactions for the large number of non-interactions.
 This is reflected in the accuracy in that a classifier that simply always predicts zero can still achieve a very high accuracy.
 Using this accuracy value is therefore problematic and this requires the other measures employed, such as ROC and precision-recall AUC values.
 
+\subsubsection{ROC curve}
 % explain what those are
 A Receiver Operating Characteristic, or ROC, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
 This makes it useful as an illustration of the tradeoff possible with this particular classifier.
@@ -380,8 +389,9 @@ The Area Under Curve, or AUC, value is the area under this line.
 A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
 
+\subsubsection{Precision-recall curve}
 %precision recall
-A precision recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
+A precision-recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
 These terms are defined:
 
 \begin{itemize}

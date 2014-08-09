@@ -97,6 +97,25 @@
       \verb http://www.nature.com/ng/journal/v25/n1/abs/ng0500_25.html
       \endverb
     \endentry
+    \entry{barber_bayesian_2013}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9a97f74e5fb11fe785cbe0a83fc5276c}
+      \strng{fullhash}{9a97f74e5fb11fe785cbe0a83fc5276c}
+      \field{sortinit}{B}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Bayesian Reasoning and Machine Learning}
+      \field{title}{Bayesian Reasoning and Machine Learning}
+      \field{year}{2013}
+      \verb{file}
+      \verb 031013:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/8TQ7EUIE/031013.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{chen_identifying_2013}{article}{}
       \name{labelname}{4}{}{%
         {{uniquename=0,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
@@ -1144,13 +1163,18 @@
   \missing{ug4template}
   \missing{gitannex}
   \missing{parallel_python_webpage}
+  \missing{van_der_maaten_visualizing_2008}
   \missing{proposal}
+  \missing{andrews_plots_1972}
   \missing{uniprot_website}
   \missing{opencastbiowiki}
+  \missing{blum_multiloc2:_2009}
   \missing{razick_irefindex_2008}
   \missing{consortium_universal_2007}
   \missing{ogrisel_parallel}
+  \missing{von-mering_string:_2005}
   \missing{alberts_molecular_2008}
+  \missing{janin_domains_1985}
   \missing{kandel_principles_2000}
   \missing{github}
   \missing{opencast-bio}

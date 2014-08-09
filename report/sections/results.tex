@@ -87,7 +87,7 @@ It was decided that indirect features should be used in the trained supervised c
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features.}
     \label{fig:unbalanced}
 \end{figure}
@@ -136,18 +136,20 @@ However, this is not the case for the in proportion case.
 
 %plots
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{in.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/in.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{in.pca.png}
     \centering
     \caption{In proportion plot of the data reduced to two dimensions using PCA.}
     \label{fig:inpca}
 \end{figure}
 
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{out.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/out.pca.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{out.pca.png}
     \centering
     \caption{Out of proportion plot of the data reduced to two dimensions using PCA.}
     \label{fig:outpca}
@@ -169,18 +171,20 @@ It should also be noted that the number of points plotted in these graphs is muc
 
 %plots
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{in.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/in.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{in.tsne.png}
     \centering
     \caption{In proportion plot of the data reduced to two dimensions using t-SNE.}
     \label{fig:intsne}
 \end{figure}
 
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{out.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/out.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{out.tsne.png}
     \centering
     \caption{Out of proportion plot of the data reduced to two dimensions using t-SNE.}
     \label{fig:outtsne}
@@ -204,9 +208,10 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 
 %this should be a tikz plot
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{in.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/in.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{in.parallel.lines.png}
     \centering
     \caption{In proportion parallel line plot of the data used to train the final classifier.}
     \label{fig:inparline}
@@ -214,9 +219,10 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 
 %this should be a tikz plot
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{out.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/out.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{out.parallel.lines.png}   
     \centering
     \caption{Out of proportion parallel line plot of the data used to train the final classifier.}
     \label{fig:outparline}
@@ -230,19 +236,21 @@ If the feature vectors of each class have reliably different values this should 
 The two cases of in proportion and out are shown in figures \ref{fig:inandcurve} and \ref{fig:outandcurve}, respectively.
 
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{in.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
     \centering
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/in.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{in.andrews.curves.png}
     \caption{In proportion Andrew's curves plot of the data used to train the final classifier.}
     \label{fig:inandcurve}
 \end{figure}
 
 \begin{figure}
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{out.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
     \centering
+%    \setlength\figureheight{3in}
+%    \setlength\figurewidth{4in}
+%    \InputIfFileExists{\imagedir/out.andrews.curves.tikz}{}{\textbf{!! Missing graphics !!}}
+    \includegraphics[0.6\textwidth]{out.andrews.curves.png}
     \caption{Out of proportion Andrew's curves plot of the data used to train the final classifier.}
     \label{fig:outandcurve}
 \end{figure}
@@ -271,7 +279,7 @@ The results of this search are shown in table \ref{tab:gridresults}.
 %table of the best parameters obtained for each classifier.
 \begin{table}
     \centering
-    \begin{tabular}{l c c c c}
+    \begin{tabular}{l c c c c c}
         Classifier                                  & Hyper-parameter values    & Test set accuracy         &                               & Training set accuracy         &  \\
         \hline
         Logistic Regression                         & C : $0.0215$              & $0.9984$                  & $\pm 3\e{-5}$                 & $0.99847$                     & $\pm 2\e{-5}$ \\
@@ -303,7 +311,7 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{logreg.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/logreg.roc.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The ROC curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.781$.}
     \label{fig:logroc}
 \end{figure}
@@ -312,7 +320,7 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{rf.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/rf.roc.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The ROC curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.806$.}
     \label{fig:rfroc}
 \end{figure}
@@ -322,7 +330,7 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
 %    \centering
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
-%    \InputIfFileExists{svc.roc.tikz}{}{\textbf{!! Missing graphics !!}}
+%    \InputIfFileExists{\imagedir/svc.roc.tikz}{}{\textbf{!! Missing graphics !!}}
 %    \caption{The ROC curve produced by a support vector machine model on the test data set using the best parameters shown in table \ref{tab:gridresults}.}
 %    \label{fig:svcroc}
 %\end{figure}
@@ -348,7 +356,7 @@ Although the random forest model achieves a better AUC value, the curve demonstr
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{logreg.pr.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/logreg.pr.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The precision-recall curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.11$.}
     \label{fig:logpr}
 \end{figure}
@@ -357,7 +365,7 @@ Although the random forest model achieves a better AUC value, the curve demonstr
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{rf.pr.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/rf.pr.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The precision-recall curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.12$.}
     \label{fig:rfpr}
 \end{figure}
@@ -375,7 +383,7 @@ These importances measures are plotted in figures \ref{fig:logregweights} and \r
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{logreg.weights.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/logreg.weights.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The internal weighting of features in a logistic regression model trained using the parameters described in table \ref{tab:gridresults}.}
     \label{fig:logregweights}
 \end{figure}
@@ -384,7 +392,7 @@ These importances measures are plotted in figures \ref{fig:logregweights} and \r
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{rf.importances.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/rf.importances.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The importances of each input feature as reported by the random forest model trained using the parameters described in table \ref{tab:gridresults}.}
     \label{fig:rfimportances}
 \end{figure}
@@ -404,7 +412,7 @@ Unfortunately, the distribution produced forms two dense groups due to the major
     \centering
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
-    \InputIfFileExists{bayes.weights.dist.tikz}{}{\textbf{!! Missing graphics !!}}
+    \InputIfFileExists{\imagedir/bayes.weights.dist.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{A histogram of the weights produced using the method of Bayesian weight generation described in section \ref{bayes}.}
     \label{fig:weightdist}
 \end{figure}
@@ -415,14 +423,30 @@ Unfortunately, the distribution produced forms two dense groups due to the major
 
 %Here are the communities we detected in each case
 
-%images of both sets of communities, nicely rendered
 
-%Investigate some of the communities by eye, look at distribution of baits etc
+%images of both sets of communities, nicely rendered
 
 \subsection{Graph comparison}
 
 %comparison of using weighted and unweighted
-%NMI and disease enrichment
+%NMI and by eye
+
+%characteristics of both graphs
+
+\subsection{Disease enrichment}
+%disease enrichment results - only schizophrenia and alzheimers to keep thing simple
+
+%investigate the crossover between different likely communities
+
+%relationship to functional annotations that may be linked to schizophrenia
+
+%crossover between these communities for weighted and unweighted cases
+
+\subsection{The effect of weighting}
+%weightings inside relevant communities
+
+
+
 
 \section*{Conclusion}
 
