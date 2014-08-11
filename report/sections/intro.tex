@@ -6,17 +6,6 @@
 
 \section{Motivation}
 
-%SYNSYS, disease etc
-The motivation for this work is as it was stated in the proposal\autocite{proposal}:
-
-%unsure how to rewrite this without it being self-plagiarism
-%probably not going to quote it as below but may have to
-\begin{quote}
-    Disorders of the central nervous system, such as major depression or schizophrenia, affect 1 in 3 people in the developed world.
-    At the synaptic level these diseases are likely related to proteins and their interactions found inside the synapse\autocites{chua_architecture_2010,synsys}.
-    The diseases of the synapse are related to the proteins in the synapse\autocite{chua_architecture_2010}, therefore understanding these proteins may help to treat disease\autocite{li_interaction_2010}.
-\end{quote}
-
 %expanded version of the above? need stats on depression and schizophrenia
 It is estimated that disorders of the brain cost Europe €798 billion Euros in 2010\autocite{olesen_economic_2012}.
 Specifically, depression is estimated to cost Europe €91.9 billion in 2004 and schizophrenia along with associated psychotic disorders is estimated at €93.9 billion.
@@ -37,9 +26,23 @@ It is a worthwhile investment in the fundamentals of constructing PPI networks.
 % results
 % conclusion
 
-
+This project involved combining both direct and indirect data sources to create weighted edges in a PPI graph to affect the communities detected by a Community Detection algorithm.
+A flow chart describing this process and the elements involved is shown in figure \ref{fig:expflow}.
+There are three main input sources shown, the pull-down experiments, direct data and indirect data.
+Pull-down experiments were used to identify the proteins of interest, which were used to build an interaction network using direct data sources, such as interaction databases.
+The indirect data sources, such as functional annotations of proteins, were used along with direct data sources in the process to generate weighted graphs.
 
 %flow charts from the proposal could go here
+\begin{figure}
+    \centering
+    \includegraphics{expflow.png}
+    \caption{A flow chart describing how the elements of the project as a whole, as shown in the project proposal.}
+    \label{fig:expflow}
+\end{figure}
+
+The resulting weighted and unweighted PPI graphs were then separated into communities using a Community Detection algorithm.
+These communities could then be compared using the two methods named in figure \ref{fig:expflow}: Disease Enrichment and NMI.
+Results of these tests were the final deliverable of the project.
 
 %information about the repository, organisation of project files etc
 \subsection{Repository}
@@ -88,7 +91,7 @@ The code in this repository may be useful to a future project, but could also be
 It is more likely that the notes on how to go about a protein interaction prediction task, and this report, will be more useful to future work.
 
 %planning and time management
-\subsection{Planning}
+\section{Planning}
 
 The project was split between five tasks:
 
