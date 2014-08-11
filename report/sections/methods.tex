@@ -42,39 +42,25 @@ For any model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can expres
     p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{ \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})}
 \end{align}
 
-These expressions are defined:
+The posterior probability is $p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})$.
+The likelihood is $p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H})$
+The prior is $p( y^{*} = 1 | \mathcal{D}, \mathcal{H})$.
+The marginal likelihood is $\sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})$.
+Where $y^{*}$ and $\pmb{x}^{*}$ are a new label and feature vector, respectively.
 
-\begin{itemize}
-    \item The posterior probability:
-        \begin{align}
-            p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})
-        \end{align}
-    \item The likelihood:
-        \begin{align}
-            p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H})
-        \end{align}
-    \item The prior:
-        \begin{align}
-            p( y^{*} = 1 | \mathcal{D}, \mathcal{H})
-        \end{align}
-    \item The marginal likelihood:
-        \begin{align}
-            \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})
-        \end{align}
-\end{itemize}
-
-We do not apply explicitly apply a prior to the probability of interaction, meaning that we implicitly apply a uniform prior.
+We explicitly apply a prior to the probability of interaction based on the expected ratio of interactions to non-interactions stated in \autocite{qi_evaluation_2006} of $1/600$.
+This will be described in more detail in section \ref{bayes}.
 
 \subsection{Protein identifier mapping}
 
 Mapping from one protein identifier to another became a significant problem in this project.
 Unfortunately, most Biological databases maintain their own indexing method to identify different genes and proteins.
-New data sources being integrated into this project would often be using a different identification scheme to that originally chosen to use in PPI network work at Edinburgh: the NCBI Entrez identifier.
+New data sources being integrated into this project would often be using a different identification scheme to the NCBI Entrez GeneID originally chosen to use in the PPI network.
 
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
 Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
 For the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter and can encode other information about the gene.
-The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2006}.
+The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
 %other protein identifier schemes and mapping between them
 Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{ensembl_website}, Uniprot identifiers from the Uniprot database\autocite{uniprot_website} and even those used only for specific databases such as DIP identifiers\autocite{dip_website}.
@@ -83,26 +69,9 @@ The reason this happens is due to isoforms of different proteins; different amin
 
 
 %methods used during the project, with references to appendix notebooks
-Various tools exist to map from one protein identifier to another:
-
-\begin{itemize}
-    \item Ensembl's BioMart\autocite{smedley_biomart_2009}:
-        \begin{itemize}
-            \item Able to map from various identifiers to others based on different databases.
-            \item Produces a csv which can be used in a variety of different tools.
-            \item Requires a list of protein identifiers.
-        \end{itemize}
-    \item NCBI's Gene\autocite{maglott_entrez_2006} provides conversion tables on it's ftp servers:
-        \begin{itemize}
-            \item Simple tab-separated text file converting all known GeneIDs between different formats.
-        \end{itemize}
-    \item The Uniprot\autocite{consortium_universal_2007} online service:
-        \begin{itemize}
-            \item Similar to BioMart, but with a simpler interface.
-            \item Converts only to or from Uniprot identifiers.
-            \item Requires a list of protein identifiers.
-        \end{itemize}
-\end{itemize}
+Various tools exist to map from one protein identifier to another: Ensembl's BioMart\autocite{smedley_biomart_2009} is a versatile web-based tool, for example.
+In this project, simple conversion tables from NCBI's Gene\autocite{maglott_entrez_2007} ftp server were primarily used.
+Another tool used was the Uniprot\autocite{consortium_universal_2007} online service web service.
 
 % talk about the problem of canonicalisation
 Unfortunately, using any of these services there will be a number of IDs which cannot be converted and many IDs mapping to the same Entrez ID as different protein isoforms are picked up.
