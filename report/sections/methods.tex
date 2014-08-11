@@ -10,19 +10,16 @@ The chosen Community Detection method, a Spectral Modularity algorithm, is also 
 
 \section{Feature extraction}
 
-Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in section \ref{supbinclass}.
+Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in the following text.
 The process of taking a retrieving these from biological databases is referred to as feature extraction.
 This commonly involved mapping between protein identifiers and indexing large tables automatically, but also involved many other small pieces of scripting.
-
-\subsection{Supervised binary classification}
-\label{supbinclass}
 
 % going through posing the problem in terms of probability
 In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
 Defining this training set rigorously, it consists of input variables $\pmb{x}$ which are typically vectors of values known as features.
-The output variables in a classification problems are a set of labels\autocite[2]{murphy_machine_2012}.
+The output variables in a classification problems are a set of labels\autocite[2]{murphy_machine_2012}: $y$.
 In the case of binary classification these are simply either 0 or 1.
-Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ we can define our training set $\mathcal{D}$ as:
+Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ we can define our training set $\mathcal{D}$ for $N$ data points as:
 
 \begin{align}
     \mathcal{D} = \left( ( \pmb{x}_{i}, y_{i} ) \right)_{i=1}^{N}
@@ -33,12 +30,13 @@ Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ 
 %pose our problem
 Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
 The training labels are either an interaction (a one) or a non-interaction (a zero).
-Interactions are taken to be any interactions in the HIPPIE\autocite{schaefer_hippie:_2012} database with over 50\% confidence.
-Negative interactions are three million random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
-There are many more negative that positive interactions and it is unlikely that any of the negative examples are real interactions.
+Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex_2008} database with over 50\% confidence.
+Non-interactions are random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
+These are also checked against the iRefIndex database to ensure they are not accidentally known interactions.
+There are approximately 600 non-interactions for every true interaction.
 
 What we would like to estimate is the posterior probability of an interaction existing given a new feature vector after training our classifier.
-For a model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can express this using Bayes theorem:
+For any model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can express this using Bayes theorem:
 
 \begin{align}
     p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{ \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})}
