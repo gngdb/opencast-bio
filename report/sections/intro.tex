@@ -42,73 +42,20 @@ The indirect data sources, such as functional annotations of proteins, were used
 
 The resulting weighted and unweighted PPI graphs were then separated into communities using a Community Detection algorithm.
 These communities could then be compared using the two methods named in figure \ref{fig:expflow}: Disease Enrichment and NMI.
-Results of these tests were the final deliverable of the project.
+The results of these tested the hypothesis of the project.
 
-%information about the repository, organisation of project files etc
-\subsection{Repository}
+%hypothesis required
+The hypothesis of this project was that the communities detected in each case would differ and that these differences would be relevant to the conclusions each network could illustrate about a particular disease.
+NMI was able to show simply that the two sets of communities detected was different.
+Disease enrichment refers to testing the likelihood that a given community is involved in a particular disease.
+This allowed us to show the differences in the predictions for disease involvement given by each network due to the weighting of the networks.
 
-%about using git as version control online, anything I can reference here?
-Git is version control software and was used extensively in this project in combination with Github\autocite{github} and git-annex\autocite{gitannex}.
-The project is built from two repositories, the first inside the second: a large git-annex based repository containing all the data and a smaller git repository stored on github containing all the code and documentation for the report\autocite{opencast-bio}.
-History for all the code and documentation, every previous version, is available publicly online but the data cannot be made publicly available.
-
-%metrics describing the repository
-Hosting the code online was intended to aid remote collaborators.
-It is also useful in order to maintain an accurate log of the work involved in the project.
-The repository also includes a wiki\autocite{opencastbiowiki} providing documentation on some of the code available in the repository and weekly reports covering the entire project.
-
-%structure of the repository
-The repository consists of several directories:
-
-\begin{itemize}
-    \item notebooks:
-        \begin{itemize}
-            \item Contains IPython notebooks covering code executed during the project.
-            \item Each notebook includes inline documentation on what is being done, and why.
-        \end{itemize}
-    \item ocbio:
-        \begin{itemize}
-            \item This contains the Python module of code developed during the project.
-            \item The major component of this is the extract.py file, which deals with writing feature vectors for use in classification.
-        \end{itemize}
-    \item proposal:
-        \begin{itemize}
-            \item Only contains the original proposal for the project.
-        \end{itemize}
-    \item report:
-        \begin{itemize}
-            \item Contains this report and all the required files to compile it.
-            \item Based on a repository for Masters project templates\autocite{ug4template} with modifications by Danilo Orlando.
-        \end{itemize}
-    \item scripts:
-        \begin{itemize}
-            \item Contains scripts, but these were not used during the bulk of the project.
-        \end{itemize}
-\end{itemize}
-
-%future usefulness?
-The code in this repository may be useful to a future project, but could also be substantially improved upon.
-It is more likely that the notes on how to go about a protein interaction prediction task, and this report, will be more useful to future work.
-
-%planning and time management
-\section{Planning}
-
-The project was split between five tasks:
-
-\begin{itemize}
-    \item Feature Extraction
-    \item Classifier Training
-    \item Community Detection and analysis
-    \item Writing the report
-\end{itemize}
-
-The original plan for this project placed feature extraction as the dominant task.
-This was correct, in that the project only found time for training the classifier and performing Community Detection within the last five weeks.
-However, the reasons for delays were unknown at the time of beginning and were due largely to inexperience with Bioinformatics.
-
-%mention weekly reports
-Weekly reports were kept as a summary of the work completed every week for supervisors and to maintain a log of the project.
-These can be found on the project wiki\autocite{opencastbiowiki}.
+%structure of the report and other resources
+The report first describes the background knowledge driving the hypothesis of the project in chapter \ref{background}.
+In chapter \ref{methods} the methods involved in executing the project are described.
+Finally, the results obtained are described in chapter \ref{results}.
+In addition, the execution of all commands required to reproduce the project were recorded in notebooks described in section \ref{app:notebooks}.
+This project was stored in a git repository and is publicly available in a repository described in Appendix \ref{app:repository}.
 
 %progress flow charts from the proposal could go here, or above
 

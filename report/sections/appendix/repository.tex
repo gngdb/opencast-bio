@@ -1,0 +1,50 @@
+%information about the repository, organisation of project files etc
+\section{Repository}
+\label{app:repository}
+
+%about using git as version control online, anything I can reference here?
+Git is version control software and was used extensively in this project in combination with Github\autocite{github} and git-annex\autocite{gitannex}.
+The project is built from two repositories, the first inside the second: a large git-annex based repository containing all the data and a smaller git repository stored on github containing all the code and documentation for the report\autocite{opencast-bio}.
+History for all the code and documentation, every previous version, is available publicly online but the data cannot be made publicly available.
+
+%metrics describing the repository
+Hosting the code online was intended to aid remote collaborators.
+It is also useful in order to maintain an accurate log of the work involved in the project.
+The repository also includes a wiki\autocite{opencastbiowiki} providing documentation on some of the code available in the repository and weekly reports covering the entire project.
+
+%structure of the repository
+The repository consists of several directories:
+
+\begin{itemize}
+    \item notebooks:
+        \begin{itemize}
+            \item Contains IPython notebooks covering code executed during the project.
+            \item Each notebook includes inline documentation on what is being done, and why.
+        \end{itemize}
+    \item ocbio:
+        \begin{itemize}
+            \item This contains the Python module of code developed during the project.
+            \item The major component of this is the extract.py file, which deals with writing feature vectors for use in classification.
+        \end{itemize}
+    \item proposal:
+        \begin{itemize}
+            \item Only contains the original proposal for the project.
+        \end{itemize}
+    \item report:
+        \begin{itemize}
+            \item Contains this report and all the required files to compile it.
+            \item Based on a repository for Masters project templates\autocite{ug4template} with modifications by Danilo Orlando.
+        \end{itemize}
+    \item scripts:
+        \begin{itemize}
+            \item Contains scripts, but these were not used during the bulk of the project.
+        \end{itemize}
+\end{itemize}
+
+%future usefulness?
+The code in this repository may be useful to a future project, but could also be substantially improved upon.
+It is more likely that the notes on how to go about a protein interaction prediction task, and this report, will be more useful to future work.
+
+%mention weekly reports
+Weekly reports were kept as a summary of the work completed every week for supervisors and to maintain a log of the project.
+These can be found on the project wiki\autocite{opencastbiowiki}.
