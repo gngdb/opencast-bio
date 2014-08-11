@@ -2,9 +2,9 @@
 \label{background}
 
 %intro to background
-This project involved the use of protein interaction prediction to attempt to improve the performance of a Community Detection algorithm on a PPI network.
+This project involved the use of protein interaction prediction to build weighted PPI networks improve the performance of a Community Detection algorithm on a PPI network.
 The aim of the Community Detection algorithm was to gain insight into structure of the interactions between proteins at the synapse to aid disease research.
-In the following section these different components, and how they fit together, will be described.
+In the following chapter these different components, and how they fit together, will be described.
 
 %what is a protein-protein interaction network?
 \section{The synapse and protein interaction}
@@ -19,17 +19,14 @@ These models are protein-protein interaction (PPI) networks and can be useful fo
 %going deeper, why do we care about proteins at the synapse, mention SYNSYS
 The proteins at the synapse drive synaptic communication, which in turn defines the functioning of the brain.
 As these proteins define the functioning of the brain any disorders which affect the brain are very likely to involve these proteins.
-Disorders which affect the brain are also very common and poorly understood, affecting one in three people in the developed world\autocite{citation_needed}.
+Disorders which affect the brain are also very common and poorly understood, affecting one in three people in the developed world.
 Curing these diseases therefore may be possible through a greater understanding of the interactions of proteins at the synaptic level\autocites{synsys,chua_architecture_2010}.
 
 %what are synapses?
 Synapses are the contacts between nerve cells where the vast majority of communication between nerve cells occurs, the only exceptions being through signalling molecules that can cross the cell membrane.
-There are two types of synapses in the nervous system, electrical and chemical\autocite{kandel_principles_2000}:
-
-\begin{itemize}
-    \item Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
-    \item Chemical synapses are involved in a much more complex system of neurotransmitter release and reception.
-\end{itemize}
+There are two types of synapses in the nervous system, electrical and chemical\autocite{kandel_principles_2000}.
+Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
+Chemical synapses are involved in a much more complex system of neurotransmitter release and reception.
 
 Synapses are therefore important to the functioning of the nervous system.
 A problem with synapse function will likely cause large problems to the nervous system, so diseases of the nervous system are likely to involve problems with synapse function.
@@ -45,6 +42,20 @@ If these functional associations are involved in disease it is possible to assoc
 %historical work in the field
 Originally, two papers, \textcite{ito_comprehensive_2001} and \textcite{uetz_comprehensive_2000}, were able to leverage large volumes of recent interaction data and build interaction networks.
 These papers were able to make interesting discoveries about the network of interactions in yeast simply by investigating subnetworks in the network that was produced.
+
+%which network are we interested in?
+The interaction network we are investigating in this work is referred to throughout as the active zone network in the synapse.
+These proteins are part of the pre-synapse and are illustrated in figure \ref{fig:actzone}.
+Proteins identified as part of this network were used as baits in the pull-down experiments whose results are used in this project to build the PPI network which is the focus of the weighted and unweighted Community Detection.
+
+\begin{figure}
+    \centering
+    \includegraphics{actzone.png}
+    \caption{An illustration of the proteins identified to be involved in the active zone network\autocite{chua_architecture_2010}.}
+    \label{fig:actzone}
+\end{figure}
+
+%function of the active zone network? What does it do?
 
 %what is community detection?
 \section{Protein complexes and community detection}
