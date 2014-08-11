@@ -86,17 +86,18 @@ This is not really a problem, as we are only aiming to provide a weighting to a 
 
 % how iRefIndex solves this problem and should have been used from the start
 % with reference to storing the sequences of each protein involved to maintain unambiguity
-A solution to this problem is provided by the iRefIndex\autocite{razick_irefindex_2008} database, which combines many databases and stores canonicalized entries.
+A solution to this problem is provided by the iRefIndex\autocite{razick_irefindex:_2008} database, which combines many databases and stores canonicalized entries.
 Using this database, it would be possible to ensure that the proteins used in a future project would be reliable canonical proteins.
 Additionally, each protein of interest should ideally be stored with reference to its sequence in, for example, FASTA format.
 
 %description of feature extraction code
 \subsection{Dedicated code: ocbio.extract}
 
-
-
 % link to the notebook on using this code
 % but update it to explain what custom generator options are
+To keep track of the various different data sources and assemble the features into vectors to be used in the classifiers a dedicated piece of code was required.
+The code developed is written as a python module called ocbio.extract.
+Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
 
 \subsection{Gold standard datasets}
 %material on the problems with choosing between gold-standard datasets
