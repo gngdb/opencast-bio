@@ -111,13 +111,26 @@ Therefore, by weighting the interactions in a PPI network according to our confi
 %Different types of sources used with reference to other works
 Many different data sources were considered for inclusion in this project.
 The full list can be found in Appendix \ref{datasources}.
-These different data sources fall into categories:
+These different data sources fall into categories described in table \ref{tab:sources}.
 
-\begin{itemize}
-    \item Primary interaction databases, such as DIP\autocite{xenarios_dip_2002}, HIPPIE\autocite{schaefer_hippie:_2012} or BioGRID\autocite{stark_biogrid:_2006}.
-    \item Associated features, such as features derived from Gene Ontology\autocite{ashburner_gene_2000} or those used in \textcite{rodgers-melnick_predicting_2013}.
-    \item Other PPI prediction resources, such as STRING\autocite{vonMering_string_2005} or InterologWalk\autocite{gallone_bio::homology::interologwalk_2011}.
-\end{itemize}
+\begin{table}
+    \centering
+    \begin{tabular}{l c}
+        Data source type                                & Examples \\
+        \hline
+        \multirow{3}{*}{Primary interaction databases}  & DIP\autocite{xenarios_dip_2002} \\
+                                                        & HIPPIE\autocite{schaefer_hippie:_2012} \\ 
+                                                        & BioGRID\autocite{stark_biogrid:_2006} \\
+        \hline
+        \multirow{2}{*}{Associated features}            & Features derived from Gene Ontology\autocite{ashburner_gene_2000} \\
+                                                        & Those used in \textcite{rodgers-melnick_predicting_2013} \\
+        \hline
+        \multirow{2}{*}{Other PPI prediction resources} & STRING\autocite{vonMering_string_2005} \\
+                                                        & InterologWalk\autocite{gallone_bio::homology::interologwalk_2011} \\
+    \end{tabular}
+    \caption{A table summarising the different sources of data used in the course of the project.}
+    \label{tab:sources}
+\end{table}
 
 %why they were chosen
 The indirect sources of data were chosen based on usage in the literature, such as in the case of Gene Ontology\autocite{qi_evaluation_2006}.
