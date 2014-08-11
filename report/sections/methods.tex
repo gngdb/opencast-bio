@@ -214,6 +214,32 @@ Three classification algorithms were chosen to test on the data:
 
 The reasons for choosing these and brief description of each algorithm are given below.
 
+\subsubsection{Hyper-parameters}
+%describe the different parameters varied in scikit-learn by name
+Each of the Classifiers used has hyper-parameters which will affect its performance.
+These hyper-parameters are described in table \ref{tab:hyper} for each of the models used in the project.
+The optimal values for these found can be found in section \ref{gridresults}, table \ref{tab:gridresults}.
+
+%table of the different hyper-parameters
+\begin{table}
+    \centering
+    \begin{tabular}{l c c}
+        Classifier                                  & Hyper-parameters     & Description \\
+        \hline
+        Logistic Regression                         & C                         &  Inverse of regularisation strength, the $\alpha$ parameter in section \ref{logreg}. \\
+        \multirow{3}{*}{Support Vector Machine}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
+                                                    & Gamma($\gamma$)           &  Kernel coefficient. \\
+                                                    & C                         &  As with Logistic Regression, a penalty parameter. \\
+        \multirow{2}{*}{Random Forest}              & N estimators              &  Number of trees used in the forest. \\
+                                                    & Max features              &  Number of features considered when looking for splits, part of the problem of finding the best decision at each node described in section \ref{randomforest}. \\
+        \multirow{2}{*}{Extremely Randomized Trees} & N estimators              &  As with Random Forest. \\
+                                                    & Max features              &  As with Random Forest. \\
+    \end{tabular}
+    \caption{Summary of the hyper-parameters described in the Scikit-learn\cite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}
+    \label{tab:hyper}
+\end{table}
+
+
 \subsubsection{Logistic Regression}
 \label{logreg}
 
@@ -242,11 +268,11 @@ The log likelihood for this model is:
 
 %describe what the C parameter is
 Regularisation of the weights represents a prior belief that the weights should not increase without bound.
-In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{murphy_machine_2012}.
-To stop this from happening we apply a penalty term to the size of the weights:
+In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{barber_bayesian_2013}.
+To stop this from happening we apply a penalty term, $\alpha$, to the size of the weights:
 
 \begin{align}
-    L'(\pmb{w},b) = L(\pmb{w},b) - C \pmb{w}^{T}\pmb{w}
+    L'(\pmb{w},b) = L(\pmb{w},b) - \alpha \pmb{w}^{T}\pmb{w}
 \end{align}
 
 Tuning this hyper-parameter is the goal of a grid search when training a Logistic Regression model.
@@ -268,6 +294,7 @@ Two hyper-parameters which can be tuned during a grid search operation are the d
 
 
 \subsubsection{Random Forest}
+\label{randomforest}
 
 Random forests operate as a combination of many decision trees.
 Decision trees are intuitively simple in that it consists of a series of comparisons arranged in a tree as shown in figure \ref{fig:dectree}.
@@ -298,12 +325,10 @@ For M trees trained on different subsets of the data\autocite{murphy_machine_201
 
 Where $f_{m}(x)$ is $m$th tree. This is simply averaging the results of the trees and is known as bagging.
 
-%with reference to Qi and ENTS, showning good performance on this problem
+%with reference to Qi and ENTS, showing good performance on this problem
 With the ability to work on large datasets and mixing continuous and discrete data these types of classifiers would appear to already be well suited to this problem.
 This is what has been observed in the literature, with these classifiers achieving the best performance despite different types of biological data being used\autocites{qi_evaluation_2006,rodgers-melnick_predicting_2013}.
 Due to these reports in the literature it appeared that this classifier would be the best choice for our protein interaction prediction task.
-
-%describe the different parameters varied in scikit-learn by name
 
 %expand on how much better they were etc? in different places?
 
