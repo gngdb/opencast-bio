@@ -178,18 +178,10 @@ To produce this output the chosen tool was the Python package Scikit-learn\autoc
 Each classifier implemented in this package has a similar interface allowing modular code to be written.
 In addition, this package is actively developed with all the required classifiers having efficient implementations.
 
-\subsection{Classification algorithms}
-
 % explain why we tried the algorithms that we tried
-Three classification algorithms were chosen to test on the data:
-
-\begin{itemize}
-    \item Logistic regression
-    \item Support vector machine (SVM)
-    \item Random forest
-\end{itemize}
-
-The reasons for choosing these and brief description of each algorithm are given below.
+The following sections describe the three classifiers chosen.
+These were a logistic regression model, a random forest model and a support vector machine.
+Each of these involved tuning a number of hyper-parameters.
 
 \subsubsection*{Hyper-parameters}
 %describe the different parameters varied in scikit-learn by name
@@ -217,27 +209,28 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
 \end{table}
 
 
-\subsubsection{Logistic Regression}
+\subsubsection*{Logistic Regression}
 \label{logreg}
 
 %with reference to Murphy
 Logistic regression is a linear model being used for classification.
-It is equivalent to a linear regression model transformed through a sigmoid function\autocite[376]{murphy_machine_2012}:
+It is equivalent to a linear regression model transformed through a sigmoid function\autocite[376]{murphy_machine_2012}, denoted here by $\sigma$:
 
 \begin{align}
     p(c=1|\pmb{x}) = \sigma(b + \pmb{x}^{T}*\pmb{w})
+    \label{sigmoidtransform}
 \end{align}
 
-Where $\pmb{x}$ is the vector of features.
-The weights and biases are the parameters of this model, expressed in the above equation as $b$ and $\pmb{w}$.
+In equation \ref{sigmoidtransform} $\pmb{x}$ is the vector of features and $c$ is the class label - in our case $1$ is a real interaction, $0$ is a non-interaction.
+The weights and biases are the parameters of this model, expressed in the above equation as $b$ and $\pmb{w}$, respectively.
 
 This divides the points in the dataset by a hyperplane, classifying the points on each side into different classes.
 For data that is linearly separable, this produces a classifier that will make no mistakes on the test data.
-Unfortunately, the data we are working with is not linearly separable.
+Unfortunately, the data we are working with is not linearly separable as shown in section \ref{dataviz}.
 
 %How is it trained?
 To find the parameters the log likelihood of this model must be maximised; corresponding to the maximum likelihood solution.
-The log likelihood for this model is:
+The log likelihood for this model, for N feature vectors, is:
 
 \begin{align}
     L(\pmb{w},b) = \sum_{n=1}^{N} c^{n} \log \sigma(b + \pmb{w}^{T}\pmb{x}^{n}) + (1 - c^{n})\log (1 - \sigma(b + \pmb{w}^{T}\pmb{x}^{n}))
@@ -263,7 +256,7 @@ The objective in placing the hyperplane for a Support Vector Machine is a "maxim
 
 %success of these models?
 These are often successful classifiers in practice.
-Applications include text categorisation, hand-written character recognition, image classification and biosequences analysis\autocite{cristianini_an_2000}.
+Applications include text categorisation, hand-written character recognition, image classification and biosequences analysis\autocite{cristianini_introduction_2000}.
 
 %describe the hyper-parameters?
 The hyper-parameters for a Support Vector Machine control the kernels, along with the regularisation parameter as described for logistic regression in section \ref{logreg}.
