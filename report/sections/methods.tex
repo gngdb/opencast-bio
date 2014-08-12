@@ -337,6 +337,9 @@ Using this we can build a model and update our belief on the likelihood of inter
 %  
 
 % consider using paragraph headings in this section
+Various measures were applied to each classifier to estimate their performance in different ways.
+These tests included simple accuracy measures applied over learning curve and grid searches along with plotting ROC and precision-recall curves.
+Grid searches of parameter values were used to find optimal hyper-parameters.
 
 % was or will be?
 Cross-validation was applied to tests during parameters searches and when plotting learning curves to get a statistical estimate of the reliability of the metrics applied to the classifier\autocite[152]{witten_data_2011}.
@@ -346,6 +349,10 @@ This is important as it must reflect the expected ratio for real protein interac
 \subsubsection*{Pipeline}
 
 %what is a pipeline? why did I use one?
+A pipeline is a combination of algorithms intended to run on the data in sequence after the data has been split into training and test.
+In the case of this project the pipeline involved three components: a mean value filling imputer, a standard scaler and the classifier itself.
+The imputer simply replaced missing values in the training data with the corresponding mean value for that column.
+Scikit-learn's standard scaler centers the data at zero mean and unit variance.
 
 \subsubsection*{Learning Curves}
 % learning curves, what are they? and why?
