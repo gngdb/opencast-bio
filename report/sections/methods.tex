@@ -110,14 +110,30 @@ Each interaction added is hand curated so it was expected as a reliable training
 Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
 %problems with DIP
-
-
 %why HIPPIE is better suited
+Unfortunately, problems were found with DIP as a training set.
+Features derived from interaction databases would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
+HIPPIE was also tested as a training set, but this lead to the same problem.
 
-%problem with positive vs. negative ratio with HIPPIE
-% and how it's not a problem
+%example feature importance graph
+\begin{figure}
+    \centering
+    \setlength\figureheight{3in}
+    \setlength\figurewidth{4in}
+    \InputIfFileExists{\imagedir/unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
+    \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features.}
+    \label{fig:unbalanced}
+\end{figure}
+
+%After removing interaction databases 
+It was decided that only indirect features should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
+Once these databases were removed the performance of the classifier was drastically lower.
+However, all of the available features had more closely distributed importances in the final classifier, as shown in section \ref{importances}.
 
 %iRefIndex as a final solution?
+To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} database was used to find positive interactions due to its effective protein identifier mapping ability, as described above.
+Again, non-interactions were generated as random combinations of Entrez Gene IDs.
+These were also checked against the positive interactions to ensure known interactions were not present.
 
 \subsection{PPI prediction features}
 

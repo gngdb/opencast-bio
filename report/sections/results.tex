@@ -75,31 +75,6 @@ The remaining features are pairwise combinations of conserved protein domains, w
 %description of Y2H feature
 %pending
 
-\subsection{Removed features}
-
-%Before their removal the features that best predicted the chosen gold standard dataset were reliably those directly derived from interaction databases.
-As listed above there were originally many features used in the supervised classification that were derived from interaction databases.
-These were very effective in predicting interactions on the training set, as expected, but their importance in the task outweighed any other features, as shown in figure \ref{fig:unbalanced}.
-It was decided that indirect features should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
-
-%example feature importance graph
-\begin{figure}
-    \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
-    \InputIfFileExists{\imagedir/unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features.}
-    \label{fig:unbalanced}
-\end{figure}
-
-%After removing interaction databases 
-Once these databases were removed the performance of the classifier was drastically lower.
-However, all of the available features had more closely distributed importances in the final classifier, as shown in section \ref{importances}.
-The classifier was then integrated 
-
-%graph of feature importance from RF classifier? probably not required, will be found below.
-
-%tables with explanation - table above now, not required.
 
 \subsection{Data visualisation}
 
