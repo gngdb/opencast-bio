@@ -305,22 +305,14 @@ Due to these reports in the literature it appeared that this classifier would be
 \subsubsection*{Other options}
 
 % what other algorithms could we have tried but didn't
-Other options considered for our classification problem, but not included in the project due to time constraints included:
-
-\begin{itemize}
-    \item Feedforward neural networks
-    \item Naive Bayes
-    \item Beta regression
-\end{itemize}
-
+Other options considered for our classification problem, but not included in the project due to time constraints included Feedforward neural networks, Naive Bayes and Beta regression.
 Naive Bayes in particular would have required modifying the code from Scikit-learn to deal with data from multiple different distributions or implementing Weka's solution of kernel density estimated distributions for each different feature\autocite{john_estimating_1995}.
 Beta regression would have been very suitable for the task and is suggested as future work, described in the following section.
 
 \subsubsection*{Beta regression}
 
 %what is beta regression? quickly
-A generalised linear model is one in which the output variable is distributed according to a given target density\autocite{murphy_machine_2012}.
-In the case of Beta regression\autocite{smithson_better_2006} this target model is the Beta distribution, which has the convenient characteristic of being bounded between 0 and 1.
+Beta regression is a generalised linear model is one in which the output variable is distributed according to a Beta distribution\autocite{smithson_better_2006}.
 A maximum-likelihood solution to this model can be found and the resulting model fit in the same way as a standard regression model.
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
@@ -331,7 +323,7 @@ To train a classifier a training set of true and false interactions is required 
 Beta regression avoids this problem as it allows the confidence values to remain a part of the regression process.
 Using this we can build a model and update our belief on the likelihood of interaction in a Bayesian framework much more easily.
 
-\subsection{Classifier verification}
+\subsection{Classifier testing}
 \label{classifierverification}
 
 %Tests we planned to use on each classifier:
