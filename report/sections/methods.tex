@@ -406,6 +406,16 @@ In this case the data that is missing is due to mismatches in protein identifier
 
 %justification for using this method, the problem with supervised classification?
 %CHECK THIS ISN'T FOUND ELSEWHERE ALREADY
+Weighting interactions using the posterior distribution of a probabilistic model requires that the model accurately represents beliefs about the system being modelled.
+Supervised classification requires that true interactions are known in order to find the parameters of the model.
+Unfortunately, in this problem we cannot know for certain whether an interaction is real or false.
+Therefore, when fitting a supervised model we only obtain, at best, an accurate predictor for the interaction database used to fit the model.
+
+%the prior on the edgelist
+As the PPI network edges we plan to weight have already been defined through combining different interaction databases we already have a strong prior on the existence of these interactions.
+Using the classifier on its own can then, at best, reproduce one of the databases used to create this network and many of the interactions will be incorrectly weighted much lower than expected.
+The solution is to treat both the result of the classifier and the edgelist inclusion as observable events dependent on the latent ``interaction'' variable.
+Along with these variables, we can also include other protein interaction prediction resources, such as STRING\autocite{von_mering_string:_2005}.
 
 %naive bayes model, advantages, disadvantages
 The model we have chosen to update our prior belief using assumes conditional independence of the observable variables given the hidden interaction variable.
@@ -424,9 +434,14 @@ The disadvantage is that our variables could be dependent, as the classifier is 
 %updating on evidence? equations
 
 %the importance of conservative estimates
+The class label, interaction, is not observed in this model so we cannot solve to find the parameters.
+To define the model, the only way to proceed is to manually define them by conservatively estimating the conditional true positive and false positive rates of the Bernoulli distributions.
+Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using KDE.
 
 %kernel density estimation, justification from Weka
-
+Using KDE in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
+Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
+As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
 
 \section{Measures applied to weighted and unweighted PPI networks}
 
@@ -443,13 +458,12 @@ The following sections describe this process and the measures applied to both gr
 %  Random edge Betweenness
 %  Spectral Betweenness
 Three algorithms were identified for use in this project for community detection, the first two are described in \textcite{newman_finding_2004}.
-All three are based on betweenness measures to partition the graph, making them optimisation approaches, but each calculates their betweenness measure in a different way:
+Geodesic edge betweenness and random edge betweenness are based on betweenness measures to partition the graph, making them optimisation approaches.
+The third, spectral modularity, was the chosen algorithm in this project.
 
-\begin{itemize}
-    \item Geodesic edge betweenness - find the shortest path between all pairs of nodes and count the number of these paths which run along each edge.
-    \item Random edge betweenness - expected net number of times that a random walk between two nodes will pass through an edge summed over all node pairs.
-    \item Spectral betweenness - pending
-\end{itemize}
+%with reference to Colin's paper, why this is a good choice
+The original advantages of spectral modularity techniques were better results in less time than competing methods in \textcite{newman_modularity_2006}.
+In a recent
 
 %community detection code, what it does, which algorithm was used
 %pending use - will see if I have time to use more than one
@@ -470,18 +484,18 @@ Where $H(X)$ is the entropy of the random variable $X$ and $H(X|Y)$ is the condi
 In the case of the function we are using to perform this from Scikit-learn the mutual information is normalised by $\sqrt{H(X)\times H(Y)}$\autocite{pedregosa_scikit-learn:_2011}.
 This produces a value between zero and one which reflects the redundancy of the distributions - 1.0 being exactly the same and 0.0 being independent.
 
-Code produced at Edinburgh to calculate NMI was also used.
-The problem with the Scikit-learn code is that it assumes the class labels are correct, but they have just been arbitrarily numbered as the communities are found. 
-This code takes that into account, ensuring that the class labels are accurate to the IDs in the community.
-
 \subsection{Disease Enrichment}
 
 %Primer on what this test actually does
-
+By linking the proteins in a cluster to known disease annotations it is possible to estimate the likelihood that a given community is involved in a particular disease.
+The code being used produces a p-value to indicate this likelihood.
+In the case of this project, due to the aims of the SYNSYS project and for simplicity, only two diseases were investigated: Schizophrenia and Alzheimer's.
 
 %interaction between significance level and p-value
 
 
 \section*{Conclusion}
 
-
+This project involved a large number of varied techniques and algorithms being used on large data sets.
+Many problems had to be solved in order to piece together the full project.
+As each of these steps were sequential, the results section describes the results as they were gathered, in the same structure as seen above.
