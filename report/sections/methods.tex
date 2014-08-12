@@ -147,7 +147,7 @@ The features used are described by index in table \ref{tab:fvectors}.
 \begin{figure}
     \centering
     \includegraphics{fvector.png}
-    \caption{A diagram showing the structure of feature vectors and interaction labels used to train the classifier.}
+    \caption{A diagram showing the structure of feature vectors and their relationship to the project as a whole. This figure is based on a similar flow chart shown in the project proposal.}
     \label{fig:fvectors}
 \end{figure}
 
@@ -191,7 +191,7 @@ Three classification algorithms were chosen to test on the data:
 
 The reasons for choosing these and brief description of each algorithm are given below.
 
-\subsubsection{Hyper-parameters}
+\subsubsection*{Hyper-parameters}
 %describe the different parameters varied in scikit-learn by name
 Each of the Classifiers used has hyper-parameters which will affect its performance.
 These hyper-parameters are described in table \ref{tab:hyper} for each of the models used in the project.
@@ -254,7 +254,7 @@ To stop this from happening we apply a penalty term, $\alpha$, to the size of th
 
 Tuning this hyper-parameter is the goal of a grid search when training a Logistic Regression model.
 
-\subsubsection{Support Vector Machines}
+\subsubsection*{Support Vector Machines}
 
 %with reference to Murphy
 Logistic regression can be generalised to apply kernel functions to the input features to obtain better classifications.
@@ -270,7 +270,7 @@ The hyper-parameters for a Support Vector Machine control the kernels, along wit
 Two hyper-parameters which can be tuned during a grid search operation are the degree of polynomial kernels if chosen and the gamma coefficient of the kernels.
 
 
-\subsubsection{Random Forest}
+\subsubsection*{Random Forest}
 \label{randomforest}
 
 Random forests operate as a combination of many decision trees.
@@ -323,7 +323,7 @@ Other options considered for our classification problem, but not included in the
 Naive Bayes in particular would have required modifying the code from Scikit-learn to deal with data from multiple different distributions or implementing Weka's solution of kernel density estimated distributions for each different feature\autocite{john_estimating_1995}.
 Beta regression would have been very suitable for the task and is suggested as future work, described in the following section.
 
-\subsubsection{Beta regression}
+\subsubsection*{Beta regression}
 
 %what is beta regression? quickly
 A generalised linear model is one in which the output variable is distributed according to a given target density\autocite{murphy_machine_2012}.
@@ -358,11 +358,11 @@ Cross-validation was applied to tests during parameters searches and when plotti
 As the training set is relatively large, these were applied as random sub-samples of the full data set, but stratified to maintain the same proportion of zeros to ones as in the full training set.
 This is important as it must reflect the expected ratio for real protein interactions to non-interactions.
 
-\subsubsection{Pipeline}
+\subsubsection*{Pipeline}
 
 %what is a pipeline? why did I use one?
 
-\subsubsection{Learning Curves}
+\subsubsection*{Learning Curves}
 % learning curves, what are they? and why?
 Learning curves, as in the notebook referenced in Appendix \ref{app:classtrain}, were used in this project to ensure that the number of samples used in a grid search was sufficient.
 The learning curve plots the accuracy of a classifier after it has been trained using cross-validation on a varying number of samples.
@@ -370,20 +370,20 @@ The learning curve plots the accuracy of a classifier after it has been trained 
 %example learning curve?
 
 
-\subsubsection{Grid search}
+\subsubsection*{Grid search}
 % grid search
 A grid search is a cross-validated test measuring accuracy testing the classifier with a variety of different hyper-parameters.
 Classifiers, such as a Logistic Regression model, have some number of hyper-parameters.
 A Logistic Regression model, for example, has a single hyper-parameter so that the grid search for this model simply involves varying this parameter to obtain the optimum performance on the test set.
 
-\subsubsection{Accuracy}
+\subsubsection*{Accuracy}
 % accuracy value
 The accuracy value plotted in the learning curve and used in grid searches of parameters values is simply the proportional of correctly classified instances in a training or validation set.
 Typically, the protein interaction prediction problem is sparse, in that there are very few interactions for the large number of non-interactions.
 This is reflected in the accuracy in that a classifier that simply always predicts zero can still achieve a very high accuracy.
 Using this accuracy value is therefore problematic and this requires the other measures employed, such as ROC and precision-recall AUC values.
 
-\subsubsection{ROC curve}
+\subsubsection*{ROC curve}
 % explain what those are
 A Receiver Operating Characteristic, or ROC, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
 This makes it useful as an illustration of the tradeoff possible with this particular classifier.
@@ -391,7 +391,7 @@ The Area Under Curve, or AUC, value is the area under this line.
 A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
 
-\subsubsection{Precision-recall curve}
+\subsubsection*{Precision-recall curve}
 %precision recall
 A precision-recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
 These terms are defined:
