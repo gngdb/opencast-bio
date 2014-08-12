@@ -154,9 +154,12 @@ The features used are described by index in table \ref{tab:fvectors}.
 \begin{table}
     \centering
     \begin{tabular}{l c c}
-        Feature & Indices & Description \\
+        Feature         & Indices & Description \\
         \hline
-        Y2H & 
+        Gene Ontology   & 1-90    & Described in section \ref{go}, with individual indices described in Appendix \ref{app:go}. \\
+        Y2H             & 91      & Y2H SVM feature described in section \ref{y2h}. \\
+        ENTS derived    & 92-198  & Features used by the ENTS classifier, described by index in supplementary table for \textcite{rodgers-melnick_predicting_2013}. \\
+        ENTS summary    & 199     & Prediction result of the classifier in \textcite{rodgers-melnick_predicting_2013}. \\
     \end{tabular}
     \caption{Each feature used in the final classifier is described by index.}
     \label{tab:fvectors}
