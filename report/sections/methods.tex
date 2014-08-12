@@ -388,7 +388,7 @@ These concerns center on the problems of small sample sizes, which are not the c
 A precision-recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
 The precision is defined as the number of true positive results over the number of total positive results.
 Recall is defined as the number of true positive results against the number of available positive examples
-Again, the area under the curve can gauge a classifier's effectiveness.
+The area under the curve is used to gauge the classifier's effectiveness.
 
 %example ROC curve?
 %example precision recall curve?
@@ -402,12 +402,30 @@ In this case the data that is missing is due to mismatches in protein identifier
 
 \subsection{Bayesian weighting}
 \label{bayes}
-
 %description of the method used to weight interactions after the classifier was found to be insufficient
 
+%justification for using this method, the problem with supervised classification?
+%CHECK THIS ISN'T FOUND ELSEWHERE ALREADY
 
+%naive bayes model, advantages, disadvantages
+The model we have chosen to update our prior belief using assumes conditional independence of the observable variables given the hidden interaction variable.
+This equates to a Naive Bayes model with a belief network as shown in figure \ref{fig:naive}.
+An advantage of this model is the simplicity of its analysis.
+The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the HIPPIE database is composed of.
 
+%belief network for naive bayes
+\begin{figure}
+    \centering
+    \includegraphics{naive.png}
+    \caption{A belief network illustrating the Naive Bayes model, equivalent to that used for inference when weighting the interactions of the PPI network.}
+    \label{fig:naive}
+\end{figure}
 
+%updating on evidence? equations
+
+%the importance of conservative estimates
+
+%kernel density estimation, justification from Weka
 
 
 \section{Measures applied to weighted and unweighted PPI networks}

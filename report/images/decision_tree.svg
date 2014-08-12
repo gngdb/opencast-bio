@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="Simple_decision_tree.svg">
+   sodipodi:docname="decision_tree.svg"
+   inkscape:export-filename="/home/gavin/Documents/MRes/opencast-bio/report/images/decision_tree.png"
+   inkscape:export-xdpi="299.92001"
+   inkscape:export-ydpi="299.92001">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -36,10 +39,10 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:window-width="1280"
-     inkscape:window-height="1024"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="636"
+     inkscape:window-height="985"
+     inkscape:window-x="640"
+     inkscape:window-y="18"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
