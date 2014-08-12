@@ -2,6 +2,7 @@
 \label{results}
 
 %intro to the results
+%below is a decent intro
 
 %iterations of results - DIP, HIPPIE, Bayesian updating and reasoning behind it
 % can then refer to this throughout this section.
@@ -16,20 +17,7 @@ Using all of the data available it was possible to run a simple Bayesian alterna
 %The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C.
 Many features were identified for extraction and these are described in Appendix \ref{datasources}.
 Of these, only a small subset were succesfully processed into a usable form.
-These are listed below and more information about each can be found in Appendix \ref{datasources}:
-
-%more citations below?
-\begin{itemize}
-    \item HIPPIE database
-    \item Pulldown derived features: affinity and abundance
-    \item Gene Ontology, also described in section \ref{go}
-    \item Yeast Two-Hybrid, also described in section \ref{y2h}
-    \item ENTS derived features, also described in section \ref{ents}
-    \item iRefIndex database
-    \item STRING database
-    \item HMR database 
-    \item InterologWalk results
-\end{itemize}
+These can be found in appendix \ref{datasources}.
 
 Of these, a smaller proportion were used in the final classifier, which neglected features directly derived from interaction databases.
 The features used to train the final classifier are shown in table \ref{tab:features}.
@@ -40,6 +28,7 @@ A brief description of these features is given below.
     \centering
     %tabular goes here
     \begin{tabular}{l c c c c}
+        \small
         Feature         &   Size &  Type                &  Coverage on training set &  Coverage on active zone network \\
         \hline
         Gene Ontology    &  90   &  Binary categorical  &  100.0\%                  & 100.0\%                          \\
@@ -57,7 +46,7 @@ A brief description of these features is given below.
 %Larger features
 %Gene ontology was built as a feature in the same manner as that of qi_evaluation_2006 but, without knowing their approach, we had to develop our own method of creating usable features.
 The Gene Ontology\autocite{ashburner_gene_2000} is a resource of annotations for genes to indicate various characteristics in a hierarchical manner, such as cellular localisation or function.
-This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as STRING\autocite{von-mering_string:_2005} to predict protein interactions.
+This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as STRING\autocite{von_mering_string:_2005} to predict protein interactions.
 Intuitively, it can be used to detect when, for example, two proteins are localised in the same area of the cell - as this would increase the probability that these two proteins interact.
 Details on exactly how this feature was generated can be found in the notebook reference in Appendix \ref{app:go}.
 
@@ -69,11 +58,12 @@ These features were obtained through analysis and modification of the bundled co
 In turn, most of these features were generated through the Multiloc2 program of \textcite{blum_multiloc2:_2009}.
 The remaining features are pairwise combinations of conserved protein domains, which are conserved "modules" of proteins described in \textcite{janin_domains_1985}.
 
-\subsection{Yeast Two-Hybrid results}
-\label{y2h}
+%\subsection{Yeast Two-Hybrid results}
+%\label{y2h}
 
 %description of Y2H feature
 %pending
+
 
 
 \subsection{Data visualisation}
