@@ -1,16 +1,49 @@
 \chapter{Conclusions}
 \label{conclusion}
 
+This project involved an array of different tools and data.
+Despite many difficulties and mistakes during the planning of the project, all of the aims of the project as stated in the proposal have been met.
+However, the results obtained are not conclusive or useful.
+
 %project ran out time towards the end
 
 \section{Deliverables}
 %what was achieved (as a reminder)
+During the course of the project a large number of data sources were tested and extracted into a machine learning workflow.
+These formed large feature vector files which could be used for classification.
+Three different classifiers were then trained on this data and compared.
+Of these, the best was used to provide predictions to weight edges.
+A Bayesian method was used to combine this with other data sources and prior knowledge to generate the edge weights.
+These edge weights were then used to create a weighted PPI graph which was then compared to its unweighted counterpart.
 
 %problems with results
 
 
+%\section{}
+
 \section{Future work}
 %repeat Bayesian approach in a more principled way
 %perhaps using probabilistic programming to enforce priors
+As a basis for future work, this work illustrates many difficulties in working with varied publicly available data sources.
+However, it also provides insight into the correct method for weighting interaction edges.
+These edges should be weighted directly as an estimate of interaction strength.
+The premise of this project was that the posterior probability of the interaction existing would correlate well with the strength of the interaction as interactions which are strong will be observed more often.
+
+However, if a full probabilistic model was to be designed the latent variable - which was interaction in our model - could be a continuous variable in the unit interval defined at a Beta distribution.
+The problem then becomes one of estimating interaction strength, which is difficult to observe in order to obtain the training set required to create a probabilistic model.
+Using the array of biological databases available it would be possible to link different observations based on strong biological prior knowledge.
+
+%describe this method in more detail?
+
+
+%an example?
+
+%the role of probabilistic programming?
+
+%reference guido's probabilistic programming language?
 
 \section*{Conclusion}
+%conclusion of the conclusion
+
+Despite the results of this project, the resources and insight into better solutions generated made it worthwhile.
+In the future it, building on the results of this project it will be possible to create a PPI network that accurately summarises our knowledge of interactions and interaction strength using all of the available data.
