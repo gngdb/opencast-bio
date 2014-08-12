@@ -48,3 +48,16 @@ It is more likely that the notes on how to go about a protein interaction predic
 %mention weekly reports
 Weekly reports were kept as a summary of the work completed every week for supervisors and to maintain a log of the project.
 These can be found on the project wiki\autocite{opencastbiowiki}.
+
+\subsection{Parallel processing with IPython.parallel}
+%description of how this was set up and how it could scale
+
+To take maximum advantage of the available computing facilities and because the sample sizes in the project exceed one million the decision was made to prepare the code for parallel processing on a remote server.
+Particularly, grid search operations to optimize performance of the classifier were considered to be processor intensive and vital to the success of the prediction task.
+The easiest way to set up these interactive parallel processing operations was the parallel processing model in IPython\autocite{parallel_python_webpage}.
+
+%How this worked in practice, and the potential
+The notebooks using parallel processing are the notebooks on classifier training, which are described in Appendix \ref{app:classtrain}.
+This usage depended on code from a parallel processing tutorial\autocite{ogrisel_parallel} to distribute memory to the cores using Numpy's memmap methods.
+The code to do this has been integrated into the ocbio module in the project repository and can be used as shown in the notebooks.
+Potentially, and as described in the tutorial, this code could be used to run the classifier training on cloud services using Starcluster.
