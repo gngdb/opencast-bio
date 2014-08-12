@@ -12,3 +12,56 @@ The vast majority could not be included in the project due to time constraints b
 %            \item Used in the PIPS database 
 %        \end{itemize}
 %\end{itemize}
+
+\subsection{Gene Ontology Features}
+\label{app:go}
+
+Each feature used in the Gene Ontology feature represents an event where both proteins in the interaction have the same Gene Ontology term active.
+If both are active the feature is 1, otherwise it is zero.
+To select effective features, commonly occurring features in the active zone network were selected from each Gene Ontology domain.
+These are summarised by domain and in the order used in the feature vectors in table \ref{apptab:go} for the first 10 of each domain.
+The remaining terms are listed in table \ref{apptab:extrago}.
+
+\begin{table}
+    \centering
+    \begin{tabular}{l c c}
+        Domain              & Term                      & Occurrences in active zone \\
+        \hline
+        \multirow{10}{*}{Molecular Function}  & protein binding           & 960 \\
+                            & poly(A) RNA binding       & 308 \\
+                            & ATP binding               & 232  \\
+                            & metal ion binding         & 137 \\
+                            & identical protein binding & 100 \\
+                            & RNA binding               & 99 \\
+                            & protein homodimerization activity & 97 \\
+                            & calcium ion binding & 88 \\
+                            & zinc ion binding & 79 \\
+                            & GTP binding & 78 \\
+        \hline
+        \multirow{10}{*}{Cellular Component}  & cytoplasm & 614 \\
+                            & cytosol & 575 \\
+                            & nucleus & 554 \\
+                            & extracellular vesicular exosome & 550 \\
+                            & plasma membrane & 449 \\
+                            & mitochondrion & 265 \\
+                            & integral component of membrane & 252 \\
+                            & nucleolus & 235 \\
+                            & nucleoplasm & 143 \\
+                            & membrane & 130 \\
+        \hline
+        \multirow{10}{*}{Biological Process}  & small molecule metabolic process & 266 \\
+                            & gene expression & 184 \\
+                            & viral process & 144 \\
+                            & signal transduction & 130 \\
+                            & cellular protein metabolic process & 125 \\
+                            & synaptic transmission & 114 \\
+                            & RNA metabolic process & 104 \\
+                            & mRNA metabolic process & 99 \\
+                            & transmembrane transport & 98 \\
+                            & blood coagulation & 97 \\
+    \end{tabular}
+    \caption{The features used in the Gene Ontology feature, by domain, and in the order used in the feature vector. The observed frequency in the active zone network is also shown. These are only listed for the first 10 of each domain, the remaining features, in order, are shown in table \ref{apptab:extrago}.}
+    \label{apptab:go}
+\end{table}
+
+\input{extrago}

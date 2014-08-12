@@ -139,14 +139,28 @@ These were also checked against the positive interactions to ensure known intera
 
 %planned features, describe the list of possible features which was created
 %put it in the appendix as a table, or otherwise somehow
+PPI prediction features are a set of values for each interaction considered, if it is a real or non-interaction.
+This arrangement is illustrated in figure \ref{fig:fvectors}.
+The features used are described by index in table \ref{tab:fvectors}.
 
+%this could be a good place to put that diagram of exactly what a feature vector is
+\begin{figure}
+    \centering
+    \includegraphics{fvector.png}
+    \caption{A diagram showing the structure of feature vectors and interaction labels used to train the classifier.}
+    \label{fig:fvectors}
+\end{figure}
 
-%this section should be written with reference to which features were found in the end to be important
-
-
-%a graph showing the importance of different features is required
-
-%a table describing each feature used, and where it comes from
+\begin{table}
+    \centering
+    \begin{tabular}{l c c}
+        Feature & Indices & Description \\
+        \hline
+        Y2H & 
+    \end{tabular}
+    \caption{Each feature used in the final classifier is described by index.}
+    \label{tab:fvectors}
+\end{table}
 
 %details of what classifiers were chosen and about scikit-learning
 \section{Weighting Protein Interactions}
