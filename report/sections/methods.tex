@@ -285,9 +285,9 @@ Other advantages of decision trees include the ability to handle a mixture of di
 %describe split function? probably not worth going into this.
 
 %then explain the problems with decision trees, variance etc
-Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\autocite{murphy_machine_2012}.
+Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\autocite[550]{murphy_machine_2012}.
 The random forest algorithm addresses this problem by providing redundancy; multiple trees are grown and their results averaged.
-For M trees trained on different subsets of the data\autocite{murphy_machine_2012}:
+For M trees trained on different subsets of the data\autocite[551]{murphy_machine_2012}:
 
 \begin{align}
     f(x) = \sum_{m=1}^{M} \frac{1}{M} f_{m}(x)
