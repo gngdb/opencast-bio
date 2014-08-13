@@ -208,13 +208,13 @@
     \endentry
     \entry{chen_identifying_2013}{article}{}
       \name{labelname}{4}{}{%
-        {{uniquename=0,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=b5da4fad55c757f3e96cc0bcf02f261b}{Fan}{F\bibinitperiod}{Weiwei}{W\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=18b975301a4d17c28ca70d0a3fbce135}{Liu}{L\bibinitperiod}{Juan}{J\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=dcd65426e188141d5c408fc2631d59bc}{Wu}{W\bibinitperiod}{Fang-Xiang}{F\bibinithyphendelim X\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{4}{}{%
-        {{uniquename=0,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=b5da4fad55c757f3e96cc0bcf02f261b}{Fan}{F\bibinitperiod}{Weiwei}{W\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=18b975301a4d17c28ca70d0a3fbce135}{Liu}{L\bibinitperiod}{Juan}{J\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=dcd65426e188141d5c408fc2631d59bc}{Wu}{W\bibinitperiod}{Fang-Xiang}{F\bibinithyphendelim X\bibinitperiod}{}{}{}{}}%
@@ -249,6 +249,28 @@
       \verb http://bib.oxfordjournals.org/content/early/2013/06/18/bib.bbt039
       \endverb
       \keyw{dynamic network,functional module,protein complex,protein–protein interaction,static network}
+    \endentry
+    \entry{ug4template}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=9e80044f995b00111a3fab4916b119c5}{Chris\bibnamedelima Brown}{C\bibinitperiod\bibinitdelim B\bibinitperiod}{Alex\bibnamedelima Shearn}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9e80044f995b00111a3fab4916b119c5}{Chris\bibnamedelima Brown}{C\bibinitperiod\bibinitdelim B\bibinitperiod}{Alex\bibnamedelima Shearn}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9e80044f995b00111a3fab4916b119c5}
+      \strng{fullhash}{9e80044f995b00111a3fab4916b119c5}
+      \field{sortinit}{C}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labeltitle}{UG4 Project Report Template}
+      \field{title}{UG4 Project Report Template}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2011}
+      \verb{url}
+      \verb https://github.com/proa/ug4-report-template
+      \endverb
     \endentry
     \entry{chua_architecture_2010}{article}{}
       \name{labelname}{4}{}{%
@@ -292,6 +314,64 @@
       \endverb
       \verb{url}
       \verb http://jcs.biologists.org/content/123/6/819
+      \endverb
+    \endentry
+    \entry{wkmdacommons}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=93d707cc77f037fd02e1c8cfa75317cf}{Commons}{C\bibinitperiod}{Wikimedia}{W\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=93d707cc77f037fd02e1c8cfa75317cf}{Commons}{C\bibinitperiod}{Wikimedia}{W\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{fullhash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \field{sortinit}{C}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{File:Simple decision tree.svg}
+      \field{title}{File:Simple decision tree.svg}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://commons.wikimedia.org/wiki/File:Simple_decision_tree.svg
+      \endverb
+    \endentry
+    \entry{consortium_universal_2008}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=456c23addb60a2e04a77eeea5bee822e}{Consortium}{C\bibinitperiod}{The\bibnamedelima UniProt}{T\bibinitperiod\bibinitdelim U\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=456c23addb60a2e04a77eeea5bee822e}{Consortium}{C\bibinitperiod}{The\bibnamedelima UniProt}{T\bibinitperiod\bibinitdelim U\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{456c23addb60a2e04a77eeea5bee822e}
+      \strng{fullhash}{456c23addb60a2e04a77eeea5bee822e}
+      \field{sortinit}{C}
+      \field{labelyear}{2008}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{The Universal Protein Resource ({UniProt})}
+      \field{abstract}{The Universal Protein Resource ({UniProt}) provides a stable, comprehensive, freely accessible, central resource on protein sequences and functional annotation. The {UniProt} Consortium is a collaboration between the European Bioinformatics Institute ({EBI}), the Protein Information Resource ({PIR}) and the Swiss Institute of Bioinformatics ({SIB}). The core activities include manual curation of protein sequences assisted by computational analysis, sequence archiving, development of a user-friendly {UniProt} website, and the provision of additional value-added information through cross-references to other databases. {UniProt} is comprised of four major components, each optimized for different uses: the {UniProt} Knowledgebase, the {UniProt} Reference Clusters, the {UniProt} Archive and the {UniProt} Metagenomic and Environmental Sequences database. {UniProt} is updated and distributed every three weeks, and can be accessed online for searches or download at http://www.uniprot.org.}
+      \field{issn}{0305-1048, 1362-4962}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{suppl 1}
+      \field{title}{The Universal Protein Resource ({UniProt})}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{36}
+      \field{year}{2008}
+      \field{pages}{D190\bibrangedash D195}
+      \verb{doi}
+      \verb 10.1093/nar/gkm895
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/3S7RBE6K/Consortium - 2008 - The Universal Protein Resource (UniProt).pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/V5EQIFEG/D190.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/36/suppl_1/D190
       \endverb
     \endentry
     \entry{cristianini_introduction_2000}{book}{}
@@ -369,6 +449,98 @@
       \verb http://www.biomedcentral.com/1471-2105/12/289/abstract
       \endverb
     \endentry
+    \entry{github}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=b79b798b2812cfe1c1431894a617897d}{GitHub}{G\bibinitperiod}{Inc}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b79b798b2812cfe1c1431894a617897d}{GitHub}{G\bibinitperiod}{Inc}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{fullhash}{b79b798b2812cfe1c1431894a617897d}
+      \field{sortinit}{G}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{GitHub}
+      \field{title}{GitHub}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{url}
+      \verb https://github.com/
+      \endverb
+    \endentry
+    \entry{opencast-bio}{online}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=99c040cef8907c8462b9fb53ba5801a0}{Gray}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=99c040cef8907c8462b9fb53ba5801a0}{Gray}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1adbcbc56587b622580bf2a7bb4a552f}
+      \strng{fullhash}{1adbcbc56587b622580bf2a7bb4a552f}
+      \field{sortinit}{G}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{opencast-bio repository}
+      \field{title}{opencast-bio repository}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://github.com/ggray1729/opencast-bio
+      \endverb
+    \endentry
+    \entry{opencastbiowiki}{online}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=11b958e93e24dffcd56e4b148e67c4ef}{Graya}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=11b958e93e24dffcd56e4b148e67c4ef}{Graya}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{468312f2cda4b4bb4a8c3f25ff8943c3}
+      \strng{fullhash}{468312f2cda4b4bb4a8c3f25ff8943c3}
+      \field{sortinit}{G}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{opencast-bio project wiki}
+      \field{title}{opencast-bio project wiki}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://github.com/ggray1729/opencast-bio/wiki
+      \endverb
+    \endentry
+    \entry{ogrisel_parallel}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=268f725a780722c5323de420783ec1d8}{Grisel}{G\bibinitperiod}{Oliver}{O\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=268f725a780722c5323de420783ec1d8}{Grisel}{G\bibinitperiod}{Oliver}{O\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{268f725a780722c5323de420783ec1d8}
+      \strng{fullhash}{268f725a780722c5323de420783ec1d8}
+      \field{sortinit}{G}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Parallel Machine Learning with scikit-learn and IPython}
+      \field{title}{Parallel Machine Learning with scikit-learn and IPython}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://github.com/ogrisel/parallel_ml_tutorial
+      \endverb
+    \endentry
     \entry{hanczar_small-sample_2010}{article}{}
       \name{labelname}{6}{}{%
         {{uniquename=0,hash=0f564c039adfdcf0de68f612e87cf32f}{Hanczar}{H\bibinitperiod}{Blaise}{B\bibinitperiod}{}{}{}{}}%
@@ -406,6 +578,77 @@
       \endverb
       \verb{url}
       \verb http://bioinformatics.oxfordjournals.org/content/26/6/822.short
+      \endverb
+    \endentry
+    \entry{gitannex}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=584f9cd6f08f9d280febe94e65ae2c43}{Hess}{H\bibinitperiod}{Joey}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=584f9cd6f08f9d280febe94e65ae2c43}{Hess}{H\bibinitperiod}{Joey}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{584f9cd6f08f9d280febe94e65ae2c43}
+      \strng{fullhash}{584f9cd6f08f9d280febe94e65ae2c43}
+      \field{sortinit}{H}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{git-annex}
+      \field{title}{git-annex}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://git-annex.branchable.com/
+      \endverb
+    \endentry
+    \entry{hubbard_ensembl_2002}{article}{}
+      \true{morelabelname}
+      \name{labelname}{10}{}{%
+        {{uniquename=0,hash=0448d6fdcd3b0158065f85f67c7827ec}{Hubbard}{H\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e06a09b53811b4e8b51002ce9e89be1e}{Barker}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=00c1e68d68524a9967e8e74c4c1e2931}{Birney}{B\bibinitperiod}{Ewan}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=30a92835a81c7a088976e2e94478da9c}{Cameron}{C\bibinitperiod}{Graham}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=88f10f739f7ff4608b89a8ff7fbbfa06}{Chen}{C\bibinitperiod}{Yuan}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5193332cd3a660ab5e98b786853864b2}{Clark}{C\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1eb01de2c14e299ffb97c7a4a6cf27f7}{Cox}{C\bibinitperiod}{Tony}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9f7900df1a94da47cfc4cfa7ae20e6fb}{Cuff}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd7e3397d7e4060cf228fce6cc6410aa}{Curwen}{C\bibinitperiod}{Val}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d661161fbbb93a2f90498dd9c281c8e5}{Down}{D\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \true{moreauthor}
+      \name{author}{10}{}{%
+        {{uniquename=0,hash=0448d6fdcd3b0158065f85f67c7827ec}{Hubbard}{H\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e06a09b53811b4e8b51002ce9e89be1e}{Barker}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=00c1e68d68524a9967e8e74c4c1e2931}{Birney}{B\bibinitperiod}{Ewan}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=30a92835a81c7a088976e2e94478da9c}{Cameron}{C\bibinitperiod}{Graham}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=88f10f739f7ff4608b89a8ff7fbbfa06}{Chen}{C\bibinitperiod}{Yuan}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5193332cd3a660ab5e98b786853864b2}{Clark}{C\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1eb01de2c14e299ffb97c7a4a6cf27f7}{Cox}{C\bibinitperiod}{Tony}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9f7900df1a94da47cfc4cfa7ae20e6fb}{Cuff}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd7e3397d7e4060cf228fce6cc6410aa}{Curwen}{C\bibinitperiod}{Val}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d661161fbbb93a2f90498dd9c281c8e5}{Down}{D\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8d6458ad2b10d46768f9241ed367155d}
+      \strng{fullhash}{01acba34ea9ed4f7da04f4985bfad67d}
+      \field{sortinit}{H}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labeltitle}{The Ensembl genome database project}
+      \field{journaltitle}{Nucleic acids research}
+      \field{number}{1}
+      \field{title}{The Ensembl genome database project}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{30}
+      \field{year}{2002}
+      \field{pages}{38\bibrangedash 41}
+      \verb{file}
+      \verb [HTML] from oxfordjournals.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/ERWQDG4P/38.html:text/html;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/6B277QQB/38.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/30/1/38.short
       \endverb
     \endentry
     \entry{ito_comprehensive_2001}{article}{}
@@ -705,6 +948,31 @@
       \verb http://nar.oxfordjournals.org/content/35/suppl_1/D26
       \endverb
     \endentry
+    \entry{mcleanunpub}{unpublished}{}
+      \name{labelname}{5}{}{%
+        {{uniquename=0,hash=ae7a1f5b656ae2757b9c843fefb1f19a}{Mclean}{M\bibinitperiod}{Colin}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=abb2b73f36f9d3b6469a589f994509be}{Kotsos}{K\bibinitperiod}{Theologos}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8c6ba049f603b2bd1a05026dd9c99aac}{He}{H\bibinitperiod}{Xin}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=840c5a0fafb832e094baa6d6daa35649}{Simpson}{S\bibinitperiod}{Ian}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=da106f24214717dfa0326439bb2baee8}{Armstrong}{A\bibinitperiod}{Douglas}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=ae7a1f5b656ae2757b9c843fefb1f19a}{Mclean}{M\bibinitperiod}{Colin}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=abb2b73f36f9d3b6469a589f994509be}{Kotsos}{K\bibinitperiod}{Theologos}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8c6ba049f603b2bd1a05026dd9c99aac}{He}{H\bibinitperiod}{Xin}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=840c5a0fafb832e094baa6d6daa35649}{Simpson}{S\bibinitperiod}{Ian}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=da106f24214717dfa0326439bb2baee8}{Armstrong}{A\bibinitperiod}{Douglas}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{dd6f72311e7dc583ee18c4e07f1d67b1}
+      \strng{fullhash}{8a6390fd9ea32d516771331b382fb6ae}
+      \field{sortinit}{M}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Modularity Based Clustering Suite}
+      \field{note}{Under consideration}
+      \field{title}{Modularity Based Clustering Suite}
+      \field{year}{2014}
+    \endentry
     \entry{murphy_machine_2012}{book}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=57a45a819d1ea44f0e40dfcdeeaa4140}{Murphy}{M\bibinitperiod}{Kevin\bibnamedelima P.}{K\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
@@ -938,6 +1206,31 @@
       \endverb
       \verb{url}
       \verb http://dl.acm.org/citation.cfm?id=2078195
+      \endverb
+    \endentry
+    \entry{synsys}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=45c7c771b36cbd9021650549431fb61f}{Project}{P\bibinitperiod}{SynSys}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=45c7c771b36cbd9021650549431fb61f}{Project}{P\bibinitperiod}{SynSys}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{45c7c771b36cbd9021650549431fb61f}
+      \strng{fullhash}{45c7c771b36cbd9021650549431fb61f}
+      \field{sortinit}{P}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{synsys - A European expertise Network on building the synapse}
+      \field{title}{synsys - A European expertise Network on building the synapse}
+      \field{urlday}{24}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{file}
+      \verb synsys - A European expertise Network on building the synapse:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/J2HM7XE3/www.synsys.eu.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.synsys.eu/
       \endverb
     \endentry
     \entry{qi_learning_2008}{thesis}{}
@@ -1269,6 +1562,28 @@
       \verb http://nar.oxfordjournals.org/content/34/suppl_1/D535.short
       \endverb
     \endentry
+    \entry{parallel_python_webpage}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=bd46a0f6e40fd020f38475651a7535c8}{Team}{T\bibinitperiod}{The\bibnamedelimb IPython\bibnamedelima Development}{T\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bd46a0f6e40fd020f38475651a7535c8}{Team}{T\bibinitperiod}{The\bibnamedelimb IPython\bibnamedelima Development}{T\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bd46a0f6e40fd020f38475651a7535c8}
+      \strng{fullhash}{bd46a0f6e40fd020f38475651a7535c8}
+      \field{sortinit}{T}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Using IPython for parallel computing}
+      \field{title}{Using IPython for parallel computing}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://ipython.org/ipython-doc/2/parallel/parallel_intro.html
+      \endverb
+    \endentry
     \entry{uetz_comprehensive_2000}{article}{}
       \name{labelname}{20}{}{%
         {{uniquename=0,hash=a2856e77697fe56c8848192a6381e47d}{Uetz}{U\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
@@ -1552,22 +1867,7 @@
       \endverb
     \endentry
   \endsortlist
-  \missing{dip_website}
-  \missing{synsys}
-  \missing{ensembl_website}
-  \missing{ug4template}
   \missing{von_mering_string_2005}
-  \missing{gitannex}
-  \missing{parallel_python_webpage}
-  \missing{wkmdacommons}
-  \missing{opencastbiowiki}
-  \missing{uniprot_website}
-  \missing{razick_irefindex_2008}
-  \missing{consortium_universal_2007}
-  \missing{ogrisel_parallel}
-  \missing{mcleanunpub}
-  \missing{github}
-  \missing{opencast-bio}
   \missing{vonMering_string_2005}
 \endrefsection
 \endinput

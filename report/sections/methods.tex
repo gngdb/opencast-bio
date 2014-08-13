@@ -30,7 +30,7 @@ Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ 
 %pose our problem
 Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
 The training labels are either an interaction (a one) or a non-interaction (a zero).
-Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex_2008} database with over 50\% confidence.
+Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex:_2008} database with over 50\% confidence.
 Non-interactions are random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
 These are also checked against the iRefIndex database to ensure they are not accidentally known interactions.
 There are approximately 600 non-interactions for every true interaction.
@@ -63,7 +63,7 @@ For the sake of posterity databases containing information about genes typically
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
 %other protein identifier schemes and mapping between them
-Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{ensembl_website}, Uniprot identifiers from the Uniprot database\autocite{uniprot_website} and even those used only for specific databases such as DIP identifiers\autocite{dip_website}.
+Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as DIP identifiers\autocite{xenarios_dip_2002}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
 
@@ -71,7 +71,7 @@ The reason this happens is due to isoforms of different proteins; different amin
 %methods used during the project, with references to appendix notebooks
 Various tools exist to map from one protein identifier to another: Ensembl's BioMart\autocite{smedley_biomart_2009} is a versatile web-based tool, for example.
 In this project, simple conversion tables from NCBI's Gene\autocite{maglott_entrez_2007} ftp server were primarily used.
-Another tool used was the Uniprot\autocite{consortium_universal_2007} online service web service.
+Another tool used was the Uniprot\autocite{consortium_universal_2008} online service web service.
 
 % talk about the problem of canonicalisation
 Unfortunately, using any of these services there will be a number of IDs which cannot be converted and many IDs mapping to the same Entrez ID as different protein isoforms are picked up.
@@ -146,14 +146,14 @@ The features used are described by index in table \ref{tab:fvectors}.
 %this could be a good place to put that diagram of exactly what a feature vector is
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{fvectors.png}
+    \includegraphics[width=0.8\textwidth]{fvectors.png}
     \caption{A diagram showing the structure of feature vectors and their relationship to the project as a whole. This figure is based on a similar flow chart shown in the project proposal.}
     \label{fig:fvectors}
 \end{figure}
 
 \begin{table}
     \centering
-    \begin{tabular}{l c c}
+    \begin{tabular}{l c p{0.5\textwidth}}
         Feature         & Indices & Description \\
         \hline
         Gene Ontology   & 1-90    & Described in section \ref{go}, with individual indices described in Appendix \ref{app:go}. \\
@@ -192,19 +192,24 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
 %table of the different hyper-parameters
 \begin{table}
     \centering
-    \begin{tabular}{l c c}
+    \small
+    \begin{tabular}{p{0.2\textwidth} c p{0.5\textwidth}}
+        
         Classifier                                  & Hyper-parameters     & Description \\
         \hline
         Logistic Regression                         & C                         &  Inverse of regularisation strength, the $\alpha$ parameter in section \ref{logreg}. \\
-        \multirow{3}{*}{Support Vector Machine}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
+        \hline 
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
                                                     & Gamma($\gamma$)           &  Kernel coefficient. \\
                                                     & C                         &  As with Logistic Regression, a penalty parameter. \\
-        \multirow{2}{*}{Random Forest}              & N estimators              &  Number of trees used in the forest. \\
+        \hline 
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators              &  Number of trees used in the forest. \\
                                                     & Max features              &  Number of features considered when looking for splits, part of the problem of finding the best decision at each node described in section \ref{randomforest}. \\
-        \multirow{2}{*}{Extremely Randomized Trees} & N estimators              &  As with Random Forest. \\
+        \hline 
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators              &  As with Random Forest. \\
                                                     & Max features              &  As with Random Forest. \\
     \end{tabular}
-    \caption{Summary of the hyper-parameters described in the Scikit-learn\cite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}
+    \caption{Summary of the hyper-parameters described in the Scikit-learn \autocite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}
     \label{tab:hyper}
 \end{table}
 

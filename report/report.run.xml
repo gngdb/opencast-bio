@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>report.bcf</file>
@@ -82,6 +82,7 @@
     </requires>
     <requires type="editable">
       <file>zlibrary.bib</file>
+      <file>librarymissing.bib</file>
     </requires>
   </external>
 </requests>
