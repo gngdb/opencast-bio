@@ -64,7 +64,7 @@ This will be described in more detail in section \ref{bayes}.
 Mapping from one protein identifier to another became a significant problem in this project.
 %FIN: so a few of my earlier comments will be redundant to this section so reference from those sections to here 
 Unfortunately, most Biological databases maintain their own indexing method to identify different genes and proteins.
-New data sources being integrated into this project would often be using a different identification scheme to the NCBI Entrez GeneID originally chosen to use in the PPI network.
+New data sources being integrated into this project would often be using a different identification scheme to the NCBI Entrez GeneID originally chosen to use in the \ac{PPI} network.
 
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
 Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
@@ -73,7 +73,7 @@ For the sake of posterity databases containing information about genes typically
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
 %other protein identifier schemes and mapping between them
-Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as DIP identifiers\autocite{xenarios_dip_2002}.
+Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as \ac{DIP} identifiers\autocite{xenarios_dip_2002}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
 %FIN: alternative splices of the same gene can produce different proteins, every gene is made of introns and exons, substrings which don't code for the amino acids in the protein and those that do respecitvely.  Expressed proteins are generated from any of several combinations of introns and exons (see http://en.wikipedia.org/wiki/Alternative_splicing).  Alt splicing is really important in eukaryotes and is one of the big explanations between the very low number of genes we found when we sequenced the human genome compared to the predicitions.
@@ -122,17 +122,17 @@ Usage and development notes for this program are referenced in Appendix \ref{app
 % with reference here to the section in Qi's thesis
 
 
-%original work on DIP (justified choice from previous work)
-The database of interacting proteins (DIP) is a database of interactions proven by small-scale experiments\autocite{xenarios_dip_2002}.
+%original work on \ac{DIP} (justified choice from previous work)
+The database of interacting proteins (\ac{DIP}) is a database of interactions proven by small-scale experiments\autocite{xenarios_dip_2002}.
 Each interaction added is hand curated so it was expected as a reliable training set.
 Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
-%problems with DIP
-%why HIPPIE is better suited
-Unfortunately, problems were found with DIP as a training set. 
+%problems with \ac{DIP}
+%why \ac{HI\ac{PPI}E} is better suited
+Unfortunately, problems were found with \ac{DIP} as a training set. 
 %FIN: I don't understand - explain what these problems are/were
 Features derived from interaction databases would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
-HIPPIE was also tested as a training set, but this lead to the same problem.
+\ac{HI\ac{PPI}E} was also tested as a training set, but this lead to the same problem.
 %FIN: so which did you use?
 
 %example feature importance graph
@@ -157,11 +157,11 @@ To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} dat
 Again, non-interactions were generated as random combinations of Entrez Gene IDs.
 These were also checked against the positive interactions to ensure known interactions were not present.
 
-\subsection{PPI prediction features}
+\subsection{\ac{PPI} prediction features}
 
 %planned features, describe the list of possible features which was created
 %put it in the appendix as a table, or otherwise somehow
-PPI prediction features are a set of values for each interaction considered, if it is a real or non-interaction.
+\ac{PPI} prediction features are a set of values for each interaction considered, if it is a real or non-interaction.
 This arrangement is illustrated in figure \ref{fig:fvectors}.
 The features used are described by index in table \ref{tab:fvectors}.
 
@@ -191,7 +191,7 @@ The features used are described by index in table \ref{tab:fvectors}.
 \section{Weighting Protein Interactions}
 
 %classification as a weighting tool
-The classification problem we are solving is different in that we are really trying to obtain a realistic weighting of interactions for use in a PPI network.
+The classification problem we are solving is different in that we are really trying to obtain a realistic weighting of interactions for use in a \ac{PPI} network.
 %FIN: different from what? 
 Classification is normally concerned about picking a decision threshold to classify examples into categories.
 However, in this case the output of our process is the posterior probability of the model given a new example.
@@ -223,7 +223,7 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
         \hline
         Logistic Regression                         & C                         &  Inverse of regularisation strength, the $\alpha$ parameter in section \ref{logreg}. \\
         \hline 
-        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel                    &  The kernel used. Three options: linear, \ac{RBF} and polynomial. \\
                                                     & Gamma($\gamma$)           &  Kernel coefficient. \\
                                                     & C                         &  As with Logistic Regression, a penalty parameter. \\
         \hline 
@@ -291,7 +291,7 @@ Applications include text categorisation, hand-written character recognition, im
 
 %describe the hyper-parameters?
 The hyper-parameters for a Support Vector Machine control the kernels, along with the regularisation parameter as described for logistic regression in section \ref{logreg}.
-%FIN: explain what a kernel is and how SVMs can classify non-linearly seperable unlink logit by transformation to feature space
+%FIN: explain what a kernel is and how \ac{SVM}s can classify non-linearly seperable unlink logit by transformation to feature space
 Two hyper-parameters which can be tuned during a grid search operation are the degree of polynomial kernels if chosen and the gamma coefficient of the kernels.
 
 
@@ -354,7 +354,7 @@ A maximum-likelihood solution to this model can be found and the resulting model
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
 True protein interactions are not something which can be assumed in a protein interaction prediction task.
-Many proteins are known to be very likely, but others are less confidently classified, as reflected in the HIPPIE database's confidence scoring system\autocite{schaefer_hippie:_2012}.
+Many proteins are known to be very likely, but others are less confidently classified, as reflected in the \ac{HI\ac{PPI}E} database's confidence scoring system\autocite{schaefer_hippie:_2012}.
 %FIN: typo/missing word
 
 To train a classifier a training set of true and false interactions is required and this cannot be supplied without thresholding the database at an arbitrary confidence value.
@@ -371,14 +371,14 @@ Using this we can build a model and update our belief on the likelihood of inter
 %  learning curves
 %  simple accuracy value
 %  grid search
-%  ROC
+%  \ac{ROC}
 %  Precision recall
 %  test interactions
 %  
 
 % consider using paragraph headings in this section
 Various measures were applied to each classifier to estimate their performance in different ways.
-These tests included simple accuracy measures applied over learning curve and grid searches along with plotting ROC and precision-recall curves.
+These tests included simple accuracy measures applied over learning curve and grid searches along with plotting \ac{ROC} and precision-recall curves.
 Grid searches of parameter values were used to find optimal hyper-parameters.
 
 % was or will be?
@@ -417,14 +417,14 @@ A Logistic Regression model, for example, has a single hyper-parameter so that t
 The accuracy value plotted in the learning curve and used in grid searches of parameters values is simply the proportional of correctly classified instances in a training or validation set.
 Typically, the protein interaction prediction problem is sparse, in that there are very few interactions for the large number of non-interactions.
 This is reflected in the accuracy in that a classifier that simply always predicts zero can still achieve a very high accuracy.
-Using this accuracy value is therefore problematic and this requires the other measures employed, such as ROC and precision-recall AUC values.
+Using this accuracy value is therefore problematic and this requires the other measures employed, such as \ac{ROC} and precision-recall \ac{AUC} values.
 
-\subsubsection*{ROC curve}
+\subsubsection*{\ac{ROC} curve}
 % explain what those are
-A Receiver Operating Characteristic, or ROC, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
+A Receiver Operating Characteristic, or \ac{ROC}, curve plots the variation in true positive to false positive rate as the threshold of classification is varied.
 This makes it useful as an illustration of the tradeoff possible with this particular classifier.
-The Area Under Curve, or AUC, value is the area under this line.
-A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
+The Area Under Curve, or \ac{AUC}, value is the area under this line.
+A higher \ac{AUC} value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
 %FIN: maybe add in a wee truth table of TP, TF, FP, FF 
 \subsubsection*{Precision-recall curve}
@@ -434,7 +434,7 @@ The precision is defined as the number of true positive results over the number 
 Recall is defined as the number of true positive results against the number of available positive examples
 The area under the curve is used to gauge the classifier's effectiveness.
 %FIN: may as well add the equations in for precision and recall, TP, TF, FP, FF - I mean you did put down baye's rule earlier 
-%example ROC curve?
+%example \ac{ROC} curve?
 %example precision recall curve?
 
 \subsection{Missing data}
@@ -457,24 +457,24 @@ Unfortunately, in this problem we cannot know for certain whether an interaction
 Therefore, when fitting a supervised model we only obtain, at best, an accurate predictor for the interaction database used to fit the model.
 
 %the prior on the edgelist
-As the PPI network edges we plan to weight have already been defined through combining different interaction databases we already have a strong prior on the existence of these interactions.
+As the \ac{PPI} network edges we plan to weight have already been defined through combining different interaction databases we already have a strong prior on the existence of these interactions.
 
 Using the classifier on its own can then, at best, reproduce one of the databases used to create this network and many of the interactions will be incorrectly weighted much lower than expected.
 The solution is to treat both the result of the classifier and the edgelist inclusion as observable events dependent on the latent ``interaction'' variable.
-Along with these variables, we can also include other protein interaction prediction resources, such as STRING\autocite{von_mering_string:_2005}.
+Along with these variables, we can also include other protein interaction prediction resources, such as \ac{STRING}\autocite{von_mering_string:_2005}.
 
 %naive bayes model, advantages, disadvantages
 The model we have chosen to update our prior belief using assumes conditional independence of the observable variables given the hidden interaction variable.
 This equates to a Naive Bayes model with a belief network as shown in figure \ref{fig:naive}.
 An advantage of this model is the simplicity of its analysis.
-The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the HIPPIE database is composed of.
+The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the \ac{HI\ac{PPI}E} database is composed of.
 %FIN: typo/missing word
 
 %belief network for naive bayes
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{naive.png}
-    \caption{A belief network illustrating the Naive Bayes model, equivalent to that used for inference when weighting the interactions of the PPI network.}
+    \caption{A belief network illustrating the Naive Bayes model, equivalent to that used for inference when weighting the interactions of the \ac{PPI} network.}
     \label{fig:naive}
 \end{figure}
 
@@ -482,18 +482,18 @@ The disadvantage is that our variables could be dependent, as the classifier is 
 
 %the importance of conservative estimates
 The class label, interaction, is not observed in this model so we cannot solve to find the parameters.
-%FIN: PPI or not
+%FIN: \ac{PPI} or not
 To define the model, the only way to proceed is to manually define them by conservatively estimating the conditional true positive and false positive rates of the Bernoulli distributions.
-Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using KDE. 
-%FIN: explain KDE acronym 
+Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using \ac{KDE}. 
+%FIN: explain \ac{KDE} acronym 
 
 %kernel density estimation, justification from Weka
-Using KDE in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
+Using \ac{KDE} in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
 %FIN: you need to explain what Weka is 
 Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
 As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
 
-\section{Measures applied to weighted and unweighted PPI networks}
+\section{Measures applied to weighted and unweighted \ac{PPI} networks}
 
 %why do we want to try weighted networks? and intro
 It is hoped that a weighted graph will provide new insight into the interactions of proteins in the active zone.

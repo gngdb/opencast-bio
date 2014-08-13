@@ -4,16 +4,16 @@
 %intro to the results
 %below is a decent intro
 
-%iterations of results - DIP, HIPPIE, Bayesian updating and reasoning behind it
+%iterations of results - \ac{DIP}, \ac{HI\ac{PPI}E}, Bayesian updating and reasoning behind it
 % can then refer to this throughout this section.
 As the project progressed the intended approach was found to be flawed and some changes were made.
 %FIN: explain the flaws
-The first of these was the change from a DIP-based training set to HIPPIE-based training set.
+The first of these was the change from a \ac{DIP}-based training set to \ac{HI\ac{PPI}E}-based training set.
 After the classification had been performed the use of a supervised classifier with this training set was found to be a poor method by itself for weighting interactions.
 Using all of the data available it was possible to run a simple Bayesian alternative to continue with the weighting for the Community detection algorithm.
 
 %Feature extraction results
-\section{PPI feature vectors}
+\section{\ac{PPI} feature vectors}
 
 %The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C.
 Many features were identified for extraction and these are described in Appendix \ref{datasources}.
@@ -47,7 +47,7 @@ A brief description of these features is given below.
 %Larger features
 %Gene ontology was built as a feature in the same manner as that of qi_evaluation_2006 but, without knowing their approach, we had to develop our own method of creating usable features.
 The Gene Ontology\autocite{ashburner_gene_2000} is a resource of annotations for genes to indicate various characteristics in a hierarchical manner, such as cellular localisation or function.
-This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as STRING\autocite{von_mering_string:_2005} to predict protein interactions.
+This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as \ac{STRING}\autocite{von_mering_string:_2005} to predict protein interactions.
 Intuitively, it can be used to detect when, for example, two proteins are localised in the same area of the cell - as this would increase the probability that these two proteins interact.
 %FIN: or rather is totally necessary for two proteins to interact in vivo even if they interact in vitro
 %FIN: furthermore proteins which are known to share a function are intuitively more likely to interact than proteins of disparate function - for example proteins encoding consecutive steps in a biosynthetic pathway are often found to form complexes which stream-lines the synthesis of their product via biochemical channelling - directly passing the substrate to the active site of each protein without dealing with equilibria in the surrounding solution
@@ -86,13 +86,13 @@ If the data were two dimensional we would like to plot it as a scatter plot and 
 This would indicate that a classification algorithm would be able classify the data.
 As the data has in excess of one hundred dimensions it is necessary to reduce the dimensionality before plotting.
 %FIN: you could still use clustering algorithms in high dimension though 
-%PCA is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
+%\ac{PCA} is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
 Two methods were tested to reduce the dimensionality of the data to two dimensions so that it could be easily plotted.
-The first of these is PCA, which is relatively simple with a fast implementation, and the second is t-SNE, which is more complicated but has achieved better performance in recent works.
+The first of these is \ac{PCA}, which is relatively simple with a fast implementation, and the second is t-SNE, which is more complicated but has achieved better performance in recent works.
 Both of these methods are described below in more detail.
 
-%PCA description, referencing Barber
-In PCA the method to express a high-dimensional point $\pmb{x}$ as a low dimensional point relies on finding an approximation for this point according to\autocite[330]{barber_bayesian_2013}:
+%\ac{PCA} description, referencing Barber
+In \ac{PCA} the method to express a high-dimensional point $\pmb{x}$ as a low dimensional point relies on finding an approximation for this point according to\autocite[330]{barber_bayesian_2013}:
 
 %FIN: this kind of stuff seems more like methods than results to me 
 
@@ -117,7 +117,7 @@ However, this is not the case for the in proportion case.
 %    \InputIfFileExists{\imagedir/in.pca.tikz}{}{\textbf{!! Missing graphics !!}}
     \centering
     \includegraphics[width=0.6\textwidth]{in.pca.png}
-    \caption{In proportion plot of the data reduced to two dimensions using PCA.}
+    \caption{In proportion plot of the data reduced to two dimensions using \ac{PCA}.}
     \label{fig:inpca}
 \end{figure}
 
@@ -127,7 +127,7 @@ However, this is not the case for the in proportion case.
 %    \InputIfFileExists{\imagedir/out.pca.tikz}{}{\textbf{!! Missing graphics !!}}
     \includegraphics[width=0.6\textwidth]{out.pca.png}
     \centering
-    \caption{Out of proportion plot of the data reduced to two dimensions using PCA.}
+    \caption{Out of proportion plot of the data reduced to two dimensions using \ac{PCA}.}
     \label{fig:outpca}
 \end{figure}
 
@@ -135,7 +135,7 @@ However, this is not the case for the in proportion case.
 %tSNE is more complicated, but was recommended due to reportedly good performance
 A more complex method to reduce the dimensionality of the data is t-SNE\autocite{van_der_maaten_visualizing_2008}.
 This technique won the Merck Visualization Challenge.   
-It differs from PCA in the objective function in that it aims to maintain a similarity measure between points between the high and low-dimensional cases.
+It differs from \ac{PCA} in the objective function in that it aims to maintain a similarity measure between points between the high and low-dimensional cases.
 
 %should probably say what we did vis. TruncatedSVD
 In addition to using this technique it was also recommended to use Truncated Singular Value Decomposition(SVD) to reduce the dimensionality of the vector to 50 beforehand.
@@ -146,8 +146,8 @@ This was for implementation based reasons in Scikit-learn.
 %FIN: typo/missing word
 
 %results
-Unfortunately, this was no more successful than PCA on this dataset, as shown in figures \ref{fig:intsne} and \ref{fig:outtsne}.
-It should also be noted that the number of points plotted in these graphs is much lower than in the case of PCA as it is much more computationally intensive.
+Unfortunately, this was no more successful than \ac{PCA} on this dataset, as shown in figures \ref{fig:intsne} and \ref{fig:outtsne}.
+It should also be noted that the number of points plotted in these graphs is much lower than in the case of \ac{PCA} as it is much more computationally intensive.
 %FIN: because? 
 
 %plots
@@ -241,7 +241,7 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 %In neither graph is it easy to see a grouping of the curves being plotted.
 %This means that it is likely to be very difficult to accurately classify the vectors.
 
-\section{Classification in weighted PPI networks}
+\section{Classification in weighted \ac{PPI} networks}
 
 %why is this different to regular classification
 In a classification task there are two common components: a training set that is labeled and a set of data which the classifier is to be applied to, without labels.
@@ -270,7 +270,7 @@ The results of this search are shown in table \ref{tab:gridresults}.
         Classifier                                  & Hyper-parameter values    & Test set accuracy     & Training set accuracy          \\
         \hline
         Logistic Regression                         & C : $0.0215$              & $0.9984 \pm 3\e{-5}$  & $0.99847 \pm 2\e{-5}$ \\
-        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel: RBF               & \multirow{3}{*}{$0.9985 \pm$ N/A}    & \multirow{3}{*}{$0.99933 \pm 1.2\e{-4}$} \\
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel: \ac{RBF}               & \multirow{3}{*}{$0.9985 \pm$ N/A}    & \multirow{3}{*}{$0.99933 \pm 1.2\e{-4}$} \\
                                                     & Gamma: $10.0$             &                           &                               &                               &       \\
                                                     & C: $10.0$                 &                           &                               &                               &       \\
         \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators: $44$        & \multirow{2}{*}{$0.99837 \pm 3\e{-5}$} & \multirow{2}{*}{$0.99921 \pm 3\e{-5}$} \\
@@ -289,23 +289,23 @@ The random forest can be seen to be performing worse than the logistic regressio
 %FIN: any idea why? 
 
 
-\subsection{ROC curves}
+\subsection{\ac{ROC} curves}
 
-%A ROC curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
-As described in section \ref{classifierverification} ROC curves were applied to all classifiers to characterise the performance of each.
-The ROC curve produced by the logistic regression model is shown in figure \ref{fig:logroc}.
-The positive AUC value is desirable and the curve of the ROC curve suggests this model can achieve a relatively good true positive rate at low false positive rate, which is likely what it would be used at - to avoid false positive protein interactions being classified.
+%A \ac{ROC} curve plots the tradeoff between true positive and false positive rates, in the case of an unbalanced classifier large sample sizes are required to obtain a smooth, stable curve.
+As described in section \ref{classifierverification} \ac{ROC} curves were applied to all classifiers to characterise the performance of each.
+The \ac{ROC} curve produced by the logistic regression model is shown in figure \ref{fig:logroc}.
+The positive \ac{AUC} value is desirable and the curve of the \ac{ROC} curve suggests this model can achieve a relatively good true positive rate at low false positive rate, which is likely what it would be used at - to avoid false positive protein interactions being classified.
 %FIN: sentence too complex - split
 
 
-%ROC curves for the different classifiers
-%with AUC values in the captions
+%\ac{ROC} curves for the different classifiers
+%with \ac{AUC} values in the captions
 \begin{figure}
     \centering
     \setlength\figureheight{2in}
     \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/logreg.roc.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{The ROC curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.781$.}
+    \caption{The \ac{ROC} curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an \ac{AUC} of $0.781$.}
     \label{fig:logroc}
 \end{figure}
 
@@ -314,7 +314,7 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
     \setlength\figureheight{2in}
     \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/rf.roc.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{The ROC curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.806$.}
+    \caption{The \ac{ROC} curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an \ac{AUC} of $0.806$.}
     \label{fig:rfroc}
 \end{figure}
 
@@ -324,16 +324,16 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/svc.roc.tikz}{}{\textbf{!! Missing graphics !!}}
-%    \caption{The ROC curve produced by a support vector machine model on the test data set using the best parameters shown in table \ref{tab:gridresults}.}
+%    \caption{The \ac{ROC} curve produced by a support vector machine model on the test data set using the best parameters shown in table \ref{tab:gridresults}.}
 %    \label{fig:svcroc}
 %\end{figure}
 
-However, the ROC curve shown in figure \ref{fig:rfroc} is very similar to that created by the logistic regression model except it has slightly better performance at low false positive rates.
+However, the \ac{ROC} curve shown in figure \ref{fig:rfroc} is very similar to that created by the logistic regression model except it has slightly better performance at low false positive rates.
 Neither show very good performance and it clear that only at very high false positive rates will the classifiers reliably find the true interactions.
 %FIN: typo/missing word
 
 
-Unfortunately, it was not possible to train the support vector machine on a large enough training set to plot a realistic ROC curve due to time constraints, so it is not shown here.
+Unfortunately, it was not possible to train the support vector machine on a large enough training set to plot a realistic \ac{ROC} curve due to time constraints, so it is not shown here.
 The notebook referenced in appendix \ref{app:classtrain} provides the results obtained.
 This is also true of the precision-recall graph in the following section.
 
@@ -344,11 +344,11 @@ This is also true of the precision-recall graph in the following section.
 %what a precision recall plot is? already in methods
 As described in section \ref{classifierverification} the classifiers were also characterised through plotting a precision-recall curve.
 This is shown for the random forest and logistic regression models in figures \ref{fig:rfpr} and \ref{fig:logpr}, respectively.
-Although the random forest model achieves a better AUC value, the curve demonstrates is unable to recall as many samples with perfect precision as the logistic regression model.
+Although the random forest model achieves a better \ac{AUC} value, the curve demonstrates is unable to recall as many samples with perfect precision as the logistic regression model.
 %FIN: typo/missing word
 
-As with the ROC curve, neither classifier shows particularly good performance.
-%FIN: be more positive - These results supported those acquired by the ROC analysis 
+As with the \ac{ROC} curve, neither classifier shows particularly good performance.
+%FIN: be more positive - These results supported those acquired by the \ac{ROC} analysis 
 
 %precision recall curves for the different classifiers
 \begin{figure}
@@ -356,7 +356,7 @@ As with the ROC curve, neither classifier shows particularly good performance.
     \setlength\figureheight{2in}
     \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/logreg.pr.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{The precision-recall curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.11$.}
+    \caption{The precision-recall curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an \ac{AUC} of $0.11$.}
     \label{fig:logpr}
 \end{figure}
 
@@ -365,7 +365,7 @@ As with the ROC curve, neither classifier shows particularly good performance.
     \setlength\figureheight{2in}
     \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/rf.pr.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{The precision-recall curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.12$. This graph shows some artefacts due to the extremely small number of positive interactions even in relatively large sample sizes.}
+    \caption{The precision-recall curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an \ac{AUC} of $0.12$. This graph shows some artefacts due to the extremely small number of positive interactions even in relatively large sample sizes.}
     \label{fig:rfpr}
 \end{figure}
 
@@ -407,7 +407,7 @@ Confidence values were chosen to be conservative but otherwise were arbitrary to
 %FIN: could be more extensively assessed and evaluated in future work 
 Estimating the error rates of the relevant databases was beyond the scope of this project.
 The values chosen are shown in table \ref{tab:estimates}.
-As the Edgelist has been reviewed and because iRefIndex represents a combination of many databases a TPR of 0.9 seemed like a fair estimate of the accuracy of positive predictions.
+As the Edgelist has been reviewed and because iRefIndex represents a combination of many databases a \ac{TPR} of 0.9 seemed like a fair estimate of the accuracy of positive predictions.
 Negative predictions were more difficult to estimate.
 Both TNRs were set to be 0.5, which is very likely to be an underestimate as most interactions are false.
 
@@ -418,9 +418,9 @@ Both TNRs were set to be 0.5, which is very likely to be an underestimate as mos
     \begin{tabular}{l c }
         Parameter       & Value \\
         \hline
-        Edgelist TPR    & 0.9 \\
+        Edgelist \ac{TPR}    & 0.9 \\
         Edgelist TNR    & 0.5 \\
-        iRefIndex TPR   & 0.9 \\
+        iRefIndex \ac{TPR}   & 0.9 \\
         iRefIndex TNR   & 0.5 \\
     \end{tabular}
     \caption{A table summarising the parameters chosen in the probabilistic model used two weight the interactions.}
@@ -446,7 +446,7 @@ Unfortunately, the distribution produced forms two dense groups due to the major
 
 %not yet, but beta/kde distributions could go here
 
-\section{Comparison of weighted and unweighted PPI networks}
+\section{Comparison of weighted and unweighted \ac{PPI} networks}
 
 %Here are the communities we detected in each case
 Once the weighted edges had been generated the communities in both the weighted and unweighted cases were found using a Spectral Modularity algorithm.
