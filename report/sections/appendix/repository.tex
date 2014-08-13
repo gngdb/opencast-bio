@@ -6,6 +6,7 @@
 Git is version control software and was used extensively in this project in combination with Github\autocite{github} and git-annex\autocite{gitannex}.
 The project is built from two repositories, the first inside the second: a large git-annex based repository containing all the data and a smaller git repository stored on github containing all the code and documentation for the report\autocite{opencast-bio}.
 History for all the code and documentation, every previous version, is available publicly online but the data cannot be made publicly available.
+%FIN: due to difficulties disseminating that amount of data on free resources such as github rather than anything to do with NDAs or proprietary data 
 
 %metrics describing the repository
 Hosting the code online was intended to aid remote collaborators.
@@ -44,6 +45,7 @@ The repository consists of several directories:
 %future usefulness?
 The code in this repository may be useful to a future project, but could also be substantially improved upon.
 It is more likely that the notes on how to go about a protein interaction prediction task, and this report, will be more useful to future work.
+%FIN: and have been fully indexed by the main internet search engines 
 
 %mention weekly reports
 Weekly reports were kept as a summary of the work completed every week for supervisors and to maintain a log of the project.
@@ -53,8 +55,11 @@ These can be found on the project wiki\autocite{opencastbiowiki}.
 %description of how this was set up and how it could scale
 
 To take maximum advantage of the available computing facilities and because the sample sizes in the project exceed one million the decision was made to prepare the code for parallel processing on a remote server.
+%FIN: typo/missing word
+
 Particularly, grid search operations to optimize performance of the classifier were considered to be processor intensive and vital to the success of the prediction task.
 The easiest way to set up these interactive parallel processing operations was the parallel processing model in IPython\autocite{parallel_python_webpage}.
+%FIN: easiest? really?  
 
 %How this worked in practice, and the potential
 The notebooks using parallel processing are the notebooks on classifier training, which are described in Appendix \ref{app:classtrain}.
