@@ -7,6 +7,7 @@
 %iterations of results - DIP, HIPPIE, Bayesian updating and reasoning behind it
 % can then refer to this throughout this section.
 As the project progressed the intended approach was found to be flawed and some changes were made.
+%FIN: explain the flaws
 The first of these was the change from a DIP-based training set to HIPPIE-based training set.
 After the classification had been performed the use of a supervised classifier with this training set was found to be a poor method by itself for weighting interactions.
 Using all of the data available it was possible to run a simple Bayesian alternative to continue with the weighting for the Community detection algorithm.
@@ -22,6 +23,7 @@ These can be found in appendix \ref{datasources}.
 Of these, a smaller proportion were used in the final classifier, which neglected features directly derived from interaction databases.
 The features used to train the final classifier are shown in table \ref{tab:features}.
 A brief description of these features is given below.
+%FIN: worth explaining wht the ENTS coverage is worse? 
 
 %feature table, with information about each (size of features, categorical/ordinal/numerical, coverage)
 \begin{table}
@@ -47,6 +49,8 @@ A brief description of these features is given below.
 The Gene Ontology\autocite{ashburner_gene_2000} is a resource of annotations for genes to indicate various characteristics in a hierarchical manner, such as cellular localisation or function.
 This resource has been used in past papers\autocite{qi_evaluation_2006} and in databases such as STRING\autocite{von_mering_string:_2005} to predict protein interactions.
 Intuitively, it can be used to detect when, for example, two proteins are localised in the same area of the cell - as this would increase the probability that these two proteins interact.
+%FIN: or rather is totally necessary for two proteins to interact in vivo even if they interact in vitro
+%FIN: furthermore proteins which are known to share a function are intuitively more likely to interact than proteins of disparate function - for example proteins encoding consecutive steps in a biosynthetic pathway are often found to form complexes which stream-lines the synthesis of their product via biochemical channelling - directly passing the substrate to the active site of each protein without dealing with equilibria in the surrounding solution
 Details on exactly how this feature was generated can be found in the notebook reference in Appendix \ref{app:go}.
 
 \subsection{Features derived from ENTS}
@@ -56,7 +60,7 @@ Details on exactly how this feature was generated can be found in the notebook r
 These features were obtained through analysis and modification of the bundled code and data downloaded from the website of \textcite{rodgers-melnick_predicting_2013}.
 In turn, most of these features were generated through the Multiloc2 program of \textcite{blum_multiloc2:_2009}.
 The remaining features are pairwise combinations of conserved protein domains, which are conserved "modules" of proteins described in \textcite{janin_domains_1985}.
-
+%FIN: domains that can evolve independently as a discrete functional unit essentially 
 %\subsection{Yeast Two-Hybrid results}
 %\label{y2h}
 
@@ -71,15 +75,17 @@ The remaining features are pairwise combinations of conserved protein domains, w
 %describe the problem of using in proportion and out of proportion methods
 For all graphs, two cases were investigated: in proportion and out of proportion.
 In proportion refers to the case where the proportion of interactions to non-interactions is correct; specifically, 1 interaction to 600 non-interactions.
+%FIN: again justify Qi's basis for this ratio 
 Out of proportion maintains the same number of interactions to non-interactions.
 This is important as it is often easier to separated the data when the classes are equally split.
+%FIN: why?
 
 \subsubsection*{Reducing dimensionality}
 %why do we want to reduce the dimensionality
 If the data were two dimensional we would like to plot it as a scatter plot and see if there was a clear grouping of the points.
 This would indicate that a classification algorithm would be able classify the data.
 As the data has in excess of one hundred dimensions it is necessary to reduce the dimensionality before plotting.
-
+%FIN: you could still use clustering algorithms in high dimension though 
 %PCA is a relatively simply and fast way to reduce the high dimensionality of our feature vector into a form that can be easily plotted.
 Two methods were tested to reduce the dimensionality of the data to two dimensions so that it could be easily plotted.
 The first of these is PCA, which is relatively simple with a fast implementation, and the second is t-SNE, which is more complicated but has achieved better performance in recent works.
@@ -87,6 +93,8 @@ Both of these methods are described below in more detail.
 
 %PCA description, referencing Barber
 In PCA the method to express a high-dimensional point $\pmb{x}$ as a low dimensional point relies on finding an approximation for this point according to\autocite[330]{barber_bayesian_2013}:
+
+%FIN: this kind of stuff seems more like methods than results to me 
 
 \begin{align}
     \pmb{x}^{n} \approx \pmb{c} + \sum_{j=1}^{M} y_{j}^{n} \pmb{b}^{j} \equiv \tilde{\pmb{x}}^{n}
@@ -96,8 +104,11 @@ Where the low dimensional points are $\pmb{y}^{n}$, $\pmb{c}$ is a constant and 
 The algorithm to find these principal components is described in \textcite[333]{barber_bayesian_2013}.
 
 The resulting plot produced using this technique is shown in figures \ref{fig:inpca} and \ref{fig:outpca} for the in proportion and out cases, respectively.
+%FIN: typo/missing word
+
 In the case of the data being out of proportion it appears that the groups can be separated.
 However, this is not the case for the in proportion case.
+%FIN: expand- make clear if this is a feature of your dataset or a case in general to do with prop and out-of-prop 
 
 %plots
 \begin{figure}
@@ -123,16 +134,21 @@ However, this is not the case for the in proportion case.
 
 %tSNE is more complicated, but was recommended due to reportedly good performance
 A more complex method to reduce the dimensionality of the data is t-SNE\autocite{van_der_maaten_visualizing_2008}.
-This technique won the Merck Visualization Challenge.
+This technique won the Merck Visualization Challenge.   
 It differs from PCA in the objective function in that it aims to maintain a similarity measure between points between the high and low-dimensional cases.
 
 %should probably say what we did vis. TruncatedSVD
 In addition to using this technique it was also recommended to use Truncated Singular Value Decomposition(SVD) to reduce the dimensionality of the vector to 50 beforehand.
+%FIN: typo/missing word
+%FIN: why was SVD recommended?
+
 This was for implementation based reasons in Scikit-learn.
+%FIN: typo/missing word
 
 %results
 Unfortunately, this was no more successful than PCA on this dataset, as shown in figures \ref{fig:intsne} and \ref{fig:outtsne}.
 It should also be noted that the number of points plotted in these graphs is much lower than in the case of PCA as it is much more computationally intensive.
+%FIN: because? 
 
 %plots
 \begin{figure}
@@ -157,6 +173,7 @@ It should also be noted that the number of points plotted in these graphs is muc
 
 %Both methods show that this data is likely to be difficult to accurately categorize as the points are not separated in a 2d space
 Both of the methods above suggest that this classification problem is difficult, as the points are not significantly separated in any of the plots.
+%FIN: biology -- all continuous smears of things 
 
 \subsection{High dimensional plots}
 
@@ -165,7 +182,7 @@ Neglecting reducing the dimensionality of the data there are some plots which ar
 Two which have been applied in this project are parallel lines plots and Andrew's curves\autocite{andrews_plots_1972}.
 Parallel lines plots are relatively simple in that each feature is simply scaled and plotted along the x axis at its index in the vector, producing a number of overlapping lines.
 Andrew's curves are more complex, and the method is described below along with the results obtained.
-
+%FIN: this definitely all belongs in methods gav
 %parallel line plot results
 The parallel lines plots are shown in proportion in figure \ref{fig:inparline} and out of proportion in figure \ref{fig:outparline}.
 In either case, it is not clear whether the data easily separates into two classes.
@@ -230,7 +247,9 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 In a classification task there are two common components: a training set that is labeled and a set of data which the classifier is to be applied to, without labels.
 This task is similar in that we have created a training set with labels and the active zone network forms a set of feature vectors that have no labels.
 However, this does not accurately encode our prior knowledge of the active zone network interactions, which were picked for their likelihood to be true interactions.
+%FIN:how were they picked? 
 For this reason, in this application classification alone is not sufficient to solve the problem of creating accurate weights, driving the development of the technique described in section \ref{bayes}.
+%FIN: typo/missing word
 
 This section describes both the results of training the classifier as planned on the labeled training set and the results of the Bayesian method to weight the interactions of the active zone network.
 
@@ -240,6 +259,7 @@ This section describes both the results of training the classifier as planned on
 
 %Using grid searches over the following parameter ranges we were able to search for the optimal parameters for each of the classifiers tested.
 Grid searches of hyper-parameter values were used to find the optimal combination.
+%FIN: optimal combination of what (hyper-paramters presumably)?
 The results of this search are shown in table \ref{tab:gridresults}.
 
 %table of the best parameters obtained for each classifier.
@@ -263,7 +283,11 @@ The results of this search are shown in table \ref{tab:gridresults}.
 \end{table}
 
 Although the results of the Support Vector Machine appear to be good, it was trained on a relatively small dataset and its performance in later tests deemed it unsuitable to our classification task.
+%FIN: in what way? you don't mention why you chose certain kernels
+
 The random forest can be seen to be performing worse than the logistic regression model in this test, with a slightly lower accuracy, but within the standard error boundaries.
+%FIN: any idea why? 
+
 
 \subsection{ROC curves}
 
@@ -271,6 +295,8 @@ The random forest can be seen to be performing worse than the logistic regressio
 As described in section \ref{classifierverification} ROC curves were applied to all classifiers to characterise the performance of each.
 The ROC curve produced by the logistic regression model is shown in figure \ref{fig:logroc}.
 The positive AUC value is desirable and the curve of the ROC curve suggests this model can achieve a relatively good true positive rate at low false positive rate, which is likely what it would be used at - to avoid false positive protein interactions being classified.
+%FIN: sentence too complex - split
+
 
 %ROC curves for the different classifiers
 %with AUC values in the captions
@@ -304,6 +330,8 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
 
 However, the ROC curve shown in figure \ref{fig:rfroc} is very similar to that created by the logistic regression model except it has slightly better performance at low false positive rates.
 Neither show very good performance and it clear that only at very high false positive rates will the classifiers reliably find the true interactions.
+%FIN: typo/missing word
+
 
 Unfortunately, it was not possible to train the support vector machine on a large enough training set to plot a realistic ROC curve due to time constraints, so it is not shown here.
 The notebook referenced in appendix \ref{app:classtrain} provides the results obtained.
@@ -317,7 +345,10 @@ This is also true of the precision-recall graph in the following section.
 As described in section \ref{classifierverification} the classifiers were also characterised through plotting a precision-recall curve.
 This is shown for the random forest and logistic regression models in figures \ref{fig:rfpr} and \ref{fig:logpr}, respectively.
 Although the random forest model achieves a better AUC value, the curve demonstrates is unable to recall as many samples with perfect precision as the logistic regression model.
+%FIN: typo/missing word
+
 As with the ROC curve, neither classifier shows particularly good performance.
+%FIN: be more positive - These results supported those acquired by the ROC analysis 
 
 %precision recall curves for the different classifiers
 \begin{figure}
@@ -345,6 +376,8 @@ As with the ROC curve, neither classifier shows particularly good performance.
 Both logistic regression models and random forests can quickly return feature importances.
 In the case of logistic regression, this is as simple as looking at the weights applied to each input feature.
 Random forests store the importances of each feature internally in Scikit-learn and this can be easily queried.
+%FIN: typo/missing word
+%FIN: Say what they show - what were the most important features
 These importances measures are plotted in figures \ref{fig:logregweights} and \ref{fig:rfimportances}.
 
 \begin{figure}
@@ -371,6 +404,7 @@ These importances measures are plotted in figures \ref{fig:logregweights} and \r
 
 %choosing conservative estimates
 Confidence values were chosen to be conservative but otherwise were arbitrary to the task and could be more carefully chosen in future work.
+%FIN: could be more extensively assessed and evaluated in future work 
 Estimating the error rates of the relevant databases was beyond the scope of this project.
 The values chosen are shown in table \ref{tab:estimates}.
 As the Edgelist has been reviewed and because iRefIndex represents a combination of many databases a TPR of 0.9 seemed like a fair estimate of the accuracy of positive predictions.
@@ -399,6 +433,7 @@ Both TNRs were set to be 0.5, which is very likely to be an underestimate as mos
 Once the Bayesian updating of the weights was completed it was necessary to check the distribution of the weights produced.
 This distribution is shown in figure \ref{fig:weightdist}
 Unfortunately, the distribution produced forms two dense groups due to the majority of binary features involved.
+%FIN: is this typical of all analyses doing this or just your dataset 
 
 \begin{figure}
     \centering
@@ -417,6 +452,7 @@ Unfortunately, the distribution produced forms two dense groups due to the major
 Once the weighted edges had been generated the communities in both the weighted and unweighted cases were found using a Spectral Modularity algorithm.
 The resulting graphs of the active zone network, divided into communities, are shown in figures \ref{fig:uwgraph} and \ref{fig:wgraph} for the unweighted and weighted cases, respectively.
 By eye, it is easy to see that the clusters detected differ.
+%FIN: 'by inspection'
 
 %images of both sets of communities, nicely rendered
 %may have to be rotated to fit on the page nicely
@@ -440,18 +476,21 @@ By eye, it is easy to see that the clusters detected differ.
 %NMI and by eye
 This observation is mirrored in the results of the NMI test.
 Both NMI test implementations returned a value of 0.604, indicating that the clustering is quite similar.
-
+%FIN: what does this mean? 
 %characteristics of both graphs
 
 \subsection{Disease enrichment}
 %disease enrichment results - only schizophrenia and alzheimers to keep thing simple
 The communities detected to be involved in disease differ by number between weighted and unweighted.
 As these numbers are arbitrary, it is necessary to compare these communities between the two graphs to see if both graphs contain similar communities involved in disease.
+%FIN: which numbers? arbitrary in what way?
 The significant disease communities discovered in each graph can be found in Appendix \ref{app:disease}.
 
 %investigate the crossover between different likely communities
 Looking at the most likely community for Schizophrenia in the unweighted graph, it is possible to compare the members of this community to the members of all the communities in the weighted graph to find the closest match.
+%FIN: I don't really know where the disease communities have come from SYNSYS?
 Community 29 in the unweighted graph was found to be the most likely to be involved in Schizophrenia.
+%FIN: according to what dataset? how? 
 The membership test used equates to the number of members shared between two communities over the number of members in either community.
 For this community it was found that community 33 in the weighted graph most closely matched 29 with a value of 0.45.
 
