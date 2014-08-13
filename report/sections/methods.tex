@@ -192,8 +192,9 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
 %table of the different hyper-parameters
 \begin{table}
     \centering
+    \small
     \begin{tabular}{p{0.2\textwidth} c p{0.5\textwidth}}
-        \small
+        
         Classifier                                  & Hyper-parameters     & Description \\
         \hline
         Logistic Regression                         & C                         &  Inverse of regularisation strength, the $\alpha$ parameter in section \ref{logreg}. \\
@@ -208,7 +209,7 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
         \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators              &  As with Random Forest. \\
                                                     & Max features              &  As with Random Forest. \\
     \end{tabular}
-    \caption{Summary of the hyper-parameters described in the Scikit-learn\cite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}
+    \caption{Summary of the hyper-parameters described in the Scikit-learn \autocite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}
     \label{tab:hyper}
 \end{table}
 

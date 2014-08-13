@@ -26,9 +26,8 @@ A brief description of these features is given below.
 %feature table, with information about each (size of features, categorical/ordinal/numerical, coverage)
 \begin{table}
     \centering
-    %tabular goes here
+    \small
     \begin{tabular}{l c c p{0.2\textwidth} p{0.2\textwidth}}
-        \small
         Feature         &   Size &  Type                &  Coverage on training set &  Coverage on active zone network \\
         \hline
         Gene Ontology    &  90   &  Binary categorical  &  100.0\%                  & 100.0\%                          \\
@@ -246,17 +245,17 @@ The results of this search are shown in table \ref{tab:gridresults}.
 %table of the best parameters obtained for each classifier.
 \begin{table}
     \centering
+    \tiny
     \begin{tabular}{p{0.2\textwidth} c c c c c}
-        \tiny
-        Classifier                                  & Hyper-parameter values    & Test set accuracy         &                               & Training set accuracy         &  \\
+        Classifier                                  & Hyper-parameter values    & Test set accuracy     & Training set accuracy          \\
         \hline
-        Logistic Regression                         & C : $0.0215$              & $0.9984$                  & $\pm 3\e{-5}$                 & $0.99847$                     & $\pm 2\e{-5}$ \\
-        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel: RBF               & \multirow{3}{*}{$0.9985$} & \multirow{3}{*}{N/A}          & \multirow{3}{*}{$0.99933$}    & \multirow{3}{*}{$\pm 1.2\e{-4}$} \\
+        Logistic Regression                         & C : $0.0215$              & $0.9984 \pm 3\e{-5}$  & $0.99847 \pm 2\e{-5}$ \\
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel: RBF               & \multirow{3}{*}{$0.9985 \pm$ N/A}    & \multirow{3}{*}{$0.99933 \pm 1.2\e{-4}$} \\
                                                     & Gamma: $10.0$             &                           &                               &                               &       \\
                                                     & C: $10.0$                 &                           &                               &                               &       \\
-        \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators: $44$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators: $44$        & \multirow{2}{*}{$0.99837 \pm 3\e{-5}$} & \multirow{2}{*}{$0.99921 \pm 3\e{-5}$} \\
                                                     & Max features: $25$        &                           &                               &                               &       \\
-        \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators: $94$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators: $94$        & \multirow{2}{*}{$0.99837 \pm 3\e{-5}$} & \multirow{2}{*}{$0.99921 \pm 3\e{-5}$} \\
                                                     & Max features: $25$        &                           &                               &                               &       \\
     \end{tabular}
     \caption{Summary of the hyper-parameter combinations found by grid search and associated statistical accuracy measures.}
