@@ -198,14 +198,14 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
         \hline
         Logistic Regression                         & C                         &  Inverse of regularisation strength, the $\alpha$ parameter in section \ref{logreg}. \\
         \hline 
-        \multirow{3}{*}{Support Vector Machine}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel                    &  The kernel used. Three options: linear, RBF and polynomial. \\
                                                     & Gamma($\gamma$)           &  Kernel coefficient. \\
                                                     & C                         &  As with Logistic Regression, a penalty parameter. \\
         \hline 
-        \multirow{2}{*}{Random Forest}              & N estimators              &  Number of trees used in the forest. \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators              &  Number of trees used in the forest. \\
                                                     & Max features              &  Number of features considered when looking for splits, part of the problem of finding the best decision at each node described in section \ref{randomforest}. \\
         \hline 
-        \multirow{2}{*}{Extremely Randomized Trees} & N estimators              &  As with Random Forest. \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators              &  As with Random Forest. \\
                                                     & Max features              &  As with Random Forest. \\
     \end{tabular}
     \caption{Summary of the hyper-parameters described in the Scikit-learn\cite{pedregosa_scikit-learn:_2011} documentation to be tuned for each of the models considered.}

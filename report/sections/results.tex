@@ -27,7 +27,7 @@ A brief description of these features is given below.
 \begin{table}
     \centering
     %tabular goes here
-    \begin{tabular}{l c c c c}
+    \begin{tabular}{l c c p{0.2\textwidth} p{0.2\textwidth}}
         \small
         Feature         &   Size &  Type                &  Coverage on training set &  Coverage on active zone network \\
         \hline
@@ -246,17 +246,17 @@ The results of this search are shown in table \ref{tab:gridresults}.
 %table of the best parameters obtained for each classifier.
 \begin{table}
     \centering
-    \begin{tabular}{p{3cm} c c c c c}
-        \small
+    \begin{tabular}{p{0.2\textwidth} c c c c c}
+        \tiny
         Classifier                                  & Hyper-parameter values    & Test set accuracy         &                               & Training set accuracy         &  \\
         \hline
         Logistic Regression                         & C : $0.0215$              & $0.9984$                  & $\pm 3\e{-5}$                 & $0.99847$                     & $\pm 2\e{-5}$ \\
-        \multirow{3}{*}{Support Vector Machine}     & kernel: RBF               & \multirow{3}{*}{$0.9985$} & \multirow{3}{*}{N/A}          & \multirow{3}{*}{$0.99933$}    & \multirow{3}{*}{$\pm 1.2\e{-4}$} \\
+        \multirow{3}{*}{\parbox{0.2\textwidth}{Support Vector Machine}}     & kernel: RBF               & \multirow{3}{*}{$0.9985$} & \multirow{3}{*}{N/A}          & \multirow{3}{*}{$0.99933$}    & \multirow{3}{*}{$\pm 1.2\e{-4}$} \\
                                                     & Gamma: $10.0$             &                           &                               &                               &       \\
                                                     & C: $10.0$                 &                           &                               &                               &       \\
-        \multirow{2}{*}{Random Forest}              & N estimators: $44$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Random Forest}}              & N estimators: $44$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
                                                     & Max features: $25$        &                           &                               &                               &       \\
-        \multirow{2}{*}{Extremely Randomized Trees} & N estimators: $94$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
+        \multirow{2}{*}{\parbox{0.2\textwidth}{Extremely Randomized Trees}} & N estimators: $94$        & \multirow{2}{*}{$0.99837$} & \multirow{2}{*}{$\pm 3\e{-5}$} & \multirow{2}{*}{$0.99921$}   & \multirow{2}{*}{$\pm 3\e{-5}$} \\
                                                     & Max features: $25$        &                           &                               &                               &       \\
     \end{tabular}
     \caption{Summary of the hyper-parameter combinations found by grid search and associated statistical accuracy measures.}
@@ -277,8 +277,8 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
 %with AUC values in the captions
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/logreg.roc.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The ROC curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.781$.}
     \label{fig:logroc}
@@ -286,8 +286,8 @@ The positive AUC value is desirable and the curve of the ROC curve suggests this
 
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/rf.roc.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The ROC curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.806$.}
     \label{fig:rfroc}
@@ -323,8 +323,8 @@ As with the ROC curve, neither classifier shows particularly good performance.
 %precision recall curves for the different classifiers
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/logreg.pr.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The precision-recall curve produced by a logistic regression model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.11$.}
     \label{fig:logpr}
@@ -332,8 +332,8 @@ As with the ROC curve, neither classifier shows particularly good performance.
 
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/rf.pr.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The precision-recall curve produced by a random forest model on the test data set using the best parameters shown in table \ref{tab:gridresults} with an AUC of $0.12$. This graph shows some artefacts due to the extremely small number of positive interactions even in relatively large sample sizes.}
     \label{fig:rfpr}
@@ -350,8 +350,8 @@ These importances measures are plotted in figures \ref{fig:logregweights} and \r
 
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/logreg.weights.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The internal weighting of features in a logistic regression model trained using the parameters described in table \ref{tab:gridresults}. The coefficients plotted on the y axis have no unit.}
     \label{fig:logregweights}
@@ -359,8 +359,8 @@ These importances measures are plotted in figures \ref{fig:logregweights} and \r
 
 \begin{figure}
     \centering
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{2in}
+    \setlength\figurewidth{3in}
     \InputIfFileExists{\imagedir/rf.importances.tikz}{}{\textbf{!! Missing graphics !!}}
     \caption{The importances of each input feature as reported by the random forest model trained using the parameters described in table \ref{tab:gridresults}. The importances plotted on the y axis have no unit.}
     \label{fig:rfimportances}
@@ -423,14 +423,14 @@ By eye, it is easy to see that the clusters detected differ.
 %may have to be rotated to fit on the page nicely
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{unweightedgraph.pdf}
+    \includegraphics[width=0.8\textwidth]{unweightedgraph.pdf}
     \caption{The unweighted graph of the active zone network divided into communities.}
     \label{fig:uwgraph}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{weightedgraph.pdf}
+    \includegraphics[width=0.8\textwidth]{weightedgraph.pdf}
     \caption{The weighted graph of the active zone network divided into communities.}
     \label{fig:wgraph}
 \end{figure}
@@ -452,7 +452,7 @@ The significant disease communities discovered in each graph can be found in App
 
 %investigate the crossover between different likely communities
 Looking at the most likely community for Schizophrenia in the unweighted graph, it is possible to compare the members of this community to the members of all the communities in the weighted graph to find the closest match.
-Community 29 in the unweighted graph was found to be the most likely to be involved in Scizophrenia.
+Community 29 in the unweighted graph was found to be the most likely to be involved in Schizophrenia.
 The membership test used equates to the number of members shared between two communities over the number of members in either community.
 For this community it was found that community 33 in the weighted graph most closely matched 29 with a value of 0.45.
 
@@ -464,11 +464,11 @@ However, in figure \ref{fig:nx6444} we can see that the weighted graph contains 
 %plots
 \begin{figure}
     \centering
-     \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+     \setlength\figureheight{1in}
+    \setlength\figurewidth{1in}
     \InputIfFileExists{\imagedir/nx2933.pgf}{}{\textbf{!! Missing graphics !!}}   
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{1in}
+    \setlength\figurewidth{1in}
     \InputIfFileExists{\imagedir/nx3329.pgf}{}{\textbf{!! Missing graphics !!}}
     \caption{The communities 29 and 33 from the unweighted and weighted graphs, respectively are plotted. In each plot the nodes not shared in each community are plotted separated from the main community on the right.}
     \label{fig:nx2933}
@@ -476,11 +476,11 @@ However, in figure \ref{fig:nx6444} we can see that the weighted graph contains 
 
 \begin{figure}
     \centering
-     \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+     \setlength\figureheight{1in}
+    \setlength\figurewidth{1in}
     \InputIfFileExists{\imagedir/nx6444.pgf}{}{\textbf{!! Missing graphics !!}}   
-    \setlength\figureheight{3in}
-    \setlength\figurewidth{4in}
+    \setlength\figureheight{1in}
+    \setlength\figurewidth{1in}
     \InputIfFileExists{\imagedir/nx4464.pgf}{}{\textbf{!! Missing graphics !!}}
     \caption{The communities 64 and 44 from the unweighted and weighted graphs, respectively are plotted. In each plot the nodes not shared in each community are plotted separated from the main community on the right.}
     \label{fig:nx6444}
