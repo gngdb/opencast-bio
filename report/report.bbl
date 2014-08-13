@@ -1,0 +1,1574 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{nyt}
+    \entry{alberts_molecular_2008}{book}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=fb62457c285c73db074f895ec8f95805}{Alberts}{A\bibinitperiod}{Bruce}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f99df14c1f32023184c881c2b99105bd}{Johnson}{J\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e04101f253d0dec7e91f2944209c1d40}{Lewis}{L\bibinitperiod}{Julian}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0312c5684b42a3225b0b0ea32937a033}{Raff}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=079205eca33fb4f81cd49113f2b13d21}{Roberts}{R\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=92f833ece2868f0e33bb37e24935ca85}{Walter}{W\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=fb62457c285c73db074f895ec8f95805}{Alberts}{A\bibinitperiod}{Bruce}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f99df14c1f32023184c881c2b99105bd}{Johnson}{J\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e04101f253d0dec7e91f2944209c1d40}{Lewis}{L\bibinitperiod}{Julian}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0312c5684b42a3225b0b0ea32937a033}{Raff}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=079205eca33fb4f81cd49113f2b13d21}{Roberts}{R\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=92f833ece2868f0e33bb37e24935ca85}{Walter}{W\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Garland Science}%
+      }
+      \strng{namehash}{e9a8f9a71c33ec6ac86a6beb3554e231}
+      \strng{fullhash}{2c6567561e51877d3357c8223487e53f}
+      \field{sortinit}{A}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Molecular Biology of the Cell}
+      \field{abstract}{{ExcerptMolecular} Biology of the Cell is the classic in-depth text reference in cell biology. By extracting fundamental concepts and meaning from this enormous and ever-growing field, the authors tell the story of cell biology, and create a coherent framework through which non-expert readers may approach the subject. Written in clear and concise language, and illustrated with original drawings, the book is enjoyable to read, and provides a sense of the excitement of modern biology. Molecular Biology of the Cell not only sets forth the current understanding of cell biology (updated as of Fall 2001), but also explores the intriguing implications and possibilities of that which remains unknown.}
+      \field{edition}{5th}
+      \field{isbn}{0-8153-3218-1; 0-8153-4072-9}
+      \field{title}{Molecular Biology of the Cell}
+      \field{year}{2008}
+    \endentry
+    \entry{andrews_plots_1972}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=5cb20795213869e307ee5ebcde340367}{Andrews}{A\bibinitperiod}{David\bibnamedelima F.}{D\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5cb20795213869e307ee5ebcde340367}{Andrews}{A\bibinitperiod}{David\bibnamedelima F.}{D\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{5cb20795213869e307ee5ebcde340367}
+      \strng{fullhash}{5cb20795213869e307ee5ebcde340367}
+      \field{sortinit}{A}
+      \field{labelyear}{1972}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Plots of high-dimensional data}
+      \field{journaltitle}{Biometrics}
+      \field{title}{Plots of high-dimensional data}
+      \field{urlday}{08}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{1972}
+      \field{pages}{125\bibrangedash 136}
+      \verb{url}
+      \verb http://www.jstor.org/stable/2528964
+      \endverb
+    \endentry
+    \entry{ashburner_gene_2000}{article}{}
+      \name{labelname}{20}{}{%
+        {{uniquename=0,hash=1af2f9a74bc59a651084d93674b64a1e}{Ashburner}{A\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5546c3b317582c874c2bf736b9cd26bf}{Ball}{B\bibinitperiod}{Catherine\bibnamedelima A.}{C\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e4a3c327992202f8eaa95662a56974c}{Blake}{B\bibinitperiod}{Judith\bibnamedelima A.}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=eee0770bf66c6a70bef04b32b803b2cd}{Botstein}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e83ae6ee91869db344a4d989d4f5093c}{Butler}{B\bibinitperiod}{Heather}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=753bd5029c4e96eb5b40fcbb13bb360c}{Cherry}{C\bibinitperiod}{J.\bibnamedelimi Michael}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8440397779d358e0bba70cf7799da318}{Davis}{D\bibinitperiod}{Allan\bibnamedelima P.}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1a443d2c3bf70a5ae0ab5ff27a43d92c}{Dolinski}{D\bibinitperiod}{Kara}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9b0d660eca54f0f5b2387ed93195efcd}{Dwight}{D\bibinitperiod}{Selina\bibnamedelima S.}{S\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0165b2ed7aa5e3bfb6bd2a593e51f49f}{Eppig}{E\bibinitperiod}{Janan\bibnamedelima T.}{J\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d5b34ff0e5de590bc5ba3b40b439cae}{Harris}{H\bibinitperiod}{Midori\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a3f04a6b9a229c3d04e371b1d822ef82}{Hill}{H\bibinitperiod}{David\bibnamedelima P.}{D\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=70a824713e479a683a7a7ed22e84e2ce}{Issel-Tarver}{I\bibinithyphendelim T\bibinitperiod}{Laurie}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=067f47f22c040b6a79b43be5e878f320}{Kasarskis}{K\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f394ee054f2fb0ab0052d5c85eca5043}{Lewis}{L\bibinitperiod}{Suzanna}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4a146966e98cad42cbe8f6bb881d14fb}{Matese}{M\bibinitperiod}{John\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=32757a11158ac03413161c07227f24dd}{Richardson}{R\bibinitperiod}{Joel\bibnamedelima E.}{J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc238c5cde15dbac1a606499d9e6e635}{Ringwald}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3feb1eb14616c5f3fd9d212ac3b0813b}{Rubin}{R\bibinitperiod}{Gerald\bibnamedelima M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=138dff38fe1e9c77884365c751029ac8}{Sherlock}{S\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{20}{}{%
+        {{uniquename=0,hash=1af2f9a74bc59a651084d93674b64a1e}{Ashburner}{A\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5546c3b317582c874c2bf736b9cd26bf}{Ball}{B\bibinitperiod}{Catherine\bibnamedelima A.}{C\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e4a3c327992202f8eaa95662a56974c}{Blake}{B\bibinitperiod}{Judith\bibnamedelima A.}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=eee0770bf66c6a70bef04b32b803b2cd}{Botstein}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e83ae6ee91869db344a4d989d4f5093c}{Butler}{B\bibinitperiod}{Heather}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=753bd5029c4e96eb5b40fcbb13bb360c}{Cherry}{C\bibinitperiod}{J.\bibnamedelimi Michael}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8440397779d358e0bba70cf7799da318}{Davis}{D\bibinitperiod}{Allan\bibnamedelima P.}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1a443d2c3bf70a5ae0ab5ff27a43d92c}{Dolinski}{D\bibinitperiod}{Kara}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9b0d660eca54f0f5b2387ed93195efcd}{Dwight}{D\bibinitperiod}{Selina\bibnamedelima S.}{S\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0165b2ed7aa5e3bfb6bd2a593e51f49f}{Eppig}{E\bibinitperiod}{Janan\bibnamedelima T.}{J\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d5b34ff0e5de590bc5ba3b40b439cae}{Harris}{H\bibinitperiod}{Midori\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a3f04a6b9a229c3d04e371b1d822ef82}{Hill}{H\bibinitperiod}{David\bibnamedelima P.}{D\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=70a824713e479a683a7a7ed22e84e2ce}{Issel-Tarver}{I\bibinithyphendelim T\bibinitperiod}{Laurie}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=067f47f22c040b6a79b43be5e878f320}{Kasarskis}{K\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f394ee054f2fb0ab0052d5c85eca5043}{Lewis}{L\bibinitperiod}{Suzanna}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4a146966e98cad42cbe8f6bb881d14fb}{Matese}{M\bibinitperiod}{John\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=32757a11158ac03413161c07227f24dd}{Richardson}{R\bibinitperiod}{Joel\bibnamedelima E.}{J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc238c5cde15dbac1a606499d9e6e635}{Ringwald}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3feb1eb14616c5f3fd9d212ac3b0813b}{Rubin}{R\bibinitperiod}{Gerald\bibnamedelima M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=138dff38fe1e9c77884365c751029ac8}{Sherlock}{S\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{cab54e8b7901a60ff3fd9841a588a71f}
+      \strng{fullhash}{7f4cf2c90bf34ae733e413c26e7acf0a}
+      \field{sortinit}{A}
+      \field{labelyear}{2000}
+      \field{labelmonth}{05}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Gene Ontology}
+      \field{abstract}{Genomic sequencing has made it clear that a large fraction of the genes specifying the core biological functions are shared by all eukaryotes. Knowledge of the biological role of such shared proteins in one organism can often be transferred to other organisms. The goal of the Gene Ontology Consortium is to produce a dynamic, controlled vocabulary that can be applied to all eukaryotes even as knowledge of gene and protein roles in cells is accumulating and changing. To this end, three independent ontologies accessible on the World-Wide Web (http://www.geneontology.org) are being constructed: biological process, molecular function and cellular component.}
+      \field{issn}{1061-4036}
+      \field{journaltitle}{Nature Genetics}
+      \field{month}{05}
+      \field{number}{1}
+      \field{shorttitle}{Gene Ontology}
+      \field{title}{Gene Ontology: tool for the unification of biology}
+      \field{urlday}{22}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{25}
+      \field{year}{2000}
+      \field{pages}{25\bibrangedash 29}
+      \verb{doi}
+      \verb 10.1038/75556
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/NK78PJD2/Ashburner et al. - 2000 - Gene Ontology tool for the unification of biology.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/FKZVCH25/ng0500_25.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/ng/journal/v25/n1/abs/ng0500_25.html
+      \endverb
+    \endentry
+    \entry{barber_bayesian_2013}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9a97f74e5fb11fe785cbe0a83fc5276c}
+      \strng{fullhash}{9a97f74e5fb11fe785cbe0a83fc5276c}
+      \field{sortinit}{B}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Bayesian Reasoning and Machine Learning}
+      \field{title}{Bayesian Reasoning and Machine Learning}
+      \field{year}{2013}
+      \verb{file}
+      \verb 031013:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/8TQ7EUIE/031013.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{blum_multiloc2:_2009}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=130e062100a1886f10101b849e8c2a3d}{Blum}{B\bibinitperiod}{Torsten}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2c3c8d7f7c6b29e6a5c055c2b0e546ee}{Briesemeister}{B\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=569089e0d5a019d6333ea5f294769662}{Kohlbacher}{K\bibinitperiod}{Oliver}{O\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=130e062100a1886f10101b849e8c2a3d}{Blum}{B\bibinitperiod}{Torsten}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2c3c8d7f7c6b29e6a5c055c2b0e546ee}{Briesemeister}{B\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=569089e0d5a019d6333ea5f294769662}{Kohlbacher}{K\bibinitperiod}{Oliver}{O\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6247d4bcfd996fb4bc9613660e80e2e7}
+      \strng{fullhash}{6247d4bcfd996fb4bc9613660e80e2e7}
+      \field{sortinit}{B}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{MultiLoc}2}
+      \field{journaltitle}{{BMC} bioinformatics}
+      \field{number}{1}
+      \field{shorttitle}{{MultiLoc}2}
+      \field{title}{{MultiLoc}2: integrating phylogeny and Gene Ontology terms improves subcellular protein localization prediction}
+      \field{urlday}{07}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{pages}{274}
+      \verb{file}
+      \verb [HTML] from biomedcentral.com:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/TUJFHBHZ/274.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2105/10/274/
+      \endverb
+    \endentry
+    \entry{chen_identifying_2013}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b5da4fad55c757f3e96cc0bcf02f261b}{Fan}{F\bibinitperiod}{Weiwei}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=18b975301a4d17c28ca70d0a3fbce135}{Liu}{L\bibinitperiod}{Juan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dcd65426e188141d5c408fc2631d59bc}{Wu}{W\bibinitperiod}{Fang-Xiang}{F\bibinithyphendelim X\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=2d5e291fa924ae738b4ff3e1f360f40c}{Chen}{C\bibinitperiod}{Bolin}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b5da4fad55c757f3e96cc0bcf02f261b}{Fan}{F\bibinitperiod}{Weiwei}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=18b975301a4d17c28ca70d0a3fbce135}{Liu}{L\bibinitperiod}{Juan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dcd65426e188141d5c408fc2631d59bc}{Wu}{W\bibinitperiod}{Fang-Xiang}{F\bibinithyphendelim X\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{4611caa5793becf5bd5671ef12361b00}
+      \strng{fullhash}{77659d7cf9c675e1d4b6e3a43d93a050}
+      \field{sortinit}{C}
+      \field{labelyear}{2013}
+      \field{labelmonth}{06}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Identifying protein complexes and functional modules—from static {PPI} networks to dynamic {PPI} networks}
+      \field{abstract}{Cellular processes are typically carried out by protein complexes and functional modules. Identifying them plays an important role for our attempt to reveal principles of cellular organizations and functions. In this article, we review computational algorithms for identifying protein complexes and/or functional modules from protein–protein interaction ({PPI}) networks. We first describe issues and pitfalls when interpreting {PPI} networks. Then based on types of data used and main ideas involved, we briefly describe protein complex and/or functional module identification algorithms in four categories: (i) those based on topological structures of unweighted {PPI} networks; (ii) those based on characters of weighted {PPI} networks; (iii) those based on multiple data integrations; and (iv) those based on dynamic {PPI} networks. The {PPI} networks are modelled increasingly precise when integrating more types of data, and the study of protein complexes would benefit by shifting from static to dynamic {PPI} networks.}
+      \field{issn}{1467-5463, 1477-4054}
+      \field{journaltitle}{Briefings in Bioinformatics}
+      \field{month}{06}
+      \field{title}{Identifying protein complexes and functional modules—from static {PPI} networks to dynamic {PPI} networks}
+      \field{urlday}{20}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{year}{2013}
+      \field{pages}{bbt039}
+      \verb{doi}
+      \verb 10.1093/bib/bbt039
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/XVQSXIB5/Chen et al. - 2013 - Identifying protein complexes and functional modul.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/WRB7M2V7/bib.bbt039.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://bib.oxfordjournals.org/content/early/2013/06/18/bib.bbt039
+      \endverb
+      \keyw{dynamic network,functional module,protein complex,protein–protein interaction,static network}
+    \endentry
+    \entry{chua_architecture_2010}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=5b6cdcf33c1178c9ee8f2d1acbd5de32}{Chua}{C\bibinitperiod}{John\bibnamedelimb J.\bibnamedelimi E.}{J\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a99f4a353553ca708b9f647ffa31a07f}{Kindler}{K\bibinitperiod}{Stefan}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a3918630d3cd63d69c324a711d1d8fdf}{Boyken}{B\bibinitperiod}{Janina}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=88f5a82bf9d3dee56c4b43cf5840b1eb}{Jahn}{J\bibinitperiod}{Reinhard}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=5b6cdcf33c1178c9ee8f2d1acbd5de32}{Chua}{C\bibinitperiod}{John\bibnamedelimb J.\bibnamedelimi E.}{J\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a99f4a353553ca708b9f647ffa31a07f}{Kindler}{K\bibinitperiod}{Stefan}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a3918630d3cd63d69c324a711d1d8fdf}{Boyken}{B\bibinitperiod}{Janina}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=88f5a82bf9d3dee56c4b43cf5840b1eb}{Jahn}{J\bibinitperiod}{Reinhard}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{693bb907d8a81aedba1181c9352f3a4c}
+      \strng{fullhash}{0f239ed6cd009a92fed8fb778b95ce6e}
+      \field{sortinit}{C}
+      \field{labelyear}{2010}
+      \field{labelmonth}{03}
+      \field{datelabelsource}{}
+      \field{labeltitle}{The architecture of an excitatory synapse}
+      \field{issn}{0021-9533, 1477-9137}
+      \field{journaltitle}{Journal of Cell Science}
+      \field{month}{03}
+      \field{number}{6}
+      \field{title}{The architecture of an excitatory synapse}
+      \field{urlday}{23}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{123}
+      \field{year}{2010}
+      \field{pages}{819\bibrangedash 823}
+      \verb{doi}
+      \verb 10.1242/jcs.052696
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DRU9ZURZ/Chua et al. - 2010 - The architecture of an excitatory synapse.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/4RXC2ZX2/819.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://jcs.biologists.org/content/123/6/819
+      \endverb
+    \endentry
+    \entry{cristianini_introduction_2000}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=b643588b4a53ed47702d3277b6de83a9}{Cristianini}{C\bibinitperiod}{Nello}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8feae4ec394a5f6905c74b1a7abff875}{Shawe-Taylor}{S\bibinithyphendelim T\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b643588b4a53ed47702d3277b6de83a9}{Cristianini}{C\bibinitperiod}{Nello}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8feae4ec394a5f6905c74b1a7abff875}{Shawe-Taylor}{S\bibinithyphendelim T\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{95272ad59aaf2ecba8126f86cda4f3d6}
+      \strng{fullhash}{95272ad59aaf2ecba8126f86cda4f3d6}
+      \field{sortinit}{C}
+      \field{labelyear}{2000}
+      \field{labelmonth}{03}
+      \field{datelabelsource}{}
+      \field{labeltitle}{An Introduction to Support Vector Machines and Other Kernel-based Learning Methods}
+      \field{abstract}{This is the first comprehensive introduction to Support Vector Machines ({SVMs}), a new generation learning system based on recent advances in statistical learning theory. {SVMs} deliver state-of-the-art performance in real-world applications such as text categorisation, hand-written character recognition, image classification, biosequences analysis, etc., and are now established as one of the standard tools for machine learning and data mining. Students will find the book both stimulating and accessible, while practitioners will be guided smoothly through the material required for a good grasp of the theory and its applications.}
+      \field{isbn}{9780521780193}
+      \field{month}{03}
+      \field{title}{An Introduction to Support Vector Machines and Other Kernel-based Learning Methods}
+      \field{year}{2000}
+      \keyw{Computers / Bioinformatics,Computers / Computer Science,Computers / Databases / General,Computers / Intelligence ({AI}) \& Semantics,Computers / Optical Data Processing,Computers / Programming / General}
+    \endentry
+    \entry{gallone_bio::homology::interologwalk_2011}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=27922a2f1143578c924bfbc95f7e105d}{Gallone}{G\bibinitperiod}{Giuseppe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d15f2390b5651789cbcd0a40046006c0}{Simpson}{S\bibinitperiod}{T.\bibnamedelimi Ian}{T\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=929021a5d446519499c5c96b5b21d024}{Armstrong}{A\bibinitperiod}{J.\bibnamedelimi Douglas}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7cf632f0acef2c5a73c73e0f9b3cec03}{Jarman}{J\bibinitperiod}{Andrew\bibnamedelima P.}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=27922a2f1143578c924bfbc95f7e105d}{Gallone}{G\bibinitperiod}{Giuseppe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d15f2390b5651789cbcd0a40046006c0}{Simpson}{S\bibinitperiod}{T.\bibnamedelimi Ian}{T\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=929021a5d446519499c5c96b5b21d024}{Armstrong}{A\bibinitperiod}{J.\bibnamedelimi Douglas}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7cf632f0acef2c5a73c73e0f9b3cec03}{Jarman}{J\bibinitperiod}{Andrew\bibnamedelima P.}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{36ace2586970df88b198f1d861b71eb8}
+      \strng{fullhash}{6cfaff9f633f7af0a18bd47276859655}
+      \field{sortinit}{G}
+      \field{labelyear}{2011}
+      \field{labelmonth}{07}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Bio}
+      \field{abstract}{Protein-protein interaction ({PPI}) data are widely used to generate network models that aim to describe the relationships between proteins in biological systems. The fidelity and completeness of such networks is primarily limited by the paucity of protein interaction information and by the restriction of most of these data to just a few widely studied experimental organisms. In order to extend the utility of existing {PPIs}, computational methods can be used that exploit functional conservation between orthologous proteins across taxa to predict putative {PPIs} or 'interologs'. To date most interolog prediction efforts have been restricted to specific biological domains with fixed underlying data sources and there are no software tools available that provide a generalised framework for 'on-the-fly' interolog prediction. {PMID}: 21767381}
+      \field{issn}{1471-2105}
+      \field{journaltitle}{{BMC} Bioinformatics}
+      \field{month}{07}
+      \field{number}{1}
+      \field{shorttitle}{Bio}
+      \field{title}{Bio::Homology::{InterologWalk} - A Perl module to build putative protein-protein interaction networks through interolog mapping}
+      \field{urlday}{09}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{289}
+      \verb{doi}
+      \verb 10.1186/1471-2105-12-289
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/JWHSGI7T/Gallone et al. - 2011 - BioHomologyInterologWalk - A Perl module to bu.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/PQCF28F4/abstract.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2105/12/289/abstract
+      \endverb
+    \endentry
+    \entry{hanczar_small-sample_2010}{article}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=0f564c039adfdcf0de68f612e87cf32f}{Hanczar}{H\bibinitperiod}{Blaise}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=da3b8ad68f158c78b0a303c8246a3e4a}{Hua}{H\bibinitperiod}{Jianping}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b7d1548a2fa9da1b7c08fc49f4a27ecb}{Sima}{S\bibinitperiod}{Chao}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c6658a761857b6fadb276645c5914846}{Weinstein}{W\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2f4232aa9114966964ee198ed596be2f}{Bittner}{B\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17d0f094a4c98af5833c1d8c22bc0dfb}{Dougherty}{D\bibinitperiod}{Edward\bibnamedelima R.}{E\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=0f564c039adfdcf0de68f612e87cf32f}{Hanczar}{H\bibinitperiod}{Blaise}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=da3b8ad68f158c78b0a303c8246a3e4a}{Hua}{H\bibinitperiod}{Jianping}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b7d1548a2fa9da1b7c08fc49f4a27ecb}{Sima}{S\bibinitperiod}{Chao}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c6658a761857b6fadb276645c5914846}{Weinstein}{W\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2f4232aa9114966964ee198ed596be2f}{Bittner}{B\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17d0f094a4c98af5833c1d8c22bc0dfb}{Dougherty}{D\bibinitperiod}{Edward\bibnamedelima R.}{E\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{fd0c3fdd5ac56f575aa34569992932d7}
+      \strng{fullhash}{a36df32529bbb53727a208ac36f4bc8e}
+      \field{sortinit}{H}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Small-sample precision of {ROC}-related estimates}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{6}
+      \field{title}{Small-sample precision of {ROC}-related estimates}
+      \field{urlday}{05}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{26}
+      \field{year}{2010}
+      \field{pages}{822\bibrangedash 830}
+      \verb{file}
+      \verb [HTML] from oxfordjournals.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/RRI24HQK/822.html:text/html;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/PNNAZK72/822.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://bioinformatics.oxfordjournals.org/content/26/6/822.short
+      \endverb
+    \endentry
+    \entry{ito_comprehensive_2001}{article}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=ea7e810a0fec789b0d8c402976eb7673}{Ito}{I\bibinitperiod}{Takashi}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=44a992f35e447069c77be3d614835da7}{Chiba}{C\bibinitperiod}{Tomoko}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aa2f86c9d6ef2b1006d8a52f646fe1bf}{Ozawa}{O\bibinitperiod}{Ritsuko}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=39230fb349c416f2a867852165f5d28c}{Yoshida}{Y\bibinitperiod}{Mikio}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d4df28cfe0de50f0db78f79d6695fbaa}{Hattori}{H\bibinitperiod}{Masahira}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5751be603ce1a52b0ab768b88ce287be}{Sakaki}{S\bibinitperiod}{Yoshiyuki}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=ea7e810a0fec789b0d8c402976eb7673}{Ito}{I\bibinitperiod}{Takashi}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=44a992f35e447069c77be3d614835da7}{Chiba}{C\bibinitperiod}{Tomoko}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aa2f86c9d6ef2b1006d8a52f646fe1bf}{Ozawa}{O\bibinitperiod}{Ritsuko}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=39230fb349c416f2a867852165f5d28c}{Yoshida}{Y\bibinitperiod}{Mikio}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d4df28cfe0de50f0db78f79d6695fbaa}{Hattori}{H\bibinitperiod}{Masahira}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5751be603ce1a52b0ab768b88ce287be}{Sakaki}{S\bibinitperiod}{Yoshiyuki}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{376fc4e03db85f74438c4d62e9c5291a}
+      \strng{fullhash}{9f456af1a91201d262a6466075eb2c58}
+      \field{sortinit}{I}
+      \field{labelyear}{2001}
+      \field{labelmonth}{04}
+      \field{datelabelsource}{}
+      \field{labeltitle}{A comprehensive two-hybrid analysis to explore the yeast protein interactome}
+      \field{abstract}{Protein–protein interactions play crucial roles in the execution of various biological functions. Accordingly, their comprehensive description would contribute considerably to the functional interpretation of fully sequenced genomes, which are flooded with novel genes of unpredictable functions. We previously developed a system to examine two-hybrid interactions in all possible combinations between the ≈6,000 proteins of the budding yeast Saccharomyces cerevisiae. Here we have completed the comprehensive analysis using this system to identify 4,549 two-hybrid interactions among 3,278 proteins. Unexpectedly, these data do not largely overlap with those obtained by the other project [Uetz, P., et al. (2000) Nature (London) 403, 623–627] and hence have substantially expanded our knowledge on the protein interaction space or interactome of the yeast. Cumulative connection of these binary interactions generates a single huge network linking the vast majority of the proteins. Bioinformatics-aided selection of biologically relevant interactions highlights various intriguing subnetworks. They include, for instance, the one that had successfully foreseen the involvement of a novel protein in spindle pole body function as well as the one that may uncover a hitherto unidentified multiprotein complex potentially participating in the process of vesicular transport. Our data would thus significantly expand and improve the protein interaction map for the exploration of genome functions that eventually leads to thorough understanding of the cell as a molecular system.}
+      \field{issn}{0027-8424, 1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{04}
+      \field{number}{8}
+      \field{title}{A comprehensive two-hybrid analysis to explore the yeast protein interactome}
+      \field{urlday}{25}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{98}
+      \field{year}{2001}
+      \field{pages}{4569\bibrangedash 4574}
+      \verb{doi}
+      \verb 10.1073/pnas.061034498
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/5F76JU7N/Ito et al. - 2001 - A comprehensive two-hybrid analysis to explore the.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/JAU5U2B2/4569.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.pnas.org/content/98/8/4569
+      \endverb
+    \endentry
+    \entry{janin_domains_1985}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=d6401e15cc90ffd42bcddc4c9bb075f0}{Janin}{J\bibinitperiod}{Joël}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e7519839a5afb3dc61bb297b7fb4f313}{Chothia}{C\bibinitperiod}{Cyrus}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=d6401e15cc90ffd42bcddc4c9bb075f0}{Janin}{J\bibinitperiod}{Joël}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e7519839a5afb3dc61bb297b7fb4f313}{Chothia}{C\bibinitperiod}{Cyrus}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{5982f73f72e25e076ab4904c1b0c5d8a}
+      \strng{fullhash}{5982f73f72e25e076ab4904c1b0c5d8a}
+      \field{sortinit}{J}
+      \field{labelyear}{1985}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Domains in proteins}
+      \field{journaltitle}{Methods in enzymology}
+      \field{shorttitle}{Domains in proteins}
+      \field{title}{Domains in proteins: definitions, location, and structural principles}
+      \field{urlday}{07}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{115}
+      \field{year}{1985}
+      \field{pages}{420\bibrangedash 430}
+      \verb{file}
+      \verb Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/G3CXEZSV/0076687985150305.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0076687985150305/pdf?md5=e4ec0621f9047761ac85b3c3fa8808e2&pid=1-s2.0-0076687985150305-main.pdf&_valck=1
+      \endverb
+    \endentry
+    \entry{john_estimating_1995}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=534e169aa5f5fd5dfda7dae90360bde3}{John}{J\bibinitperiod}{George\bibnamedelima H.}{G\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cb234967d439eca7bd966830f708c7a2}{Langley}{L\bibinitperiod}{Pat}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=534e169aa5f5fd5dfda7dae90360bde3}{John}{J\bibinitperiod}{George\bibnamedelima H.}{G\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cb234967d439eca7bd966830f708c7a2}{Langley}{L\bibinitperiod}{Pat}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
+      \strng{namehash}{7e3f6290bb51741c1c27f090198e288d}
+      \strng{fullhash}{7e3f6290bb51741c1c27f090198e288d}
+      \field{sortinit}{J}
+      \field{labelyear}{1995}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Estimating continuous distributions in Bayesian classifiers}
+      \field{booktitle}{Proceedings of the Eleventh conference on Uncertainty in artificial intelligence}
+      \field{title}{Estimating continuous distributions in Bayesian classifiers}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{year}{1995}
+      \field{pages}{338\bibrangedash 345}
+      \verb{file}
+      \verb [PDF] from arxiv.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/9TBICEUW/John and Langley - 1995 - Estimating continuous distributions in Bayesian cl.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/ZQW6GJD4/citation.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2074196
+      \endverb
+    \endentry
+    \entry{kandel_principles_2000}{book}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=f989128c78843505d54f7f8882e189ac}{Kandel}{K\bibinitperiod}{Eric}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dddbb230189ad136cc94985f66ed012a}{Schwartz}{S\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0e11ee54c7f31afbc4d3d5c66061719c}{Jessell}{J\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=f989128c78843505d54f7f8882e189ac}{Kandel}{K\bibinitperiod}{Eric}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dddbb230189ad136cc94985f66ed012a}{Schwartz}{S\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0e11ee54c7f31afbc4d3d5c66061719c}{Jessell}{J\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {{McGraw}-Hill Medical}%
+      }
+      \strng{namehash}{0a1bf3859042b8fba464ebd4aa6b54f6}
+      \strng{fullhash}{0a1bf3859042b8fba464ebd4aa6b54f6}
+      \field{sortinit}{K}
+      \field{labelyear}{2000}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Principles of Neural Science}
+      \field{abstract}{A Doody's Core Title for 2011! 5 {STAR} {DOODY}'S {REVIEW}! "This is a simply wonderful book that makes accessible in one place all the details of how the neuron and brain work. The writing is clear. The drawings are elegant and educational. The book is a feast for both the eye and mind. The richness, the beauty, and the complexity of neuroscience is all captured in this superb book."--Doody's Review Service Now in resplendent color, the new edition continues to define the latest in the scientific understanding of the brain, the nervous system, and human behavior. Each chapter is thoroughly revised and includes the impact of molecular biology in the mechanisms underlying developmental processes and in the pathogenesis of disease. Important features to this edition include a new chapter - Genes and Behavior; a complete updating of development of the nervous system; the genetic basis of neurological and psychiatric disease; cognitive neuroscience of perception, planning, action, motivation and memory; ion channel mechanisms; and much more.}
+      \field{edition}{4 edition}
+      \field{isbn}{9780838577011}
+      \field{month}{01}
+      \field{title}{Principles of Neural Science}
+      \field{year}{2000}
+    \endentry
+    \entry{kenley_detecting_2011}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=befcb9aeda20e39960378f72a4c094bc}{Kenley}{K\bibinitperiod}{Edward\bibnamedelima Casey}{E\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7c53dabb84c6d2e6a649e19118fb3018}{Cho}{C\bibinitperiod}{Young-Rae}{Y\bibinithyphendelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=befcb9aeda20e39960378f72a4c094bc}{Kenley}{K\bibinitperiod}{Edward\bibnamedelima Casey}{E\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7c53dabb84c6d2e6a649e19118fb3018}{Cho}{C\bibinitperiod}{Young-Rae}{Y\bibinithyphendelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{086042b5ce79cf3e4000b846baa65f54}
+      \strng{fullhash}{086042b5ce79cf3e4000b846baa65f54}
+      \field{sortinit}{K}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Detecting protein complexes and functional modules from protein interaction networks}
+      \field{abstract}{Recent high-throughput experiments have generated protein–protein interaction data on a genomic scale, yielding the complete interactome for several organisms. Various graph clustering algorithms have been applied to protein interaction networks for identifying protein complexes and functional modules. Although the previous algorithms are scalable and robust, their accuracy is still limited because of the complex connectivity found in protein interaction networks. In this study, we propose a novel information-theoretic definition, graph entropy, as a measure of the structural complexity of a graph. Loss of graph entropy represents an increase in modularity of the graph. Based on this concept, we present a graph clustering algorithm which searches for the local optimum in modularity. The algorithm detects each optimal cluster by growing a seed in a manner that minimizes graph entropy. In the experiments with the yeast interactome, the results show that the graph entropy approach has higher accuracy in predicting protein complexes and functional modules than the best competing method. We statistically compared output clusters to both known protein complexes and Gene Ontology annotations in the biological process and molecular function categories in order to measure f-scores and p-scores as clustering accuracy. Because this algorithm is also scalable, it can be applied to the larger scale human protein interaction network.}
+      \field{issn}{1615-9861}
+      \field{journaltitle}{{PROTEOMICS}}
+      \field{number}{19}
+      \field{shorttitle}{Detecting protein complexes and functional modules from protein interaction networks}
+      \field{title}{Detecting protein complexes and functional modules from protein interaction networks: A graph entropy approach}
+      \field{urlday}{17}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{11}
+      \field{year}{2011}
+      \field{pages}{3835\bibrangedash 3844}
+      \verb{doi}
+      \verb 10.1002/pmic.201100193
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/R4QRZCQZ/Kenley and Cho - 2011 - Detecting protein complexes and functional modules.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DNFMU58J/full.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/pmic.201100193/abstract
+      \endverb
+      \keyw{Bioinformatics,Functional modules,Graph clustering,Protein complexes,Protein interaction networks,Protein–protein interactions}
+    \endentry
+    \entry{li_interaction_2010}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=b659fa76c3134308505227a2ef8f7d77}{Li}{L\bibinitperiod}{Ka\bibnamedelima Wan}{K\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=07945971117fa60a99251ab87ddea265}{Klemmer}{K\bibinitperiod}{Patricia}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=44118b95375ae63f3bf52ab2542f9a10}{Smit}{S\bibinitperiod}{August\bibnamedelima B.}{A\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=b659fa76c3134308505227a2ef8f7d77}{Li}{L\bibinitperiod}{Ka\bibnamedelima Wan}{K\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=07945971117fa60a99251ab87ddea265}{Klemmer}{K\bibinitperiod}{Patricia}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=44118b95375ae63f3bf52ab2542f9a10}{Smit}{S\bibinitperiod}{August\bibnamedelima B.}{A\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{0023d252617d78c12431937e53d8f3a0}
+      \strng{fullhash}{0023d252617d78c12431937e53d8f3a0}
+      \field{sortinit}{L}
+      \field{labelyear}{2010}
+      \field{labelmonth}{08}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Interaction proteomics of synapse protein complexes}
+      \field{abstract}{The brain integrates complex types of information, and executes a wide range of physiological and behavioral processes. Trillions of tiny organelles, the synapses, are central to neuronal communication and information processing in the brain. Synaptic transmission involves an intricate network of synaptic proteins that forms the molecular machinery underlying transmitter release, activation, and modulation of transmitter receptors and signal transduction cascades. These processes are dynamically regulated and underlie neuroplasticity, crucial to learning and memory formation. In recent years, interaction proteomics has increasingly been used to elucidate the constituents of synaptic protein complexes. Unlike classic hypothesis-based assays, interaction proteomics detects both known and novel interactors without bias. In this trend article, we focus on the technical aspects of recent proteomics to identify synapse protein complexes, and the complementary methods used to verify the protein–protein interaction. Moreover, we discuss the experimental feasibility of performing global analysis of the synapse protein interactome.}
+      \field{issn}{1618-2642, 1618-2650}
+      \field{journaltitle}{Analytical and Bioanalytical Chemistry}
+      \field{month}{08}
+      \field{number}{8}
+      \field{title}{Interaction proteomics of synapse protein complexes}
+      \field{urlday}{20}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{397}
+      \field{year}{2010}
+      \field{pages}{3195\bibrangedash 3202}
+      \verb{doi}
+      \verb 10.1007/s00216-010-3658-z
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/KRP5463M/Li et al. - 2010 - Interaction proteomics of synapse protein complexe.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/5AUU4FTH/s00216-010-3658-z.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/article/10.1007/s00216-010-3658-z
+      \endverb
+      \keyw{Affinity isolation,Analytical Chemistry,Biochemistry,general,brain,Environmental Monitoring/Analysis,Food Science,Laboratory Medicine,Measurement Science and Instrumentation,Protein interactome,Synapse}
+    \endentry
+    \entry{mackay_information_2003}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=96990f4abfc4fa3344a5993e99ea87e6}{Mackay}{M\bibinitperiod}{David\bibnamedelimb J\bibnamedelima C}{D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=96990f4abfc4fa3344a5993e99ea87e6}{Mackay}{M\bibinitperiod}{David\bibnamedelimb J\bibnamedelima C}{D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{96990f4abfc4fa3344a5993e99ea87e6}
+      \strng{fullhash}{96990f4abfc4fa3344a5993e99ea87e6}
+      \field{sortinit}{M}
+      \field{labelyear}{2003}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Information Theory, Inference, and Learning Algorithms}
+      \field{isbn}{0521642981}
+      \field{title}{Information Theory, Inference, and Learning Algorithms}
+      \field{year}{2003}
+      \verb{file}
+      \verb book:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/RUPKUF2U/book.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{maglott_entrez_2007}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=732ca98e8bb1eb0af50113a96ce56d56}{Maglott}{M\bibinitperiod}{Donna}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7246e17d579014d313d14dc977ca67d5}{Ostell}{O\bibinitperiod}{Jim}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=13237ec4046b51b1c76ad2e535dda936}{Pruitt}{P\bibinitperiod}{Kim\bibnamedelima D.}{K\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd25e7e9cd2c474524b0a67b1dcdcc45}{Tatusova}{T\bibinitperiod}{Tatiana}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=732ca98e8bb1eb0af50113a96ce56d56}{Maglott}{M\bibinitperiod}{Donna}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7246e17d579014d313d14dc977ca67d5}{Ostell}{O\bibinitperiod}{Jim}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=13237ec4046b51b1c76ad2e535dda936}{Pruitt}{P\bibinitperiod}{Kim\bibnamedelima D.}{K\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd25e7e9cd2c474524b0a67b1dcdcc45}{Tatusova}{T\bibinitperiod}{Tatiana}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{c430ff930e166a44e666ba7bcb9ac201}
+      \strng{fullhash}{625845254bc26c26efa7265ea2884571}
+      \field{sortinit}{M}
+      \field{labelyear}{2007}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Entrez Gene}
+      \field{abstract}{Entrez Gene (www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=gene) is {NCBI}'s database for gene-specific information. Entrez Gene includes records from genomes that have been completely sequenced, that have an active research community to contribute gene-specific information or that are scheduled for intense sequence analysis. The content of Entrez Gene represents the result of both curation and automated integration of data from {NCBI}'s Reference Sequence project ({RefSeq}), from collaborating model organism databases and from other databases within {NCBI}. Records in Entrez Gene are assigned unique, stable and tracked integers as identifiers. The content (nomenclature, map location, gene products and their attributes, markers, phenotypes and links to citations, sequences, variation details, maps, expression, homologs, protein domains and external databases) is provided via interactive browsing through {NCBI}'s Entrez system, via {NCBI}'s Entrez programing utilities (E-Utilities), and for bulk transfer by ftp.}
+      \field{issn}{0305-1048, 1362-4962}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{suppl 1}
+      \field{shorttitle}{Entrez Gene}
+      \field{title}{Entrez Gene: gene-centered information at {NCBI}}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{35}
+      \field{year}{2007}
+      \field{pages}{D26\bibrangedash D31}
+      \verb{doi}
+      \verb 10.1093/nar/gkl993
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/FAMUEMA3/Maglott et al. - 2007 - Entrez Gene gene-centered information at NCBI.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/54ZCEJ6P/D26.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/35/suppl_1/D26
+      \endverb
+    \endentry
+    \entry{murphy_machine_2012}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=57a45a819d1ea44f0e40dfcdeeaa4140}{Murphy}{M\bibinitperiod}{Kevin\bibnamedelima P.}{K\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=57a45a819d1ea44f0e40dfcdeeaa4140}{Murphy}{M\bibinitperiod}{Kevin\bibnamedelima P.}{K\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {The {MIT} Press}%
+      }
+      \strng{namehash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \strng{fullhash}{57a45a819d1ea44f0e40dfcdeeaa4140}
+      \field{sortinit}{M}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Machine Learning: A Probabilistic Perspective}
+      \field{isbn}{978-0-262-01802-0}
+      \field{title}{Machine Learning: A Probabilistic Perspective}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2380985
+      \endverb
+    \endentry
+    \entry{newman_modularity_2006}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e10496a046558ed6c27e3a9373727f7f}
+      \strng{fullhash}{e10496a046558ed6c27e3a9373727f7f}
+      \field{sortinit}{N}
+      \field{labelyear}{2006}
+      \field{labelmonth}{06}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Modularity and community structure in networks}
+      \field{abstract}{Many networks of interest in the sciences, including social networks, computer networks, and metabolic and regulatory networks, are found to divide naturally into communities or modules. The problem of detecting and characterizing this community structure is one of the outstanding issues in the study of networked systems. One highly effective approach is the optimization of the quality function known as “modularity” over the possible divisions of a network. Here I show that the modularity can be expressed in terms of the eigenvectors of a characteristic matrix for the network, which I call the modularity matrix, and that this expression leads to a spectral algorithm for community detection that returns results of demonstrably higher quality than competing methods in shorter running times. I illustrate the method with applications to several published network data sets.}
+      \field{issn}{0027-8424, 1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{06}
+      \field{number}{23}
+      \field{title}{Modularity and community structure in networks}
+      \field{urlday}{17}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{103}
+      \field{year}{2006}
+      \field{pages}{8577\bibrangedash 8582}
+      \verb{doi}
+      \verb 10.1073/pnas.0601602103
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/UFUV89WF/Newman - 2006 - Modularity and community structure in networks.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/EMSQD4C7/8577.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.pnas.org/content/103/23/8577
+      \endverb
+      \keyw{clustering,metabolic network,modules,partitioning,social network}
+    \endentry
+    \entry{newman_communities_2012}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e10496a046558ed6c27e3a9373727f7f}
+      \strng{fullhash}{e10496a046558ed6c27e3a9373727f7f}
+      \field{sortinit}{N}
+      \field{labelyear}{2012}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Communities, modules and large-scale structure in networks}
+      \field{abstract}{Networks, also called graphs by mathematicians, provide a useful abstraction of the structure of many complex systems, ranging from social systems and computer networks to biological networks and the state spaces of physical systems. In the past decade there have been significant advances in experiments to determine the topological structure of networked systems, but there remain substantial challenges in extracting scientific understanding from the large quantities of data produced by the experiments. A variety of basic measures and metrics are available that can tell us about small-scale structure in networks, such as correlations, connections and recurrent patterns, but it is considerably more difficult to quantify structure on medium and large scales, to understand the ‘big picture’. Important progress has been made, however, within the past few years, a selection of which is reviewed here. View full text}
+      \field{issn}{1745-2473}
+      \field{journaltitle}{Nature Physics}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{Communities, modules and large-scale structure in networks}
+      \field{urlday}{17}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{8}
+      \field{year}{2012}
+      \field{pages}{25\bibrangedash 31}
+      \verb{doi}
+      \verb 10.1038/nphys2162
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/B2WSBX9Q/Newman - 2012 - Communities, modules and large-scale structure in .pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/ZZ72K6H7/nphys2162.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/nphys/journal/v8/n1/abs/nphys2162.html
+      \endverb
+      \keyw{Statistical physics,thermodynamics and nonlinear dynamics}
+    \endentry
+    \entry{newman_finding_2004}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d0a234cad5f1174e74175aff18bee28}{Girvan}{G\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=e10496a046558ed6c27e3a9373727f7f}{Newman}{N\bibinitperiod}{M.\bibnamedelimi E.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d0a234cad5f1174e74175aff18bee28}{Girvan}{G\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{774c384e8765061027c9e2622addf535}
+      \strng{fullhash}{774c384e8765061027c9e2622addf535}
+      \field{sortinit}{N}
+      \field{labelyear}{2004}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Finding and evaluating community structure in networks}
+      \field{abstract}{We propose and study a set of algorithms for discovering community structure in networks—natural divisions of network nodes into densely connected subgroups. Our algorithms all share two definitive features: first, they involve iterative removal of edges from the network to split it into communities, the edges removed being identified using any one of a number of possible “betweenness” measures, and second, these measures are, crucially, recalculated after each removal. We also propose a measure for the strength of the community structure found by our algorithms, which gives us an objective metric for choosing the number of communities into which a network should be divided. We demonstrate that our algorithms are highly effective at discovering community structure in both computer-generated and real-world network data, and show how they can be used to shed light on the sometimes dauntingly complex structure of networked systems.}
+      \field{journaltitle}{Physical Review E}
+      \field{month}{02}
+      \field{number}{2}
+      \field{title}{Finding and evaluating community structure in networks}
+      \field{urlday}{17}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{69}
+      \field{year}{2004}
+      \field{pages}{026113}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.69.026113
+      \endverb
+      \verb{file}
+      \verb APS Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/CTT45M9J/PhysRevE.69.html:text/html;Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/U7ZCT4WS/Newman and Girvan - 2004 - Finding and evaluating community structure in netw.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://link.aps.org/doi/10.1103/PhysRevE.69.026113
+      \endverb
+    \endentry
+    \entry{olesen_economic_2012}{article}{}
+      \name{labelname}{7}{}{%
+        {{uniquename=0,hash=6101406d5781a30ce390b8d4b083f12b}{Olesen}{O\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0a1fae87a173b97664d9db628fb5165c}{Gustavsson}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a566d5457b46575068fea9376da9a8e9}{Svensson}{S\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14b3e314534f743bf19aedaa883d8786}{Wittchen}{W\bibinitperiod}{H.-U.}{H\bibinithyphendelim U\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=620c1fa074a8bc89a18d24cad382d0f4}{Jönsson}{J\bibinitperiod}{B.}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=793bb57022f9d7e1b1e57a6e5a311957}{{CDBE2010\bibnamedelimb study\bibnamedelimb group}}{C\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5de4052c2f2fca2bb1bfb27d654b5707}{{European\bibnamedelimb Brain\bibnamedelimb Council}}{E\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=6101406d5781a30ce390b8d4b083f12b}{Olesen}{O\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0a1fae87a173b97664d9db628fb5165c}{Gustavsson}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a566d5457b46575068fea9376da9a8e9}{Svensson}{S\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14b3e314534f743bf19aedaa883d8786}{Wittchen}{W\bibinitperiod}{H.-U.}{H\bibinithyphendelim U\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=620c1fa074a8bc89a18d24cad382d0f4}{Jönsson}{J\bibinitperiod}{B.}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=793bb57022f9d7e1b1e57a6e5a311957}{{CDBE2010\bibnamedelimb study\bibnamedelimb group}}{C\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5de4052c2f2fca2bb1bfb27d654b5707}{{European\bibnamedelimb Brain\bibnamedelimb Council}}{E\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{a2e92506fc153eb6fe8e88b7e8501727}
+      \strng{fullhash}{e5228e8db4cf56c204ab4d60eeaaae26}
+      \field{sortinit}{O}
+      \field{labelyear}{2012}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{The economic cost of brain disorders in Europe}
+      \field{abstract}{{BACKGROUND} {AND} {PURPOSE}: In 2005, we presented for the first time overall estimates of annual costs for brain disorders (mental and neurologic disorders) in Europe. This new report presents updated, more accurate, and comprehensive 2010 estimates for 30 European countries. {METHODS}: One-year prevalence and annual cost per person of 19 major groups of disorders are based on 'best estimates' derived from systematic literature reviews by panels of experts in epidemiology and health economics. Our cost estimation model was populated with national statistics from Eurostat to adjust to 2010 values, converting all local currencies to Euros (€), imputing cost for countries where no data were available, and aggregating country estimates to purchasing power parity-adjusted estimates of the total cost of brain disorders in Europe in 2010. {RESULTS}: Total European 2010 cost of brain disorders was €798 billion, of which direct health care cost 37\%, direct non-medical cost 23\%, and indirect cost 40\%. Average cost per inhabitant was €5.550. The European average cost per person with a disorder of the brain ranged between €285 for headache and €30 000 for neuromuscular disorders. Total annual cost per disorder (in billion € 2010) was as follows: addiction 65.7; anxiety disorders 74.4; brain tumor 5.2; child/adolescent disorders 21.3; dementia 105.2; eating disorders 0.8; epilepsy 13.8; headache 43.5; mental retardation 43.3; mood disorders 113.4; multiple sclerosis 14.6; neuromuscular disorders 7.7; Parkinson's disease 13.9; personality disorders 27.3; psychotic disorders 93.9; sleep disorders 35.4; somatoform disorder 21.2; stroke 64.1; and traumatic brain injury 33.0. {CONCLUSION}: Our cost model revealed that brain disorders overall are much more costly than previously estimated constituting a major health economic challenge for Europe. Our estimate should be regarded as conservative because many disorders or cost items could not be included because of lack of data.}
+      \field{issn}{1468-1331}
+      \field{journaltitle}{European Journal of Neurology: The Official Journal of the European Federation of Neurological Societies}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{The economic cost of brain disorders in Europe}
+      \field{volume}{19}
+      \field{year}{2012}
+      \field{pages}{155\bibrangedash 162}
+      \verb{doi}
+      \verb 10.1111/j.1468-1331.2011.03590.x
+      \endverb
+      \keyw{Brain Diseases,Europe,Health Care Costs,Humans}
+    \endentry
+    \entry{pedregosa_scikit-learn:_2011}{article}{}
+      \true{morelabelname}
+      \name{labelname}{10}{}{%
+        {{uniquename=0,hash=bab4e5caee2d67831e464ce575022b37}{Pedregosa}{P\bibinitperiod}{Fabian}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cfa3239dded54488f9a82a5718d5b927}{Varoquaux}{V\bibinitperiod}{Gaël}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=12ebe424e1c87de156c57e8fa7683f46}{Gramfort}{G\bibinitperiod}{Alexandre}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=504ea1986689f1047a6f0beda2cb3822}{Michel}{M\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0f3fc06fb9fcbb01b9cc0985eaf0a71c}{Thirion}{T\bibinitperiod}{Bertrand}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=721be0317527f44db425f7a97dcab15e}{Grisel}{G\bibinitperiod}{Olivier}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d3b6c8582cea4e8b6576137b6a72cadc}{Blondel}{B\bibinitperiod}{Mathieu}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=86e647e5c801f3ce733927f75f029463}{Prettenhofer}{P\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89d698773eaf2fae761ff0008031c7be}{Weiss}{W\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b255e99d411f28c789a231829f765c64}{Dubourg}{D\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \true{moreauthor}
+      \name{author}{10}{}{%
+        {{uniquename=0,hash=bab4e5caee2d67831e464ce575022b37}{Pedregosa}{P\bibinitperiod}{Fabian}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cfa3239dded54488f9a82a5718d5b927}{Varoquaux}{V\bibinitperiod}{Gaël}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=12ebe424e1c87de156c57e8fa7683f46}{Gramfort}{G\bibinitperiod}{Alexandre}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=504ea1986689f1047a6f0beda2cb3822}{Michel}{M\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0f3fc06fb9fcbb01b9cc0985eaf0a71c}{Thirion}{T\bibinitperiod}{Bertrand}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=721be0317527f44db425f7a97dcab15e}{Grisel}{G\bibinitperiod}{Olivier}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d3b6c8582cea4e8b6576137b6a72cadc}{Blondel}{B\bibinitperiod}{Mathieu}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=86e647e5c801f3ce733927f75f029463}{Prettenhofer}{P\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89d698773eaf2fae761ff0008031c7be}{Weiss}{W\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b255e99d411f28c789a231829f765c64}{Dubourg}{D\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9ec95d747bac3417f92265a9a44f8bb4}
+      \strng{fullhash}{9c0daf119a88f60278a791d01ffdd5ec}
+      \field{sortinit}{P}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Scikit-learn}
+      \field{journaltitle}{The Journal of Machine Learning Research}
+      \field{shorttitle}{Scikit-learn}
+      \field{title}{Scikit-learn: Machine learning in Python}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2825\bibrangedash 2830}
+      \verb{file}
+      \verb [PDF] from arxiv.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/X32CS3SI/Pedregosa et al. - 2011 - Scikit-learn Machine learning in Python.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/RK8F7DGQ/citation.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2078195
+      \endverb
+    \endentry
+    \entry{qi_learning_2008}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Universitat Pompeu Fabra, Spain}%
+      }
+      \strng{namehash}{04b7a7c641a6bc5e81aba25f88ffec13}
+      \strng{fullhash}{04b7a7c641a6bc5e81aba25f88ffec13}
+      \field{sortinit}{Q}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Learning of protein interaction networks}
+      \field{title}{Learning of protein interaction networks}
+      \field{type}{phdthesis}
+      \field{urlday}{09}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{file}
+      \verb [PDF] from cmu.edu:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/65SFFGN5/Qi - 2008 - Learning of protein interaction networks.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://www-2.cs.cmu.edu/~qyj/paper_CMU/qyj-disertation-v17-final.pdf
+      \endverb
+    \endentry
+    \entry{qi_evaluation_2006}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a210861d4e88a6ab333e157678c83064}{Bar-Joseph}{B\bibinithyphendelim J\bibinitperiod}{Ziv}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=13d38fcedbb24838efa4465febc05806}{Klein-Seetharaman}{K\bibinithyphendelim S\bibinitperiod}{Judith}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a210861d4e88a6ab333e157678c83064}{Bar-Joseph}{B\bibinithyphendelim J\bibinitperiod}{Ziv}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=13d38fcedbb24838efa4465febc05806}{Klein-Seetharaman}{K\bibinithyphendelim S\bibinitperiod}{Judith}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d69a112dcc43f6c53e82953359bdb0fa}
+      \strng{fullhash}{d69a112dcc43f6c53e82953359bdb0fa}
+      \field{sortinit}{Q}
+      \field{labelyear}{2006}
+      \field{labelmonth}{05}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Evaluation of different biological data and computational classification methods for use in protein interaction prediction}
+      \field{abstract}{Protein–protein interactions play a key role in many biological systems. High-throughput methods can directly detect the set of interacting proteins in yeast, but the results are often incomplete and exhibit high false-positive and false-negative rates. Recently, many different research groups independently suggested using supervised learning methods to integrate direct and indirect biological data sources for the protein interaction prediction task. However, the data sources, approaches, and implementations varied. Furthermore, the protein interaction prediction task itself can be subdivided into prediction of (1) physical interaction, (2) co-complex relationship, and (3) pathway co-membership. To investigate systematically the utility of different data sources and the way the data is encoded as features for predicting each of these types of protein interactions, we assembled a large set of biological features and varied their encoding for use in each of the three prediction tasks. Six different classifiers were used to assess the accuracy in predicting interactions, Random Forest ({RF}), {RF} similarity-based k-Nearest-Neighbor, Naïve Bayes, Decision Tree, Logistic Regression, and Support Vector Machine. For all classifiers, the three prediction tasks had different success rates, and co-complex prediction appears to be an easier task than the other two. Independently of prediction task, however, the {RF} classifier consistently ranked as one of the top two classifiers for all combinations of feature sets. Therefore, we used this classifier to study the importance of different biological datasets. First, we used the splitting function of the {RF} tree structure, the Gini index, to estimate feature importance. Second, we determined classification accuracy when only the top-ranking features were used as an input in the classifier. We find that the importance of different features depends on the specific prediction task and the way they are encoded. Strikingly, gene expression is consistently the most important feature for all three prediction tasks, while the protein interactions identified using the yeast-2-hybrid system were not among the top-ranking features under any condition. Proteins 2006. © 2006 Wiley-Liss, Inc.}
+      \field{issn}{1097-0134}
+      \field{journaltitle}{Proteins: Structure, Function, and Bioinformatics}
+      \field{month}{05}
+      \field{number}{3}
+      \field{title}{Evaluation of different biological data and computational classification methods for use in protein interaction prediction}
+      \field{urlday}{25}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{63}
+      \field{year}{2006}
+      \field{pages}{490\bibrangedash 500}
+      \verb{doi}
+      \verb 10.1002/prot.20865
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/6I63W9CW/Qi et al. - 2006 - Evaluation of different biological data and comput.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/2BBCZI6C/full.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/prot.20865/abstract
+      \endverb
+      \keyw{high-throughput data,joint learning,protein–protein interaction}
+    \endentry
+    \entry{razick_irefindex:_2008}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=7a95499dfb6c8a0def01aa062710309d}{Razick}{R\bibinitperiod}{Sabry}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=35567251f3ff5c4cf53d542f46ee0094}{Magklaras}{M\bibinitperiod}{George}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9581049963ec80547c510f03886ef864}{Donaldson}{D\bibinitperiod}{Ian\bibnamedelima M.}{I\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=7a95499dfb6c8a0def01aa062710309d}{Razick}{R\bibinitperiod}{Sabry}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=35567251f3ff5c4cf53d542f46ee0094}{Magklaras}{M\bibinitperiod}{George}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9581049963ec80547c510f03886ef864}{Donaldson}{D\bibinitperiod}{Ian\bibnamedelima M.}{I\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{59792436dd13ea9da9f876724de86721}
+      \strng{fullhash}{59792436dd13ea9da9f876724de86721}
+      \field{sortinit}{R}
+      \field{labelyear}{2008}
+      \field{labelmonth}{09}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{iRefIndex}}
+      \field{abstract}{Interaction data for a given protein may be spread across multiple databases. We set out to create a unifying index that would facilitate searching for these data and that would group together redundant interaction data while recording the methods used to perform this grouping. {PMID}: 18823568}
+      \field{issn}{1471-2105}
+      \field{journaltitle}{{BMC} Bioinformatics}
+      \field{month}{09}
+      \field{number}{1}
+      \field{shorttitle}{{iRefIndex}}
+      \field{title}{{iRefIndex}: A consolidated protein interaction database with provenance}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{9}
+      \field{year}{2008}
+      \field{pages}{405}
+      \verb{doi}
+      \verb 10.1186/1471-2105-9-405
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/WTXCETZ9/Razick et al. - 2008 - iRefIndex A consolidated protein interaction data.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/TFCIE997/405.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2105/9/405/abstract
+      \endverb
+    \endentry
+    \entry{rodgers-melnick_predicting_2013}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=0a984b3f9d00b1fb5b789b9891bdc6c8}{Rodgers-Melnick}{R\bibinithyphendelim M\bibinitperiod}{Eli}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=74b59afb1e3fe66e9428e0116363ffef}{Culp}{C\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d50d7a3149e633165c46a7a755e77018}{DiFazio}{D\bibinitperiod}{Stephen\bibnamedelima P.}{S\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=0a984b3f9d00b1fb5b789b9891bdc6c8}{Rodgers-Melnick}{R\bibinithyphendelim M\bibinitperiod}{Eli}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=74b59afb1e3fe66e9428e0116363ffef}{Culp}{C\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d50d7a3149e633165c46a7a755e77018}{DiFazio}{D\bibinitperiod}{Stephen\bibnamedelima P.}{S\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{bf343aadb61380052a0c8b861dab4535}
+      \strng{fullhash}{bf343aadb61380052a0c8b861dab4535}
+      \field{sortinit}{R}
+      \field{labelyear}{2013}
+      \field{labelmonth}{09}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Predicting whole genome protein interaction networks from primary sequence data in model and non-model organisms using {ENTS}}
+      \field{abstract}{The large-scale identification of physical protein-protein interactions ({PPIs}) is an important step toward understanding how biological networks evolve and generate emergent phenotypes. However, experimental identification of {PPIs} is a laborious and error-prone process, and current methods of {PPI} prediction tend to be highly conservative or require large amounts of functional data that may not be available for newly-sequenced organisms. {PMID}: 24015873}
+      \field{issn}{1471-2164}
+      \field{journaltitle}{{BMC} Genomics}
+      \field{month}{09}
+      \field{number}{1}
+      \field{title}{Predicting whole genome protein interaction networks from primary sequence data in model and non-model organisms using {ENTS}}
+      \field{urlday}{24}
+      \field{urlmonth}{06}
+      \field{urlyear}{2014}
+      \field{volume}{14}
+      \field{year}{2013}
+      \field{pages}{608}
+      \verb{doi}
+      \verb 10.1186/1471-2164-14-608
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/ZFHTPUAX/Rodgers-Melnick et al. - 2013 - Predicting whole genome protein interaction networ.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DWS98X3J/608.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2164/14/608/abstract
+      \endverb
+    \endentry
+    \entry{schaefer_hippie:_2012}{article}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=80a0456d9cc9372fa9a11246be5dac60}{Schaefer}{S\bibinitperiod}{Martin\bibnamedelima H.}{M\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=27debbab5f694c7919b1484f49307071}{Fontaine}{F\bibinitperiod}{Jean-Fred}{J\bibinithyphendelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9c3d610fb08459298bf4b3d404139417}{Vinayagam}{V\bibinitperiod}{Arunachalam}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=628aa09ae2cdc4f3ddb7436d96657011}{Porras}{P\bibinitperiod}{Pablo}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a6bb4b6facc4f31f6b4a05c319eadfcd}{Wanker}{W\bibinitperiod}{Erich\bibnamedelima E.}{E\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b2533dd15d8bc5a63a2116fc6da7275f}{Andrade-Navarro}{A\bibinithyphendelim N\bibinitperiod}{Miguel\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=80a0456d9cc9372fa9a11246be5dac60}{Schaefer}{S\bibinitperiod}{Martin\bibnamedelima H.}{M\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=27debbab5f694c7919b1484f49307071}{Fontaine}{F\bibinitperiod}{Jean-Fred}{J\bibinithyphendelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9c3d610fb08459298bf4b3d404139417}{Vinayagam}{V\bibinitperiod}{Arunachalam}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=628aa09ae2cdc4f3ddb7436d96657011}{Porras}{P\bibinitperiod}{Pablo}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a6bb4b6facc4f31f6b4a05c319eadfcd}{Wanker}{W\bibinitperiod}{Erich\bibnamedelima E.}{E\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b2533dd15d8bc5a63a2116fc6da7275f}{Andrade-Navarro}{A\bibinithyphendelim N\bibinitperiod}{Miguel\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e039c4a20c6bdc87d97429bb8b21108d}
+      \strng{fullhash}{5a2c94c1ea20c13d97f82ad7a4be17b1}
+      \field{sortinit}{S}
+      \field{labelyear}{2012}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{HIPPIE}}
+      \field{abstract}{Protein function is often modulated by protein-protein interactions ({PPIs}) and therefore defining the partners of a protein helps to understand its activity. {PPIs} can be detected through different experimental approaches and are collected in several expert curated databases. These databases are used by researchers interested in examining detailed information on particular proteins. In many analyses the reliability of the characterization of the interactions becomes important and it might be necessary to select sets of {PPIs} of different confidence levels. To this goal, we generated {HIPPIE} (Human Integrated Protein-Protein Interaction {rEference}), a human {PPI} dataset with a normalized scoring scheme that integrates multiple experimental {PPI} datasets. {HIPPIE}'s scoring scheme has been optimized by human experts and a computer algorithm to reflect the amount and quality of evidence for a given {PPI} and we show that these scores correlate to the quality of the experimental characterization. The {HIPPIE} web tool (available at http://cbdm.mdc-berlin.de/tools/hippie) allows researchers to do network analyses focused on likely true {PPI} sets by generating subnetworks around proteins of interest at a specified confidence level.}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{{PLoS} {ONE}}
+      \field{month}{02}
+      \field{number}{2}
+      \field{shorttitle}{{HIPPIE}}
+      \field{title}{{HIPPIE}: Integrating Protein Interaction Networks with Experiment Based Quality Scores}
+      \field{urlday}{08}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{7}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0031826
+      \endverb
+      \verb{file}
+      \verb PubMed Central Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/TABSPDQZ/Schaefer et al. - 2012 - HIPPIE Integrating Protein Interaction Networks w.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3279424/
+      \endverb
+    \endentry
+    \entry{smedley_biomart_2009}{article}{}
+      \name{labelname}{7}{}{%
+        {{uniquename=0,hash=f289094aa1c912236e7ec024de4ac301}{Smedley}{S\bibinitperiod}{Damian}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=03a2baf5e4ada20ce880f4fff3ea2da1}{Haider}{H\bibinitperiod}{Syed}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a149b9d39d443c05b354fd873c681023}{Ballester}{B\bibinitperiod}{Benoit}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2232ba8b2756a9ac7f1248f079c65a72}{Holland}{H\bibinitperiod}{Richard}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=053107725682875b0c0d9ab5903c4c20}{London}{L\bibinitperiod}{Darin}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dba7f1b59360dca742fdb583bab1ab41}{Thorisson}{T\bibinitperiod}{Gudmundur}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c934482e931b8c6f22ff7102bbcdd01e}{Kasprzyk}{K\bibinitperiod}{Arek}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=f289094aa1c912236e7ec024de4ac301}{Smedley}{S\bibinitperiod}{Damian}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=03a2baf5e4ada20ce880f4fff3ea2da1}{Haider}{H\bibinitperiod}{Syed}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a149b9d39d443c05b354fd873c681023}{Ballester}{B\bibinitperiod}{Benoit}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2232ba8b2756a9ac7f1248f079c65a72}{Holland}{H\bibinitperiod}{Richard}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=053107725682875b0c0d9ab5903c4c20}{London}{L\bibinitperiod}{Darin}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dba7f1b59360dca742fdb583bab1ab41}{Thorisson}{T\bibinitperiod}{Gudmundur}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c934482e931b8c6f22ff7102bbcdd01e}{Kasprzyk}{K\bibinitperiod}{Arek}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{dc772901a6065ebbeb4a851c2024f985}
+      \strng{fullhash}{31e554f7a5ce6f5f50b2baa0fd1e26dd}
+      \field{sortinit}{S}
+      \field{labelyear}{2009}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{BioMart} – biological queries made easy}
+      \field{abstract}{Biologists need to perform complex queries, often across a variety of databases. Typically, each data resource provides an advanced query interface, each of which must be learnt by the biologist before they can begin to query them. Frequently, more than one data source is required and for high-throughput analysis, cutting and pasting results between websites is certainly very time consuming. Therefore, many groups rely on local bioinformatics support to process queries by accessing the resource's programmatic interfaces if they exist. This is not an efficient solution in terms of cost and time. Instead, it would be better if the biologist only had to learn one generic interface. {BioMart} provides such a solution. {PMID}: 19144180}
+      \field{issn}{1471-2164}
+      \field{journaltitle}{{BMC} Genomics}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{BioMart} – biological queries made easy}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{pages}{22}
+      \verb{doi}
+      \verb 10.1186/1471-2164-10-22
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/T9T8JNJI/Smedley et al. - 2009 - BioMart – biological queries made easy.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/8UXXC6NM/22.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2164/10/22/abstract
+      \endverb
+    \endentry
+    \entry{smithson_better_2006}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=c7a5e89bd8a0252a9761ea561025392f}{Smithson}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8ed50a9f757635fc55fcba2ceac2ae79}{Verkuilen}{V\bibinitperiod}{Jay}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=c7a5e89bd8a0252a9761ea561025392f}{Smithson}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8ed50a9f757635fc55fcba2ceac2ae79}{Verkuilen}{V\bibinitperiod}{Jay}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7260fdbd78da1a1a9540d75a6b5e497e}
+      \strng{fullhash}{7260fdbd78da1a1a9540d75a6b5e497e}
+      \field{sortinit}{S}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labeltitle}{A better lemon squeezer?}
+      \field{journaltitle}{Psychological methods}
+      \field{number}{1}
+      \field{shorttitle}{A better lemon squeezer?}
+      \field{title}{A better lemon squeezer? Maximum-likelihood regression with beta-distributed dependent variables.}
+      \field{urlday}{05}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{11}
+      \field{year}{2006}
+      \field{pages}{54}
+      \verb{file}
+      \verb [PDF] from anu.edu.au:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DWSCDIFP/Smithson and Verkuilen - 2006 - A better lemon squeezer Maximum-likelihood regres.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/Z37Z5K2M/54.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://psycnet.apa.org/journals/met/11/1/54/
+      \endverb
+    \endentry
+    \entry{stark_biogrid:_2006}{article}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=7d3920dbd440b426070baa7180d87849}{Stark}{S\bibinitperiod}{Chris}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=845c8ae9b82c732af626fe79e35d855e}{Breitkreutz}{B\bibinitperiod}{Bobby-Joe}{B\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3a415be2116d81e83d0fe98238531309}{Reguly}{R\bibinitperiod}{Teresa}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=74cd482e8c5d0195ad29f6e185081d0c}{Boucher}{B\bibinitperiod}{Lorrie}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8692774cf44dfca7883149f817fd6672}{Breitkreutz}{B\bibinitperiod}{Ashton}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f236468f2a5c8132d4000d107c0eccc0}{Tyers}{T\bibinitperiod}{Mike}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=7d3920dbd440b426070baa7180d87849}{Stark}{S\bibinitperiod}{Chris}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=845c8ae9b82c732af626fe79e35d855e}{Breitkreutz}{B\bibinitperiod}{Bobby-Joe}{B\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3a415be2116d81e83d0fe98238531309}{Reguly}{R\bibinitperiod}{Teresa}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=74cd482e8c5d0195ad29f6e185081d0c}{Boucher}{B\bibinitperiod}{Lorrie}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8692774cf44dfca7883149f817fd6672}{Breitkreutz}{B\bibinitperiod}{Ashton}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f236468f2a5c8132d4000d107c0eccc0}{Tyers}{T\bibinitperiod}{Mike}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9a4c133b73d7a4b177ca96799f51e387}
+      \strng{fullhash}{c5088c7b0b20ea5859525ce300c70439}
+      \field{sortinit}{S}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{BioGRID}}
+      \field{journaltitle}{Nucleic acids research}
+      \field{number}{suppl 1}
+      \field{shorttitle}{{BioGRID}}
+      \field{title}{{BioGRID}: a general repository for interaction datasets}
+      \field{urlday}{02}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{34}
+      \field{year}{2006}
+      \field{pages}{D535\bibrangedash D539}
+      \verb{file}
+      \verb [HTML] from oxfordjournals.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/Z6GUPFQK/D535.html:text/html;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/ETQFXTMU/D535.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/34/suppl_1/D535.short
+      \endverb
+    \endentry
+    \entry{uetz_comprehensive_2000}{article}{}
+      \name{labelname}{20}{}{%
+        {{uniquename=0,hash=a2856e77697fe56c8848192a6381e47d}{Uetz}{U\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b4605542269e24719b15d4d0b047f50a}{Giot}{G\bibinitperiod}{Loic}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=daca1a91ed5a3997abf7784ac8a5b271}{Cagney}{C\bibinitperiod}{Gerard}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=86a3f9bb2b7eb85557f1f3b159a63ecb}{Mansfield}{M\bibinitperiod}{Traci\bibnamedelima A.}{T\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2f62f5fdc3eb682c3a889fb52bc1e944}{Judson}{J\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5c64931cb4d8065f6676bae1a4889de1}{Knight}{K\bibinitperiod}{James\bibnamedelima R.}{J\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17ca1ea8f0f15664a01825a46ee7d419}{Lockshon}{L\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c148b6ab7d45d28789c72596d64a63a6}{Narayan}{N\bibinitperiod}{Vaibhav}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=caca0469762d05bcc773f5a29d2c9626}{Srinivasan}{S\bibinitperiod}{Maithreyan}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ca4e19878242d683e554fbf83bf060e5}{Pochart}{P\bibinitperiod}{Pascale}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14264b34bc7fd89d69d9349d9f3d6d00}{Qureshi-Emili}{Q\bibinithyphendelim E\bibinitperiod}{Alia}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96641b60b95eb223b3df53d9263f63ff}{Li}{L\bibinitperiod}{Ying}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d76ae279330203a4e6f2983cb9a87e14}{Godwin}{G\bibinitperiod}{Brian}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b80b957863b19834af030ea1490c63ab}{Conover}{C\bibinitperiod}{Diana}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=259addd626d2c0dfa478853a03b01afc}{Kalbfleisch}{K\bibinitperiod}{Theodore}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e01a041a334bfc37dc718c0f42a9a0ba}{Vijayadamodar}{V\bibinitperiod}{Govindan}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cb040c0572785a7ad019600eb3a3fdc7}{Yang}{Y\bibinitperiod}{Meijia}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a9f5643038ead6a53d249d26db2230af}{Johnston}{J\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7f22931e94dc496c13d95737974148ce}{Fields}{F\bibinitperiod}{Stanley}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b189c9d7a2cc28b37096f2cce54f2864}{Rothberg}{R\bibinitperiod}{Jonathan\bibnamedelima M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{20}{}{%
+        {{uniquename=0,hash=a2856e77697fe56c8848192a6381e47d}{Uetz}{U\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b4605542269e24719b15d4d0b047f50a}{Giot}{G\bibinitperiod}{Loic}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=daca1a91ed5a3997abf7784ac8a5b271}{Cagney}{C\bibinitperiod}{Gerard}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=86a3f9bb2b7eb85557f1f3b159a63ecb}{Mansfield}{M\bibinitperiod}{Traci\bibnamedelima A.}{T\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2f62f5fdc3eb682c3a889fb52bc1e944}{Judson}{J\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5c64931cb4d8065f6676bae1a4889de1}{Knight}{K\bibinitperiod}{James\bibnamedelima R.}{J\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17ca1ea8f0f15664a01825a46ee7d419}{Lockshon}{L\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c148b6ab7d45d28789c72596d64a63a6}{Narayan}{N\bibinitperiod}{Vaibhav}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=caca0469762d05bcc773f5a29d2c9626}{Srinivasan}{S\bibinitperiod}{Maithreyan}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ca4e19878242d683e554fbf83bf060e5}{Pochart}{P\bibinitperiod}{Pascale}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14264b34bc7fd89d69d9349d9f3d6d00}{Qureshi-Emili}{Q\bibinithyphendelim E\bibinitperiod}{Alia}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96641b60b95eb223b3df53d9263f63ff}{Li}{L\bibinitperiod}{Ying}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d76ae279330203a4e6f2983cb9a87e14}{Godwin}{G\bibinitperiod}{Brian}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b80b957863b19834af030ea1490c63ab}{Conover}{C\bibinitperiod}{Diana}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=259addd626d2c0dfa478853a03b01afc}{Kalbfleisch}{K\bibinitperiod}{Theodore}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e01a041a334bfc37dc718c0f42a9a0ba}{Vijayadamodar}{V\bibinitperiod}{Govindan}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cb040c0572785a7ad019600eb3a3fdc7}{Yang}{Y\bibinitperiod}{Meijia}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a9f5643038ead6a53d249d26db2230af}{Johnston}{J\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7f22931e94dc496c13d95737974148ce}{Fields}{F\bibinitperiod}{Stanley}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b189c9d7a2cc28b37096f2cce54f2864}{Rothberg}{R\bibinitperiod}{Jonathan\bibnamedelima M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d5c1f6af5fdcfe89e925c50f12a12818}
+      \strng{fullhash}{7fc52cefb6ae05fa654d3720808bfac9}
+      \field{sortinit}{U}
+      \field{labelyear}{2000}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{A comprehensive analysis of protein–protein interactions in Saccharomyces cerevisiae}
+      \field{abstract}{Two large-scale yeast two-hybrid screens were undertaken to identify protein–protein interactions between full-length open reading frames predicted from the Saccharomyces cerevisiae genome sequence. In one approach, we constructed a protein array of about 6,000 yeast transformants, with each transformant expressing one of the open reading frames as a fusion to an activation domain. This array was screened by a simple and automated procedure for 192 yeast proteins, with positive responses identified by their positions in the array. In a second approach, we pooled cells expressing one of about 6,000 activation domain fusions to generate a library. We used a high-throughput screening procedure to screen nearly all of the 6,000 predicted yeast proteins, expressed as Gal4 {DNA}-binding domain fusion proteins, against the library, and characterized positives by sequence analysis. These approaches resulted in the detection of 957 putative interactions involving 1,004 S. cerevisiae proteins. These data reveal interactions that place functionally unclassified proteins in a biological context, interactions between proteins involved in the same biological function, and interactions that link biological functions together into larger cellular processes. The results of these screens are shown here.}
+      \field{issn}{0028-0836}
+      \field{journaltitle}{Nature}
+      \field{month}{02}
+      \field{number}{6770}
+      \field{title}{A comprehensive analysis of protein–protein interactions in Saccharomyces cerevisiae}
+      \field{urlday}{25}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{403}
+      \field{year}{2000}
+      \field{pages}{623\bibrangedash 627}
+      \verb{doi}
+      \verb 10.1038/35001009
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/K3M2KJ76/Uetz et al. - 2000 - A comprehensive analysis of protein–protein intera.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/48PN6K6D/403623a0.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/nature/journal/v403/n6770/abs/403623a0.html
+      \endverb
+    \endentry
+    \entry{van_der_maaten_visualizing_2008}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=0ef07e10598a5186b30357de23ebbaff}{Van\bibnamedelimb der\bibnamedelima Maaten}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod}{Laurens}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=0ef07e10598a5186b30357de23ebbaff}{Van\bibnamedelimb der\bibnamedelima Maaten}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod}{Laurens}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{15de65b55871c0624a03b5e07f188e52}
+      \strng{fullhash}{15de65b55871c0624a03b5e07f188e52}
+      \field{sortinit}{V}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Visualizing data using t-{SNE}}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{2579-2605}
+      \field{title}{Visualizing data using t-{SNE}}
+      \field{urlday}{08}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{9}
+      \field{year}{2008}
+      \field{pages}{85}
+      \verb{file}
+      \verb [PDF] from tudelft.nl:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/J2KRAKEA/Van der Maaten and Hinton - 2008 - Visualizing data using t-SNE.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://siplab.tudelft.nl/sites/default/files/vandermaaten08a.pdf
+      \endverb
+    \endentry
+    \entry{von_mering_string:_2005}{article}{}
+      \name{labelname}{9}{}{%
+        {{uniquename=0,hash=48b01a710aa6c2ccfa06864c9069de95}{Mering}{M\bibinitperiod}{Christian}{C\bibinitperiod}{von}{v\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=0f7a88f2fd424887db3db8b3e9344347}{Jensen}{J\bibinitperiod}{Lars\bibnamedelima J.}{L\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cca581fa87c5ba2fca919c38ceaef03d}{Snel}{S\bibinitperiod}{Berend}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd6c6089279ca223ab5de025c724ed47}{Hooper}{H\bibinitperiod}{Sean\bibnamedelima D.}{S\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1fce77f0c5bc18a47cce42680776cef2}{Krupp}{K\bibinitperiod}{Markus}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=57283fa7674696ce4a3fefdf727cead6}{Foglierini}{F\bibinitperiod}{Mathilde}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=196881b5b814b069933ef949a97d6103}{Jouffre}{J\bibinitperiod}{Nelly}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1745ba735bee9b2cbab7bc613dfd80bc}{Huynen}{H\bibinitperiod}{Martijn\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e661978528e2df38a8c66036d9e7c3a2}{Bork}{B\bibinitperiod}{Peer}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{9}{}{%
+        {{uniquename=0,hash=48b01a710aa6c2ccfa06864c9069de95}{Mering}{M\bibinitperiod}{Christian}{C\bibinitperiod}{von}{v\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=0f7a88f2fd424887db3db8b3e9344347}{Jensen}{J\bibinitperiod}{Lars\bibnamedelima J.}{L\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cca581fa87c5ba2fca919c38ceaef03d}{Snel}{S\bibinitperiod}{Berend}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd6c6089279ca223ab5de025c724ed47}{Hooper}{H\bibinitperiod}{Sean\bibnamedelima D.}{S\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1fce77f0c5bc18a47cce42680776cef2}{Krupp}{K\bibinitperiod}{Markus}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=57283fa7674696ce4a3fefdf727cead6}{Foglierini}{F\bibinitperiod}{Mathilde}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=196881b5b814b069933ef949a97d6103}{Jouffre}{J\bibinitperiod}{Nelly}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1745ba735bee9b2cbab7bc613dfd80bc}{Huynen}{H\bibinitperiod}{Martijn\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e661978528e2df38a8c66036d9e7c3a2}{Bork}{B\bibinitperiod}{Peer}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ba59b8f41e4a07203841978520fec4df}
+      \strng{fullhash}{ce03bb29aa52e4d21f7d75e241cfc220}
+      \field{sortinit}{v}
+      \field{labelyear}{2005}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{STRING}}
+      \field{abstract}{A full description of a protein's function requires knowledge of all partner proteins with which it specifically associates. From a functional perspective, ‘association’ can mean direct physical binding, but can also mean indirect interaction such as participation in the same metabolic pathway or cellular process. Currently, information about protein association is scattered over a wide variety of resources and model organisms. {STRING} aims to simplify access to this information by providing a comprehensive, yet quality-controlled collection of protein–protein associations for a large number of organisms. The associations are derived from high-throughput experimental data, from the mining of databases and literature, and from predictions based on genomic context analysis. {STRING} integrates and ranks these associations by benchmarking them against a common reference set, and presents evidence in a consistent and intuitive web interface. Importantly, the associations are extended beyond the organism in which they were originally described, by automatic transfer to orthologous protein pairs in other organisms, where applicable. {STRING} currently holds 730 000 proteins in 180 fully sequenced organisms, and is available at http://string.embl.de/.}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{Database issue}
+      \field{shorttitle}{{STRING}}
+      \field{title}{{STRING}: known and predicted protein-protein associations, integrated and transferred across organisms}
+      \field{urlday}{10}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{33}
+      \field{year}{2005}
+      \field{pages}{D433\bibrangedash D437}
+      \verb{doi}
+      \verb 10.1093/nar/gki005
+      \endverb
+      \verb{file}
+      \verb PubMed Central Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/SGMBH75F/von Mering et al. - 2005 - STRING known and predicted protein-protein associ.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC539959/
+      \endverb
+    \endentry
+    \entry{wang_recent_2010}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=8b7342aa6149c3cde951d5e4afb30c54}{Wang}{W\bibinitperiod}{Jianxin}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dd037b3b861a870d96b7329da5d30d28}{Li}{L\bibinitperiod}{Min}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42c36324263a87af0f346274382c8bf2}{Deng}{D\bibinitperiod}{Youping}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04488b26a12d4372b9498c4ee04d9d50}{Pan}{P\bibinitperiod}{Yi}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=8b7342aa6149c3cde951d5e4afb30c54}{Wang}{W\bibinitperiod}{Jianxin}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dd037b3b861a870d96b7329da5d30d28}{Li}{L\bibinitperiod}{Min}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42c36324263a87af0f346274382c8bf2}{Deng}{D\bibinitperiod}{Youping}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=04488b26a12d4372b9498c4ee04d9d50}{Pan}{P\bibinitperiod}{Yi}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{23238f0fff1edb628324538fdcd87d04}
+      \strng{fullhash}{aee686dd1869806531b03f1574630e10}
+      \field{sortinit}{W}
+      \field{labelyear}{2010}
+      \field{labelmonth}{12}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Recent advances in clustering methods for protein interaction networks}
+      \field{abstract}{The increasing availability of large-scale protein-protein interaction data has made it possible to understand the basic components and organization of cell machinery from the network level. The arising challenge is how to analyze such complex interacting data to reveal the principles of cellular organization, processes and functions. Many studies have shown that clustering protein interaction network is an effective approach for identifying protein complexes or functional modules, which has become a major research topic in systems biology. In this review, recent advances in clustering methods for protein interaction networks will be presented in detail. The predictions of protein functions and interactions based on modules will be covered. Finally, the performance of different clustering methods will be compared and the directions for future research will be discussed. {PMID}: 21143777}
+      \field{issn}{1471-2164}
+      \field{journaltitle}{{BMC} Genomics}
+      \field{month}{12}
+      \field{number}{Suppl 3}
+      \field{title}{Recent advances in clustering methods for protein interaction networks}
+      \field{urlday}{20}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{S10}
+      \verb{doi}
+      \verb 10.1186/1471-2164-11-S3-S10
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/2ZPE5EMS/Wang et al. - 2010 - Recent advances in clustering methods for protein .pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/XWAFM42F/S10.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2164/11/S3/S10/abstract
+      \endverb
+    \endentry
+    \entry{witten_data_2011}{book}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=926252d979eb0dc3c8c27118fa93f219}{Witten}{W\bibinitperiod}{Ian\bibnamedelima H.}{I\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14376659b7c222795bf43d1158efbaef}{Frank}{F\bibinitperiod}{Eibe}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f059944221378f9fa63495c1d3621a13}{Hall}{H\bibinitperiod}{Mark\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=926252d979eb0dc3c8c27118fa93f219}{Witten}{W\bibinitperiod}{Ian\bibnamedelima H.}{I\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14376659b7c222795bf43d1158efbaef}{Frank}{F\bibinitperiod}{Eibe}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f059944221378f9fa63495c1d3621a13}{Hall}{H\bibinitperiod}{Mark\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9e043ba8c73d87b16dce6152d8677416}
+      \strng{fullhash}{9e043ba8c73d87b16dce6152d8677416}
+      \field{sortinit}{W}
+      \field{labelyear}{2011}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Data Mining}
+      \field{abstract}{Data Mining: Practical Machine Learning Tools and Techniques offers a thorough grounding in machine learning concepts as well as practical advice on applying machine learning tools and techniques in real-world data mining situations. This highly anticipated third edition of the most acclaimed work on data mining and machine learning will teach you everything you need to know about preparing inputs, interpreting outputs, evaluating results, and the algorithmic methods at the heart of successful data mining. Thorough updates reflect the technical changes and modernizations that have taken place in the field since the last edition, including new material on Data Transformations, Ensemble Learning, Massive Data Sets, Multi-instance Learning, plus a new version of the popular Weka machine learning software developed by the authors. Witten, Frank, and Hall include both tried-and-true techniques of today as well as methods at the leading edge of contemporary research. *Provides a thorough grounding in machine learning concepts as well as practical advice on applying the tools and techniques to your data mining projects *Offers concrete tips and techniques for performance improvement that work by transforming the input or output in machine learning methods *Includes downloadable Weka software toolkit, a collection of machine learning algorithms for data mining tasks—in an updated, interactive interface. Algorithms in toolkit cover: data pre-processing, classification, regression, clustering, association rules, visualization}
+      \field{isbn}{9780080890364}
+      \field{month}{02}
+      \field{shorttitle}{Data Mining}
+      \field{title}{Data Mining: Practical Machine Learning Tools and Techniques: Practical Machine Learning Tools and Techniques}
+      \field{year}{2011}
+      \keyw{Computers / Databases / General}
+    \endentry
+    \entry{xenarios_dip_2002}{article}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=c7143cee17696a58049c71ba662ddc0a}{Xenarios}{X\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=be9d9ef5bb1c6467bdcf468ee5e45b58}{Salwinski}{S\bibinitperiod}{Lukasz}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2e01b69ba52ed75cb9678163a1a5e7ea}{Duan}{D\bibinitperiod}{Xiaoqun\bibnamedelima Joyce}{X\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=de9bf0411923ea1083ea11e309365773}{Higney}{H\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a2d56ad1fb926cd0d13ef5695144334a}{Kim}{K\bibinitperiod}{Sul-Min}{S\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=98a78dc06381e0da757765ce85c7b558}{Eisenberg}{E\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=c7143cee17696a58049c71ba662ddc0a}{Xenarios}{X\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=be9d9ef5bb1c6467bdcf468ee5e45b58}{Salwinski}{S\bibinitperiod}{Lukasz}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2e01b69ba52ed75cb9678163a1a5e7ea}{Duan}{D\bibinitperiod}{Xiaoqun\bibnamedelima Joyce}{X\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=de9bf0411923ea1083ea11e309365773}{Higney}{H\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a2d56ad1fb926cd0d13ef5695144334a}{Kim}{K\bibinitperiod}{Sul-Min}{S\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=98a78dc06381e0da757765ce85c7b558}{Eisenberg}{E\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e15d99e772d88a19d399012eb97ae29b}
+      \strng{fullhash}{64fdb14effe29f24cc2def8ab9fe25a0}
+      \field{sortinit}{X}
+      \field{labelyear}{2002}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{DIP}, the Database of Interacting Proteins}
+      \field{abstract}{The Database of Interacting Proteins ({DIP}: http://dip.doe-mbi.ucla.edu) is a database that documents experimentally determined protein–protein interactions. It provides the scientific community with an integrated set of tools for browsing and extracting information about protein interaction networks. As of September 2001, the {DIP} catalogs ∼11 000 unique interactions among 5900 proteins from >80 organisms; the vast majority from yeast, Helicobacter pylori and human. Tools have been developed that allow users to analyze, visualize and integrate their own experimental data with the information about protein–protein interactions available in the {DIP} database.}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{1}
+      \field{shorttitle}{{DIP}, the Database of Interacting Proteins}
+      \field{title}{{DIP}, the Database of Interacting Proteins: a research tool for studying cellular networks of protein interactions}
+      \field{urlday}{10}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{volume}{30}
+      \field{year}{2002}
+      \field{pages}{303\bibrangedash 305}
+      \verb{file}
+      \verb PubMed Central Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/E2N5D6QG/Xenarios et al. - 2002 - DIP, the Database of Interacting Proteins a resea.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC99070/
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{dip_website}
+  \missing{synsys}
+  \missing{ensembl_website}
+  \missing{ug4template}
+  \missing{von_mering_string_2005}
+  \missing{gitannex}
+  \missing{parallel_python_webpage}
+  \missing{wkmdacommons}
+  \missing{opencastbiowiki}
+  \missing{uniprot_website}
+  \missing{razick_irefindex_2008}
+  \missing{consortium_universal_2007}
+  \missing{ogrisel_parallel}
+  \missing{mcleanunpub}
+  \missing{github}
+  \missing{opencast-bio}
+  \missing{vonMering_string_2005}
+\endrefsection
+\endinput
+
