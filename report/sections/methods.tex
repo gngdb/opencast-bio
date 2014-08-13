@@ -4,15 +4,19 @@
 % * description of disease enrichment method
 
 %intro to the methods
-Feature extraction was the predominant component in this project and involved turning the various data sources involved into usable features in a machine learning framework.
-This allowed the Classifier to be trained in a traditional way.
-The chosen Community Detection method, a Spectral Modularity algorithm, is also described.
+Feature extraction was the predominant component in this project and involved turning the various data sources involved into usable features in a machine learning framework. 
+This allowed the Classifier to be trained in a traditional way. 
+%FIN: what would a non-traditional way be?  
+The chosen Community Detection method, a Spectral Modularity algorithm, is also described. 
+%FIN:why was it chosen? 
 
 \section{Feature extraction}
 
 Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in the following text.
-The process of taking a retrieving these from biological databases is referred to as feature extraction.
-This commonly involved mapping between protein identifiers and indexing large tables automatically, but also involved many other small pieces of scripting.
+The process of taking a retrieving these from biological databases is referred to as feature extraction. 
+%FIN: typo 
+This commonly involved mapping between protein identifiers and indexing large tables automatically, but also involved many other small pieces of scripting. 
+%FIN: mention non-standardisation/alternative identifiers used in different data sources -I think you need to make it clear how difficult the data collection was especially as a novice to the available databases and data formats
 
 % going through posing the problem in terms of probability
 In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
@@ -25,17 +29,20 @@ Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ 
     \mathcal{D} = \left( ( \pmb{x}_{i}, y_{i} ) \right)_{i=1}^{N}
 \end{align}
 
-%an example?
+%an example?  
 
 %pose our problem
 Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
 The training labels are either an interaction (a one) or a non-interaction (a zero).
 Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex:_2008} database with over 50\% confidence.
+%FIN: why, what is this db? consolidated database
 Non-interactions are random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
+%FIN: created by you how and from what dataset, hell cite the script/ipynb you used
 These are also checked against the iRefIndex database to ensure they are not accidentally known interactions.
 There are approximately 600 non-interactions for every true interaction.
 
 What we would like to estimate is the posterior probability of an interaction existing given a new feature vector after training our classifier.
+%FIN: typo/missing word
 For any model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can express this using Bayes theorem:
 
 \begin{align}
@@ -49,24 +56,29 @@ The marginal likelihood is $\sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \ma
 Where $y^{*}$ and $\pmb{x}^{*}$ are a new label and feature vector, respectively.
 
 We explicitly apply a prior to the probability of interaction based on the expected ratio of interactions to non-interactions stated in \autocite{qi_evaluation_2006} of $1/600$.
+%FIN: what was Qi's justification for this value? Presumably observed ratios - cite the justifying paper if it wasn't Qi
 This will be described in more detail in section \ref{bayes}.
 
 \subsection{Protein identifier mapping}
 
 Mapping from one protein identifier to another became a significant problem in this project.
+%FIN: so a few of my earlier comments will be redundant to this section so reference from those sections to here 
 Unfortunately, most Biological databases maintain their own indexing method to identify different genes and proteins.
 New data sources being integrated into this project would often be using a different identification scheme to the NCBI Entrez GeneID originally chosen to use in the PPI network.
 
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
 Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
 For the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter and can encode other information about the gene.
+%FIN: commonly referred to as accessions 
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
 %other protein identifier schemes and mapping between them
 Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as DIP identifiers\autocite{xenarios_dip_2002}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
-
+%FIN: alternative splices of the same gene can produce different proteins, every gene is made of introns and exons, substrings which don't code for the amino acids in the protein and those that do respecitvely.  Expressed proteins are generated from any of several combinations of introns and exons (see http://en.wikipedia.org/wiki/Alternative_splicing).  Alt splicing is really important in eukaryotes and is one of the big explanations between the very low number of genes we found when we sequenced the human genome compared to the predicitions.
+%FIN: the other source of 'isoforms' is when a piece of DNA is duplicated and have diverged a little in sequence between copies (older literature referred to alleles as isoforms which are slightly different as these are alternative forms of a gene such as say a gene for blue eyes or brown eyes (although that may actually be a polygenetic trait))
+%FIN: you've also missed an issue with the multiple mappings of mistakes and errors, also these mistakes and errors being differentially fixed or propagated through databases.  A lot of the big source databases are public goods where many author's contribute and curation is mostly automated so have problems.  A fun and amusing example of finding accessions in databases that have been reformatted automatically by someone using excel and not noticing http://www.biomedcentral.com/1471-2105/5/80
 
 %methods used during the project, with references to appendix notebooks
 Various tools exist to map from one protein identifier to another: Ensembl's BioMart\autocite{smedley_biomart_2009} is a versatile web-based tool, for example.
@@ -75,20 +87,26 @@ Another tool used was the Uniprot\autocite{consortium_universal_2008} online ser
 
 % talk about the problem of canonicalisation
 Unfortunately, using any of these services there will be a number of IDs which cannot be converted and many IDs mapping to the same Entrez ID as different protein isoforms are picked up.
+%FIN: this isn't always the explanation - for example one database might contain say several different crystal structures done of a protein which will all theoretically map from many identifiers relating to each of these structures to one identifier of the raw sequence in genbank
 One way to avoid this problem is to only refer to a single canonical form of any given protein and find this protein in other databases through its amino acid sequence.
+%FIN: a benefit of this method is also that it can be used to find mis-labelled proteins: if you searched just for all data related to protein X, but someone had done a load of work on something they called protein Y but was actually protein X. If you didn't search by sequence you wouldn't find data 
 This ensures that when referring to an interaction between two identifiers the interaction is always simply between two proteins.
+%FIN: also note why the amino acid sequence is better than using the nucleotide sequence because it is the actual form of the protein and is derived after all the alternative splicing/isoform issues 
 
 % how using Entrez identifiers risks becoming gene interaction prediction
 % or "What Entrez isn't"
 Otherwise, as in this project, the interaction is detected between two Entrez IDs; which corresponds to an interaction between genes - possibly only a single interaction between combinations of the isoforms of each gene.
+%FIN: exactly, also worth putting the limitation in of not directly testing co-localisation and co-expression (i.e. temporal and spatial localisation allowing interaction)
 Unfortunately, this means that this project is only concerned with gene interaction prediction until the Entrez IDs have been carefully canonicalized.
 This is not really a problem, as we are only aiming to provide a weighting to a graph, rather than provide an accurate prediction of interaction between proteins.
+%FIN: to be less negative maybe say you will still identify possible interactions but may not identify all of them (as you are only checking one isoform etc).  This can still be informative if it is a new predicition which is later validated
 
 % how iRefIndex solves this problem and should have been used from the start
 % with reference to storing the sequences of each protein involved to maintain unambiguity
 A solution to this problem is provided by the iRefIndex\autocite{razick_irefindex:_2008} database, which combines many databases and stores canonicalized entries.
 Using this database, it would be possible to ensure that the proteins used in a future project would be reliable canonical proteins.
 Additionally, each protein of interest should ideally be stored with reference to its sequence in, for example, FASTA format.
+%FIN: be explicit amino acid sequence rather than protein sequence
 
 %description of feature extraction code
 \subsection{Dedicated code: ocbio.extract}
@@ -111,9 +129,11 @@ Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
 %problems with DIP
 %why HIPPIE is better suited
-Unfortunately, problems were found with DIP as a training set.
+Unfortunately, problems were found with DIP as a training set. 
+%FIN: I don't understand - explain what these problems are/were
 Features derived from interaction databases would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
 HIPPIE was also tested as a training set, but this lead to the same problem.
+%FIN: so which did you use?
 
 %example feature importance graph
 \begin{figure}
@@ -129,6 +149,8 @@ HIPPIE was also tested as a training set, but this lead to the same problem.
 It was decided that only indirect features should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
 Once these databases were removed the performance of the classifier was drastically lower.
 However, all of the available features had more closely distributed importances in the final classifier, as shown in section \ref{importances}.
+%FIN: this isn't obvious to me - you need to explain why balance set of features is important 
+
 
 %iRefIndex as a final solution?
 To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} database was used to find positive interactions due to its effective protein identifier mapping ability, as described above.
@@ -170,6 +192,7 @@ The features used are described by index in table \ref{tab:fvectors}.
 
 %classification as a weighting tool
 The classification problem we are solving is different in that we are really trying to obtain a realistic weighting of interactions for use in a PPI network.
+%FIN: different from what? 
 Classification is normally concerned about picking a decision threshold to classify examples into categories.
 However, in this case the output of our process is the posterior probability of the model given a new example.
 
@@ -177,7 +200,7 @@ However, in this case the output of our process is the posterior probability of 
 To produce this output the chosen tool was the Python package Scikit-learn\autocite{pedregosa_scikit-learn:_2011}.
 Each classifier implemented in this package has a similar interface allowing modular code to be written.
 In addition, this package is actively developed with all the required classifiers having efficient implementations.
-
+%FIN: also one of most widely used packages 
 % explain why we tried the algorithms that we tried
 The following sections describe the three classifiers chosen.
 These were a logistic regression model, a random forest model and a support vector machine.
@@ -185,6 +208,7 @@ Each of these involved tuning a number of hyper-parameters.
 
 \subsubsection*{Hyper-parameters}
 %describe the different parameters varied in scikit-learn by name
+%FIN: explain what a hyper-parameter actually is  
 Each of the Classifiers used has hyper-parameters which will affect its performance.
 These hyper-parameters are described in table \ref{tab:hyper} for each of the models used in the project.
 The optimal values for these found can be found in section \ref{gridresults}, table \ref{tab:gridresults}.
@@ -219,6 +243,7 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
 
 %with reference to Murphy
 Logistic regression is a linear model being used for classification.
+%FIN:binary classification  
 It is equivalent to a linear regression model transformed through a sigmoid function\autocite[376]{murphy_machine_2012}, denoted here by $\sigma$:
 
 \begin{align}
@@ -251,13 +276,14 @@ To stop this from happening we apply a penalty term, $\alpha$, to the size of th
 \end{align}
 
 Tuning this hyper-parameter is the goal of a grid search when training a Logistic Regression model.
-
+%FIN: explain grid-search 
 \subsubsection*{Support Vector Machines}
-
+%FIN: you are a big fan of Murphy 
 %with reference to Murphy
 Logistic regression can be generalised to apply kernel functions to the input features to obtain better classifications.
 Support Vector Machines exploit this while also applying a different objective function intended to avoid overfitting\autocite[383]{murphy_machine_2012}.
 The objective in placing the hyperplane for a Support Vector Machine is a "maximum margin" in that is attempts to maintain the same distance from the closest opposing class points.
+%FIN: typo/missing word
 
 %success of these models?
 These are often successful classifiers in practice.
@@ -265,6 +291,7 @@ Applications include text categorisation, hand-written character recognition, im
 
 %describe the hyper-parameters?
 The hyper-parameters for a Support Vector Machine control the kernels, along with the regularisation parameter as described for logistic regression in section \ref{logreg}.
+%FIN: explain what a kernel is and how SVMs can classify non-linearly seperable unlink logit by transformation to feature space
 Two hyper-parameters which can be tuned during a grid search operation are the degree of polynomial kernels if chosen and the gamma coefficient of the kernels.
 
 
@@ -292,6 +319,7 @@ Other advantages of decision trees include the ability to handle a mixture of di
 %then explain the problems with decision trees, variance etc
 Unfortunately, despite the strengths of decision trees there are still problems with stability: small changes in the input data can produce large changes in the output\autocite[550]{murphy_machine_2012}.
 The random forest algorithm addresses this problem by providing redundancy; multiple trees are grown and their results averaged.
+%FIN: how many trees?
 For M trees trained on different subsets of the data\autocite[551]{murphy_machine_2012}:
 
 \begin{align}
@@ -302,6 +330,7 @@ Where $f_{m}(x)$ is $m$th tree. This is simply averaging the results of the tree
 
 %with reference to Qi and ENTS, showing good performance on this problem
 With the ability to work on large datasets and mixing continuous and discrete data these types of classifiers would appear to already be well suited to this problem.
+%FIN: maybe say well theoretically suited and then show in reality with the citations 
 This is what has been observed in the literature, with these classifiers achieving the best performance despite different types of biological data being used\autocites{qi_evaluation_2006,rodgers-melnick_predicting_2013}.
 Due to these reports in the literature it appeared that this classifier would be the best choice for our protein interaction prediction task.
 
@@ -312,22 +341,28 @@ Due to these reports in the literature it appeared that this classifier would be
 % what other algorithms could we have tried but didn't
 Other options considered for our classification problem, but not included in the project due to time constraints included Feedforward neural networks, Naive Bayes and Beta regression.
 Naive Bayes in particular would have required modifying the code from Scikit-learn to deal with data from multiple different distributions or implementing Weka's solution of kernel density estimated distributions for each different feature\autocite{john_estimating_1995}.
+%FIN: explain why 
 Beta regression would have been very suitable for the task and is suggested as future work, described in the following section.
 
 \subsubsection*{Beta regression}
 
 %what is beta regression? quickly
 Beta regression is a generalised linear model is one in which the output variable is distributed according to a Beta distribution\autocite{smithson_better_2006}.
+%FIN: typo/missing word
 A maximum-likelihood solution to this model can be found and the resulting model fit in the same way as a standard regression model.
+%FIN: typo/missing word
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
 True protein interactions are not something which can be assumed in a protein interaction prediction task.
 Many proteins are known to be very likely, but others are less confidently classified, as reflected in the HIPPIE database's confidence scoring system\autocite{schaefer_hippie:_2012}.
+%FIN: typo/missing word
+
 To train a classifier a training set of true and false interactions is required and this cannot be supplied without thresholding the database at an arbitrary confidence value.
 
 Beta regression avoids this problem as it allows the confidence values to remain a part of the regression process.
 Using this we can build a model and update our belief on the likelihood of interaction in a Bayesian framework much more easily.
 
+%FIN: actually this is pretty cool, note to self read up on Beta regression 
 \subsection{Classifier testing}
 \label{classifierverification}
 
@@ -348,6 +383,7 @@ Grid searches of parameter values were used to find optimal hyper-parameters.
 
 % was or will be?
 Cross-validation was applied to tests during parameters searches and when plotting learning curves to get a statistical estimate of the reliability of the metrics applied to the classifier\autocite[152]{witten_data_2011}.
+%FIN: you don't really explain what CV and why you can't just optimise the models performance directly on the test set
 As the training set is relatively large, these were applied as random sub-samples of the full data set, but stratified to maintain the same proportion of zeros to ones as in the full training set.
 This is important as it must reflect the expected ratio for real protein interactions to non-interactions.
 
@@ -359,11 +395,13 @@ In the case of this project the pipeline involved three components: a mean value
 The imputer simply replaced missing values in the training data with the corresponding mean value for that column.
 Scikit-learn's standard scaler centers the data at zero mean and unit variance.
 
+%FIN: need to explain/just why you need to normalise data and gracefully handle missing data
+
 \subsubsection*{Learning Curves}
 % learning curves, what are they? and why?
 Learning curves, as in the notebook referenced in Appendix \ref{app:classtrain}, were used in this project to ensure that the number of samples used in a grid search was sufficient.
 The learning curve plots the accuracy of a classifier after it has been trained using cross-validation on a varying number of samples.
-
+%FIN: most importantly they can diagnose common classifier issues (bias/variance) 
 %example learning curve?
 %still pending, worth it if page count allows
 
@@ -372,6 +410,7 @@ The learning curve plots the accuracy of a classifier after it has been trained 
 A grid search is a cross-validated test measuring accuracy testing the classifier with a variety of different hyper-parameters.
 Classifiers, such as a Logistic Regression model, have some number of hyper-parameters.
 A Logistic Regression model, for example, has a single hyper-parameter so that the grid search for this model simply involves varying this parameter to obtain the optimum performance on the test set.
+%FIN:repeat hyper-parameter identity in logististc regression - regularisation
 
 \subsubsection*{Accuracy}
 % accuracy value
@@ -387,14 +426,14 @@ This makes it useful as an illustration of the tradeoff possible with this parti
 The Area Under Curve, or AUC, value is the area under this line.
 A higher AUC value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
-
+%FIN: maybe add in a wee truth table of TP, TF, FP, FF 
 \subsubsection*{Precision-recall curve}
 %precision recall
 A precision-recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
 The precision is defined as the number of true positive results over the number of total positive results.
 Recall is defined as the number of true positive results against the number of available positive examples
 The area under the curve is used to gauge the classifier's effectiveness.
-
+%FIN: may as well add the equations in for precision and recall, TP, TF, FP, FF - I mean you did put down baye's rule earlier 
 %example ROC curve?
 %example precision recall curve?
 
@@ -404,6 +443,7 @@ Before classification could be performed the missing data in the feature vectors
 This was performed by filling the missing values with the mean value of that feature.
 This is a common technique that is applied if it is likely the data is missing at random.
 In this case the data that is missing is due to mismatches in protein identifier mapping dictionaries, which is likely random and independent of the interaction prediction task.
+%FIN: link back to imputer discussed earlier, if you are having a section on this you could add a section on data normalization
 
 \subsection{Bayesian weighting}
 \label{bayes}
@@ -418,6 +458,7 @@ Therefore, when fitting a supervised model we only obtain, at best, an accurate 
 
 %the prior on the edgelist
 As the PPI network edges we plan to weight have already been defined through combining different interaction databases we already have a strong prior on the existence of these interactions.
+
 Using the classifier on its own can then, at best, reproduce one of the databases used to create this network and many of the interactions will be incorrectly weighted much lower than expected.
 The solution is to treat both the result of the classifier and the edgelist inclusion as observable events dependent on the latent ``interaction'' variable.
 Along with these variables, we can also include other protein interaction prediction resources, such as STRING\autocite{von_mering_string:_2005}.
@@ -427,6 +468,7 @@ The model we have chosen to update our prior belief using assumes conditional in
 This equates to a Naive Bayes model with a belief network as shown in figure \ref{fig:naive}.
 An advantage of this model is the simplicity of its analysis.
 The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the HIPPIE database is composed of.
+%FIN: typo/missing word
 
 %belief network for naive bayes
 \begin{figure}
@@ -440,11 +482,14 @@ The disadvantage is that our variables could be dependent, as the classifier is 
 
 %the importance of conservative estimates
 The class label, interaction, is not observed in this model so we cannot solve to find the parameters.
+%FIN: PPI or not
 To define the model, the only way to proceed is to manually define them by conservatively estimating the conditional true positive and false positive rates of the Bernoulli distributions.
-Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using KDE.
+Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using KDE. 
+%FIN: explain KDE acronym 
 
 %kernel density estimation, justification from Weka
 Using KDE in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
+%FIN: you need to explain what Weka is 
 Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
 As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
 
@@ -452,11 +497,12 @@ As before, a conservative estimate of its accuracy is applied through increasing
 
 %why do we want to try weighted networks? and intro
 It is hoped that a weighted graph will provide new insight into the interactions of proteins in the active zone.
+%FIN: I think at this stage you need a refresher to the reader on what active zone you are talking about
 For this reason, comparing the unweighted and weighted cases of the graph produced is a major goal of this project.
 The following sections describe this process and the measures applied to both graphs.
 
 \subsection{Community detection}
-
+%FIN: section needs expansion in the areas you have noted 
 %description of each of the algorithms available
 %three:
 %  Geodesic edge Betweenness
@@ -477,7 +523,7 @@ Although it detected fewer communities, it maintained a higher modularity score.
 \subsection{Normalised Mutual Information}
 
 %NMI theory, what is a measure of
-Mutual information intuitively is the reduction in uncertainty about one random variable by observing another.
+Mutual information intuitively is the reduction in uncertainty about one random variable by observing another
 Defined in terms of entropy it is\autocite{mackay_information_2003}:
 
 %could move that citation next to the equation?
@@ -495,6 +541,8 @@ This produces a value between zero and one which reflects the redundancy of the 
 %Primer on what this test actually does
 By linking the proteins in a cluster to known disease annotations it is possible to estimate the likelihood that a given community is involved in a particular disease.
 The code being used produces a p-value to indicate this likelihood.
+%FIN: explain a p-val? 
+
 In the case of this project, due to the aims of the SYNSYS project and for simplicity, only two diseases were investigated: Schizophrenia and Alzheimer's.
 
 %interaction between significance level and p-value
