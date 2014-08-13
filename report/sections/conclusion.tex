@@ -4,6 +4,7 @@
 This project involved an array of different tools and data.
 Despite many difficulties and mistakes during the planning of the project, all of the aims of the project as stated in the proposal have been met.
 However, the results obtained are not conclusive or useful.
+%FIN: try and spin the positives a bit harder - what can be done to make them useful, 'this work represents a step towards that'
 
 %project ran out time towards the end
 
@@ -17,6 +18,7 @@ A Bayesian method was used to combine this with other data sources and prior kno
 These edge weights were then used to create a weighted PPI graph which was then compared to its unweighted counterpart.
 
 %problems with results
+%FIN: could maybe put in what features you identified as being important as a possible source of future work
 
 
 %\section{}
@@ -25,11 +27,14 @@ These edge weights were then used to create a weighted PPI graph which was then 
 %repeat Bayesian approach in a more principled way
 %perhaps using probabilistic programming to enforce priors
 As a basis for future work, this work illustrates many difficulties in working with varied publicly available data sources.
+%FIN: with a mixture of manual and automated curation 
 However, it also provides insight into the correct method for weighting interaction edges.
 These edges should be weighted directly as an estimate of interaction strength.
 The premise of this project was that the posterior probability of the interaction existing would correlate well with the strength of the interaction as interactions which are strong will be observed more often.
+%FIN: what is a strong vs weak interaction in this context? because you can have tight 'strong' or weak physicochemical interactions between proteins (dissociation constants etc)
 
 However, if a full probabilistic model was to be designed the latent variable - which was interaction in our model - could be a continuous variable in the unit interval defined at a Beta distribution.
+%FIN: expand?
 The problem then becomes one of estimating interaction strength, which is difficult to observe in order to obtain the training set required to create a probabilistic model.
 Using the array of biological databases available it would be possible to link different observations based on strong biological prior knowledge.
 
