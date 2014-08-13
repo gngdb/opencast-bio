@@ -1,32 +1,20 @@
 [0] Config.pm:318> INFO - This is Biber 1.8
 [0] Config.pm:321> INFO - Logfile is 'report.blg'
-[92] biber:275> INFO - === Wed Aug 13, 2014, 01:05:12
-[92] Biber.pm:333> INFO - Reading 'report.bcf'
-[177] Biber.pm:630> INFO - Found 55 citekeys in bib section 0
-[198] Biber.pm:3053> INFO - Processing section 0
-[216] Biber.pm:3190> INFO - Looking for bibtex format file 'zlibrary.bib' for section 0
-[410] bibtex.pm:937> INFO - Decoding LaTeX character macros into UTF-8
-[591] bibtex.pm:812> INFO - Found BibTeX data source 'zlibrary.bib'
-[731] Utils.pm:169> WARN - I didn't find a database entry for 'synsys' (section 0)
-[731] Utils.pm:169> WARN - I didn't find a database entry for 'vonMering_string_2005' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'razick_irefindex_2008' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'ensembl_website' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'uniprot_website' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'dip_website' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'consortium_universal_2007' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'wkmdacommons' (section 0)
-[732] Utils.pm:169> WARN - I didn't find a database entry for 'mcleanunpub' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'github' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'gitannex' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'opencast-bio' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'opencastbiowiki' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'ug4template' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'parallel_python_webpage' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'ogrisel_parallel' (section 0)
-[733] Utils.pm:169> WARN - I didn't find a database entry for 'von_mering_string_2005' (section 0)
-[1033] Biber.pm:2939> INFO - Overriding locale 'en_GB.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
-[1033] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
-[1034] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_GB.UTF-8'
-[1247] bbl.pm:482> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[1262] bbl.pm:555> INFO - Output to report.bbl
-[1262] Biber.pm:105> INFO - WARNINGS: 17
+[92] biber:275> INFO - === Wed Aug 13, 2014, 11:51:33
+[93] Biber.pm:333> INFO - Reading 'report.bcf'
+[177] Biber.pm:630> INFO - Found 52 citekeys in bib section 0
+[197] Biber.pm:3053> INFO - Processing section 0
+[215] Biber.pm:3190> INFO - Looking for bibtex format file 'zlibrary.bib' for section 0
+[412] bibtex.pm:937> INFO - Decoding LaTeX character macros into UTF-8
+[594] bibtex.pm:812> INFO - Found BibTeX data source 'zlibrary.bib'
+[737] Biber.pm:3190> INFO - Looking for bibtex format file 'librarymissing.bib' for section 0
+[739] bibtex.pm:937> INFO - Decoding LaTeX character macros into UTF-8
+[739] bibtex.pm:812> INFO - Found BibTeX data source 'librarymissing.bib'
+[749] Utils.pm:169> WARN - I didn't find a database entry for 'vonMering_string_2005' (section 0)
+[749] Utils.pm:169> WARN - I didn't find a database entry for 'von_mering_string_2005' (section 0)
+[1117] Biber.pm:2939> INFO - Overriding locale 'en_GB.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[1117] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
+[1117] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_GB.UTF-8'
+[1389] bbl.pm:482> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[1406] bbl.pm:555> INFO - Output to report.bbl
+[1406] Biber.pm:105> INFO - WARNINGS: 2

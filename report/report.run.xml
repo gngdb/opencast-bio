@@ -82,6 +82,7 @@
     </requires>
     <requires type="editable">
       <file>zlibrary.bib</file>
+      <file>librarymissing.bib</file>
     </requires>
   </external>
 </requests>

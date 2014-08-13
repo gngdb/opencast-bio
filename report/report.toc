@@ -30,74 +30,74 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.4}PPI prediction features}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Weighting Protein Interactions}{24}
+\contentsline {section}{\numberline {3.2}Weighting Protein Interactions}{23}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Classifier testing}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Missing data}{30}
+\contentsline {subsection}{\numberline {3.2.2}Missing data}{31}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.3}Bayesian weighting}{31}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Measures applied to weighted and unweighted PPI networks}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Community detection}{32}
+\contentsline {subsection}{\numberline {3.3.1}Community detection}{33}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.2}Normalised Mutual Information}{33}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.3}Disease Enrichment}{33}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{34}
+\contentsline {chapter}{\numberline {4}Results}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}PPI feature vectors}{34}
+\contentsline {section}{\numberline {4.1}PPI feature vectors}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Gene Ontology}{34}
+\contentsline {subsection}{\numberline {4.1.1}Gene Ontology}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Features derived from ENTS}{35}
+\contentsline {subsection}{\numberline {4.1.2}Features derived from ENTS}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Data visualisation}{35}
+\contentsline {subsection}{\numberline {4.1.3}Data visualisation}{36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}High dimensional plots}{38}
+\contentsline {subsection}{\numberline {4.1.4}High dimensional plots}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Classification in weighted PPI networks}{38}
+\contentsline {section}{\numberline {4.2}Classification in weighted PPI networks}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Classifier accuracy and best parameters}{40}
+\contentsline {subsection}{\numberline {4.2.1}Classifier accuracy and best parameters}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}ROC curves}{40}
+\contentsline {subsection}{\numberline {4.2.2}ROC curves}{41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Precision-recall curves}{41}
+\contentsline {subsection}{\numberline {4.2.3}Precision-recall curves}{42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Feature importances}{43}
+\contentsline {subsection}{\numberline {4.2.4}Feature importances}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Bayesian weighting of interactions}{43}
+\contentsline {subsection}{\numberline {4.2.5}Bayesian weighting of interactions}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Comparison of weighted and unweighted PPI networks}{47}
+\contentsline {section}{\numberline {4.3}Comparison of weighted and unweighted PPI networks}{48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Disease enrichment}{51}
+\contentsline {subsection}{\numberline {4.3.1}Disease enrichment}{52}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusions}{54}
+\contentsline {chapter}{\numberline {5}Conclusions}{55}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Deliverables}{54}
+\contentsline {section}{\numberline {5.1}Deliverables}{55}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Future work}{54}
+\contentsline {section}{\numberline {5.2}Future work}{55}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Repository}{56}
+\contentsline {chapter}{\numberline {A}Repository}{57}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.0.1}Parallel processing with IPython.parallel}{57}
+\contentsline {subsection}{\numberline {A.0.1}Parallel processing with IPython.parallel}{58}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Notebooks}{58}
+\contentsline {chapter}{\numberline {B}Notebooks}{59}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Feature Extraction Notebooks}{58}
+\contentsline {section}{\numberline {B.1}Feature Extraction Notebooks}{59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.1}Gene Ontology}{58}
+\contentsline {subsection}{\numberline {B.1.1}Gene Ontology}{59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.2}Features derived from ENTS}{59}
+\contentsline {subsection}{\numberline {B.1.2}Features derived from ENTS}{60}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Classifier Training}{59}
+\contentsline {section}{\numberline {B.2}Classifier Training}{60}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}ocbio.extract Usage}{60}
+\contentsline {section}{\numberline {B.3}ocbio.extract Usage}{61}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Data sources}{60}
+\contentsline {section}{\numberline {B.4}Data sources}{61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.1}Gene Ontology Features}{61}
+\contentsline {subsection}{\numberline {B.4.1}Gene Ontology Features}{62}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Disease enrichment results}{64}
+\contentsline {chapter}{\numberline {C}Disease enrichment results}{65}
