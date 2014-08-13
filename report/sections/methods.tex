@@ -128,11 +128,11 @@ Each interaction added is hand curated so it was expected as a reliable training
 Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
 
 %problems with \ac{DIP}
-%why \ac{HI\ac{PPI}E} is better suited
+%why \ac{HIPPIE} is better suited
 Unfortunately, problems were found with \ac{DIP} as a training set. 
 %FIN: I don't understand - explain what these problems are/were
 Features derived from interaction databases would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
-\ac{HI\ac{PPI}E} was also tested as a training set, but this lead to the same problem.
+\ac{HIPPIE} was also tested as a training set, but this lead to the same problem.
 %FIN: so which did you use?
 
 %example feature importance graph
@@ -354,7 +354,7 @@ A maximum-likelihood solution to this model can be found and the resulting model
 
 %why this would also have been a good idea, if we didn't have to implement it ourselves
 True protein interactions are not something which can be assumed in a protein interaction prediction task.
-Many proteins are known to be very likely, but others are less confidently classified, as reflected in the \ac{HI\ac{PPI}E} database's confidence scoring system\autocite{schaefer_hippie:_2012}.
+Many proteins are known to be very likely, but others are less confidently classified, as reflected in the \ac{HIPPIE} database's confidence scoring system\autocite{schaefer_hippie:_2012}.
 %FIN: typo/missing word
 
 To train a classifier a training set of true and false interactions is required and this cannot be supplied without thresholding the database at an arbitrary confidence value.
@@ -467,7 +467,7 @@ Along with these variables, we can also include other protein interaction predic
 The model we have chosen to update our prior belief using assumes conditional independence of the observable variables given the hidden interaction variable.
 This equates to a Naive Bayes model with a belief network as shown in figure \ref{fig:naive}.
 An advantage of this model is the simplicity of its analysis.
-The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the \ac{HI\ac{PPI}E} database is composed of.
+The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the \ac{HIPPIE} database is composed of.
 %FIN: typo/missing word
 
 %belief network for naive bayes
