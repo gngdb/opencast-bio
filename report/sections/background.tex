@@ -115,7 +115,7 @@ For each interaction this set of values are known as features.
 The bulk of this project, described in chapter \ref{methods}, involved obtaining these values for every feature necessary to train the classifier and classify the interactions of the synaptic network.  %FIN: maybe expand on this being non-trivial due to the plethora of data sources and alternative identifiers they use. 
 
 %what is the classifier
-The classifier is a machine learning algorithm that can learn from a labelled training set how to sort these vectors of features into the appropriate category. %citation to Murphy?  %FIN: citation to the Murphy's law might be appropriate... 
+The classifier, or model, is a machine learning algorithm that can learn from a labelled training set how to sort these vectors of features into the appropriate category. %citation to Murphy?  %FIN: citation to the Murphy's law might be appropriate... 
 However, these algorithms cannot make predictions unless the training data is informative.   
 Also, the training data must be an accurate representation of the case the algorithm is planned to be applied to. %FIN:make this specific to your data as well - so for example the training data must use validated examples of protein protein interactions 
 
@@ -127,7 +127,7 @@ The goal in this project is to appropriately weight interactions in a \ac{PPI} n
 
 %what's the point in weighting connections?
 Weakly interacting proteins will have a lower confidence in their interacting at all, as it will have been observed less frequently.
-Therefore, by weighting the interactions in a \ac{PPI} network according to our confidence we can also make the \ac{PPI} network reflect more closely the true situation. %FIN: i.e. proteins predicted to interact actually interacting in vivo 
+Therefore, by weighting the interactions in a \ac{PPI} network according to our confidence we can also make the \ac{PPI} network reflect more closely the true interactions existing in vivo. %FIN: i.e. proteins predicted to interact actually interacting in vivo 
 
 %what data sources were used to predict protein-protein interactions?
 \section{Data sources and networks}
