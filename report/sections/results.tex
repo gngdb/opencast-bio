@@ -107,11 +107,11 @@ In \ac{PCA} the method to express a high-dimensional point $\pmb{x}$ as a low di
 Where the low dimensional points are $\pmb{y}^{n}$, $\pmb{c}$ is a constant and $\pmb{b}_{j}$ are the principal components.
 The algorithm to find these principal components is described in \textcite[333]{barber_bayesian_2013}.
 
-The resulting plot produced using this technique is shown in figures \ref{fig:inpca} and \ref{fig:outpca} for the in proportion and out cases, respectively.
+The resulting plots produced using this technique are shown in figures \ref{fig:inpca} and \ref{fig:outpca} for the in and out of proportion cases, respectively.
 %FIN: typo/missing word
 
-In the case of the data being out of proportion it appears that the groups can be separated.
-However, this is not the case for the in proportion case.
+In the case of the data being out of proportion it appears that the groups can be partially separated.
+However, this is not the case for the in proportion case, and it is very difficult to discern any interactions.
 %FIN: expand- make clear if this is a feature of your dataset or a case in general to do with prop and out-of-prop 
 
 %plots
@@ -120,7 +120,7 @@ However, this is not the case for the in proportion case.
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/in.pca.tikz}{}{\textbf{!! Missing graphics !!}}
     \centering
-    \includegraphics[width=0.6\textwidth]{in.pca.png}
+    \includegraphics[width=0.8\textwidth]{in.pca.png}
     \caption{In proportion plot of the data reduced to two dimensions using \ac{PCA}.}
     \label{fig:inpca}
 \end{figure}
@@ -129,7 +129,7 @@ However, this is not the case for the in proportion case.
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/out.pca.tikz}{}{\textbf{!! Missing graphics !!}}
-    \includegraphics[width=0.6\textwidth]{out.pca.png}
+    \includegraphics[width=0.8\textwidth]{out.pca.png}
     \centering
     \caption{Out of proportion plot of the data reduced to two dimensions using \ac{PCA}.}
     \label{fig:outpca}
@@ -137,17 +137,16 @@ However, this is not the case for the in proportion case.
 
 
 %tSNE is more complicated, but was recommended due to reportedly good performance
-A more complex method to reduce the dimensionality of the data is t-SNE\autocite{van_der_maaten_visualizing_2008}.
+A more complex method to reduce the dimensionality of the data is t-distributed Stochastic Neighbourhood Embedding (t-SNE)\autocite{van_der_maaten_visualizing_2008}.
 This technique won the Merck Visualization Challenge.   
 It differs from \ac{PCA} in the objective function in that it aims to maintain a similarity measure between points between the high and low-dimensional cases.
 
 %should probably say what we did vis. TruncatedSVD
 In addition to using this technique it was also recommended to use Truncated Singular Value Decomposition(SVD) to reduce the dimensionality of the vector to 50 beforehand.
+This was for implementation reasons in Scikit-learn.
+%FIN: typo/missing word
 %FIN: typo/missing word
 %FIN: why was SVD recommended?
-
-This was for implementation based reasons in Scikit-learn.
-%FIN: typo/missing word
 
 %results
 Unfortunately, this was no more successful than \ac{PCA} on this dataset, as shown in figures \ref{fig:intsne} and \ref{fig:outtsne}.
@@ -159,7 +158,7 @@ It should also be noted that the number of points plotted in these graphs is muc
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/in.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
-    \includegraphics[width=0.6\textwidth]{in.tsne.png}
+    \includegraphics[width=0.8\textwidth]{in.tsne.png}
     \centering
     \caption{In proportion plot of the data reduced to two dimensions using t-SNE. Axes are not labeled as they are meaningless after the transformation.}
     \label{fig:intsne}
@@ -169,7 +168,7 @@ It should also be noted that the number of points plotted in these graphs is muc
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/out.tsne.tikz}{}{\textbf{!! Missing graphics !!}}
-    \includegraphics[width=0.6\textwidth]{out.tsne.png}
+    \includegraphics[width=0.8\textwidth]{out.tsne.png}
     \centering
     \caption{Out of proportion plot of the data reduced to two dimensions using t-SNE. Axes are not labeled as they are meaningless after the transformation.}
     \label{fig:outtsne}
@@ -197,7 +196,7 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/in.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
-    \includegraphics[width=0.6\textwidth]{in.parallel.lines.png}
+    \includegraphics[width=0.8\textwidth]{in.parallel.lines.png}
     \centering
     \caption{In proportion parallel line plot of the data used to train the final classifier. Each feature vector is scaled into the graph interval and plotted, overlapping.}
     \label{fig:inparline}
@@ -208,7 +207,7 @@ The in proportion case in particular shown in figure \ref{fig:inparlines} is ver
 %    \setlength\figureheight{3in}
 %    \setlength\figurewidth{4in}
 %    \InputIfFileExists{\imagedir/out.parallel.lines.tikz}{}{\textbf{!! Missing graphics !!}}
-    \includegraphics[width=0.6\textwidth]{out.parallel.lines.png}   
+    \includegraphics[width=0.8\textwidth]{out.parallel.lines.png}   
     \centering
     \caption{Out of proportion parallel line plot of the data used to train the final classifier. Each feature vector is scaled into the graph interval and plotted, overlapping.}
     \label{fig:outparline}
