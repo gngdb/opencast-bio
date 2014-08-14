@@ -492,13 +492,13 @@ Continuous distributions, such as the classifier predictions or prediction datab
 %Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
 %As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
 
-\section{Measures applied to weighted and unweighted \ac{PPI} networks}
+\section{Comparison of weighted and unweighted \ac{PPI} networks}
 
 %why do we want to try weighted networks? and intro
-It is hoped that a weighted graph will provide new insight into the interactions of proteins in the active zone.
+It is hoped that a weighted network will provide new insight into the interactions of proteins in the active zone described in table \ref{tab:synsys}.
 %FIN: I think at this stage you need a refresher to the reader on what active zone you are talking about
 For this reason, comparing the unweighted and weighted cases of the graph produced is a major goal of this project.
-The following sections describe this process and the measures applied to both graphs.
+The following sections describe this process and the measures applied to both networks.
 
 \subsection{Community detection}
 \label{communitydetection}
@@ -513,9 +513,9 @@ Geodesic edge betweenness and random edge betweenness are based on betweenness m
 The third, spectral modularity, was the chosen algorithm in this project.
 
 %with reference to Colin's paper, why this is a good choice
-The original advantages of spectral modularity techniques were better results in less time than competing methods in \textcite{newman_modularity_2006}.
+The original advantages of spectral modularity techniques were compatible results on generated test data in less time than competing methods in \textcite{newman_modularity_2006}.
 In a recent paper, this method was compared favourably to other methods in terms of CPU time\autocite{mcleanunpub}.
-Although it detected fewer communities, it maintained a higher modularity score.
+%Although it detected fewer communities, it maintained a higher modularity score.
 
 %community detection code, what it does, which algorithm was used
 %pending use - will see if I have time to use more than one
@@ -541,16 +541,21 @@ This produces a value between zero and one which reflects the redundancy of the 
 
 %Primer on what this test actually does
 By linking the proteins in a cluster to known disease annotations it is possible to estimate the likelihood that a given community is involved in a particular disease.
-The code being used produces a p-value to indicate this likelihood.
-%FIN: explain a p-val? 
+Using a list of known genes involved in the disease of interest the test finds if the number of these genes in the communities detected is significant.
+The code being used produces uses a hypergeometric test to find this likelihood and returns a p-value.
 
-In the case of this project, due to the aims of the SYNSYS project and for simplicity, only two diseases were investigated: Schizophrenia and Alzheimer's.
+%FIN: explain a p-val? GAV: no space
 
+In the case of this project, due to the aims of the SYNSYS\autocite{synsys} project and for simplicity, only two diseases were investigated: Schizophrenia and Alzheimer's.
+The genes associated with schizophrenia and Alzheimer's used are part of the internal code used.
 %interaction between significance level and p-value
 
 
 \section*{Conclusion}
 
-This project involved a large number of varied techniques and algorithms being used on large data sets.
-Many problems had to be solved in order to piece together the full project.
-As each of these steps were sequential, the results section describes the results as they were gathered, in the same structure as seen above.
+%This project involved a large number of varied techniques and algorithms being used on large data sets.
+%Many problems had to be solved in order to piece together the full project.
+%As each of these steps were sequential, the results section describes the results as they were gathered, in the same structure as seen above.
+This chapter described how the weighted network was constructed using both a supervised probabilistic model and another conditionally independent model.
+After the failings of the supervised method were apparent, this combined method was the best solution found to the prediction problem.
+The next chapter will discuss the results of both of these techniques and the analysis of the weighted and unweighted networks produced.
