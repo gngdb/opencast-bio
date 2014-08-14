@@ -76,7 +76,7 @@ The exact set of interactions used in the unweighted network used was prepared p
         \hline
         24      & 1548  & 9372 \\
     \end{tabular}
-    \caption{A table summarising the results of the pull-down experiments performed as part of the SYNSYS project\autocite{synsys},and the active zone network defined using them, used in this project.}
+    \caption{A table summarising the results of the pull-down experiments performed as part of the SYNSYS project\autocite{synsys}, and the active zone network defined using them, used in this project.}
     \label{tab:synsys}
 \end{table}
 
@@ -94,9 +94,10 @@ Unfortunately, this description is not specific on exact measures for a graph to
 Community detection algorithms are simply tested on graphs that are agreed to exhibit community structure with the aim of finding the pre-defined communities. %FIN: by whom, cite an example of one of these test graphs 
 
 %describe how these algorithms usually work
-There are two main approaches to the problem of Community Detection: traditional hierarchical methods and more recent optimization based methods\autocite{newman_communities_2012}.
+Two important approaches to the problem of Community Detection are traditional hierarchical methods and more recent optimization based methods\autocite{newman_communities_2012}.
 Hierarchical methods were developed in the field of sociology and involves grading nodes by how highly connected they are in the network and then using this value to group nodes into communities.
-Optimization based methods involves a different measure known as betweenness, which is analogous to the current flowing along edges if the graph were an electric circuit, and then allows a reductive technique where edges are removed iteratively to reveal sub-graphs without connections between them. %FIN:sentence needs fixed/split it too complex
+Optimization based methods involves, such as spectral modularity, involves grading edges and removing them iteratively to reveal the community structure.
+%a different measure known as betweenness, which is analogous to the current flowing along edges if the graph were an electric circuit, and then allows a reductive technique where edges are removed iteratively to reveal sub-graphs without connections between them. %FIN:sentence needs fixed/split it too complex
 
 %example paper using community detection on ppi graphs?
 %FIN: http://www.biomedcentral.com/1752-0509/4/100/ 
@@ -107,13 +108,11 @@ Optimization based methods involves a different measure known as betweenness, wh
 Protein interaction prediction was developed to solve the problem of incomplete and unreliable interaction data by combining both direct and indirect information\autocite{qi_learning_2008}.
 Direct information are the result of experiments, such as yeast two-hybrid, intended to directly find protein-protein interactions.  %FIN: explain what y2h is and why it is good - you reconstitute some split marker (transcription factor or something) only when two proteins interact from 2 genetically modified yeast hybrids. So if you see that marker it means that the proteins you've put in each hybrid interact
 Indirect information includes biological data that was not gathered directly to find interactions, such as gene expression data. %FIN: explain; two proteins can only interact if they are both expressed at the same time and place within a cell therefore co-expression and co-localisation data are important sources of indirect evidence for \ac{PPI} (in fact are necessary for true \ac{PPI})
-More information on the data sources can be found in the following section \ref{back:sources}.
-
 
 %what are features?
 To predict a protein interaction we need to have a value or sequence of values from which to make our guess as to the existence of an interaction.
 For each interaction this set of values are known as features.
-The bulk of the work in this project involved obtaining these values for every feature necessary to train the classifier and classify the interactions of the synaptic network.  %FIN: maybe expand on this being non-trivial due to the plethora of data sources and alternative identifiers they use. 
+The bulk of this project, described in chapter \ref{methods}, involved obtaining these values for every feature necessary to train the classifier and classify the interactions of the synaptic network.  %FIN: maybe expand on this being non-trivial due to the plethora of data sources and alternative identifiers they use. 
 
 %what is the classifier
 The classifier is a machine learning algorithm that can learn from a labelled training set how to sort these vectors of features into the appropriate category. %citation to Murphy?  %FIN: citation to the Murphy's law might be appropriate... 

@@ -14,6 +14,11 @@
 %%   \import{<path to file>}{<filename>.pgf}
 %%
 %% Matplotlib used the following preamble
+%%   \usepackage{units}
+%%   \usepackage{metalogo}
+%%   \usepackage{unicode-math}
+%%   \setmathfont{xits-math.otf}
+%%   \setmainfont{DejaVu Serif}
 %%   \usepackage{fontspec}
 %%
 \begingroup%
@@ -2968,7 +2973,7 @@
 \pgftext[x=1.233964in,y=2.321741in,,]{{\sffamily\fontsize{5.000000}{6.000000}\selectfont 2794}}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=2.050000in,y=2.769444in,,base]{{\ttfamily\fontsize{12.000000}{14.400000}\selectfont Unweighted community 64 interactions}}%
+\pgftext[x=2.050000in,y=2.769444in,,base]{{\rmfamily\fontsize{12.000000}{14.400000}\selectfont Unweighted community 64 interactions}}%
 \end{pgfscope}%
 \end{pgfpicture}%
 \makeatother%
