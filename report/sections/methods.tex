@@ -113,15 +113,9 @@ Additionally, each protein of interest should ideally be stored with reference t
 %FIN: be explicit amino acid sequence rather than protein sequence
 
 %description of feature extraction code
-\subsection{Dedicated code: ocbio.extract}
+%\subsection{Dedicated code: ocbio.extract}
 
-% link to the notebook on using this code
-% but update it to explain what custom generator options are
-To keep track of the various different data sources and assemble the features into vectors to be used in the classifiers a dedicated piece of code was required.
-The code developed is written as a python module called ocbio.extract.
-Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
-
-\subsection{Gold standard datasets}
+\section{Supervised model}
 \label{gold}
 %material on the problems with choosing between gold-standard datasets
 % with reference here to the section in Qi's thesis
@@ -161,6 +155,12 @@ However, all of the available features had more closely distributed importances 
 To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} database was used to find positive interactions due to its effective protein identifier mapping ability, as described above.
 Again, non-interactions were generated as random combinations of Entrez Gene IDs.
 These were also checked against the positive interactions to ensure known interactions were not present.
+
+% link to the notebook on using this code
+% but update it to explain what custom generator options are
+To keep track of the various different data sources and assemble the features into vectors to be used in the classifiers a dedicated piece of code was required.
+The code developed is written as a python module called ocbio.extract.
+Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
 
 \subsection{\ac{PPI} prediction features}
 
