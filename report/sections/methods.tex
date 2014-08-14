@@ -444,7 +444,7 @@ The area under the curve is used to gauge the classifier's effectiveness.
 %example \ac{ROC} curve?
 %example precision recall curve?
 
-\subsection{Bayesian weighting}
+\section{Conditionally independent probabilistic model}
 \label{bayes}
 %description of the method used to weight interactions after the classifier was found to be insufficient
 
@@ -453,7 +453,7 @@ The area under the curve is used to gauge the classifier's effectiveness.
 Weighting interactions using the posterior distribution of a probabilistic model requires that the model accurately represents beliefs about the system being modelled.
 Supervised classification requires that true interactions are known in order to find the parameters of the model.
 Unfortunately, in this problem we cannot know for certain whether an interaction is real or false.
-Therefore, when fitting a supervised model we only obtain, at best, an accurate predictor for the interaction database used to fit the model.
+Therefore, when fitting a supervised model we only obtain, at best, an accurate predictor for the interaction database used to fit the model as shown in figure \ref{fig:unbalanced}.
 
 %the prior on the edgelist
 As the \ac{PPI} network edges we plan to weight have already been defined through combining different interaction databases we already have a strong prior on the existence of these interactions.
@@ -483,14 +483,14 @@ The disadvantage is that our variables could be dependent, as the classifier is 
 The class label, interaction, is not observed in this model so we cannot solve to find the parameters.
 %FIN: \ac{PPI} or not
 To define the model, the only way to proceed is to manually define them by conservatively estimating the conditional true positive and false positive rates of the Bernoulli distributions.
-Continuous distributions, such as the classifier predictions or prediction databases, must be estimated using \ac{KDE}. 
+Continuous distributions, such as the classifier predictions or prediction databases, were estimated in a supervised way using a sample of the training set used to train the supervised classification model.
 %FIN: explain \ac{KDE} acronym 
 
 %kernel density estimation, justification from Weka
-Using \ac{KDE} in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
+%Using \ac{KDE} in conjunction with Naive Bayes is the approach used by Weka to deal with arbitrary conditional distributions\autocite{john_estimating_1995}.
 %FIN: you need to explain what Weka is 
-Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
-As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
+%Unfortunately, this distribution is estimated using samples labeled using the protein interaction databases, so we cannot be fully confident in its predictions.
+%As before, a conservative estimate of its accuracy is applied through increasing the smoothing bandwidth.
 
 \section{Measures applied to weighted and unweighted \ac{PPI} networks}
 
