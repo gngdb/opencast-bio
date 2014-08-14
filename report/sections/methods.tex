@@ -12,21 +12,21 @@ Feature extraction was the predominant component in this project and involved tu
 The chosen Community Detection method, the fast and efficient Spectral Modularity algorithm, is also described. 
 %FIN:why was it chosen? 
 
-\section{Feature extraction}
+\section{Feature vectors}
 
 %Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in the following text.
 The set of biologically relevant information associated with a given protein interaction is referred to as a feature vector and the constituent elements features.
 The process of retrieving these from biological databases is referred to as feature extraction. 
 %FIN: typo 
-This commonly involved mapping between protein identifiers and indexing large tables automatically.
+This is a task which commonly involved mapping between non-standardised protein identifiers and indexing large tables of biological data automatically.
 %FIN: mention non-standardisation/alternative identifiers used in different data sources -I think you need to make it clear how difficult the data collection was especially as a novice to the available databases and data formats
 
 % going through posing the problem in terms of probability
 In supervised learning problems we wish to learn a mapping between input variables and output variables given a training set.
-Defining this training set rigorously, it consists of input variables $\pmb{x}$ which are typically vectors of values known as features.
-The output variables in a classification problems are a set of labels\autocite[2]{murphy_machine_2012}: $y$.
+Defining this training set rigorously, it consists of input variables $\pmb{x}$, which are typically vectors of values known as features.
+The output variables in a classification problems are a set of labels\autocite[2]{murphy_machine_2012} which are denoted as $y$.
 In the case of binary classification these are simply either 0 or 1.
-Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ we can define our training set $\mathcal{D}$ for $N$ data points as:
+Given $N$ training vectors, $\pmb{x}_{i}$, corresponding to $N$ interactions in the network and training labels $y_{i}$ we can define our training set $\mathcal{D}$ for $N$ data points as:
 
 \begin{align}
     \mathcal{D} = \left( ( \pmb{x}_{i}, y_{i} ) \right)_{i=1}^{N}
@@ -37,12 +37,14 @@ Therefore, given $N$ training vectors $\pmb{x}_{i}$ and training labels $y_{i}$ 
 %pose our problem
 Our problem involves taking various types of biological data, such as entries from biological databases indicating that proteins are involved in the same part of a cell and using these as features.
 The training labels are either an interaction (a one) or a non-interaction (a zero).
-Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex:_2008} database with over 50\% confidence.
+Interactions are taken to be any interactions in the iRefIndex\autocite{razick_irefindex:_2008} consolidated database.
+This database was chosen for reasons described in section \ref{gold}.
 %FIN: why, what is this db? consolidated database
 Non-interactions are random binary combinations of Entrez protein IDs, which is a method applied in other works\autocite{qi_evaluation_2006} to create negative training examples.
 %FIN: created by you how and from what dataset, hell cite the script/ipynb you used
 These are also checked against the iRefIndex database to ensure they are not accidentally known interactions.
-There are approximately 600 non-interactions for every true interaction.
+The full training set contained 188,833 true interactions and 997,760 non-interactions, but only a sub-sample of this was used for training to ensure a ratio of 600 non-interactions per true interaction.
+%There are approximately 600 non-interactions for every true interaction.
 
 What we would like to estimate is the posterior probability of an interaction existing given a new feature vector after training our classifier.
 %FIN: typo/missing word
@@ -50,17 +52,15 @@ For any model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can expres
 
 \begin{align}
     p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H}) = \frac{ p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H}) p( y^{*} = 1 | \mathcal{D}, \mathcal{H})}{ \sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})}
+    \label{eq:bayes}
 \end{align}
 
-The posterior probability is $p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})$.
-The likelihood is $p(\pmb{x}^{*}| y^{*} = 1 , \mathcal{D}, \mathcal{H})$
-The prior is $p( y^{*} = 1 | \mathcal{D}, \mathcal{H})$.
-The marginal likelihood is $\sum{y^{*}} p( \pmb{x}^{*} | y^{*}, \mathcal{D}, \mathcal{H})$.
+Where in equation \ref{eq:bayes} posterior probability is $p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})$ and the prior is $p( y^{*} = 1 | \mathcal{D}, \mathcal{H})$.
 Where $y^{*}$ and $\pmb{x}^{*}$ are a new label and feature vector, respectively.
 
-We explicitly apply a prior to the probability of interaction based on the expected ratio of interactions to non-interactions stated in \autocite{qi_evaluation_2006} of $1/600$.
-%FIN: what was Qi's justification for this value? Presumably observed ratios - cite the justifying paper if it wasn't Qi
-This will be described in more detail in section \ref{bayes}.
+We explicitly apply a prior to the probability of interaction based on the expected ratio of interactions to non-interactions stated in \autocite{qi_evaluation_2006}.
+%FIN: what was Qi's justification for this value? Presumably observed ratios - cite the justifying paper if it wasn't Qi - unfortunately, it was Qi - other papers sometimes choose one in 350 or one in 400 (PIPs)
+This is described in more detail in section \ref{bayes}.
 
 \subsection{Protein identifier mapping}
 
@@ -121,6 +121,7 @@ The code developed is written as a python module called ocbio.extract.
 Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
 
 \subsection{Gold standard datasets}
+\label{gold}
 %material on the problems with choosing between gold-standard datasets
 % with reference here to the section in Qi's thesis
 
