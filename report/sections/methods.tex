@@ -120,17 +120,17 @@ Additionally, each protein of interest should ideally be stored with reference t
 %material on the problems with choosing between gold-standard datasets
 % with reference here to the section in Qi's thesis
 
-
 %original work on \ac{DIP} (justified choice from previous work)
+To begin supervised learning, the model required a set of accepted true interactions.
 The database of interacting proteins (\ac{DIP}) is a database of interactions proven by small-scale experiments\autocite{xenarios_dip_2002}.
 Each interaction added is hand curated so it was expected as a reliable training set.
-Also, this database was used as a training set in \textcite{qi_evaluation_2006}.
+This database was also used as a training set in \textcite{qi_evaluation_2006}, who used the same supervised training method.
 
 %problems with \ac{DIP}
 %why \ac{HIPPIE} is better suited
 Unfortunately, problems were found with \ac{DIP} as a training set. 
 %FIN: I don't understand - explain what these problems are/were
-Features derived from interaction databases would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
+Features derived from interaction other databases, such as STRING, would win out in importance versus all indirect features as shown in figure \ref{fig:unbalanced}.
 \ac{HIPPIE} was also tested as a training set, but this lead to the same problem.
 %FIN: so which did you use?
 
@@ -140,35 +140,35 @@ Features derived from interaction databases would win out in importance versus a
     \setlength\figureheight{3in}
     \setlength\figurewidth{4in}
     \InputIfFileExists{\imagedir/unbalanced.weighting.tikz}{}{\textbf{!! Missing graphics !!}}
-    \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features. Feature indexes are not as described in table \ref{tab:fvectors}.}
+    \caption{An example of an unbalanced set of feature importances plotted after fitting a Random Forest classifier to a dataset containing interaction database derived features. Feature indexes are not as described in table \ref{tab:fvectors}. Importances are dimensionless and show that only a small number of features are important to the classifier.}
     \label{fig:unbalanced}
 \end{figure}
 
 %After removing interaction databases 
-It was decided that only indirect features should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
+It was decided that only indirect features, as described in section \ref{back:sources} should be used in the trained supervised classifier and direct evidence integrated into the final weightings in an explicit Bayesian method described in section \ref{bayes}; the results of which are described in section \ref{bayesresults}.
 Once these databases were removed the performance of the classifier was drastically lower.
 However, all of the available features had more closely distributed importances in the final classifier, as shown in section \ref{importances}.
 %FIN: this isn't obvious to me - you need to explain why balance set of features is important 
 
 
 %iRefIndex as a final solution?
-To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} database was used to find positive interactions due to its effective protein identifier mapping ability, as described above.
+To train the final classifier the iRefIndex\autocite{razick_irefindex:_2008} database was used to find real interactions due to its canonicalisation of identifiers and the number of databases it includes.
 Again, non-interactions were generated as random combinations of Entrez Gene IDs.
 These were also checked against the positive interactions to ensure known interactions were not present.
 
-% link to the notebook on using this code
-% but update it to explain what custom generator options are
-To keep track of the various different data sources and assemble the features into vectors to be used in the classifiers a dedicated piece of code was required.
-The code developed is written as a python module called ocbio.extract.
-Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
-
-\subsection{\ac{PPI} prediction features}
+\subsection{Labeling feature vectors}
 
 %planned features, describe the list of possible features which was created
 %put it in the appendix as a table, or otherwise somehow
 \ac{PPI} prediction features are a set of values for each interaction considered, if it is a real or non-interaction.
 This arrangement is illustrated in figure \ref{fig:fvectors}.
 The features used are described by index in table \ref{tab:fvectors}.
+
+% link to the notebook on using this code
+% but update it to explain what custom generator options are
+To keep track of the various different data sources and assemble the features into vectors to be used in the classifiers a dedicated piece of code was required.
+The code developed is written as a python module called ocbio.extract.
+Usage and development notes for this program are referenced in Appendix \ref{app:ocbio}.
 
 %this could be a good place to put that diagram of exactly what a feature vector is
 \begin{figure}
@@ -193,30 +193,32 @@ The features used are described by index in table \ref{tab:fvectors}.
 \end{table}
 
 %details of what classifiers were chosen and about scikit-learning
-\section{Weighting Protein Interactions}
+\subsection{Model Selection}
 
 %classification as a weighting tool
 The classification problem we are solving is different in that we are really trying to obtain a realistic weighting of interactions for use in a \ac{PPI} network.
 %FIN: different from what? 
 Classification is normally concerned about picking a decision threshold to classify examples into categories.
-However, in this case the output of our process is the posterior probability of the model given a new example.
+However, in this case the output of our process is the posterior probability of the model $\mathcal{H}$ as in equation \ref{eq:bayes}.
+Where $\mathcal{H}$ is any of the following classification models, such as logistic regression.
 
 %introduce scikit-learn
-To produce this output the chosen tool was the Python package Scikit-learn\autocite{pedregosa_scikit-learn:_2011}.
+The posterior probability was constructed using the Python package Scikit-learn\autocite{pedregosa_scikit-learn:_2011}.
 Each classifier implemented in this package has a similar interface allowing modular code to be written.
 In addition, this package is actively developed with all the required classifiers having efficient implementations.
 %FIN: also one of most widely used packages 
-% explain why we tried the algorithms that we tried
-The following sections describe the three classifiers chosen.
-These were a logistic regression model, a random forest model and a support vector machine.
-Each of these involved tuning a number of hyper-parameters.
 
-\subsubsection*{Hyper-parameters}
+% explain why we tried the algorithms that we tried
+%The following sections describe the three classifiers chosen.
+There were three classifiers chosen: a logistic regression model, a random forest model and a \ac{SVM}.
+%Each of these involved tuning a number of hyper-parameters.
+
+%\subsubsection*{Hyper-parameters}
 %describe the different parameters varied in scikit-learn by name
 %FIN: explain what a hyper-parameter actually is  
-Each of the Classifiers used has hyper-parameters which will affect its performance.
+Each classifier used requires tuning of hyper-parameters which will affect its overall performance.
 These hyper-parameters are described in table \ref{tab:hyper} for each of the models used in the project.
-The optimal values for these found can be found in section \ref{gridresults}, table \ref{tab:gridresults}.
+The optimal values for these found can be found in table \ref{tab:gridresults}.
 
 %table of the different hyper-parameters
 \begin{table}
@@ -247,7 +249,7 @@ The optimal values for these found can be found in section \ref{gridresults}, ta
 \label{logreg}
 
 %with reference to Murphy
-Logistic regression is a linear model being used for classification.
+Logistic regression is a linear model being used for binary classification.
 %FIN:binary classification  
 It is equivalent to a linear regression model transformed through a sigmoid function\autocite[376]{murphy_machine_2012}, denoted here by $\sigma$:
 
@@ -256,15 +258,15 @@ It is equivalent to a linear regression model transformed through a sigmoid func
     \label{sigmoidtransform}
 \end{align}
 
-In equation \ref{sigmoidtransform} $\pmb{x}$ is the vector of features and $c$ is the class label - in our case $1$ is a real interaction, $0$ is a non-interaction.
+Where in equation \ref{sigmoidtransform} $\pmb{x}$ is the vector of features and $c$ is the class label - using $1$ for a real interaction and $0$ for a non-interaction.
 The weights and biases are the parameters of this model, expressed in the above equation as $b$ and $\pmb{w}$, respectively.
 
-This divides the points in the dataset by a hyperplane, classifying the points on each side into different classes.
+This divides the points, feature vectors, in the dataset by a hyperplane, classifying the points on each side of the hyperplane into different classes.
 For data that is linearly separable, this produces a classifier that will make no mistakes on the test data.
-Unfortunately, the data we are working with is not linearly separable as shown in section \ref{dataviz}.
+Unfortunately, the data we are working with is not linearly separable as shown by visualization in section \ref{dataviz}.
 
 %How is it trained?
-To find the parameters the log likelihood of this model must be maximised; corresponding to the maximum likelihood solution.
+To find the parameters in this model the log likelihood must be maximised; corresponding to the maximum likelihood solution.
 The log likelihood for this model, for N feature vectors, is:
 
 \begin{align}
