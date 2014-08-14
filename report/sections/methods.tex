@@ -71,7 +71,7 @@ New data sources being integrated into this project would often be using a diffe
 
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
 Genes are uniquely defined by their amino acid sequence, which is a long series of letters.
-However, for the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter than the sequence and can encode other information about the gene, typically referred to as an accession.
+However, for the sake of posterity, databases containing information about genes typically apply an identifier for each gene that is much shorter than the sequence and can encode other information about the gene, typically referred to as an accession.
 %FIN: commonly referred to as accessions 
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
@@ -123,7 +123,7 @@ Additionally, each protein of interest should ideally be stored with reference t
 %original work on \ac{DIP} (justified choice from previous work)
 To begin supervised learning, the model required a set of accepted true interactions.
 The database of interacting proteins (\ac{DIP}) is a database of interactions proven by small-scale experiments\autocite{xenarios_dip_2002}.
-Each interaction added is hand curated so it was expected as a reliable training set.
+Each interaction added is hand curated so it was expected to be a reliable training set.
 This database was also used as a training set in \textcite{qi_evaluation_2006}, who used the same supervised training method.
 
 %problems with \ac{DIP}
@@ -309,7 +309,7 @@ In table \ref{tab:gridresults} it can be seen that the best performance was achi
 
 A random forest is a another of these models.
 It operates as a combination of many decision trees.
-Decision trees are intuitively simple in that it consists of a series of comparisons arranged in a tree as shown in figure \ref{fig:dectree}.
+Decision trees are intuitively simple in that they consist of a series of comparisons arranged in a tree as shown in figure \ref{fig:dectree}.
 Each feature is tested at a node to come to a final conclusion about the state of the interaction.
 
 \begin{figure}
@@ -463,7 +463,7 @@ The solution is to treat both the result of the classifier and the edgelist incl
 Along with these variables, we can also include other protein interaction prediction resources, such as \ac{STRING}\autocite{von_mering_string:_2005}.
 
 %naive bayes model, advantages, disadvantages
-The model we have chosen to update our prior belief using assumes conditional independence of the observable variables given the hidden interaction variable.
+The model we have chosen to update our prior belief assumes conditional independence of the observable variables given the hidden interaction variable.
 This equates to a Naive Bayes model with a belief network as shown in figure \ref{fig:naive}.
 An advantage of this model is the simplicity of its analysis.
 The disadvantage is that our variables could be dependent, as the classifier is trained on some of the same interaction databases that the \ac{HIPPIE} database is composed of.
