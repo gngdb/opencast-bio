@@ -493,9 +493,47 @@ Both NMI test implementations returned a value of 0.604, indicating that the clu
 The communities detected to be involved in disease differ by number between weighted and unweighted.
 As these numbers are arbitrary indexes, it is necessary to compare these communities between the two graphs to see if both graphs contain similar communities involved in disease.
 %FIN: which numbers? arbitrary in what way?
-The significant disease communities discovered in each graph can be found in Appendix \ref{app:disease}.
+%The significant disease communities discovered in each graph can be found in Appendix \ref{app:disease}.
+The significant disease communities discovered in the unweighted and weighted cases can be seen in tables \ref{tab:wdisease} and \ref{tab:uwdisease}, respectively.
 
 %disease tables should be in report
+\begin{table}
+    \centering
+    \begin{tabular}{l c c c c}
+        \small
+        Community & Size & disease & p-value & p_lower (\%) \\ 
+        \hline
+        44 & 35 & schizophrenia & $3.45\e{-3}$ & 0.6 \\ 
+        45 & 73 & schizophrenia & $3.90\e{-3}$ & 0.4 \\ 
+        48 & 17 & Alzheimer's_disease & $7.57\e{-3}$ & 0.2 \\ 
+        33 & 64 & Alzheimer's_disease & $8.39\e{-3}$ & 0.7 \\ 
+        33 & 64 & schizophrenia & $2.33\e{-2}$ & 2.2 \\ 
+        14 & 18 & schizophrenia & $4.19\e{-2}$ & 3.2 \\ 
+        2 & 48 & schizophrenia & $4.67\e{-2}$ & 4.9 \\ 
+        15 & 8 & Alzheimer's_disease & $4.98\e{-2}$ & 5.2 \\ 
+    \end{tabular}
+    \caption{Disease enrichment results for the weighted communities detected in the active zone network.}
+    \label{tab:wdisease}
+\end{table}
+    
+
+\begin{table}
+    \centering
+    \begin{tabular}{l c c c c }
+        \small
+        Community & Size & disease & p-value & p_lower (\%) \\ 
+        \hline
+        29 & 88 & schizophrenia & $1.69\e{-3}$ & 0.2 \\ 
+        2 & 99 & schizophrenia & $4.32\e{-3}$ & 0.5 \\ 
+        30 & 26 & Alzheimer's_disease & $5.37\e{-3}$ & 0.7 \\ 
+        61 & 24 & schizophrenia & $1.96\e{-2}$ & 1.5 \\ 
+        63 & 23 & Alzheimer's_disease & $3.50\e{-2}$ & 4.3 \\ 
+        61 & 24 & Alzheimer's_disease & $4.25\e{-2}$ & 4.5 \\ 
+        63 & 23 & schizophrenia & $4.62\e{-2}$ & 4.3 \\ 
+    \end{tabular}
+    \caption{Disease enrichment results for the unweighted communities detected in the active zone network.}
+    \label{tab:uwdisease}
+\end{table}
 
 %investigate the crossover between different likely communities
 Looking at the most likely community for Schizophrenia in the unweighted graph, it is possible to compare the members of this community to the members of all the communities in the weighted graph to find the closest match.
