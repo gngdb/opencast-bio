@@ -18,7 +18,8 @@ If you would like to repeat the weighting of the edges and community detection(a
 
 1. Run the [Training and Test set generation notebook][traintest]
 2. Run the [Classifier Training notebook][classtrain]
-3. Run the [Community Detection notebook][comdet]
+3. Run the [Bayesian edge weighting notebook][bayes]
+4. Run the [Community Detection notebook][comdet]
 
 This assumes you have access to the extracted features.
 If you would like to repeat those, the notebooks required are referenced in the report's appendices.
@@ -48,3 +49,4 @@ The report is available in the repository.
 [classtrain]: http://nbviewer.ipython.org/github/ggray1729/opencast-bio/blob/master/notebooks/Classifier%20Training.ipynb
 [comdet]: http://nbviewer.ipython.org/github/ggray1729/opencast-bio/blob/master/notebooks/Community%20Detection.ipynb
 [ocbio]: https://github.com/ggray1729/opencast-bio/blob/master/notebooks/ocbio.extract%20usage%20notes.ipynb
+[bayes]: http://nbviewer.ipython.org/github/ggray1729/opencast-bio/blob/master/notebooks/Bayesian%20updating%20of%20pulldown%20interactions.ipynb
