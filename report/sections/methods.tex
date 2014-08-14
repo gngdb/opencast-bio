@@ -410,6 +410,14 @@ Classifiers, such as a Logistic Regression model, have some number of hyper-para
 A Logistic Regression model, for example, has a single hyper-parameter so that the grid search for this model simply involves varying this parameter to obtain the optimum performance on the test set.
 %FIN:repeat hyper-parameter identity in logististc regression - regularisation
 
+%\subsection{Missing data}
+%how was missing data dealt with?
+Before classification could be performed the missing data in the feature vectors had to be imputed.
+This was performed by filling the missing values with the mean value of that feature.
+This is a common technique that is applied if it is likely the data is missing at random.
+In this case the data that is missing is due to mismatches in protein identifier mapping dictionaries, which is likely random and independent of the interaction prediction task.
+%FIN: link back to imputer discussed earlier, if you are having a section on this you could add a section on data normalization
+
 \subsubsection*{Accuracy}
 % accuracy value
 The accuracy value plotted in the learning curve and used in grid searches of parameters values is simply the proportional of correctly classified instances in a training or validation set.
@@ -425,6 +433,7 @@ The Area Under Curve, or \ac{AUC}, value is the area under this line.
 A higher \ac{AUC} value corresponds to a better classifier, although there is some controversy surrounding this\autocite{hanczar_small-sample_2010}.
 These concerns center on the problems of small sample sizes, which are not the case in this project.
 %FIN: maybe add in a wee truth table of TP, TF, FP, FF 
+
 \subsubsection*{Precision-recall curve}
 %precision recall
 A precision-recall curve plots the precision of a classifier against its recall as the threshold of classification is varied.
@@ -434,14 +443,6 @@ The area under the curve is used to gauge the classifier's effectiveness.
 %FIN: may as well add the equations in for precision and recall, TP, TF, FP, FF - I mean you did put down baye's rule earlier 
 %example \ac{ROC} curve?
 %example precision recall curve?
-
-\subsection{Missing data}
-%how was missing data dealt with?
-Before classification could be performed the missing data in the feature vectors had to be imputed.
-This was performed by filling the missing values with the mean value of that feature.
-This is a common technique that is applied if it is likely the data is missing at random.
-In this case the data that is missing is due to mismatches in protein identifier mapping dictionaries, which is likely random and independent of the interaction prediction task.
-%FIN: link back to imputer discussed earlier, if you are having a section on this you could add a section on data normalization
 
 \subsection{Bayesian weighting}
 \label{bayes}
