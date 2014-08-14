@@ -49,12 +49,12 @@ Two papers, \textcite{ito_comprehensive_2001} and \textcite{uetz_comprehensive_2
 These papers were able to make interesting discoveries about the network of interactions in yeast simply by investigating subnetworks in the network that was produced.  %FIN: for example? identification of many previously unidentified proteins involved in yeast vesicular transport such as Ygl161c, Ygl198w, and Ylr324w
 
 %which network are we interested in and stating the aims of the project
-The aim of this project is to extend work in the field of protein interaction prediction \autocites{qi_evaluation_2006,mcdowall_pips:_2009,rodgers-melnick_predicting_2013,von_mering_string:2005} to weighting protein interactions with a posterior probability through the use of varied data sources.
-Specifically, the interactions we are considering are those of the active zone network illustrated in figure \ref{fig:actzon} found as part of the SYNSYS project\autocite{synsys}.
+The aim of this project is to extend work in the field of protein interaction prediction \autocites{qi_evaluation_2006,mcdowall_pips:_2009,rodgers-melnick_predicting_2013,von_mering_string:_2005} to weighting protein interactions with a posterior probability through the use of varied data sources.
+Specifically, the interactions we are considering are those of the active zone network illustrated in figure \ref{fig:actzone} found as part of the SYNSYS project\autocite{synsys}.
 This data forms a set of proteins and a prepared unweighted list of protein interactions summarised in table \ref{tab:synsys}.
 These proteins and their interactions were found through immuno-precipitation, or pull-down, experiments in the mouse hippocampus focusing on the pre-synapse.
 In these experiments a set of bait proteins are selected and used to attract a set of prey proteins, the interaction between bait and prey being the interactions detected.
-The exact set of interactions used in the unweighted network used was prepared prior to this project using additional resources: HIPPIE\autocite{schaefer_hippie:_2012}, InterologWalk\autocite{gallone_bio::homology::interologwalk_2011}, BiGRID\autocite{stark_biogrid:_2006}, CCSB\autocite{yu_high-quality_2008}, HPRD\autocite{baolin_hprd:_2007}, IntAct\autocite{hermjakob_intact:_2004} and MDC\autocite{futschik_comparison_2006}.
+The exact set of interactions used in the unweighted network used was prepared prior to this project using additional resources: HIPPIE\autocite{schaefer_hippie:_2012}, InterologWalk\autocite{gallone_bio::homology::interologwalk_2011}, BiGRID\autocite{stark_biogrid:_2006}, CCSB\autocite{yu_high-quality_2008}, HPRD\autocite{baolin_hprd:_2007}, IntAct\autocite{hermjakob_intact:_2004} and MDC\autocite{futschik_comparison_2007}.
 %The interaction network we are investigating in this work is referred to throughout as the active zone network in the synapse.
 %These proteins are part of the pre-synapse and are illustrated in figure \ref{fig:actzone}.
 %Proteins identified as part of this network were used as baits in the pull-down experiments whose results are used in this project to build the \ac{PPI} network which is the focus of the weighted and unweighted Community Detection.
@@ -71,7 +71,7 @@ The exact set of interactions used in the unweighted network used was prepared p
 \begin{table}
     \centering
     \begin{tabular}{l c c} 
-        \multicolumn{3}{*}{Number of} \\
+        \multicolumn{3}{c}{Number of} \\
         baits   & preys & interactions \\
         \hline
         24      & 1548  & 9372 \\
