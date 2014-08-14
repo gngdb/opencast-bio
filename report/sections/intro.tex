@@ -2,7 +2,8 @@
 \label{introduction}
 
 %intro to the intro here
-
+To improve the insight gained on disease through the use of \ac{PPI} networks we aim to incorporate as much of the available information on the existence of protein interactions as possible.
+This provides scope for data mining from a vast array of biological databases and requires the application of machine learning techniques to deal with very large datasets.
 
 \section{Motivation}
 
@@ -12,12 +13,12 @@ Specifically, depression is estimated to cost Europe €91.9 billion in 2004 and
 There are many diseases with limited treatment options in the brain, and a deeper understanding of the brain is required to treat them. 
 
 %FIN: even in motivation say why proteins matter to understanding brain - key components, molecular machines etc
-
-These diseases are very likely to act at the synaptic level\autocites{chua_architecture_2010,synsys}.
-However, the exact proteins or genes involved in these diseases are unknown.
+Synaptic connections composed of the proteins of the cell are likely to be involved in these diseases\autocites{chua_architecture_2010,synsys}.
+However, the exact proteins or genes involved, and their organisation, in these diseases remain an important research topic.
 If it is possible to even gain slightly more information about associated proteins at the synapse it may be possible to develop new treatments\autocite{li_interaction_2010}.
 
-In addition, as a project this includes work from various areas, such as Bioinformatics, Machine Learning and Software Development that made it a good learning exercise. %FIN: thus made it a good 
+The aim of this project is to gather more information using various computational tools.
+This includes work from various areas such as Bioinformatics, Machine Learning and Software Development, thus making it a good learning exercise. %FIN: thus made it a good 
 It is a worthwhile investment in the fundamentals of constructing \ac{PPI} networks. %FIN: first usage of acronym should be in full, Protein-Protein Interaction 
 
 %overview of the project or the report? pretty sure it's the report
@@ -30,10 +31,12 @@ It is a worthwhile investment in the fundamentals of constructing \ac{PPI} netwo
 
 This project involved combining both direct and indirect data sources to create weighted edges in a \ac{PPI} graph to affect the communities detected by a Community Detection algorithm.
 A flow chart describing this process and the elements involved is shown in figure \ref{fig:expflow}.
-There are three main input sources shown, the pull-down experiments, direct data and indirect data.
+Pre-synaptic Immunoprecipitation, or pull-down, experiments performed as part of the SYNSYS project\autocite{synsys} provide empirical validation of a set of interacting proteins for this project shown in figure \ref{fig:actzone} and described in table \ref{tab:pulldown}.
+Direct and indirect data refers to the interactions databases and other databases, respectively, as described in table \ref{tab:sources}.
+
 %FIN: worth briefly explaining what pull-down experiments are or their importance i.e. that they are potentially empirical molecular validation of protein-protein interaction predictions
-Pull-down experiments were used to identify the proteins of interest, which were used to build an interaction network using direct data sources, such as interaction databases.
-The indirect data sources, such as functional annotations of proteins, were used along with direct data sources in the process to generate weighted graphs.
+%Pull-down experiments were used to identify the proteins of interest, which were used to build an interaction network using direct data sources, such as interaction databases.
+%The indirect data sources, such as functional annotations of proteins, were used along with direct data sources in the process to generate weighted graphs.
 
 %flow charts from the proposal could go here
 \begin{figure}
@@ -43,24 +46,28 @@ The indirect data sources, such as functional annotations of proteins, were used
     \label{fig:expflow}
 \end{figure}
 
-The resulting weighted and unweighted \ac{PPI} graphs were then separated into communities using a Community Detection algorithm.
-These communities could then be compared using the two methods named in figure \ref{fig:expflow}: Disease Enrichment and NMI.
-The results of these tested the hypothesis of the project. %FIN: "results of these were used to test" is clearer
+The resulting weighted and unweighted \ac{PPI} graphs were then separated into communities using a spectral based Community Detection algorithm as described in section \ref{communitydetection}.
+Comparison between these sets of communities was performed using \ac{NMI}\autocite{lancichinetti_benchmark_2008}.
 
+Using information on disease association of proteins it was possible to estimate the involvement of a community in a particular disease using a hypergeometric test as described in section \ref{diseaseenrichment}.
+Specifically, this project focused on the two diseases schizophrenia and Alzheimer's.
+Our hypothesis was that the weighted communities would find more likely communities involved in these diseases than in the unweighted case.
+If the weighted case represents a real cluster of proteins this should be the case as seen in \textcite{soler-lopez_interactome_2011}.
 %hypothesis required %FIN: hypothesis needs stated earlier - this is a bit confusing
-The hypothesis of this project was that the communities detected in each case would differ and that these differences would be relevant to the conclusions each network could illustrate about a particular disease.
-NMI was able to show simply that the two sets of communities detected was different. %FIN: were different
-Disease enrichment refers to testing the likelihood that a given community is involved in a particular disease. %FIN: for example? You would expect a community to represent a certain cluster of interacting proteins right? 
+%The hypothesis of this project was that the communities detected in each case would differ and that these differences would be relevant to the conclusions each network could illustrate about a particular disease.
+%\ac{NMI} was able to show simply that the two sets of communities detected were different. %FIN: were different
+%Disease enrichment refers to testing the likelihood that a given community is involved in a particular disease. %FIN: for example? You would expect a community to represent a certain cluster of interacting proteins right? 
 %FIN: they identify a high confidence interaction network/cluster around known Alzheimer's related proteins and identify putative additional factors  Genome Res. 2011 Mar;21(3):364-76. doi: 10.1101/gr.114280.110. Epub 2010 Dec 16.
 %FIN: Interactome mapping suggests new mechanistic details underlying Alzheimer's disease.
 %FIN: Soler-López M1, Zanzoni A, Lluís R, Stelzl U, Aloy P.
-This allowed us to show the differences in the predictions for disease involvement given by each network due to the weighting of the networks.
+%This allowed us to show the differences in the predictions for disease involvement given by each network due to the weighting of the networks.
 %FIN:this sentence is horrific - split it or rephrase
 
 %structure of the report and other resources
-The report first describes the background knowledge driving the hypothesis of the project in chapter \ref{background}.
-In chapter \ref{methods} the methods involved in executing the project are described.
-Finally, the results obtained are described in chapter \ref{results}.
+The body of this report is split into three chapters.
+Chapter \ref{background} describes the presynaptic dataset and data sources used to construct weighted and unweighted networks.
+The methods used to generate the weighted network and details on the community detection are described in chapter \ref{methods}.
+Chapter \ref{results} highlights candidate communities found in each case and analysis of these results.
 In addition, the execution of all commands required to reproduce the project were recorded in notebooks described in section \ref{app:notebooks}.
 This project was stored in a git repository and is publicly available in a repository described in Appendix \ref{app:repository}.
 
@@ -73,4 +80,5 @@ This project was stored in a git repository and is publicly available in a repos
 \section*{Conclusion}
 
 The following report covers the background information necessary to understand the methods of the project and the results which were obtained.
-It was approached as an opportunity to use a variety of new tools, and each will be described as the report continues. %FIN: "an opportunity to investigate the effectiveness of new tools in resolving known issues in predicting \ac{PPI}" or something like that
+It was approached as an opportunity to combine a variety of new tools in disease research on \ac{PPI} networks.
+%FIN: "an opportunity to investigate the effectiveness of new tools in resolving known issues in predicting \ac{PPI}" or something like that
