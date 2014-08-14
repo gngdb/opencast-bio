@@ -55,8 +55,7 @@ For any model $\mathcal{H}$ and a new feature vector $\pmb{x}^{*}$ we can expres
     \label{eq:bayes}
 \end{align}
 
-Where in equation \ref{eq:bayes} posterior probability is $p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})$ and the prior is $p( y^{*} = 1 | \mathcal{D}, \mathcal{H})$.
-Where $y^{*}$ and $\pmb{x}^{*}$ are a new label and feature vector, respectively.
+Where in equation \ref{eq:bayes} posterior probability of an interaction $y^{*} = 1$ conditioned on a novel feature vector $\pmb{x}^{*}$ is $p(y^{*} = 1 | \pmb{x}^{*}, \mathcal{D}, \mathcal{H})$ and the prior is $p( y^{*} = 1 | \mathcal{D}, \mathcal{H})$.
 
 We explicitly apply a prior to the probability of interaction based on the expected ratio of interactions to non-interactions stated in \autocite{qi_evaluation_2006}.
 %FIN: what was Qi's justification for this value? Presumably observed ratios - cite the justifying paper if it wasn't Qi - unfortunately, it was Qi - other papers sometimes choose one in 350 or one in 400 (PIPs)
@@ -69,9 +68,10 @@ Mapping from one protein identifier to another became a significant problem in t
 Unfortunately, most Biological databases maintain their own indexing method to identify different genes and proteins.
 New data sources being integrated into this project would often be using a different identification scheme to the NCBI Entrez GeneID originally chosen to use in the \ac{PPI} network.
 
+
 %what the Entrez identifier is -  as opposed to other protein identifier schemes - cite NCBI web pages
-Genes are defined by their amino acid sequence, but this is a long series of letters and the number of genes is much smaller than the possible combinations of these letters.
-For the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter and can encode other information about the gene.
+Genes are uniquely defined by their amino acid sequence, which is a long series of letters.
+However, for the sake of posterity databases containing information about genes typically apply an identifier for each gene that is much shorter than the sequence and can encode other information about the gene, typically referred to as an accession.
 %FIN: commonly referred to as accessions 
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
@@ -79,6 +79,7 @@ The Entrez GeneID identifier is relatively simple, just consisting of a number g
 Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as \ac{DIP} identifiers\autocite{xenarios_dip_2002}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
+This can be due to, for example, alternative splicing\autocite{black_mechanisms_2003} or simple submission errors\autocite{zeeberg_mistaken_2004}.
 %FIN: alternative splices of the same gene can produce different proteins, every gene is made of introns and exons, substrings which don't code for the amino acids in the protein and those that do respecitvely.  Expressed proteins are generated from any of several combinations of introns and exons (see http://en.wikipedia.org/wiki/Alternative_splicing).  Alt splicing is really important in eukaryotes and is one of the big explanations between the very low number of genes we found when we sequenced the human genome compared to the predicitions.
 %FIN: the other source of 'isoforms' is when a piece of DNA is duplicated and have diverged a little in sequence between copies (older literature referred to alleles as isoforms which are slightly different as these are alternative forms of a gene such as say a gene for blue eyes or brown eyes (although that may actually be a polygenetic trait))
 %FIN: you've also missed an issue with the multiple mappings of mistakes and errors, also these mistakes and errors being differentially fixed or propagated through databases.  A lot of the big source databases are public goods where many author's contribute and curation is mostly automated so have problems.  A fun and amusing example of finding accessions in databases that have been reformatted automatically by someone using excel and not noticing http://www.biomedcentral.com/1471-2105/5/80
@@ -89,7 +90,7 @@ In this project, simple conversion tables from NCBI's Gene\autocite{maglott_entr
 Another tool used was the Uniprot\autocite{consortium_universal_2008} online service web service.
 
 % talk about the problem of canonicalisation
-Unfortunately, using any of these services there will be a number of IDs which cannot be converted and many IDs mapping to the same Entrez ID as different protein isoforms are picked up.
+Unfortunately, using any of these services there will be a number of identifiers which cannot be converted and many IDs mapping to the same Entrez identifier as different protein isoforms are picked up.
 %FIN: this isn't always the explanation - for example one database might contain say several different crystal structures done of a protein which will all theoretically map from many identifiers relating to each of these structures to one identifier of the raw sequence in genbank
 One way to avoid this problem is to only refer to a single canonical form of any given protein and find this protein in other databases through its amino acid sequence.
 %FIN: a benefit of this method is also that it can be used to find mis-labelled proteins: if you searched just for all data related to protein X, but someone had done a load of work on something they called protein Y but was actually protein X. If you didn't search by sequence you wouldn't find data 
@@ -98,9 +99,9 @@ This ensures that when referring to an interaction between two identifiers the i
 
 % how using Entrez identifiers risks becoming gene interaction prediction
 % or "What Entrez isn't"
-Otherwise, as in this project, the interaction is detected between two Entrez IDs; which corresponds to an interaction between genes - possibly only a single interaction between combinations of the isoforms of each gene.
+Otherwise, as in this project, the interaction is detected between two Entrez identifiers; which corresponds to an interaction between genes - possibly only a single interaction between combinations of the isoforms of each gene.
 %FIN: exactly, also worth putting the limitation in of not directly testing co-localisation and co-expression (i.e. temporal and spatial localisation allowing interaction)
-Unfortunately, this means that this project is only concerned with gene interaction prediction until the Entrez IDs have been carefully canonicalized.
+Unfortunately, this means that this project is only concerned with gene interaction prediction until the Entrez identifiers have been carefully canonicalized.
 This is not really a problem, as we are only aiming to provide a weighting to a graph, rather than provide an accurate prediction of interaction between proteins.
 %FIN: to be less negative maybe say you will still identify possible interactions but may not identify all of them (as you are only checking one isoform etc).  This can still be informative if it is a new predicition which is later validated
 
