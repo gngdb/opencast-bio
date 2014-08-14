@@ -6,23 +6,23 @@
 
 %iterations of results - \ac{DIP}, \ac{HIPPIE}, Bayesian updating and reasoning behind it
 % can then refer to this throughout this section.
-As the project progressed the intended approach was found to be flawed and some changes were made.
+As the project progressed the intended approach was found to be flawed and some changes had to be made.
 %FIN: explain the flaws
 The first of these was the change from a \ac{DIP}-based training set to \ac{HIPPIE}-based training set.
-After the classification had been performed the use of a supervised classifier with this training set was found to be a poor method by itself for weighting interactions.
-Using all of the data available it was possible to run a simple Bayesian alternative to continue with the weighting for the Community detection algorithm.
+After the classification had been performed the use of a supervised classifier with this training set was found to produce poor results for weighting interactions.
+Using all of the data available it was possible to run a simple Bayesian alternative to continue weighting the interactions.
 
 %Feature extraction results
 \section{\ac{PPI} feature vectors}
 
 %The features extracted were X,Y,Z and the appendices explaining how this was done are A,B,C.
-Many features were identified for extraction and these are described in Appendix \ref{datasources}.
-Of these, only a small subset were succesfully processed into a usable form.
-These can be found in appendix \ref{datasources}.
+27 features were identified for extraction and these are described in Appendix \ref{datasources}.
+Of these, only 8 were successfully processed into a usable form.
 
-Of these, a smaller proportion were used in the final classifier, which neglected features directly derived from interaction databases.
+Only 3 were used in the final supervised classifier, which neglected features directly derived from interaction databases.
 The features used to train the final classifier are shown in table \ref{tab:features}.
-A brief description of these features is given below.
+Yeast two-hybrid is an internal database of Yeast two-hybrid results used directly.
+A brief description of the remaining features is given below.
 %FIN: worth explaining wht the ENTS coverage is worse? 
 
 %feature table, with information about each (size of features, categorical/ordinal/numerical, coverage)
@@ -57,9 +57,9 @@ Details on exactly how this feature was generated can be found in the notebook r
 \label{ents}
 %ENTS features were retreived through analysis and modification of the code published on the ENTS website, but did not have full coverage on any dataset.
 
-These features were obtained through analysis and modification of the bundled code and data downloaded from the website of \textcite{rodgers-melnick_predicting_2013}.
+107 features were obtained through analysis and modification of the bundled code and data downloaded from the website of \textcite{rodgers-melnick_predicting_2013}.
 In turn, most of these features were generated through the Multiloc2 program of \textcite{blum_multiloc2:_2009}.
-The remaining features are pairwise combinations of conserved protein domains, which are conserved "modules" of proteins described in \textcite{janin_domains_1985}.
+The remaining features are pairwise combinations of conserved protein domains, which are conserved ``modules'' of proteins described in \textcite{janin_domains_1985}.
 %FIN: domains that can evolve independently as a discrete functional unit essentially 
 %\subsection{Yeast Two-Hybrid results}
 %\label{y2h}
@@ -67,15 +67,21 @@ The remaining features are pairwise combinations of conserved protein domains, w
 %description of Y2H feature
 %pending
 
-\subsection{Data visualisation}
+\section{Data visualisation}
 \label{dataviz}
+
+%description of the following plots
+The feature vectors corresponding to interactions or non-interactions are plotted in the following section.
+Two techniques are used to plot these.
+The first of these is to reduce the dimensionality of the vector down to a size that can be plotted.
+The second was to plot all dimensions simultaneously using a parallel-coordinate plot.
 
 %describe the problem of using in proportion and out of proportion methods
 For all graphs, two cases were investigated: in proportion and out of proportion.
 In proportion refers to the case where the proportion of interactions to non-interactions is correct; specifically, 1 interaction to 600 non-interactions.
 %FIN: again justify Qi's basis for this ratio 
 Out of proportion maintains the same number of interactions to non-interactions.
-This is important as it is often easier to separated the data when the classes are equally split.
+This is important as it is often easier to separated the data when the classes are equally split due to the sheer number of non-interactions.
 %FIN: why?
 
 \subsubsection*{Reducing dimensionality}
