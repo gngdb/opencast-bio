@@ -42,16 +42,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="384.69416"
-     inkscape:cy="572.95693"
+     inkscape:cx="389.29524"
+     inkscape:cy="576.56395"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g10435"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="636"
+     inkscape:window-width="1276"
      inkscape:window-height="985"
      inkscape:window-x="0"
      inkscape:window-y="18"
@@ -84,7 +84,7 @@
        style="opacity:0.15;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 8;stroke-dashoffset:0"
        id="rect11603"
        width="200"
-       height="445"
+       height="610"
        x="500"
        y="42.362183" />
     <rect
@@ -297,7 +297,33 @@
            id="flowPara5839"
            style="font-size:18px">Gold standard dataset</flowPara><flowPara
            id="flowPara5855"
-           style="font-size:14px">iRefIndex</flowPara></flowRoot>    </g>
+           style="font-size:14px">iRefIndex</flowPara></flowRoot>      <flowRoot
+         transform="translate(21.979492,419.79081)"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;opacity:0.7"
+         id="flowRoot3487"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3489"><rect
+             y="52.362183"
+             x="517.85712"
+             height="105.27853"
+             width="184.44415"
+             id="rect3491"
+             style="font-size:18px" /></flowRegion><flowPara
+           style="font-size:18px"
+           id="flowPara3495">Direct data</flowPara></flowRoot>      <path
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:none;marker-mid:none;marker-end:url(#Arrow1Mend);opacity:0.7"
+         d="m 580,477.36218 0,-21"
+         id="path3499"
+         inkscape:connector-curvature="0"
+         transform="translate(0,-2)"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4821"
+         d="m 580,495.36218 0,27.25"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:none;marker-mid:none;marker-end:url(#Arrow1Mend);opacity:0.7"
+         sodipodi:nodetypes="cc" />
+    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Mend)"
        d="m 475,407.36218 0,119"

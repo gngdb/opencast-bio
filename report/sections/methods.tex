@@ -267,7 +267,7 @@ Unfortunately, the data we are working with is not linearly separable as shown b
 
 %How is it trained?
 To find the parameters in this model the log likelihood must be maximised; corresponding to the maximum likelihood solution.
-The log likelihood for this model, for N feature vectors, is:
+The log likelihood, for N feature vectors, is given by:
 
 \begin{align}
     L(\pmb{w},b) = \sum_{n=1}^{N} c^{n} \log \sigma(b + \pmb{w}^{T}\pmb{x}^{n}) + (1 - c^{n})\log (1 - \sigma(b + \pmb{w}^{T}\pmb{x}^{n}))
@@ -276,14 +276,15 @@ The log likelihood for this model, for N feature vectors, is:
 %describe what the C parameter is
 Regularisation of the weights represents a prior belief that the weights should not increase without bound.
 In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{barber_bayesian_2013}.
-To stop this from happening we apply a penalty term, $\alpha$, to the size of the weights:
+To stop this from happening we apply a penalty term, $\frac{1}{C}$, to the size of the weights:
 
 \begin{align}
-    L'(\pmb{w},b) = L(\pmb{w},b) - \alpha \pmb{w}^{T}\pmb{w}
+    L'(\pmb{w},b) = L(\pmb{w},b) - \frac{1}{C} \pmb{w}^{T}\pmb{w}
 \end{align}
 
-Tuning this hyper-parameter is the goal of a grid search when training a Logistic Regression model.
+Tuning this hyper-parameter is the goal of a grid search, which is discussed in section \ref{classtest}, and the optimal value found in this case was 0.0215 as shown in table \ref{tab:gridresults}.
 %FIN: explain grid-search 
+
 \subsubsection*{Support Vector Machines}
 %FIN: you are a big fan of Murphy 
 %with reference to Murphy
