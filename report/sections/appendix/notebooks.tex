@@ -55,6 +55,29 @@ Links are provided to the code and an online service to view the notebook:
         \item This notebook can be viewed here: \url{http://nbviewer.ipython.org/github/ggray1729/opencast-bio/blob/master/notebooks/Classifier%20Training.ipynb}
 \end{itemize}
 
+In this notebook both learning curves and pipelines are used in the training of the classifiers.
+These are described in the following sections:
+
+\subsubsection*{Pipeline}
+
+%what is a pipeline? why did I use one?
+A pipeline is a combination of algorithms intended to run on the data in sequence after the data has been split into training and test.
+In the case of this project the pipeline involved three components: a mean value filling imputer, a standard scaler and the classifier itself.
+The imputer simply replaced missing values in the training data with the corresponding mean value for that column.
+Scikit-learn's standard scaler centers the data at zero mean and unit variance.
+
+%FIN: need to explain/just why you need to normalise data and gracefully handle missing data
+
+\subsubsection*{Learning Curves}
+% learning curves, what are they? and why?
+Learning curves, as in the notebook referenced in Appendix \ref{app:classtrain}, were used in this project to ensure that the number of samples used in a grid search was sufficient.
+The learning curve plots the accuracy of a classifier after it has been trained using cross-validation on a varying number of samples.
+%FIN: most importantly they can diagnose common classifier issues (bias/variance) 
+%example learning curve?
+%still pending, worth it if page count allows
+
+
+
 \section{ocbio.extract Usage}
 \label{app:ocbio}
 
