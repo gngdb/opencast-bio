@@ -5,6 +5,8 @@
 
 %intro to the methods
 This chapter describes the use of two probabilistic models to construct a weighted PPI network.
+The first of these is a supervised binary classifier, implemented from a selection of either logistic regression, \ac{SVM} or random forest.
+As the project progressed this method was unsuccessful and a second conditionally independent probabilistic model was used to update on prior knowledge and produce the final weightings.
 Feature extraction was the predominant component in this project and involved turning the various data sources involved into usable features in a machine learning framework. 
 %FIN: what would a non-traditional way be?  
 The chosen Community Detection method, the fast and efficient Spectral Modularity algorithm, is also described. 
@@ -12,10 +14,11 @@ The chosen Community Detection method, the fast and efficient Spectral Modularit
 
 \section{Feature extraction}
 
-Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in the following text.
-The process of taking a retrieving these from biological databases is referred to as feature extraction. 
+%Features are the processed form of the data we use to make predictions about a given interaction between pairs of proteins and is defined mathematically in the following text.
+The set of biologically relevant information associated with a given protein interaction is referred to as a feature vector and the constituent elements features.
+The process of retrieving these from biological databases is referred to as feature extraction. 
 %FIN: typo 
-This commonly involved mapping between protein identifiers and indexing large tables automatically, but also involved many other small pieces of scripting. 
+This commonly involved mapping between protein identifiers and indexing large tables automatically.
 %FIN: mention non-standardisation/alternative identifiers used in different data sources -I think you need to make it clear how difficult the data collection was especially as a novice to the available databases and data formats
 
 % going through posing the problem in terms of probability
