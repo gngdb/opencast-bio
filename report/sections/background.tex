@@ -2,23 +2,35 @@
 \label{background}
 
 %intro to background
-This project involved the use of protein interaction prediction to build weighted \ac{PPI} networks improve the performance of a Community Detection algorithm on a \ac{PPI} network.
+This project involved the use of protein interaction prediction to build weighted \ac{PPI} networks improve the performance of Community Detection on a \ac{PPI} network for disease research.
+The following chapter describes the relationship of the disease to the proteins of the synapse.
+\ac{PPI} networks, and their application to disease research is then described.
 %FIN: I'd probably explain the \ac{PPI} acronym once more for people that skipped the beginning
-The aim of the Community Detection algorithm was to gain insight into structure of the interactions between proteins at the synapse to aid disease research.
+%The aim of the Community Detection algorithm was to gain insight into structure of the interactions between proteins at the synapse to aid disease research.
 %FIN: you need to justify why the synapse is important in neuronal disease research with a reference at least
-In the following chapter these different components, and how they fit together, will be described.
+%In the following chapter these different components, and how they fit together, will be described.
 
 %what is a protein-protein interaction network?
 \section{The synapse and protein interaction}
 
 %intro paragraph, why proteins are important
-Cells consist largely of proteins. 
+Proteins consist of approximately 20\% of cell mass in a typical eukaryote\autocite{lodish_molecular_2000}.
 %FIN: quantify - account for ~20% of the cell mass of a "typical eurkaryote" http://www.ncbi.nlm.nih.gov/books/NBK21473/
 %FIN: "synthesis of proteins accounts for a considerable if highly variable proportion of the normal metabolism of a cell"  http://www.sciencedirect.com/science/article/pii/S1574789109000751
-Each of these proteins are carefully tuned molecules which fit into machinery of a cell within the human body. %FIN: I dislike this sentence from an evolutionary perspective - plenty are shit - "Proteins facilitate almost every aspect of cellular metabolism across all forms of life.  They have evolved complex and extensive systems of interaction with one another and other cellular macro and micromolecules"
+Each of these proteins are molecules which fit into machinery of a cell within the human body.%FIN: I dislike this sentence from an evolutionary perspective - plenty are shit - "Proteins facilitate almost every aspect of cellular metabolism across all forms of life.  They have evolved complex and extensive systems of interaction with one another and other cellular macro and micromolecules"
 Functions of these cells include almost all cellular functions; there are proteins capable of pumping ions, reshaping DNA and fluorescing\autocite{alberts_molecular_2008}. %FIN:shoulda read the next sentence first before writing the last comment... still change that last 'tuned' sentence
 A crude model of the cell is to map the interactions between these molecular machines to try to guess about the functioning of the cell. %FIN: explain why this is crude - it ignores the interaction of proteins with everything else!
-These models are \ac{PPI} networks and can be useful for disease research. %FIN: expand a little: how are they useful?  They allow targeted research, can identify additional previously uncharacterised disease factors, are targets for molecular therapies add a reference to one of the many \ac{PPI} papers you are citing that explain why \ac{PPI}s matter 
+These models are \ac{PPI} networks and can be useful for targeting proteins in disease research\autocite{chen_identifying_2013}. %FIN: expand a little: how are they useful?  They allow targeted research, can identify additional previously uncharacterised disease factors, are targets for molecular therapies add a reference to one of the many \ac{PPI} papers you are citing that explain why \ac{PPI}s matter 
+
+%what are synapses?
+Synapses are the contacts between nerve cells where the vast majority of communication between nerve cells occurs, the only exceptions being through signalling molecules that can cross the cell membrane as shown in figure \ref{fig:actzone}.
+There are two types of synapses in the nervous system, electrical and chemical\autocite{kandel_principles_2000}.
+Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
+Chemical synapses are involved in a much more complex system of neurotransmitter release and reception.
+Synapses are therefore important to the functioning of the nervous system. 
+A problem with synapse function will likely cause large problems to the nervous system, so diseases of the nervous system are likely to involve problems with synapse function. %FIN: use the word neurotransmission its a great word, bonus points for 'impinge' 
+%As the cell is composed of proteins, so is the synapse composed of proteins. %FIN: there are lots of other shit too - I'd get rid of this its too simple in this form.  "As synapse function heavily features the interaction of many proteins e.g. transporters, signal-receptors, ... etc" - maybe choose some random specific examples
+Investigating the functioning of these proteins will help to explain the functioning of the synapse and hopefully provide insight into the diseases of the synapse\autocite{synsys}.%FIN:such as?  Some autistic spectrum disorders have been connected with heritable loss-of-function mutations in synaptic regulatory proteins such as Neuroglobin 4 http://jp.physoc.org/content/587/4/727
 
 %going deeper, why do we care about proteins at the synapse, mention SYNSYS
 The proteins at the synapse drive synaptic communication, which in turn defines the functioning of the brain.  %FIN: explain what the synapse is- the princpial interaction interface of a neuron - maybe move synapse section to before where yout alk about it
@@ -26,30 +38,26 @@ As these proteins define the functioning of the brain any disorders which affect
 Disorders which affect the brain are also very common and poorly understood, affecting one in three people in the developed world. %FIN: \ac{PPI} offer opportunities to use known factors to identify additional uncharacterised protein factors in neuronal diseases
 Curing these diseases therefore may be possible through a greater understanding of the interactions of proteins at the synaptic level\autocites{synsys,chua_architecture_2010}.
 
-%what are synapses?
-Synapses are the contacts between nerve cells where the vast majority of communication between nerve cells occurs, the only exceptions being through signalling molecules that can cross the cell membrane.
-There are two types of synapses in the nervous system, electrical and chemical\autocite{kandel_principles_2000}.
-Electrical synapses form a simple electrical connection through an ionic substrate between two neurons.
-Chemical synapses are involved in a much more complex system of neurotransmitter release and reception.
-Synapses are therefore important to the functioning of the nervous system. 
-A problem with synapse function will likely cause large problems to the nervous system, so diseases of the nervous system are likely to involve problems with synapse function. %FIN: use the word neurotransmission its a great word, bonus points for 'impinge' 
-As the cell is composed of proteins, so is the synapse composed of proteins. %FIN: there are lots of other shit too - I'd get rid of this its too simple in this form.  "As synapse function heavily features the interaction of many proteins e.g. transporters, signal-receptors, ... etc" - maybe choose some random specific examples
-Investigating the functioning of these proteins will help to explain the functioning of the synapse and hopefully provide insight into the diseases of the synapse.%FIN:such as?  Some autistic spectrum disorders have been connected with heritable loss-of-function mutations in synaptic regulatory proteins such as Neuroglobin 4 http://jp.physoc.org/content/587/4/727
-
 %but what is a protein-protein interaction network?
 Physical interaction between proteins can be inferred from a range of different experiments.
-Typical contemporary protein interaction networks rely on databases of confirmed interactions from a variety of experiments, for example in \textcite{kenley_detecting_2011} several well-known interaction databases were used. %FIN:give an example of one or two e.g. \ac{DIP} and BioGRID 
-By forming a network from these individual interactions as edges and clustering this network the example paper was able to predict complexes and functional associations. %FIN: example paper doesn't sound quite right - "Kenley et al. were able". Be more specific in what a functional association is
-If these functional associations are involved in disease it is possible to associate proteins with diseases, as will be shown in section \ref{methods}. %FIN:how? If members of this functional association has been previously implicated in diseases or something
+Typical contemporary protein interaction networks rely on databases of confirmed interactions from a variety of experiments, for example in \textcite{kenley_detecting_2011} several well-known interaction databases were used, such as BioGRID\autocite{stark_biogrid:_2006}. %FIN:give an example of one or two e.g. \ac{DIP} and BioGRID 
+By forming a network from these individual interactions as edges and clustering this network \textcite{kenley_detecting_2011} were able to predict complexes and functional associations. %FIN: example paper doesn't sound quite right - "Kenley et al. were able". Be more specific in what a functional association is
+As with functional association, through associating community members with disease it is possible to associate communities with diseases, as will be discussed in chapter \ref{methods}. %FIN:how? If members of this functional association has been previously implicated in diseases or something
 
 %historical work in the field
-Originally, two papers, \textcite{ito_comprehensive_2001} and \textcite{uetz_comprehensive_2000}, were able to leverage large volumes of recent interaction data and build interaction networks. % mention they collected a lot of their own data in earlier papers by molecular methods (yeast-2h)
+Two papers, \textcite{ito_comprehensive_2001} and \textcite{uetz_comprehensive_2000}, were able to leverage large volumes of recent interaction data and build interaction networks. % mention they collected a lot of their own data in earlier papers by molecular methods (yeast-2h)
 These papers were able to make interesting discoveries about the network of interactions in yeast simply by investigating subnetworks in the network that was produced.  %FIN: for example? identification of many previously unidentified proteins involved in yeast vesicular transport such as Ygl161c, Ygl198w, and Ylr324w
 
-%which network are we interested in?
-The interaction network we are investigating in this work is referred to throughout as the active zone network in the synapse.
-These proteins are part of the pre-synapse and are illustrated in figure \ref{fig:actzone}.
-Proteins identified as part of this network were used as baits in the pull-down experiments whose results are used in this project to build the \ac{PPI} network which is the focus of the weighted and unweighted Community Detection.
+%which network are we interested in and stating the aims of the project
+The aim of this project is to extend work in the field of protein interaction prediction \autocites{qi_evaluation_2006,mcdowall_pips:_2009,rodgers-melnick_predicting_2013,von_mering_string:2005} to weighting protein interactions with a posterior probability through the use of varied data sources.
+Specifically, the interactions we are considering are those of the active zone network illustrated in figure \ref{fig:actzon} found as part of the SYNSYS project\autocite{synsys}.
+This data forms a set of proteins and a prepared unweighted list of protein interactions summarised in table \ref{tab:synsys}.
+These proteins and their interactions were found through immuno-precipitation, or pull-down, experiments in the mouse hippocampus focusing on the pre-synapse.
+In these experiments a set of bait proteins are selected and used to attract a set of prey proteins, the interaction between bait and prey being the interactions detected.
+The exact set of interactions used in the unweighted network used was prepared prior to this project using additional resources: HIPPIE\autocite{schaefer_hippie:_2012}, InterologWalk\autocite{gallone_bio::homology::interologwalk_2011}, BiGRID\autocite{stark_biogrid:_2006}, CCSB\autocite{yu_high-quality_2008}, HPRD\autocite{baolin_hprd:_2007}, IntAct\autocite{hermjakob_intact:_2004} and MDC\autocite{futschik_comparison_2006}.
+%The interaction network we are investigating in this work is referred to throughout as the active zone network in the synapse.
+%These proteins are part of the pre-synapse and are illustrated in figure \ref{fig:actzone}.
+%Proteins identified as part of this network were used as baits in the pull-down experiments whose results are used in this project to build the \ac{PPI} network which is the focus of the weighted and unweighted Community Detection.
 %FIN: what is a pull-down experiment you still haven't explained it or why it is 'gold-standard' or that it is one of the gold-standards for demonstrating \ac{PPI} in-vitro. Life scientists love to differentiate between in-vitro and in-vivo. While pull-down experiments can show interactions in-vitro (i.e. a test-tube) it doesn't necessarily mean the cells will interact in-vivo (in the cell).  That is why demonstrating that two proteins that interact also co-localise in the cell is important to confirm functional interaction.  Cells, and especially eukaryotic cells aren't really big bags of proteins (and other molecules) as they are often drawn in books - they contain a complex set of compartmentalisation, diffusion gradients and active retention or inactivation of proteins in certain areas
 
 \begin{figure}
@@ -58,6 +66,19 @@ Proteins identified as part of this network were used as baits in the pull-down 
     \caption{An illustration of the proteins identified to be involved in the active zone network\autocite{chua_architecture_2010}.}
     \label{fig:actzone}
 \end{figure}
+
+%synsys table: no. of baits, preys, interactions, etc?
+\begin{table}
+    \centering
+    \begin{tabular}{l c c} 
+        \multicolumn{3}{*}{Number of} \\
+        baits   & preys & interactions \\
+        \hline
+        24      & 1548  & 9372 \\
+    \end{tabular}
+    \caption{A table summarising the results of the pull-down experiments performed as part of the SYNSYS project\autocite{synsys},and the active zone network defined using them, used in this project.}
+    \label{tab:synsys}
+\end{table}
 
 %function of the active zone network? What does it do?
 
