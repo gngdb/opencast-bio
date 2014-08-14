@@ -153,24 +153,99 @@
       \verb http://www.nature.com/ng/journal/v25/n1/abs/ng0500_25.html
       \endverb
     \endentry
-    \entry{barber_bayesian_2013}{article}{}
+    \entry{baolin_hprd:_2007}{incollection}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=373b4c12b7629a77ce2217795cc7420e}{Baolin}{B\bibinitperiod}{Liu}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5a3f24f749995d5aacefa1b22b142ec4}{Bo}{B\bibinitperiod}{Hu}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=373b4c12b7629a77ce2217795cc7420e}{Baolin}{B\bibinitperiod}{Liu}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5a3f24f749995d5aacefa1b22b142ec4}{Bo}{B\bibinitperiod}{Hu}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c30de795aaac81b1d95882f71644271a}
+      \strng{fullhash}{c30de795aaac81b1d95882f71644271a}
+      \field{sortinit}{B}
+      \field{labelyear}{2007}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{HPRD}}
+      \field{booktitle}{Network and Parallel Computing}
+      \field{shorttitle}{{HPRD}}
+      \field{title}{{HPRD}: a high performance {RDF} database}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2007}
+      \field{pages}{364\bibrangedash 374}
+      \verb{file}
+      \verb [PDF] from igroupnet.com:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DM9DI5DB/Baolin and Bo - 2007 - HPRD a high performance RDF database.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/VU85ZQW5/978-3-540-74784-0_37.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/chapter/10.1007/978-3-540-74784-0_37
+      \endverb
+    \endentry
+    \entry{barber_bayesian_2012}{book}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
         {{uniquename=0,hash=9a97f74e5fb11fe785cbe0a83fc5276c}{Barber}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
       }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
       \strng{namehash}{9a97f74e5fb11fe785cbe0a83fc5276c}
       \strng{fullhash}{9a97f74e5fb11fe785cbe0a83fc5276c}
       \field{sortinit}{B}
-      \field{labelyear}{2013}
+      \field{labelyear}{2012}
+      \field{labelmonth}{02}
       \field{datelabelsource}{}
       \field{labeltitle}{Bayesian Reasoning and Machine Learning}
+      \field{abstract}{Machine learning methods extract value from vast data sets quickly and with modest resources. They are established tools in a wide range of industrial applications, including search engines, {DNA} sequencing, stock market analysis, and robot locomotion, and their use is spreading rapidly. People who know the methods have their choice of rewarding jobs. This hands-on text opens these opportunities to computer science students with modest mathematical backgrounds. It is designed for final-year undergraduates and master's students with limited background in linear algebra and calculus. Comprehensive and coherent, it develops everything from basic reasoning to advanced techniques within the framework of graphical models. Students learn more than a menu of techniques, they develop analytical and problem-solving skills that equip them for the real world. Numerous examples and exercises, both computer based and theoretical, are included in every chapter. Resources for students and instructors, including a {MATLAB} toolbox, are available online.}
+      \field{isbn}{9780521518147}
+      \field{month}{02}
       \field{title}{Bayesian Reasoning and Machine Learning}
-      \field{year}{2013}
-      \verb{file}
-      \verb 031013:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/8TQ7EUIE/031013.pdf:application/pdf
+      \field{year}{2012}
+      \keyw{Computers / Computer Vision \& Pattern Recognition,Computers / Intelligence ({AI}) \& Semantics,Mathematics / Probability \& Statistics / General}
+    \endentry
+    \entry{black_mechanisms_2003}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8519fcffd3635c260ba2f38cbaaae020}{Black}{B\bibinitperiod}{Douglas\bibnamedelima L.}{D\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8519fcffd3635c260ba2f38cbaaae020}{Black}{B\bibinitperiod}{Douglas\bibnamedelima L.}{D\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8519fcffd3635c260ba2f38cbaaae020}
+      \strng{fullhash}{8519fcffd3635c260ba2f38cbaaae020}
+      \field{sortinit}{B}
+      \field{labelyear}{2003}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Mechanisms of Alternative Pre-Messenger Rna Splicing}
+      \field{abstract}{Alternative pre-{mRNA} splicing is a central mode of genetic regulation in higher eukaryotes. Variability in splicing patterns is a major source of protein diversity from the genome. In this review, I describe what is currently known of the molecular mechanisms that control changes in splice site choice. I start with the best-characterized systems from the Drosophila sex determination pathway, and then describe the regulators of other systems about whose mechanisms there is some data. How these regulators are combined into complex systems of tissue-specific splicing is discussed. In conclusion, very recent studies are presented that point to new directions for understanding alternative splicing and its mechanisms.}
+      \field{journaltitle}{Annual Review of Biochemistry}
+      \field{number}{1}
+      \field{title}{Mechanisms of Alternative Pre-Messenger Rna Splicing}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{72}
+      \field{year}{2003}
+      \field{pages}{291\bibrangedash 336}
+      \verb{doi}
+      \verb 10.1146/annurev.biochem.72.121801.161720
       \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/IEN4FFFH/Black - 2003 - Mechanisms of Alternative Pre-Messenger Rna Splici.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1146/annurev.biochem.72.121801.161720
+      \endverb
+      \keyw{alternative splicing,protein diversity,regulatory mechanisms,{RNA} binding proteins,spliceosome}
     \endentry
     \entry{blum_multiloc2:_2009}{article}{}
       \name{labelname}{3}{}{%
@@ -316,64 +391,6 @@
       \verb http://jcs.biologists.org/content/123/6/819
       \endverb
     \endentry
-    \entry{wkmdacommons}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=93d707cc77f037fd02e1c8cfa75317cf}{Commons}{C\bibinitperiod}{Wikimedia}{W\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=93d707cc77f037fd02e1c8cfa75317cf}{Commons}{C\bibinitperiod}{Wikimedia}{W\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{93d707cc77f037fd02e1c8cfa75317cf}
-      \strng{fullhash}{93d707cc77f037fd02e1c8cfa75317cf}
-      \field{sortinit}{C}
-      \field{labelyear}{2013}
-      \field{datelabelsource}{}
-      \field{labeltitle}{File:Simple decision tree.svg}
-      \field{title}{File:Simple decision tree.svg}
-      \field{year}{2013}
-      \verb{url}
-      \verb http://commons.wikimedia.org/wiki/File:Simple_decision_tree.svg
-      \endverb
-    \endentry
-    \entry{consortium_universal_2008}{article}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=456c23addb60a2e04a77eeea5bee822e}{Consortium}{C\bibinitperiod}{The\bibnamedelima UniProt}{T\bibinitperiod\bibinitdelim U\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=456c23addb60a2e04a77eeea5bee822e}{Consortium}{C\bibinitperiod}{The\bibnamedelima UniProt}{T\bibinitperiod\bibinitdelim U\bibinitperiod}{}{}{}{}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{456c23addb60a2e04a77eeea5bee822e}
-      \strng{fullhash}{456c23addb60a2e04a77eeea5bee822e}
-      \field{sortinit}{C}
-      \field{labelyear}{2008}
-      \field{labelmonth}{01}
-      \field{datelabelsource}{}
-      \field{labeltitle}{The Universal Protein Resource ({UniProt})}
-      \field{abstract}{The Universal Protein Resource ({UniProt}) provides a stable, comprehensive, freely accessible, central resource on protein sequences and functional annotation. The {UniProt} Consortium is a collaboration between the European Bioinformatics Institute ({EBI}), the Protein Information Resource ({PIR}) and the Swiss Institute of Bioinformatics ({SIB}). The core activities include manual curation of protein sequences assisted by computational analysis, sequence archiving, development of a user-friendly {UniProt} website, and the provision of additional value-added information through cross-references to other databases. {UniProt} is comprised of four major components, each optimized for different uses: the {UniProt} Knowledgebase, the {UniProt} Reference Clusters, the {UniProt} Archive and the {UniProt} Metagenomic and Environmental Sequences database. {UniProt} is updated and distributed every three weeks, and can be accessed online for searches or download at http://www.uniprot.org.}
-      \field{issn}{0305-1048, 1362-4962}
-      \field{journaltitle}{Nucleic Acids Research}
-      \field{month}{01}
-      \field{number}{suppl 1}
-      \field{title}{The Universal Protein Resource ({UniProt})}
-      \field{urlday}{29}
-      \field{urlmonth}{07}
-      \field{urlyear}{2014}
-      \field{volume}{36}
-      \field{year}{2008}
-      \field{pages}{D190\bibrangedash D195}
-      \verb{doi}
-      \verb 10.1093/nar/gkm895
-      \endverb
-      \verb{file}
-      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/3S7RBE6K/Consortium - 2008 - The Universal Protein Resource (UniProt).pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/V5EQIFEG/D190.html:text/html
-      \endverb
-      \verb{url}
-      \verb http://nar.oxfordjournals.org/content/36/suppl_1/D190
-      \endverb
-    \endentry
     \entry{cristianini_introduction_2000}{book}{}
       \name{labelname}{2}{}{%
         {{uniquename=0,hash=b643588b4a53ed47702d3277b6de83a9}{Cristianini}{C\bibinitperiod}{Nello}{N\bibinitperiod}{}{}{}{}}%
@@ -402,6 +419,49 @@
       \field{title}{An Introduction to Support Vector Machines and Other Kernel-based Learning Methods}
       \field{year}{2000}
       \keyw{Computers / Bioinformatics,Computers / Computer Science,Computers / Databases / General,Computers / Intelligence ({AI}) \& Semantics,Computers / Optical Data Processing,Computers / Programming / General}
+    \endentry
+    \entry{futschik_comparison_2007}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=be9f8bcac4d912f32cfba9a7714aa508}{Futschik}{F\bibinitperiod}{Matthias\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd2bdb808d017581b4cb378accb8db91}{Chaurasia}{C\bibinitperiod}{Gautam}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=adc6a3b55cc7143be922c11c7ad2b582}{Herzel}{H\bibinitperiod}{Hanspeter}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=be9f8bcac4d912f32cfba9a7714aa508}{Futschik}{F\bibinitperiod}{Matthias\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd2bdb808d017581b4cb378accb8db91}{Chaurasia}{C\bibinitperiod}{Gautam}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=adc6a3b55cc7143be922c11c7ad2b582}{Herzel}{H\bibinitperiod}{Hanspeter}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b5da17256cd54cad300f414aa3e3db7c}
+      \strng{fullhash}{b5da17256cd54cad300f414aa3e3db7c}
+      \field{sortinit}{F}
+      \field{labelyear}{2007}
+      \field{labelmonth}{03}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Comparison of human protein–protein interaction maps}
+      \field{abstract}{Motivation: Large-scale mappings of protein–protein interactions have started to give us new views of the complex molecular mechanisms inside a cell. After initial projects to systematically map protein interactions in model organisms such as yeast, worm and fly, researchers have begun to focus on the mapping of the human interactome. To tackle this enormous challenge, different approaches have been proposed and pursued. While several large-scale human protein interaction maps have recently been published, their quality remains to be critically assessed. Results: We present here a first comparative analysis of eight currently available large-scale maps with a total of over 10 000 unique proteins and 57 000 interactions included. They are based either on literature search, orthology or by yeast-two-hybrid assays. Comparison reveals only a small, but statistically significant overlap. More importantly, our analysis gives clear indications that all interaction maps imply considerable selection and detection biases. These results have to be taken into account for future assembly of the human interactome. Availability: An integrated human interaction network called Unified Human Interactome ({UniHI}) is made publicly accessible at http://www.mdc-berlin.de/unihi. Contact: m.futschik\{at\}biologie.hu-berlin.de Supplementary information: Supplementary data are available at Bioinformatics online.}
+      \field{issn}{1367-4803, 1460-2059}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{03}
+      \field{number}{5}
+      \field{title}{Comparison of human protein–protein interaction maps}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{23}
+      \field{year}{2007}
+      \field{pages}{605\bibrangedash 611}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btl683
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/QKKN9FW5/Futschik et al. - 2007 - Comparison of human protein–protein interaction ma.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/6QHM3GTN/605.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://bioinformatics.oxfordjournals.org/content/23/5/605
+      \endverb
     \endentry
     \entry{gallone_bio::homology::interologwalk_2011}{article}{}
       \name{labelname}{4}{}{%
@@ -432,7 +492,7 @@
       \field{month}{07}
       \field{number}{1}
       \field{shorttitle}{Bio}
-      \field{title}{Bio::Homology::{InterologWalk} - A Perl module to build putative protein-protein interaction networks through interolog mapping}
+      \field{title}{Bio::Homology::InterologWalk - A Perl module to build putative protein-protein interaction networks through interolog mapping}
       \field{urlday}{09}
       \field{urlmonth}{04}
       \field{urlyear}{2014}
@@ -451,13 +511,13 @@
     \endentry
     \entry{github}{online}{}
       \name{labelname}{1}{}{%
-        {{uniquename=0,hash=b79b798b2812cfe1c1431894a617897d}{GitHub}{G\bibinitperiod}{Inc}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=10302de279eaf7752eaa1f9d952ea2c5}{{GitHub,\bibnamedelimb Inc}}{G\bibinitperiod}{}{}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{uniquename=0,hash=b79b798b2812cfe1c1431894a617897d}{GitHub}{G\bibinitperiod}{Inc}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=10302de279eaf7752eaa1f9d952ea2c5}{{GitHub,\bibnamedelimb Inc}}{G\bibinitperiod}{}{}{}{}{}{}}%
       }
-      \strng{namehash}{b79b798b2812cfe1c1431894a617897d}
-      \strng{fullhash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{namehash}{10302de279eaf7752eaa1f9d952ea2c5}
+      \strng{fullhash}{10302de279eaf7752eaa1f9d952ea2c5}
       \field{sortinit}{G}
       \field{labelyear}{2008}
       \field{datelabelsource}{}
@@ -469,6 +529,31 @@
       \field{year}{2008}
       \verb{url}
       \verb https://github.com/
+      \endverb
+    \endentry
+    \entry{opencastbiowiki}{online}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=99c040cef8907c8462b9fb53ba5801a0}{Gray}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=99c040cef8907c8462b9fb53ba5801a0}{Gray}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1adbcbc56587b622580bf2a7bb4a552f}
+      \strng{fullhash}{1adbcbc56587b622580bf2a7bb4a552f}
+      \field{sortinit}{G}
+      \field{extrayear}{1}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{opencast-bio project wiki}
+      \field{title}{opencast-bio project wiki}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://github.com/ggray1729/opencast-bio/wiki
       \endverb
     \endentry
     \entry{opencast-bio}{online}{}
@@ -483,6 +568,7 @@
       \strng{namehash}{1adbcbc56587b622580bf2a7bb4a552f}
       \strng{fullhash}{1adbcbc56587b622580bf2a7bb4a552f}
       \field{sortinit}{G}
+      \field{extrayear}{2}
       \field{labelyear}{2014}
       \field{datelabelsource}{}
       \field{labeltitle}{opencast-bio repository}
@@ -493,30 +579,6 @@
       \field{year}{2014}
       \verb{url}
       \verb https://github.com/ggray1729/opencast-bio
-      \endverb
-    \endentry
-    \entry{opencastbiowiki}{online}{}
-      \name{labelname}{2}{}{%
-        {{uniquename=0,hash=11b958e93e24dffcd56e4b148e67c4ef}{Graya}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{uniquename=0,hash=11b958e93e24dffcd56e4b148e67c4ef}{Graya}{G\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=744e030db826ac8a6863e214cdaef4bf}{Maguire}{M\bibinitperiod}{Finlay}{F\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{468312f2cda4b4bb4a8c3f25ff8943c3}
-      \strng{fullhash}{468312f2cda4b4bb4a8c3f25ff8943c3}
-      \field{sortinit}{G}
-      \field{labelyear}{2014}
-      \field{datelabelsource}{}
-      \field{labeltitle}{opencast-bio project wiki}
-      \field{title}{opencast-bio project wiki}
-      \field{urlday}{13}
-      \field{urlmonth}{08}
-      \field{urlyear}{2014}
-      \field{year}{2014}
-      \verb{url}
-      \verb https://github.com/ggray1729/opencast-bio/wiki
       \endverb
     \endentry
     \entry{ogrisel_parallel}{online}{}
@@ -578,6 +640,56 @@
       \endverb
       \verb{url}
       \verb http://bioinformatics.oxfordjournals.org/content/26/6/822.short
+      \endverb
+    \endentry
+    \entry{hermjakob_intact:_2004}{article}{}
+      \true{morelabelname}
+      \name{labelname}{10}{}{%
+        {{uniquename=0,hash=a1d11d1a0d9cd50b99cbb45fc204e933}{Hermjakob}{H\bibinitperiod}{Henning}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ac1394e967de112237b9aa0fc82ed7b}{Montecchi-Palazzi}{M\bibinithyphendelim P\bibinitperiod}{Luisa}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=32c909423618b3f5cb17352a1225e0d2}{Lewington}{L\bibinitperiod}{Chris}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c25e634c49595bbbf389f2a8904e9005}{Mudali}{M\bibinitperiod}{Sugath}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2479784b5eacf56dbf9298de615c3331}{Kerrien}{K\bibinitperiod}{Samuel}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2229dddceb7e393aac7067479018e6c3}{Orchard}{O\bibinitperiod}{Sandra}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0a583636752a35b063533cc1cabe961b}{Vingron}{V\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3dd2b036aaeefde2619b223412773f21}{Roechert}{R\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c7cc3cc33ff924607007792110f9a83b}{Roepstorff}{R\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fe9d891995eb21aa72bc9563c2d70575}{Valencia}{V\bibinitperiod}{Alfonso}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \true{moreauthor}
+      \name{author}{10}{}{%
+        {{uniquename=0,hash=a1d11d1a0d9cd50b99cbb45fc204e933}{Hermjakob}{H\bibinitperiod}{Henning}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ac1394e967de112237b9aa0fc82ed7b}{Montecchi-Palazzi}{M\bibinithyphendelim P\bibinitperiod}{Luisa}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=32c909423618b3f5cb17352a1225e0d2}{Lewington}{L\bibinitperiod}{Chris}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c25e634c49595bbbf389f2a8904e9005}{Mudali}{M\bibinitperiod}{Sugath}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2479784b5eacf56dbf9298de615c3331}{Kerrien}{K\bibinitperiod}{Samuel}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2229dddceb7e393aac7067479018e6c3}{Orchard}{O\bibinitperiod}{Sandra}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0a583636752a35b063533cc1cabe961b}{Vingron}{V\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3dd2b036aaeefde2619b223412773f21}{Roechert}{R\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c7cc3cc33ff924607007792110f9a83b}{Roepstorff}{R\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fe9d891995eb21aa72bc9563c2d70575}{Valencia}{V\bibinitperiod}{Alfonso}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4b927379e1f70418e3f2766f557bc0cf}
+      \strng{fullhash}{a9ce646c43a03aac36678e3943755ab4}
+      \field{sortinit}{H}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{IntAct}}
+      \field{journaltitle}{Nucleic acids research}
+      \field{number}{suppl 1}
+      \field{shorttitle}{{IntAct}}
+      \field{title}{{IntAct}: an open source molecular interaction database}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{32}
+      \field{year}{2004}
+      \field{pages}{D452\bibrangedash D455}
+      \verb{file}
+      \verb [HTML] from oxfordjournals.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/SA34QHGS/D452.html:text/html;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/3GUUSMGA/D452.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/32/suppl_1/D452.short
       \endverb
     \endentry
     \entry{gitannex}{online}{}
@@ -838,6 +950,39 @@
       \endverb
       \keyw{Bioinformatics,Functional modules,Graph clustering,Protein complexes,Protein interaction networks,Protein–protein interactions}
     \endentry
+    \entry{lancichinetti_benchmark_2008}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=831f2bfeca4c2e57705e84268455e7ed}{Lancichinetti}{L\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3f057d4175c110c6302b495f38eebcb6}{Fortunato}{F\bibinitperiod}{Santo}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7bf86f8cac7f65e65f53c7cd54661e36}{Radicchi}{R\bibinitperiod}{Filippo}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=831f2bfeca4c2e57705e84268455e7ed}{Lancichinetti}{L\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3f057d4175c110c6302b495f38eebcb6}{Fortunato}{F\bibinitperiod}{Santo}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7bf86f8cac7f65e65f53c7cd54661e36}{Radicchi}{R\bibinitperiod}{Filippo}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3fe0dfac1d409e90abc573551153a6a9}
+      \strng{fullhash}{3fe0dfac1d409e90abc573551153a6a9}
+      \field{sortinit}{L}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Benchmark graphs for testing community detection algorithms}
+      \field{journaltitle}{Physical Review E}
+      \field{number}{4}
+      \field{title}{Benchmark graphs for testing community detection algorithms}
+      \field{urlday}{13}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{78}
+      \field{year}{2008}
+      \field{pages}{046110}
+      \verb{file}
+      \verb [PDF] from arxiv.org:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/BXN2C23I/Lancichinetti et al. - 2008 - Benchmark graphs for testing community detection a.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/SQZUWSKT/PhysRevE.78.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://journals.aps.org/pre/abstract/10.1103/PhysRevE.78.046110
+      \endverb
+    \endentry
     \entry{li_interaction_2010}{article}{}
       \name{labelname}{3}{}{%
         {{uniquename=0,hash=b659fa76c3134308505227a2ef8f7d77}{Li}{L\bibinitperiod}{Ka\bibnamedelima Wan}{K\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
@@ -881,6 +1026,38 @@
       \verb http://link.springer.com/article/10.1007/s00216-010-3658-z
       \endverb
       \keyw{Affinity isolation,Analytical Chemistry,Biochemistry,general,brain,Environmental Monitoring/Analysis,Food Science,Laboratory Medicine,Measurement Science and Instrumentation,Protein interactome,Synapse}
+    \endentry
+    \entry{lodish_molecular_2000}{book}{}
+      \name{labelname}{6}{}{%
+        {{uniquename=0,hash=d7527073c0482b500bd019cd28a4c67e}{Lodish}{L\bibinitperiod}{Harvey}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c6943f3976ce2c92e5205b161fe8fbfb}{Berk}{B\bibinitperiod}{Arnold}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a5190e43d391c63559978c5a1fb3203}{Zipursky}{Z\bibinitperiod}{S.\bibnamedelimi Lawrence}{S\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=48763d74ce26cf58f1978a8c80002561}{Matsudaira}{M\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f62023cd351af310763707529ca57c51}{Baltimore}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a79c4d86251ac627b29db1e65f4a63ee}{Darnell}{D\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=d7527073c0482b500bd019cd28a4c67e}{Lodish}{L\bibinitperiod}{Harvey}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c6943f3976ce2c92e5205b161fe8fbfb}{Berk}{B\bibinitperiod}{Arnold}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a5190e43d391c63559978c5a1fb3203}{Zipursky}{Z\bibinitperiod}{S.\bibnamedelimi Lawrence}{S\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=48763d74ce26cf58f1978a8c80002561}{Matsudaira}{M\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f62023cd351af310763707529ca57c51}{Baltimore}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a79c4d86251ac627b29db1e65f4a63ee}{Darnell}{D\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{7f443402b5feb7f049b83cd6bde1004c}
+      \strng{fullhash}{98d63d230d0155cd82c2b2a3002ade23}
+      \field{sortinit}{L}
+      \field{labelyear}{2000}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Molecular Cell Biology}
+      \field{abstract}{{ExcerptModern} biology is rooted in an understanding of the molecules within cells and of the interactions between cells that allow construction of multicellular organisms. The more we learn about the structure, function, and development of different organisms, the more we recognize that all life processes exhibit remarkable similarities. Molecular Cell Biology concentrates on the macromolecules and reactions studied by biochemists, the processes described by cell biologists, and the gene control pathways identified by molecular biologists and geneticists. In this millennium, two gathering forces will reshape molecular cell biology: genomics, the complete {DNA} sequence of many organisms, and proteomics, a knowledge of all the possible shapes and functions that proteins employ.All the concepts of molecular cell biology continue to be derived from experiments, and powerful experimental tools that allow the study of living cells and organisms at higher and higher levels of resolution are being developed constantly. In this fourth edition, we address the current state of molecular cell biology and look forward to what further exploration will uncover in the twenty-first century.}
+      \field{edition}{4th}
+      \field{isbn}{0-7167-3136-3}
+      \field{title}{Molecular Cell Biology}
+      \field{year}{2000}
     \endentry
     \entry{mackay_information_2003}{book}{}
       \name{labelname}{1}{}{%
@@ -946,6 +1123,50 @@
       \endverb
       \verb{url}
       \verb http://nar.oxfordjournals.org/content/35/suppl_1/D26
+      \endverb
+    \endentry
+    \entry{mcdowall_pips:_2009}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=6c6751ff9d642740887eb2a74945bbe3}{McDowall}{M\bibinitperiod}{Mark\bibnamedelima D.}{M\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=210881b4afa65de0f2ca916e57741e07}{Scott}{S\bibinitperiod}{Michelle\bibnamedelima S.}{M\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e009ff36c383e4af19e0c151d03f066d}{Barton}{B\bibinitperiod}{Geoffrey\bibnamedelima J.}{G\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=6c6751ff9d642740887eb2a74945bbe3}{McDowall}{M\bibinitperiod}{Mark\bibnamedelima D.}{M\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=210881b4afa65de0f2ca916e57741e07}{Scott}{S\bibinitperiod}{Michelle\bibnamedelima S.}{M\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e009ff36c383e4af19e0c151d03f066d}{Barton}{B\bibinitperiod}{Geoffrey\bibnamedelima J.}{G\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{4e64777db9d07d093eb31a40e255773c}
+      \strng{fullhash}{4e64777db9d07d093eb31a40e255773c}
+      \field{sortinit}{M}
+      \field{labelyear}{2009}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{{PIPs}}
+      \field{abstract}{The {PIPs} database (http://www.compbio.dundee.ac.uk/www-pips) is a resource for studying protein–protein interactions in human. It contains predictions of >37 000 high probability interactions of which >34 000 are not reported in the interaction databases {HPRD}, {BIND}, {DIP} or {OPHID}. The interactions in {PIPs} were calculated by a Bayesian method that combines information from expression, orthology, domain co-occurrence, post-translational modifications and sub-cellular location. The predictions also take account of the topology of the predicted interaction network. The web interface to {PIPs} ranks predictions according to their likelihood of interaction broken down by the contribution from each information source and with easy access to the evidence that supports each prediction. Where data exists in {OPHID}, {HPRD}, {DIP} or {BIND} for a protein pair this is also reported in the output tables returned by a search. A network browser is included to allow convenient browsing of the interaction network for any protein in the database. The {PIPs} database provides a new resource on protein–protein interactions in human that is straightforward to browse, or can be exploited completely, for interaction network modelling.}
+      \field{issn}{0305-1048, 1362-4962}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{suppl 1}
+      \field{shorttitle}{{PIPs}}
+      \field{title}{{PIPs}: human protein–protein interaction prediction database}
+      \field{urlday}{25}
+      \field{urlmonth}{06}
+      \field{urlyear}{2014}
+      \field{volume}{37}
+      \field{year}{2009}
+      \field{pages}{D651\bibrangedash D656}
+      \verb{doi}
+      \verb 10.1093/nar/gkn870
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/CHJ743WB/McDowall et al. - 2009 - PIPs human protein–protein interaction prediction.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/VWTSM6P6/D651.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/37/suppl_1/D651
       \endverb
     \endentry
     \entry{mcleanunpub}{unpublished}{}
@@ -1208,31 +1429,6 @@
       \verb http://dl.acm.org/citation.cfm?id=2078195
       \endverb
     \endentry
-    \entry{synsys}{misc}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=45c7c771b36cbd9021650549431fb61f}{Project}{P\bibinitperiod}{SynSys}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=45c7c771b36cbd9021650549431fb61f}{Project}{P\bibinitperiod}{SynSys}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{45c7c771b36cbd9021650549431fb61f}
-      \strng{fullhash}{45c7c771b36cbd9021650549431fb61f}
-      \field{sortinit}{P}
-      \field{labelyear}{2014}
-      \field{datelabelsource}{}
-      \field{labeltitle}{synsys - A European expertise Network on building the synapse}
-      \field{title}{synsys - A European expertise Network on building the synapse}
-      \field{urlday}{24}
-      \field{urlmonth}{04}
-      \field{urlyear}{2014}
-      \field{year}{2014}
-      \verb{file}
-      \verb synsys - A European expertise Network on building the synapse:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/J2HM7XE3/www.synsys.eu.html:text/html
-      \endverb
-      \verb{url}
-      \verb http://www.synsys.eu/
-      \endverb
-    \endentry
     \entry{qi_learning_2008}{thesis}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
@@ -1490,36 +1686,51 @@
       \verb http://www.biomedcentral.com/1471-2164/10/22/abstract
       \endverb
     \endentry
-    \entry{smithson_better_2006}{article}{}
-      \name{labelname}{2}{}{%
-        {{uniquename=0,hash=c7a5e89bd8a0252a9761ea561025392f}{Smithson}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=8ed50a9f757635fc55fcba2ceac2ae79}{Verkuilen}{V\bibinitperiod}{Jay}{J\bibinitperiod}{}{}{}{}}%
+    \entry{soler-lopez_interactome_2011}{article}{}
+      \name{labelname}{5}{}{%
+        {{uniquename=0,hash=f8354ff7a96b988173bdfeadf15a9794}{Soler-López}{S\bibinithyphendelim L\bibinitperiod}{Montserrat}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1013b62733af2aeb2a6d84710cbe9467}{Zanzoni}{Z\bibinitperiod}{Andreas}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=67427334c7ac1ebbc0da762588945d99}{Lluís}{L\bibinitperiod}{Ricart}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f9eb8d4a356a8f36f84d31ec281ad084}{Stelzl}{S\bibinitperiod}{Ulrich}{U\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b00489d962d2431d78077d15b094a134}{Aloy}{A\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{2}{}{%
-        {{uniquename=0,hash=c7a5e89bd8a0252a9761ea561025392f}{Smithson}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=8ed50a9f757635fc55fcba2ceac2ae79}{Verkuilen}{V\bibinitperiod}{Jay}{J\bibinitperiod}{}{}{}{}}%
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=f8354ff7a96b988173bdfeadf15a9794}{Soler-López}{S\bibinithyphendelim L\bibinitperiod}{Montserrat}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1013b62733af2aeb2a6d84710cbe9467}{Zanzoni}{Z\bibinitperiod}{Andreas}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=67427334c7ac1ebbc0da762588945d99}{Lluís}{L\bibinitperiod}{Ricart}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f9eb8d4a356a8f36f84d31ec281ad084}{Stelzl}{S\bibinitperiod}{Ulrich}{U\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b00489d962d2431d78077d15b094a134}{Aloy}{A\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{7260fdbd78da1a1a9540d75a6b5e497e}
-      \strng{fullhash}{7260fdbd78da1a1a9540d75a6b5e497e}
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{2326323025e1e2bf5479a435a1b85695}
+      \strng{fullhash}{d2f1bb80b47b8145e7c59d4ecbc544f1}
       \field{sortinit}{S}
-      \field{labelyear}{2006}
+      \field{labelyear}{2011}
+      \field{labelmonth}{03}
       \field{datelabelsource}{}
-      \field{labeltitle}{A better lemon squeezer?}
-      \field{journaltitle}{Psychological methods}
-      \field{number}{1}
-      \field{shorttitle}{A better lemon squeezer?}
-      \field{title}{A better lemon squeezer? Maximum-likelihood regression with beta-distributed dependent variables.}
-      \field{urlday}{05}
+      \field{labeltitle}{Interactome mapping suggests new mechanistic details underlying Alzheimer's disease}
+      \field{abstract}{Recent advances toward the characterization of Alzheimer's disease ({AD}) have permitted the identification of a dozen of genetic risk factors, although many more remain undiscovered. In parallel, works in the field of network biology have shown a strong link between protein connectivity and disease. In this manuscript, we demonstrate that {AD}-related genes are indeed highly interconnected and, based on this observation, we set up an interaction discovery strategy to unveil novel {AD} causative and susceptibility genes. In total, we report 200 high-confidence protein–protein interactions between eight confirmed {AD}-related genes and 66 candidates. Of these, 31 are located in chromosomal regions containing susceptibility loci related to the etiology of late-onset {AD}, and 17 show dysregulated expression patterns in {AD} patients, which makes them very good candidates for further functional studies. Interestingly, we also identified four novel direct interactions among well-characterized {AD} causative/susceptibility genes (i.e., {APP}, A2M, {APOE}, {PSEN}1, and {PSEN}2), which support the suggested link between plaque formation and inflammatory processes and provide insights into the intracellular regulation of {APP} cleavage. Finally, we contextualize the discovered relationships, integrating them with all the interaction data reported in the literature, building the most complete interactome associated to {AD}. This general view facilitates the analyses of global properties of the network, such as its functional modularity, and triggers many hypotheses on the molecular mechanisms implicated in {AD}. For instance, our analyses suggest a putative role for {PDCD}4 as a neuronal death regulator and {ECSIT} as a molecular link between oxidative stress, inflammation, and mitochondrial dysfunction in {AD}.}
+      \field{issn}{1088-9051, 1549-5469}
+      \field{journaltitle}{Genome Research}
+      \field{month}{03}
+      \field{number}{3}
+      \field{title}{Interactome mapping suggests new mechanistic details underlying Alzheimer's disease}
+      \field{urlday}{14}
       \field{urlmonth}{08}
       \field{urlyear}{2014}
-      \field{volume}{11}
-      \field{year}{2006}
-      \field{pages}{54}
+      \field{volume}{21}
+      \field{year}{2011}
+      \field{pages}{364\bibrangedash 376}
+      \verb{doi}
+      \verb 10.1101/gr.114280.110
+      \endverb
       \verb{file}
-      \verb [PDF] from anu.edu.au:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/DWSCDIFP/Smithson and Verkuilen - 2006 - A better lemon squeezer Maximum-likelihood regres.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/Z37Z5K2M/54.html:text/html
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/42IUZSQA/Soler-López et al. - 2011 - Interactome mapping suggests new mechanistic detai.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/HGDD6PTZ/364.html:text/html
       \endverb
       \verb{url}
-      \verb http://psycnet.apa.org/journals/met/11/1/54/
+      \verb http://genome.cshlp.org/content/21/3/364
       \endverb
     \endentry
     \entry{stark_biogrid:_2006}{article}{}
@@ -1562,15 +1773,40 @@
       \verb http://nar.oxfordjournals.org/content/34/suppl_1/D535.short
       \endverb
     \endentry
-    \entry{parallel_python_webpage}{online}{}
+    \entry{synsys}{misc}{}
       \name{labelname}{1}{}{%
-        {{uniquename=0,hash=bd46a0f6e40fd020f38475651a7535c8}{Team}{T\bibinitperiod}{The\bibnamedelimb IPython\bibnamedelima Development}{T\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7606a526b7af9df5e9b8ff6766296fba}{{SynSys\bibnamedelimb Project}}{S\bibinitperiod}{}{}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{uniquename=0,hash=bd46a0f6e40fd020f38475651a7535c8}{Team}{T\bibinitperiod}{The\bibnamedelimb IPython\bibnamedelima Development}{T\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7606a526b7af9df5e9b8ff6766296fba}{{SynSys\bibnamedelimb Project}}{S\bibinitperiod}{}{}{}{}{}{}}%
       }
-      \strng{namehash}{bd46a0f6e40fd020f38475651a7535c8}
-      \strng{fullhash}{bd46a0f6e40fd020f38475651a7535c8}
+      \strng{namehash}{7606a526b7af9df5e9b8ff6766296fba}
+      \strng{fullhash}{7606a526b7af9df5e9b8ff6766296fba}
+      \field{sortinit}{S}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labeltitle}{synsys - A European expertise Network on building the synapse}
+      \field{title}{synsys - A European expertise Network on building the synapse}
+      \field{urlday}{24}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \verb{file}
+      \verb synsys - A European expertise Network on building the synapse:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/J2HM7XE3/www.synsys.eu.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.synsys.eu/
+      \endverb
+    \endentry
+    \entry{parallel_python_webpage}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=a645456750d09db3765b7bd37c1a0a49}{{The\bibnamedelimb IPython\bibnamedelimb Development\bibnamedelimb Team}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a645456750d09db3765b7bd37c1a0a49}{{The\bibnamedelimb IPython\bibnamedelimb Development\bibnamedelimb Team}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{a645456750d09db3765b7bd37c1a0a49}
+      \strng{fullhash}{a645456750d09db3765b7bd37c1a0a49}
       \field{sortinit}{T}
       \field{labelyear}{2014}
       \field{datelabelsource}{}
@@ -1582,6 +1818,45 @@
       \field{year}{2014}
       \verb{url}
       \verb http://ipython.org/ipython-doc/2/parallel/parallel_intro.html
+      \endverb
+    \endentry
+    \entry{the_uniprot_consortium_universal_2008}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=b1fd6f17d97609f9deeb3f64db3371fb}{{The\bibnamedelimb UniProt\bibnamedelimb Consortium}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b1fd6f17d97609f9deeb3f64db3371fb}{{The\bibnamedelimb UniProt\bibnamedelimb Consortium}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b1fd6f17d97609f9deeb3f64db3371fb}
+      \strng{fullhash}{b1fd6f17d97609f9deeb3f64db3371fb}
+      \field{sortinit}{T}
+      \field{labelyear}{2008}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labeltitle}{The Universal Protein Resource ({UniProt})}
+      \field{abstract}{The Universal Protein Resource ({UniProt}) provides a stable, comprehensive, freely accessible, central resource on protein sequences and functional annotation. The {UniProt} Consortium is a collaboration between the European Bioinformatics Institute ({EBI}), the Protein Information Resource ({PIR}) and the Swiss Institute of Bioinformatics ({SIB}). The core activities include manual curation of protein sequences assisted by computational analysis, sequence archiving, development of a user-friendly {UniProt} website, and the provision of additional value-added information through cross-references to other databases. {UniProt} is comprised of four major components, each optimized for different uses: the {UniProt} Knowledgebase, the {UniProt} Reference Clusters, the {UniProt} Archive and the {UniProt} Metagenomic and Environmental Sequences database. {UniProt} is updated and distributed every three weeks, and can be accessed online for searches or download at http://www.uniprot.org.}
+      \field{issn}{0305-1048, 1362-4962}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{01}
+      \field{number}{suppl 1}
+      \field{title}{The Universal Protein Resource ({UniProt})}
+      \field{urlday}{29}
+      \field{urlmonth}{07}
+      \field{urlyear}{2014}
+      \field{volume}{36}
+      \field{year}{2008}
+      \field{pages}{D190\bibrangedash D195}
+      \verb{doi}
+      \verb 10.1093/nar/gkm895
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/3S7RBE6K/Consortium - 2008 - The Universal Protein Resource (UniProt).pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/V5EQIFEG/D190.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nar.oxfordjournals.org/content/36/suppl_1/D190
       \endverb
     \endentry
     \entry{uetz_comprehensive_2000}{article}{}
@@ -1790,6 +2065,25 @@
       \verb http://www.biomedcentral.com/1471-2164/11/S3/S10/abstract
       \endverb
     \endentry
+    \entry{wkmdacommons}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=cac81b15c60fc2acba989be487fd40d7}{{Wikimedia\bibnamedelimb Commons}}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cac81b15c60fc2acba989be487fd40d7}{{Wikimedia\bibnamedelimb Commons}}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{cac81b15c60fc2acba989be487fd40d7}
+      \strng{fullhash}{cac81b15c60fc2acba989be487fd40d7}
+      \field{sortinit}{W}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{File:Simple decision tree.svg}
+      \field{title}{File:Simple decision tree.svg}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://commons.wikimedia.org/wiki/File:Simple_decision_tree.svg
+      \endverb
+    \endentry
     \entry{witten_data_2011}{book}{}
       \name{labelname}{3}{}{%
         {{uniquename=0,hash=926252d979eb0dc3c8c27118fa93f219}{Witten}{W\bibinitperiod}{Ian\bibnamedelima H.}{I\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
@@ -1866,8 +2160,166 @@
       \verb http://www.ncbi.nlm.nih.gov/pmc/articles/PMC99070/
       \endverb
     \endentry
+    \entry{yu_high-quality_2008}{article}{}
+      \name{labelname}{34}{}{%
+        {{uniquename=0,hash=d2526c879bf9c50bd2607a0d60da4262}{Yu}{Y\bibinitperiod}{Haiyuan}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c13dda7b4e046de0dc37c312f3a5aeea}{Braun}{B\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6dee1d71d7280796bcdcc1f8fb637f41}{Yıldırım}{Y\bibinitperiod}{Muhammed\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4b30b4e6752af56ff50ef8dbc661b0aa}{Lemmens}{L\bibinitperiod}{Irma}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=370bf32143c2fbc8a7b52921c394a7f1}{Venkatesan}{V\bibinitperiod}{Kavitha}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b70a4102aa13ee70ff2fbc425878c9f2}{Sahalie}{S\bibinitperiod}{Julie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d26ca72c3544d37b8a96f195d52c0464}{Hirozane-Kishikawa}{H\bibinithyphendelim K\bibinitperiod}{Tomoko}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1e851e743885ae56e26a9939509ea9c2}{Gebreab}{G\bibinitperiod}{Fana}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0c3bb2625d92599a7df7d96021e7219d}{Li}{L\bibinitperiod}{Na}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cfc2b40acf81ec5cccdee3681678e146}{Simonis}{S\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1665574d605f477d2b5f6556591e6d76}{Hao}{H\bibinitperiod}{Tong}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fffcee46857dc957c387d8306612a841}{Rual}{R\bibinitperiod}{Jean-François}{J\bibinithyphendelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ef489805b1f2d1fcae4ff11a6da895a7}{Dricot}{D\bibinitperiod}{Amélie}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c07c9931c86c8337b35cded5f5c9bd54}{Vazquez}{V\bibinitperiod}{Alexei}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=25ff09ad583f3cfb5a34f8297b373953}{Murray}{M\bibinitperiod}{Ryan\bibnamedelima R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1bcba09dd2a8c517665059a0eec1366a}{Simon}{S\bibinitperiod}{Christophe}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=79cedc9b095b222cc91f6b787ad8229a}{Tardivo}{T\bibinitperiod}{Leah}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=48267a1ba3d8c243ead79634e02a7d69}{Tam}{T\bibinitperiod}{Stanley}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a14fec41d23e165df12b4ada656fae26}{Svrzikapa}{S\bibinitperiod}{Nenad}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6908b92c217e81c041fe70dc56e64b44}{Fan}{F\bibinitperiod}{Changyu}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=37f739757282b6700ad83cad89e0801d}{Smet}{S\bibinitperiod}{Anne-Sophie\bibnamedelima de}{A\bibinithyphendelim S\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e48974c288be107474dac414194d5884}{Motyl}{M\bibinitperiod}{Adriana}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a18156783814cb5d7aad1dcb7d2160ac}{Hudson}{H\bibinitperiod}{Michael\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0d4b820e14e83c90d075663737b32535}{Park}{P\bibinitperiod}{Juyong}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=db600dcfe831d8c153fd90b20e53217e}{Xin}{X\bibinitperiod}{Xiaofeng}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5b2168715f8e8187d5371e76d3bd26a4}{Cusick}{C\bibinitperiod}{Michael\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=171dc3098ce9c6f273eccd448650439a}{Moore}{M\bibinitperiod}{Troy}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e842ca10fa96a0eb25936c70d2046cb4}{Boone}{B\bibinitperiod}{Charlie}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7d041659633e29317689385f227d3173}{Snyder}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d0c8ea4889cc317bb07b61344d80ffd}{Roth}{R\bibinitperiod}{Frederick\bibnamedelima P.}{F\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=15bacd7ddfc866c5dd96976d4b0244d5}{Barabási}{B\bibinitperiod}{Albert-László}{A\bibinithyphendelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4536ff9f86f9d44529606a2849d97ff6}{Tavernier}{T\bibinitperiod}{Jan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ea5ceb1b3bb51ed2894f661e06f89982}{Hill}{H\bibinitperiod}{David\bibnamedelima E.}{D\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a9a720ff4b44ed5df3a02ffefca1bec5}{Vidal}{V\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{34}{}{%
+        {{uniquename=0,hash=d2526c879bf9c50bd2607a0d60da4262}{Yu}{Y\bibinitperiod}{Haiyuan}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c13dda7b4e046de0dc37c312f3a5aeea}{Braun}{B\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6dee1d71d7280796bcdcc1f8fb637f41}{Yıldırım}{Y\bibinitperiod}{Muhammed\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4b30b4e6752af56ff50ef8dbc661b0aa}{Lemmens}{L\bibinitperiod}{Irma}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=370bf32143c2fbc8a7b52921c394a7f1}{Venkatesan}{V\bibinitperiod}{Kavitha}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b70a4102aa13ee70ff2fbc425878c9f2}{Sahalie}{S\bibinitperiod}{Julie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d26ca72c3544d37b8a96f195d52c0464}{Hirozane-Kishikawa}{H\bibinithyphendelim K\bibinitperiod}{Tomoko}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1e851e743885ae56e26a9939509ea9c2}{Gebreab}{G\bibinitperiod}{Fana}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0c3bb2625d92599a7df7d96021e7219d}{Li}{L\bibinitperiod}{Na}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cfc2b40acf81ec5cccdee3681678e146}{Simonis}{S\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1665574d605f477d2b5f6556591e6d76}{Hao}{H\bibinitperiod}{Tong}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fffcee46857dc957c387d8306612a841}{Rual}{R\bibinitperiod}{Jean-François}{J\bibinithyphendelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ef489805b1f2d1fcae4ff11a6da895a7}{Dricot}{D\bibinitperiod}{Amélie}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c07c9931c86c8337b35cded5f5c9bd54}{Vazquez}{V\bibinitperiod}{Alexei}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=25ff09ad583f3cfb5a34f8297b373953}{Murray}{M\bibinitperiod}{Ryan\bibnamedelima R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1bcba09dd2a8c517665059a0eec1366a}{Simon}{S\bibinitperiod}{Christophe}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=79cedc9b095b222cc91f6b787ad8229a}{Tardivo}{T\bibinitperiod}{Leah}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=48267a1ba3d8c243ead79634e02a7d69}{Tam}{T\bibinitperiod}{Stanley}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a14fec41d23e165df12b4ada656fae26}{Svrzikapa}{S\bibinitperiod}{Nenad}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6908b92c217e81c041fe70dc56e64b44}{Fan}{F\bibinitperiod}{Changyu}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=37f739757282b6700ad83cad89e0801d}{Smet}{S\bibinitperiod}{Anne-Sophie\bibnamedelima de}{A\bibinithyphendelim S\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e48974c288be107474dac414194d5884}{Motyl}{M\bibinitperiod}{Adriana}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a18156783814cb5d7aad1dcb7d2160ac}{Hudson}{H\bibinitperiod}{Michael\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0d4b820e14e83c90d075663737b32535}{Park}{P\bibinitperiod}{Juyong}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=db600dcfe831d8c153fd90b20e53217e}{Xin}{X\bibinitperiod}{Xiaofeng}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5b2168715f8e8187d5371e76d3bd26a4}{Cusick}{C\bibinitperiod}{Michael\bibnamedelima E.}{M\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=171dc3098ce9c6f273eccd448650439a}{Moore}{M\bibinitperiod}{Troy}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e842ca10fa96a0eb25936c70d2046cb4}{Boone}{B\bibinitperiod}{Charlie}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7d041659633e29317689385f227d3173}{Snyder}{S\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d0c8ea4889cc317bb07b61344d80ffd}{Roth}{R\bibinitperiod}{Frederick\bibnamedelima P.}{F\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=15bacd7ddfc866c5dd96976d4b0244d5}{Barabási}{B\bibinitperiod}{Albert-László}{A\bibinithyphendelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4536ff9f86f9d44529606a2849d97ff6}{Tavernier}{T\bibinitperiod}{Jan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ea5ceb1b3bb51ed2894f661e06f89982}{Hill}{H\bibinitperiod}{David\bibnamedelima E.}{D\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a9a720ff4b44ed5df3a02ffefca1bec5}{Vidal}{V\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{cd54c3f4a87f8f79c7b3842ebc2f5089}
+      \strng{fullhash}{ec4334e9fef56520a190b45f989b9530}
+      \field{sortinit}{Y}
+      \field{labelyear}{2008}
+      \field{labelmonth}{10}
+      \field{datelabelsource}{}
+      \field{labeltitle}{High-Quality Binary Protein Interaction Map of the Yeast Interactome Network}
+      \field{abstract}{Current yeast interactome network maps contain several hundred molecular complexes with limited and somewhat controversial representation of direct binary interactions. We carried out a comparative quality assessment of current yeast interactome data sets, demonstrating that high-throughput yeast two-hybrid (Y2H) screening provides high-quality binary interaction information. Because a large fraction of the yeast binary interactome remains to be mapped, we developed an empirically controlled mapping framework to produce a “second-generation” high-quality, high-throughput Y2H data set covering ∼20\% of all yeast binary interactions. Both Y2H and affinity purification followed by mass spectrometry ({AP}/{MS}) data are of equally high quality but of a fundamentally different and complementary nature, resulting in networks with different topological and biological properties. Compared to co-complex interactome models, this binary map is enriched for transient signaling interactions and intercomplex connections with a highly significant clustering between essential proteins. Rather than correlating with essentiality, protein connectivity correlates with genetic pleiotropy.}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{month}{10}
+      \field{number}{5898}
+      \field{title}{High-Quality Binary Protein Interaction Map of the Yeast Interactome Network}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{322}
+      \field{year}{2008}
+      \field{pages}{104\bibrangedash 110}
+      \verb{doi}
+      \verb 10.1126/science.1158684
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/9GW5UAQZ/Yu et al. - 2008 - High-Quality Binary Protein Interaction Map of the.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/2EVU4E55/104.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.sciencemag.org/content/322/5898/104
+      \endverb
+    \endentry
+    \entry{zeeberg_mistaken_2004}{article}{}
+      \name{labelname}{8}{}{%
+        {{uniquename=0,hash=66d05db98429f0efc23fbbc002785464}{Zeeberg}{Z\bibinitperiod}{Barry\bibnamedelima R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6640a9e04bdecd5b65d7a21cd8813a72}{Riss}{R\bibinitperiod}{Joseph}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=57847476f7c73d3cfb0f94fe0ac784d7}{Kane}{K\bibinitperiod}{David\bibnamedelima W.}{D\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3338776b650abb75e53c244ace137c48}{Bussey}{B\bibinitperiod}{Kimberly\bibnamedelima J.}{K\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7e71f26f00c51209f90587a1fe5702c0}{Uchio}{U\bibinitperiod}{Edward}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b83347bb7e294c39093eaebc686e1bf1}{Linehan}{L\bibinitperiod}{W.\bibnamedelimi Marston}{W\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d4d4eab268963f6b212faa26b1dedb96}{Barrett}{B\bibinitperiod}{J.\bibnamedelimi Carl}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e5555a5807e9513948f3585a71806de}{Weinstein}{W\bibinitperiod}{John\bibnamedelima N.}{J\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{8}{}{%
+        {{uniquename=0,hash=66d05db98429f0efc23fbbc002785464}{Zeeberg}{Z\bibinitperiod}{Barry\bibnamedelima R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6640a9e04bdecd5b65d7a21cd8813a72}{Riss}{R\bibinitperiod}{Joseph}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=57847476f7c73d3cfb0f94fe0ac784d7}{Kane}{K\bibinitperiod}{David\bibnamedelima W.}{D\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3338776b650abb75e53c244ace137c48}{Bussey}{B\bibinitperiod}{Kimberly\bibnamedelima J.}{K\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7e71f26f00c51209f90587a1fe5702c0}{Uchio}{U\bibinitperiod}{Edward}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b83347bb7e294c39093eaebc686e1bf1}{Linehan}{L\bibinitperiod}{W.\bibnamedelimi Marston}{W\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d4d4eab268963f6b212faa26b1dedb96}{Barrett}{B\bibinitperiod}{J.\bibnamedelimi Carl}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e5555a5807e9513948f3585a71806de}{Weinstein}{W\bibinitperiod}{John\bibnamedelima N.}{J\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{af017ec0e5d43c2e44c457eafcfdd190}
+      \strng{fullhash}{261dd551f60c3d73dbf28aa1fc881943}
+      \field{sortinit}{Z}
+      \field{labelyear}{2004}
+      \field{labelmonth}{06}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Mistaken Identifiers}
+      \field{abstract}{When processing microarray data sets, we recently noticed that some gene names were being changed inadvertently to non-gene names. {PMID}: 15214961}
+      \field{issn}{1471-2105}
+      \field{journaltitle}{{BMC} Bioinformatics}
+      \field{month}{06}
+      \field{number}{1}
+      \field{shorttitle}{Mistaken Identifiers}
+      \field{title}{Mistaken Identifiers: Gene name errors can be introduced inadvertently when using Excel in bioinformatics}
+      \field{urlday}{14}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{volume}{5}
+      \field{year}{2004}
+      \field{pages}{80}
+      \verb{doi}
+      \verb 10.1186/1471-2105-5-80
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/8EPQ6UBG/Zeeberg et al. - 2004 - Mistaken Identifiers Gene name errors can be intr.pdf:application/pdf;Snapshot:/home/gavin/.mozilla/firefox/i2j16z7y.default/zotero/storage/6FR8QKF2/80.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.biomedcentral.com/1471-2105/5/80/abstract
+      \endverb
+    \endentry
   \endsortlist
-  \missing{von_mering_string_2005}
 \endrefsection
 \endinput
 

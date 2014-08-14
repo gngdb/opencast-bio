@@ -76,7 +76,7 @@ However, for the sake of posterity databases containing information about genes 
 The Entrez GeneID identifier is relatively simple, just consisting of a number generated when the gene was added to the database\autocite{maglott_entrez_2007}.
 
 %other protein identifier schemes and mapping between them
-Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{consortium_universal_2008} and even those used only for specific databases such as \ac{DIP} identifiers\autocite{xenarios_dip_2002}.
+Other popular schemes include the Ensembl identifier from the Ensembl database\autocite{hubbard_ensembl_2002}, Uniprot identifiers from the Uniprot database\autocite{the_uniprot_consortium_universal_2008} and even those used only for specific databases such as \ac{DIP} identifiers\autocite{xenarios_dip_2002}.
 Mapping between these different identifiers is difficult as each identifier may map to none or many in another database.
 The reason this happens is due to isoforms of different proteins; different amino acid sequences can code for a protein with the same name.
 This can be due to, for example, alternative splicing\autocite{black_mechanisms_2003} or simple submission errors\autocite{zeeberg_mistaken_2004}.
@@ -87,7 +87,7 @@ This can be due to, for example, alternative splicing\autocite{black_mechanisms_
 %methods used during the project, with references to appendix notebooks
 Various tools exist to map from one protein identifier to another: Ensembl's BioMart\autocite{smedley_biomart_2009} is a versatile web-based tool, for example.
 In this project, simple conversion tables from NCBI's Gene\autocite{maglott_entrez_2007} ftp server were primarily used.
-Another tool used was the Uniprot\autocite{consortium_universal_2008} online service web service.
+Another tool used was the Uniprot\autocite{the_uniprot_consortium_universal_2008} online service web service.
 
 % talk about the problem of canonicalisation
 Unfortunately, using any of these services there will be a number of identifiers which cannot be converted and many IDs mapping to the same Entrez identifier as different protein isoforms are picked up.
@@ -275,7 +275,7 @@ The log likelihood, for N feature vectors, is given by:
 
 %describe what the C parameter is
 Regularisation of the weights represents a prior belief that the weights should not increase without bound.
-In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{barber_bayesian_2013}.
+In a case where the data is linearly separable and where regularisation is not applied the weights will increase without bound to produce extremely confident classifications\autocite[381]{barber_bayesian_2012}.
 To stop this from happening we apply a penalty term, $\frac{1}{C}$, to the size of the weights:
 
 \begin{align}
