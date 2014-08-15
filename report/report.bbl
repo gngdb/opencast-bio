@@ -492,7 +492,7 @@
       \field{month}{07}
       \field{number}{1}
       \field{shorttitle}{Bio}
-      \field{title}{Bio::Homology::InterologWalk - A Perl module to build putative protein-protein interaction networks through interolog mapping}
+      \field{title}{Bio::-\\Homology::InterologWalk - A Perl module to build putative protein-protein interaction networks through interolog mapping}
       \field{urlday}{09}
       \field{urlmonth}{04}
       \field{urlyear}{2014}
