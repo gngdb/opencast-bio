@@ -1,0 +1,97 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {british}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Outline}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Background}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}The synapse and protein interaction}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Protein complexes and community detection}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Protein-protein interaction prediction}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Data sources and networks}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Methodology}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Feature vectors}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Protein identifier mapping}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Supervised model}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Labeling feature vectors}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Model Selection}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Model testing}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Conditionally independent probabilistic model}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Comparison of weighted and unweighted \ac {PPI} networks}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Community detection}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Normalised Mutual Information}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Disease Enrichment}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}\ac {PPI} feature vectors}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Gene Ontology}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Features derived from ENTS}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Data visualisation}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}High dimensional plots}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Model selection results}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Classifier accuracy and best hyper-parameters}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}\ac {ROC} curves}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Precision-recall curves}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.4}Feature importances}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.5}Bayesian weighting of interactions}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Comparison of weighted and unweighted \ac {PPI} networks}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Disease enrichment}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusions}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Deliverables}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Future work}{46}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Repository}{48}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Parallel processing with IPython.parallel}{49}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Notebooks}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Feature Extraction Notebooks}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.1.1}Gene Ontology}{51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.1.2}Features derived from ENTS}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Classifier Training}{52}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}ocbio.extract Usage}{53}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}Data sources}{54}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.1}Gene Ontology Features}{54}

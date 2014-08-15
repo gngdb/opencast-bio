@@ -950,6 +950,95 @@
       \endverb
       \keyw{Bioinformatics,Functional modules,Graph clustering,Protein complexes,Protein interaction networks,Protein–protein interactions}
     \endentry
+    \entry{kirov_novo_2012}{article}{}
+      \name{labelname}{30}{}{%
+        {{uniquename=0,hash=13d69dc49428a653dd6697ace6ff226d}{Kirov}{K\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d2ee8d98ea6f647c41116263258fdbd3}{Pocklington}{P\bibinitperiod}{A.\bibnamedelimi J.}{A\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cf15782d3b9edb90bc0b4fb3d4f3b544}{Holmans}{H\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96226aa2b2f3471e28551c0363ba949c}{Ivanov}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=06be72d2291e9f69230c583b3d25409d}{Ikeda}{I\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aab5aa4ca0961b284d11eead4ca67bb0}{Ruderfer}{R\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=453a87c63e70c0be1f79aeb333650a4c}{Moran}{M\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1f1a061c98aa706eaf4a798acb4e7068}{Chambert}{C\bibinitperiod}{K.}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3216f0c52ce5781435d3ce00ee51189f}{Toncheva}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a0eb026f4ef03074d241842a218b80ac}{Georgieva}{G\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d408c8156991e6085d4f206ffae928ae}{Grozeva}{G\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b742d7bf67c90131edac1ba21bd8a9ac}{Fjodorova}{F\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7a7ae63e98e155f01255e0d44e12d047}{Wollerton}{W\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8e4ea797f87840a866ac6e9f2fc1220f}{Rees}{R\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7059f3ea69e902689f1424becf107f16}{Nikolov}{N\bibinitperiod}{I.}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5d71c24e7794cfb3d723f789d5f80fca}{Lagemaat}{L\bibinitperiod}{L.\bibnamedelimi N.}{L\bibinitperiod\bibinitdelim N\bibinitperiod}{van\bibnamedelima de}{v\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=fd30b3801dd82449bc5a6cd8d35d5e93}{Bayés}{B\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6a12fdfe21c3394b2cd16b74bc6b7d7a}{Fernandez}{F\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6b4c2b158506f2793229bdceb6dbc18d}{Olason}{O\bibinitperiod}{P.\bibnamedelimi I.}{P\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ac7a9c544efbb83828a25b1a5b547ec8}{Böttcher}{B\bibinitperiod}{Y.}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd4fcfb74b49870acb21fded71bd2047}{Komiyama}{K\bibinitperiod}{N.\bibnamedelimi H.}{N\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=704954dc462fe15b25a2af6ab4af4361}{Collins}{C\bibinitperiod}{M.\bibnamedelimi O.}{M\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=35d03aad0458e082f9410dcd35d645c9}{Choudhary}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=83c80265bc661341942154df3d91c473}{Stefansson}{S\bibinitperiod}{K.}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d0ed490798039cc4df971c9191cde14}{Stefansson}{S\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e855253348eef287b8d594a15bc798e}{Grant}{G\bibinitperiod}{S.\bibnamedelimi G.\bibnamedelimi N.}{S\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=46806de31f302ccaed53ca516ff8492f}{Purcell}{P\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c2b7eae694d22e1eec7219408f73435a}{Sklar}{S\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6f4c67704aceeb4c5b4a4713c18555cb}{O'Donovan}{O\bibinitperiod}{M.\bibnamedelimi C.}{M\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e592d4b0d1954a3d48134918a157cc4d}{Owen}{O\bibinitperiod}{M.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{30}{}{%
+        {{uniquename=0,hash=13d69dc49428a653dd6697ace6ff226d}{Kirov}{K\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d2ee8d98ea6f647c41116263258fdbd3}{Pocklington}{P\bibinitperiod}{A.\bibnamedelimi J.}{A\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cf15782d3b9edb90bc0b4fb3d4f3b544}{Holmans}{H\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=96226aa2b2f3471e28551c0363ba949c}{Ivanov}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=06be72d2291e9f69230c583b3d25409d}{Ikeda}{I\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aab5aa4ca0961b284d11eead4ca67bb0}{Ruderfer}{R\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=453a87c63e70c0be1f79aeb333650a4c}{Moran}{M\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1f1a061c98aa706eaf4a798acb4e7068}{Chambert}{C\bibinitperiod}{K.}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3216f0c52ce5781435d3ce00ee51189f}{Toncheva}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a0eb026f4ef03074d241842a218b80ac}{Georgieva}{G\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d408c8156991e6085d4f206ffae928ae}{Grozeva}{G\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b742d7bf67c90131edac1ba21bd8a9ac}{Fjodorova}{F\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7a7ae63e98e155f01255e0d44e12d047}{Wollerton}{W\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8e4ea797f87840a866ac6e9f2fc1220f}{Rees}{R\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7059f3ea69e902689f1424becf107f16}{Nikolov}{N\bibinitperiod}{I.}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5d71c24e7794cfb3d723f789d5f80fca}{Lagemaat}{L\bibinitperiod}{L.\bibnamedelimi N.}{L\bibinitperiod\bibinitdelim N\bibinitperiod}{van\bibnamedelima de}{v\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=fd30b3801dd82449bc5a6cd8d35d5e93}{Bayés}{B\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6a12fdfe21c3394b2cd16b74bc6b7d7a}{Fernandez}{F\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6b4c2b158506f2793229bdceb6dbc18d}{Olason}{O\bibinitperiod}{P.\bibnamedelimi I.}{P\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ac7a9c544efbb83828a25b1a5b547ec8}{Böttcher}{B\bibinitperiod}{Y.}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd4fcfb74b49870acb21fded71bd2047}{Komiyama}{K\bibinitperiod}{N.\bibnamedelimi H.}{N\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=704954dc462fe15b25a2af6ab4af4361}{Collins}{C\bibinitperiod}{M.\bibnamedelimi O.}{M\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=35d03aad0458e082f9410dcd35d645c9}{Choudhary}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=83c80265bc661341942154df3d91c473}{Stefansson}{S\bibinitperiod}{K.}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d0ed490798039cc4df971c9191cde14}{Stefansson}{S\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5e855253348eef287b8d594a15bc798e}{Grant}{G\bibinitperiod}{S.\bibnamedelimi G.\bibnamedelimi N.}{S\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=46806de31f302ccaed53ca516ff8492f}{Purcell}{P\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c2b7eae694d22e1eec7219408f73435a}{Sklar}{S\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6f4c67704aceeb4c5b4a4713c18555cb}{O'Donovan}{O\bibinitperiod}{M.\bibnamedelimi C.}{M\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e592d4b0d1954a3d48134918a157cc4d}{Owen}{O\bibinitperiod}{M.\bibnamedelimi J.}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{0ff5f4e3125ae53a6ee7939bb08e3654}
+      \strng{fullhash}{2e2a77a47aa61e7a68b279bb57e9c00e}
+      \field{sortinit}{K}
+      \field{labelyear}{2012}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{De novo {CNV} analysis implicates specific abnormalities of postsynaptic signalling complexes in the pathogenesis of schizophrenia}
+      \field{abstract}{A small number of rare, recurrent genomic copy number variants ({CNVs}) are known to substantially increase susceptibility to schizophrenia. As a consequence of the low fecundity in people with schizophrenia and other neurodevelopmental phenotypes to which these {CNVs} contribute, {CNVs} with large effects on risk are likely to be rapidly removed from the population by natural selection. Accordingly, such {CNVs} must frequently occur as recurrent de novo mutations. In a sample of 662 schizophrenia proband-parent trios, we found that rare de novo {CNV} mutations were significantly more frequent in cases (5.1\% all cases, 5.5\% family history negative) compared with 2.2\% among 2623 controls, confirming the involvement of de novo {CNVs} in the pathogenesis of schizophrenia. Eight de novo {CNVs} occurred at four known schizophrenia loci (3q29, 15q11.2, 15q13.3 and 16p11.2). De novo {CNVs} of known pathogenic significance in other genomic disorders were also observed, including deletion at the {TAR} (thrombocytopenia absent radius) region on 1q21.1 and duplication at the {WBS} (Williams-Beuren syndrome) region at 7q11.23. Multiple de novos spanned genes encoding members of the {DLG} (discs large) family of membrane-associated guanylate kinases ({MAGUKs}) that are components of the postsynaptic density ({PSD}). Two de novos also affected {EHMT}1, a histone methyl transferase known to directly regulate {DLG} family members. Using a systems biology approach and merging novel {CNV} and proteomics data sets, systematic analysis of synaptic protein complexes showed that, compared with control {CNVs}, case de novos were significantly enriched for the {PSD} proteome (P=1.72 × 10⁻⁶. This was largely explained by enrichment for members of the N-methyl-D-aspartate receptor ({NMDAR}) (P=4.24 × 10⁻⁶) and neuronal activity-regulated cytoskeleton-associated protein ({ARC}) (P=3.78 × 10⁻⁸) postsynaptic signalling complexes. In an analysis of 18 492 subjects (7907 cases and 10 585 controls), case {CNVs} were enriched for members of the {NMDAR} complex (P=0.0015) but not {ARC} (P=0.14). Our data indicate that defects in {NMDAR} postsynaptic signalling and, possibly, {ARC} complexes, which are known to be important in synaptic plasticity and cognition, play a significant role in the pathogenesis of schizophrenia.}
+      \field{issn}{1476-5578}
+      \field{journaltitle}{Molecular Psychiatry}
+      \field{month}{02}
+      \field{number}{2}
+      \field{title}{De novo {CNV} analysis implicates specific abnormalities of postsynaptic signalling complexes in the pathogenesis of schizophrenia}
+      \field{volume}{17}
+      \field{year}{2012}
+      \field{pages}{142\bibrangedash 153}
+      \verb{doi}
+      \verb 10.1038/mp.2011.154
+      \endverb
+      \keyw{{AIDS}-Related Complex,Bulgaria,Case-Control Studies,{DNA} Copy Number Variations,Family Health,Female,Gene Frequency,Genetic Predisposition to Disease,Genotype,Humans,Iceland,Japan,Male,Meta-Analysis as Topic,Microarray Analysis,Models,Biological,Post-Synaptic Density,Psychiatric Status Rating Scales,Receptors,N-Methyl-D-Aspartate,Schizophrenia,Signal Transduction,Statistics,Nonparametric,Synapses}
+    \endentry
     \entry{lancichinetti_benchmark_2008}{article}{}
       \name{labelname}{3}{}{%
         {{uniquename=0,hash=831f2bfeca4c2e57705e84268455e7ed}{Lancichinetti}{L\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
@@ -1026,6 +1115,63 @@
       \verb http://link.springer.com/article/10.1007/s00216-010-3658-z
       \endverb
       \keyw{Affinity isolation,Analytical Chemistry,Biochemistry,general,brain,Environmental Monitoring/Analysis,Food Science,Laboratory Medicine,Measurement Science and Instrumentation,Protein interactome,Synapse}
+    \endentry
+    \entry{lips_functional_2012}{article}{}
+      \name{labelname}{14}{}{%
+        {{uniquename=0,hash=ba9fa866310cdc3e81c99bede57ac22c}{Lips}{L\bibinitperiod}{E.\bibnamedelimi S.}{E\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=47b5c140ffe13cc5034a81edc2110427}{Cornelisse}{C\bibinitperiod}{L.\bibnamedelimi N.}{L\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=601b4d434eb20ad6611a7b0afa51fd34}{Toonen}{T\bibinitperiod}{R.\bibnamedelimi F.}{R\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fb11755a1794b50e67856acc43c3366b}{Min}{M\bibinitperiod}{J.\bibnamedelimi L.}{J\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=732d940af4119d1e871b61f95baccbde}{Hultman}{H\bibinitperiod}{C.\bibnamedelimi M.}{C\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3ea66c6f54ef700a72a1efcc259dcee1}{{International\bibnamedelimb Schizophrenia\bibnamedelimb Consortium}}{I\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=db503ebca070edfbc20f65670e0a83da}{Holmans}{H\bibinitperiod}{P.\bibnamedelimi A.}{P\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6f4c67704aceeb4c5b4a4713c18555cb}{O'Donovan}{O\bibinitperiod}{M.\bibnamedelimi C.}{M\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6916ba91c6bc7a85a63a3a6eb051fba0}{Purcell}{P\bibinitperiod}{S.\bibnamedelimi M.}{S\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2746617741fec62fafd258c3811802b4}{Smit}{S\bibinitperiod}{A.\bibnamedelimi B.}{A\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d2a81e580d0322eda8b4c7205e1b6ad}{Verhage}{V\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1a9ca8a97b3390b635f9759cc7ba4869}{Sullivan}{S\bibinitperiod}{P.\bibnamedelimi F.}{P\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1d9f5e221d448f691d509b825e219277}{Visscher}{V\bibinitperiod}{P.\bibnamedelimi M.}{P\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a5e2e2165862c7bccb33190c9a92208}{Posthuma}{P\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{14}{}{%
+        {{uniquename=0,hash=ba9fa866310cdc3e81c99bede57ac22c}{Lips}{L\bibinitperiod}{E.\bibnamedelimi S.}{E\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=47b5c140ffe13cc5034a81edc2110427}{Cornelisse}{C\bibinitperiod}{L.\bibnamedelimi N.}{L\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=601b4d434eb20ad6611a7b0afa51fd34}{Toonen}{T\bibinitperiod}{R.\bibnamedelimi F.}{R\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fb11755a1794b50e67856acc43c3366b}{Min}{M\bibinitperiod}{J.\bibnamedelimi L.}{J\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=732d940af4119d1e871b61f95baccbde}{Hultman}{H\bibinitperiod}{C.\bibnamedelimi M.}{C\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3ea66c6f54ef700a72a1efcc259dcee1}{{International\bibnamedelimb Schizophrenia\bibnamedelimb Consortium}}{I\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=db503ebca070edfbc20f65670e0a83da}{Holmans}{H\bibinitperiod}{P.\bibnamedelimi A.}{P\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6f4c67704aceeb4c5b4a4713c18555cb}{O'Donovan}{O\bibinitperiod}{M.\bibnamedelimi C.}{M\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6916ba91c6bc7a85a63a3a6eb051fba0}{Purcell}{P\bibinitperiod}{S.\bibnamedelimi M.}{S\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2746617741fec62fafd258c3811802b4}{Smit}{S\bibinitperiod}{A.\bibnamedelimi B.}{A\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d2a81e580d0322eda8b4c7205e1b6ad}{Verhage}{V\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1a9ca8a97b3390b635f9759cc7ba4869}{Sullivan}{S\bibinitperiod}{P.\bibnamedelimi F.}{P\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1d9f5e221d448f691d509b825e219277}{Visscher}{V\bibinitperiod}{P.\bibnamedelimi M.}{P\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9a5e2e2165862c7bccb33190c9a92208}{Posthuma}{P\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{40654e542fb6529d502d2ee94a4b0279}
+      \strng{fullhash}{992e3046b9d0f5ac63b78a2ed66e402e}
+      \field{sortinit}{L}
+      \field{labelyear}{2012}
+      \field{labelmonth}{10}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Functional gene group analysis identifies synaptic gene groups as risk factor for schizophrenia}
+      \field{abstract}{Schizophrenia is a highly heritable disorder with a polygenic pattern of inheritance and a population prevalence of ~1\%. Previous studies have implicated synaptic dysfunction in schizophrenia. We tested the accumulated association of genetic variants in expert-curated synaptic gene groups with schizophrenia in 4673 cases and 4965 healthy controls, using functional gene group analysis. Identifying groups of genes with similar cellular function rather than genes in isolation may have clinical implications for finding additional drug targets. We found that a group of 1026 synaptic genes was significantly associated with the risk of schizophrenia (P=7.6 × 10(-11)) and more strongly associated than 100 randomly drawn, matched control groups of genetic variants (P<0.01). Subsequent analysis of synaptic subgroups suggested that the strongest association signals are derived from three synaptic gene groups: intracellular signal transduction (P=2.0 × 10(-4)), excitability (P=9.0 × 10(-4)) and cell adhesion and trans-synaptic signaling (P=2.4 × 10(-3)). These results are consistent with a role of synaptic dysfunction in schizophrenia and imply that impaired intracellular signal transduction in synapses, synaptic excitability and cell adhesion and trans-synaptic signaling play a role in the pathology of schizophrenia.}
+      \field{issn}{1476-5578}
+      \field{journaltitle}{Molecular Psychiatry}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{Functional gene group analysis identifies synaptic gene groups as risk factor for schizophrenia}
+      \field{volume}{17}
+      \field{year}{2012}
+      \field{pages}{996\bibrangedash 1006}
+      \verb{doi}
+      \verb 10.1038/mp.2011.117
+      \endverb
+      \keyw{Calcium Channels,L-Type,Case-Control Studies,Cell Adhesion,European Continental Ancestry Group,Female,Genetic Predisposition to Disease,Genome-Wide Association Study,Genotype,Humans,Intracellular Signaling Peptides and Proteins,Linkage Disequilibrium,Male,Oligonucleotide Array Sequence Analysis,Polymorphism,Single Nucleotide,{PubMed},Risk Factors,Schizophrenia,Signal Transduction,Synapses}
     \endentry
     \entry{lodish_molecular_2000}{book}{}
       \name{labelname}{6}{}{%
